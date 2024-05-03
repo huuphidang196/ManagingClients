@@ -54,6 +54,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\SplitDisplayFinderOverall\PanelDisplayOverall\PanelDisplayOverallSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\SplitDisplayFinderOverall\SplitDisplayFinderOverall.cs" />
+    <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
+    <Compile Include="_Data\Scripts\DTO\Account\ProfileAccount.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Data\Scripts\BLL\Scene_Manage_Customer\SplitContainerNB\Account_Profile\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
