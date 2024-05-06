@@ -54,10 +54,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\SplitDisplayFinderOverall\PanelDisplayOverall\PanelDisplayOverallSC.cs" />
-    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\SplitDisplayFinderOverall\SplitDisplayFinderOverall.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\PanelDetailProfileSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\tabCtrlPADetail\tabProfile\pnlPA\PanelProfileAccountSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\PanelPurchasingOrderSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\splitContainerMainControl\pnlDisplayOverall\PanelDisplayOverallSC.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\ProfileAccount.cs" />
+    <Compile Include="_Data\Scripts\SaveManager\SaveManager.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,7 +87,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_Data\Scripts\BLL\Scene_Manage_Customer\SplitContainerNB\Account_Profile\" />
+    <Folder Include="_Data\Scripts\SaveManager\Query\PersonalAccount\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

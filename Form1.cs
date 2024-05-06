@@ -1,5 +1,6 @@
 ﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.SplitDisplayFinderOverall;
 using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.SplitDisplayFinderOverall.PanelDisplayOverall;
+using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.SplitDisplayFinderOverall.PanelDisplayOverall.PanelDetailProfile;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,20 @@ namespace ManagingClients
 {
     public partial class frmMain_Control : Form
     {
-        protected SplitDisplayFinderOverall _SplitDisplayFinderOverall;
-       
+        private static frmMain_Control _instance;
+        public static frmMain_Control Instance
+        {
+            get
+            {
+                if (_instance == null) _instance = new frmMain_Control();
+                return frmMain_Control._instance;
+            }
+
+            private set { frmMain_Control._instance = value; }
+        }
+
+        protected SplitDisplayFinderOverallManager _SplitDisplayFinderOverall;
+
         public frmMain_Control()
         {
             InitializeComponent();
@@ -25,27 +38,29 @@ namespace ManagingClients
 
         protected virtual void SetAllValue()
         {
-            this._SplitDisplayFinderOverall = new SplitDisplayFinderOverall(this.pnlDisplayOverall, this.pnlDetailProfile
+            this._SplitDisplayFinderOverall = new SplitDisplayFinderOverallManager(this, this.pnlDisplayOverall, this.pnlDetailProfile
               , this.pnlPurchasingOrder);
         }
 
         private void frmMain_Control_Load(object sender, EventArgs e)
         {
-            PanelDisplayOverallSC.Instance.PanelDetail_Profile.Visible = true;
-            PanelDisplayOverallSC.Instance.PanelPurchasingOrder.Visible = false;
+            PanelDisplayOverallSC.Instance.TurnOnPanelProfileAccount();
 
         }
 
         private void btnPurchasingOrder_Click(object sender, EventArgs e)
         {
-            PanelDisplayOverallSC.Instance.PanelDetail_Profile.Visible = false;
-            PanelDisplayOverallSC.Instance.PanelPurchasingOrder.Visible = true;
+            PanelDisplayOverallSC.Instance.TurnOnPanelPurchasingOrder();
         }
 
         private void btnProfileAccount_Click(object sender, EventArgs e)
         {
-            PanelDisplayOverallSC.Instance.PanelDetail_Profile.Visible = true;
-            PanelDisplayOverallSC.Instance.PanelPurchasingOrder.Visible = false;
+            PanelDisplayOverallSC.Instance.TurnOnPanelProfileAccount();
+        }
+
+        private void btnSavePAC_Click(object sender, EventArgs e)
+        {
+            TabControlMyProfileDetail.Instance.SaveMyProfile();
         }
     }
 }

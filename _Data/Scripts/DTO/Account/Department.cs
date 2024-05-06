@@ -38,17 +38,17 @@ namespace ManagingClients._Data.Scripts.DTO.Account
 
     public enum LevelAccess
     {
-        WHITE = 0,//KHÁCH
+        LEVEL_ZERO = 0,//KHÁCH
 
-        RED = 1, // CHỦ TỊCH, GIÁM ĐỐC
+        LEVEL_05 = 1, // CHỦ TỊCH, GIÁM ĐỐC
 
-        ORANGE = 2, // TRƯỞNG PHÒNG
+        LEVEL_04 = 2, // TRƯỞNG PHÒNG
 
-        YELLOW = 3, // PHÓ PHÒNG
+        LEVEL_03 = 3, // PHÓ PHÒNG
 
-        GREEN = 4, //NHÓM TRƯỞNG
+        LEVEL_02 = 4, //NHÓM TRƯỞNG
 
-        BROWN = 5, //NHÂN VIÊN
+        LEVEL_01 = 5, //NHÂN VIÊN
     }
 
     public enum Sex
