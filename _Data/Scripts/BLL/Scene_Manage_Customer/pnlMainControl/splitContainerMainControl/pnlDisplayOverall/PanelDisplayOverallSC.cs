@@ -11,19 +11,13 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
 {
     public class PanelDisplayOverallSC
     {
-        private static PanelDisplayOverallSC _instance;
-        public static PanelDisplayOverallSC Instance
-        {
-            get
-            {
-                if (_instance == null) _instance = new PanelDisplayOverallSC();
-                return PanelDisplayOverallSC._instance;
-            }
+        protected PanelDetailProfileSC _PanelDetailProfileSC;
+        public PanelDetailProfileSC Panel_Detail_Profile => _PanelDetailProfileSC;
 
-            private set { PanelDisplayOverallSC._instance = value; }
-        }
+        protected PanelPurchasingOrderSC _PanelPurchasingOrder;
+        public PanelPurchasingOrderSC PanelPurchasingOrder => _PanelPurchasingOrder;
 
-        private PanelDisplayOverallSC() 
+        public PanelDisplayOverallSC()
         {
             //Panel Display Detail Profile
             this._PanelDetailProfileSC = new PanelDetailProfileSC();
@@ -31,14 +25,6 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
             this._PanelPurchasingOrder = new PanelPurchasingOrderSC();
         }
 
-
-        protected PanelDetailProfileSC _PanelDetailProfileSC;
-        public PanelDetailProfileSC Panel_Detail_Profile => _PanelDetailProfileSC;
-
-        protected PanelPurchasingOrderSC _PanelPurchasingOrder;
-        public PanelPurchasingOrderSC PanelPurchasingOrder => _PanelPurchasingOrder;
-
-  
 
         public virtual void TurnOnPanelProfileAccount()
         {

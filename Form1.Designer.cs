@@ -63,13 +63,13 @@ namespace ManagingClients
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmailAccount = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddressAccount = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboYearDate = new System.Windows.Forms.ComboBox();
+            this.cboMonthDate = new System.Windows.Forms.ComboBox();
             this.cboDayDate = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -102,6 +102,9 @@ namespace ManagingClients
             this.fpnlOptionsNB = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlBottomDisplay = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtPassWordAccount = new System.Windows.Forms.TextBox();
             this.pnlMainControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainControl)).BeginInit();
             this.splitContainerMainControl.Panel1.SuspendLayout();
@@ -145,6 +148,7 @@ namespace ManagingClients
             this.spcPurchasingOrder.Panel2.SuspendLayout();
             this.spcPurchasingOrder.SuspendLayout();
             this.pnlOptions.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainControl
@@ -400,6 +404,7 @@ namespace ManagingClients
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
+            this.flowLayoutPanel1.Controls.Add(this.panel16);
             this.flowLayoutPanel1.Controls.Add(this.panel9);
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Controls.Add(this.panel14);
@@ -408,7 +413,7 @@ namespace ManagingClients
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 123);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 483);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 551);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -426,7 +431,7 @@ namespace ManagingClients
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 5);
+            this.label3.Location = new System.Drawing.Point(5, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 22);
             this.label3.TabIndex = 0;
@@ -436,7 +441,7 @@ namespace ManagingClients
             // 
             this.lblNameLogIn.AutoSize = true;
             this.lblNameLogIn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameLogIn.Location = new System.Drawing.Point(146, 5);
+            this.lblNameLogIn.Location = new System.Drawing.Point(146, 9);
             this.lblNameLogIn.Name = "lblNameLogIn";
             this.lblNameLogIn.Size = new System.Drawing.Size(139, 22);
             this.lblNameLogIn.TabIndex = 0;
@@ -534,7 +539,7 @@ namespace ManagingClients
             // panel4
             // 
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.txtEmailAccount);
             this.panel4.Location = new System.Drawing.Point(3, 144);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(573, 40);
@@ -552,22 +557,22 @@ namespace ManagingClients
             this.label6.TabIndex = 0;
             this.label6.Text = "Email :";
             // 
-            // textBox2
+            // txtEmailAccount
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtEmailAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(150, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(420, 30);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "phidh@gses.vn";
+            this.txtEmailAccount.Location = new System.Drawing.Point(150, 5);
+            this.txtEmailAccount.Name = "txtEmailAccount";
+            this.txtEmailAccount.Size = new System.Drawing.Size(420, 30);
+            this.txtEmailAccount.TabIndex = 1;
+            this.txtEmailAccount.Text = "phidh@gses.vn";
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.txtAddressAccount);
-            this.panel9.Location = new System.Drawing.Point(3, 190);
+            this.panel9.Location = new System.Drawing.Point(3, 236);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(573, 40);
             this.panel9.TabIndex = 4;
@@ -597,30 +602,30 @@ namespace ManagingClients
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.comboBox4);
-            this.panel5.Controls.Add(this.comboBox3);
+            this.panel5.Controls.Add(this.cboYearDate);
+            this.panel5.Controls.Add(this.cboMonthDate);
             this.panel5.Controls.Add(this.cboDayDate);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(3, 236);
+            this.panel5.Location = new System.Drawing.Point(3, 282);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(573, 43);
             this.panel5.TabIndex = 5;
             // 
-            // comboBox4
+            // cboYearDate
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(450, 7);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 30);
-            this.comboBox4.TabIndex = 1;
+            this.cboYearDate.FormattingEnabled = true;
+            this.cboYearDate.Location = new System.Drawing.Point(450, 7);
+            this.cboYearDate.Name = "cboYearDate";
+            this.cboYearDate.Size = new System.Drawing.Size(121, 30);
+            this.cboYearDate.TabIndex = 1;
             // 
-            // comboBox3
+            // cboMonthDate
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(300, 7);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 30);
-            this.comboBox3.TabIndex = 1;
+            this.cboMonthDate.FormattingEnabled = true;
+            this.cboMonthDate.Location = new System.Drawing.Point(300, 7);
+            this.cboMonthDate.Name = "cboMonthDate";
+            this.cboMonthDate.Size = new System.Drawing.Size(121, 30);
+            this.cboMonthDate.TabIndex = 1;
             // 
             // cboDayDate
             // 
@@ -648,7 +653,7 @@ namespace ManagingClients
             this.panel14.Controls.Add(this.lblPersonDepartment);
             this.panel14.Controls.Add(this.label15);
             this.panel14.Controls.Add(this.label14);
-            this.panel14.Location = new System.Drawing.Point(3, 285);
+            this.panel14.Location = new System.Drawing.Point(3, 331);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(573, 56);
             this.panel14.TabIndex = 5;
@@ -709,7 +714,7 @@ namespace ManagingClients
             // 
             this.panel15.Controls.Add(this.lblLevelAcess);
             this.panel15.Controls.Add(this.label19);
-            this.panel15.Location = new System.Drawing.Point(3, 347);
+            this.panel15.Location = new System.Drawing.Point(3, 393);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(573, 56);
             this.panel15.TabIndex = 5;
@@ -743,7 +748,7 @@ namespace ManagingClients
             // panel6
             // 
             this.panel6.Controls.Add(this.btnSavePAC);
-            this.panel6.Location = new System.Drawing.Point(3, 409);
+            this.panel6.Location = new System.Drawing.Point(3, 455);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(573, 54);
             this.panel6.TabIndex = 6;
@@ -765,10 +770,10 @@ namespace ManagingClients
             // tabSettingNotify
             // 
             this.tabSettingNotify.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabSettingNotify.Location = new System.Drawing.Point(4, 31);
+            this.tabSettingNotify.Location = new System.Drawing.Point(4, 22);
             this.tabSettingNotify.Name = "tabSettingNotify";
             this.tabSettingNotify.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettingNotify.Size = new System.Drawing.Size(917, 747);
+            this.tabSettingNotify.Size = new System.Drawing.Size(917, 756);
             this.tabSettingNotify.TabIndex = 1;
             this.tabSettingNotify.Text = "Cài đặt thông báo";
             // 
@@ -974,6 +979,39 @@ namespace ManagingClients
             this.pnlHeader.Size = new System.Drawing.Size(1073, 70);
             this.pnlHeader.TabIndex = 0;
             // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.label16);
+            this.panel16.Controls.Add(this.txtPassWordAccount);
+            this.panel16.Location = new System.Drawing.Point(3, 190);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(573, 40);
+            this.panel16.TabIndex = 3;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(42, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 22);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Mật khẩu :";
+            // 
+            // txtPassWordAccount
+            // 
+            this.txtPassWordAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassWordAccount.Location = new System.Drawing.Point(150, 5);
+            this.txtPassWordAccount.Name = "txtPassWordAccount";
+            this.txtPassWordAccount.Size = new System.Drawing.Size(420, 30);
+            this.txtPassWordAccount.TabIndex = 1;
+            this.txtPassWordAccount.Text = "19062001Phi@";
+            this.txtPassWordAccount.UseSystemPasswordChar = true;
+            // 
             // frmMain_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -1047,18 +1085,17 @@ namespace ManagingClients
             ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).EndInit();
             this.spcPurchasingOrder.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlMainControl;
         private System.Windows.Forms.Panel pnlLeftHeadControl;
         private System.Windows.Forms.PictureBox ptbGses;
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.Panel pnlBottomNB;
-        private System.Windows.Forms.SplitContainer splitContainerMainControl;
         private System.Windows.Forms.Panel pnlBottomDisplay;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer spcPurchasingOrder;
@@ -1070,36 +1107,23 @@ namespace ManagingClients
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblNameLogIn;
-        private System.Windows.Forms.TextBox txtNameRealistic;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radNu;
-        private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox cboDayDate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnSavePAC;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox ptbAvatar;
-        private System.Windows.Forms.Button btnSelectAVT;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TabControl tabCtrlPADetail;
         private System.Windows.Forms.TabPage tabProfile;
         private System.Windows.Forms.TabPage tabSettingNotify;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtAddressAccount;
         private System.Windows.Forms.TabPage tabPersonalAccount;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label10;
@@ -1117,15 +1141,33 @@ namespace ManagingClients
         public System.Windows.Forms.Panel pnlDetailProfile;
         public System.Windows.Forms.Panel pnlPurchasingOrder;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label lblPersonDepartment;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblPersonPosition;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label lblLevelAcess;
         private System.Windows.Forms.Label label19;
         public System.Windows.Forms.Panel pnlProfileAccount;
         private System.Windows.Forms.Panel pnlHeader;
+        public System.Windows.Forms.Label lblNameLogIn;
+        public System.Windows.Forms.TextBox txtNameRealistic;
+        public System.Windows.Forms.TextBox txtEmailAccount;
+        public System.Windows.Forms.RadioButton radNu;
+        public System.Windows.Forms.RadioButton radNam;
+        public System.Windows.Forms.ComboBox cboDayDate;
+        public System.Windows.Forms.ComboBox cboYearDate;
+        public System.Windows.Forms.ComboBox cboMonthDate;
+        public System.Windows.Forms.Button btnSavePAC;
+        public System.Windows.Forms.PictureBox ptbAvatar;
+        public System.Windows.Forms.TextBox txtAddressAccount;
+        public System.Windows.Forms.Label lblPersonDepartment;
+        public System.Windows.Forms.Label lblPersonPosition;
+        public System.Windows.Forms.Label lblLevelAcess;
+        public System.Windows.Forms.Button btnSelectAVT;
+        public System.Windows.Forms.TabControl tabCtrlPADetail;
+        public System.Windows.Forms.Panel pnlMainControl;
+        public System.Windows.Forms.SplitContainer splitContainerMainControl;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox txtPassWordAccount;
     }
 }
 

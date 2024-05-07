@@ -1,6 +1,5 @@
-﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.SplitDisplayFinderOverall;
-using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.SplitDisplayFinderOverall.PanelDisplayOverall;
-using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.SplitDisplayFinderOverall.PanelDisplayOverall.PanelDetailProfile;
+﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl;
+using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainerMainControl.pnlDisplayOverall;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +26,6 @@ namespace ManagingClients
             private set { frmMain_Control._instance = value; }
         }
 
-        protected SplitDisplayFinderOverallManager _SplitDisplayFinderOverall;
 
         public frmMain_Control()
         {
@@ -38,29 +36,29 @@ namespace ManagingClients
 
         protected virtual void SetAllValue()
         {
-            this._SplitDisplayFinderOverall = new SplitDisplayFinderOverallManager(this, this.pnlDisplayOverall, this.pnlDetailProfile
-              , this.pnlPurchasingOrder);
+
         }
 
         private void frmMain_Control_Load(object sender, EventArgs e)
         {
-            PanelDisplayOverallSC.Instance.TurnOnPanelProfileAccount();
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
 
         }
 
         private void btnPurchasingOrder_Click(object sender, EventArgs e)
         {
-            PanelDisplayOverallSC.Instance.TurnOnPanelPurchasingOrder();
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelPurchasingOrder();
         }
 
         private void btnProfileAccount_Click(object sender, EventArgs e)
         {
-            PanelDisplayOverallSC.Instance.TurnOnPanelProfileAccount();
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
         }
 
         private void btnSavePAC_Click(object sender, EventArgs e)
         {
-            TabControlMyProfileDetail.Instance.SaveMyProfile();
+            MessageBox.Show(PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
+                Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ToString());
         }
     }
 }
