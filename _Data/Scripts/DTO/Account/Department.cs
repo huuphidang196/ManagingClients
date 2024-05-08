@@ -13,7 +13,7 @@ namespace ManagingClients._Data.Scripts.DTO.Account
         COMPANY = 1,
         
         TECHNICAL_DEPARTMENT = 2,
-        
+
         SALE_DEPARTMENT = 3,
         
         ACCOUNTING_DEPARTMENT = 4,

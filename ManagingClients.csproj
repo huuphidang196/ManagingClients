@@ -61,6 +61,8 @@
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\PanelPurchasingOrderSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\PanelDisplayOverallSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\SplitContainerMainControl.cs" />
+    <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
+    <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\ProfileAccount.cs" />
     <Compile Include="_Data\Scripts\SaveManager\SaveManager.cs" />
@@ -90,7 +92,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_Data\Scripts\DAO\" />
     <Folder Include="_Data\Scripts\SaveManager\Query\PersonalAccount\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

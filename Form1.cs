@@ -1,5 +1,7 @@
 ﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl;
 using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainerMainControl.pnlDisplayOverall;
+using ManagingClients._Data.Scripts.DAO.Scene_Manage_Customer.pnlMainControl.pnlDisplayOverall.pnlDetailProfile;
+using ManagingClients._Data.Scripts.DTO.Account;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,6 +61,13 @@ namespace ManagingClients
         {
             MessageBox.Show(PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
                 Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ToString());
+        }
+
+        private void tabCtrlPADetail_Selected(object sender, TabControlEventArgs e)
+        {
+            ProfileAccount profileAccount = DetailProfileProvider.Instance.GetProfileAccount();
+
+            txtNameRealistic.Text = profileAccount.Name_Realistic;
         }
     }
 }

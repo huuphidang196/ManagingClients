@@ -85,15 +85,18 @@ namespace ManagingClients
             this.tabSettingNotify = new System.Windows.Forms.TabPage();
             this.tabPersonalAccount = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnRemoveAccount = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnRequestChangePA = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnRequestChangeLA = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnRemoveAccount = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pnlPurchasingOrder = new System.Windows.Forms.Panel();
@@ -102,9 +105,6 @@ namespace ManagingClients
             this.fpnlOptionsNB = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlBottomDisplay = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtPassWordAccount = new System.Windows.Forms.TextBox();
             this.pnlMainControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainControl)).BeginInit();
             this.splitContainerMainControl.Panel1.SuspendLayout();
@@ -138,9 +138,10 @@ namespace ManagingClients
             this.panel6.SuspendLayout();
             this.tabPersonalAccount.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.pnlPurchasingOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).BeginInit();
@@ -148,7 +149,6 @@ namespace ManagingClients
             this.spcPurchasingOrder.Panel2.SuspendLayout();
             this.spcPurchasingOrder.SuspendLayout();
             this.pnlOptions.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainControl
@@ -296,6 +296,7 @@ namespace ManagingClients
             this.tabCtrlPADetail.SelectedIndex = 0;
             this.tabCtrlPADetail.Size = new System.Drawing.Size(925, 782);
             this.tabCtrlPADetail.TabIndex = 1;
+            this.tabCtrlPADetail.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabCtrlPADetail_Selected);
             // 
             // tabProfile
             // 
@@ -404,7 +405,6 @@ namespace ManagingClients
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel16);
             this.flowLayoutPanel1.Controls.Add(this.panel9);
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Controls.Add(this.panel14);
@@ -477,7 +477,7 @@ namespace ManagingClients
             this.txtNameRealistic.Name = "txtNameRealistic";
             this.txtNameRealistic.Size = new System.Drawing.Size(420, 30);
             this.txtNameRealistic.TabIndex = 1;
-            this.txtNameRealistic.Text = "Đặng Hữu Phi";
+            this.txtNameRealistic.Text = "Đặng Hữu";
             // 
             // panel3
             // 
@@ -572,7 +572,7 @@ namespace ManagingClients
             // 
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.txtAddressAccount);
-            this.panel9.Location = new System.Drawing.Point(3, 236);
+            this.panel9.Location = new System.Drawing.Point(3, 190);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(573, 40);
             this.panel9.TabIndex = 4;
@@ -606,7 +606,7 @@ namespace ManagingClients
             this.panel5.Controls.Add(this.cboMonthDate);
             this.panel5.Controls.Add(this.cboDayDate);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(3, 282);
+            this.panel5.Location = new System.Drawing.Point(3, 236);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(573, 43);
             this.panel5.TabIndex = 5;
@@ -653,7 +653,7 @@ namespace ManagingClients
             this.panel14.Controls.Add(this.lblPersonDepartment);
             this.panel14.Controls.Add(this.label15);
             this.panel14.Controls.Add(this.label14);
-            this.panel14.Location = new System.Drawing.Point(3, 331);
+            this.panel14.Location = new System.Drawing.Point(3, 285);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(573, 56);
             this.panel14.TabIndex = 5;
@@ -714,7 +714,7 @@ namespace ManagingClients
             // 
             this.panel15.Controls.Add(this.lblLevelAcess);
             this.panel15.Controls.Add(this.label19);
-            this.panel15.Location = new System.Drawing.Point(3, 393);
+            this.panel15.Location = new System.Drawing.Point(3, 347);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(573, 56);
             this.panel15.TabIndex = 5;
@@ -748,7 +748,7 @@ namespace ManagingClients
             // panel6
             // 
             this.panel6.Controls.Add(this.btnSavePAC);
-            this.panel6.Location = new System.Drawing.Point(3, 455);
+            this.panel6.Location = new System.Drawing.Point(3, 409);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(573, 54);
             this.panel6.TabIndex = 6;
@@ -782,51 +782,52 @@ namespace ManagingClients
             this.tabPersonalAccount.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabPersonalAccount.Controls.Add(this.flowLayoutPanel2);
             this.tabPersonalAccount.Controls.Add(this.panel10);
-            this.tabPersonalAccount.Location = new System.Drawing.Point(4, 31);
+            this.tabPersonalAccount.Location = new System.Drawing.Point(4, 22);
             this.tabPersonalAccount.Name = "tabPersonalAccount";
-            this.tabPersonalAccount.Size = new System.Drawing.Size(917, 747);
+            this.tabPersonalAccount.Size = new System.Drawing.Size(917, 756);
             this.tabPersonalAccount.TabIndex = 2;
             this.tabPersonalAccount.Text = "Cài đặt cá nhân";
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.panel11);
+            this.flowLayoutPanel2.Controls.Add(this.panel17);
             this.flowLayoutPanel2.Controls.Add(this.panel12);
             this.flowLayoutPanel2.Controls.Add(this.panel13);
+            this.flowLayoutPanel2.Controls.Add(this.panel11);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(43, 123);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(663, 415);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
-            // panel11
+            // panel17
             // 
-            this.panel11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel11.Controls.Add(this.btnRemoveAccount);
-            this.panel11.Controls.Add(this.label11);
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(654, 73);
-            this.panel11.TabIndex = 0;
+            this.panel17.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel17.Controls.Add(this.btnChangePassword);
+            this.panel17.Controls.Add(this.label17);
+            this.panel17.Location = new System.Drawing.Point(3, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(654, 73);
+            this.panel17.TabIndex = 0;
             // 
-            // btnRemoveAccount
+            // btnChangePassword
             // 
-            this.btnRemoveAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRemoveAccount.Location = new System.Drawing.Point(492, 17);
-            this.btnRemoveAccount.Name = "btnRemoveAccount";
-            this.btnRemoveAccount.Size = new System.Drawing.Size(148, 41);
-            this.btnRemoveAccount.TabIndex = 2;
-            this.btnRemoveAccount.Text = "Xóa Tài Khoản";
-            this.btnRemoveAccount.UseVisualStyleBackColor = false;
+            this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnChangePassword.Location = new System.Drawing.Point(492, 17);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(148, 41);
+            this.btnChangePassword.TabIndex = 2;
+            this.btnChangePassword.Text = "Đổi mật khẩu";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
             // 
-            // label11
+            // label17
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(183, 22);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Yêu cầu xóa tài khoản";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(18, 26);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(119, 22);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Đổi mật khẩu ";
             // 
             // panel12
             // 
@@ -836,7 +837,7 @@ namespace ManagingClients
             this.panel12.Location = new System.Drawing.Point(3, 82);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(654, 73);
-            this.panel12.TabIndex = 0;
+            this.panel12.TabIndex = 1;
             // 
             // btnRequestChangePA
             // 
@@ -865,7 +866,7 @@ namespace ManagingClients
             this.panel13.Location = new System.Drawing.Point(3, 161);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(654, 73);
-            this.panel13.TabIndex = 0;
+            this.panel13.TabIndex = 2;
             // 
             // btnRequestChangeLA
             // 
@@ -885,6 +886,35 @@ namespace ManagingClients
             this.label13.Size = new System.Drawing.Size(272, 22);
             this.label13.TabIndex = 1;
             this.label13.Text = "Yêu cầu thay đổi Cấp độ truy cập";
+            // 
+            // panel11
+            // 
+            this.panel11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel11.Controls.Add(this.btnRemoveAccount);
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Location = new System.Drawing.Point(3, 240);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(654, 73);
+            this.panel11.TabIndex = 3;
+            // 
+            // btnRemoveAccount
+            // 
+            this.btnRemoveAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRemoveAccount.Location = new System.Drawing.Point(492, 17);
+            this.btnRemoveAccount.Name = "btnRemoveAccount";
+            this.btnRemoveAccount.Size = new System.Drawing.Size(148, 41);
+            this.btnRemoveAccount.TabIndex = 2;
+            this.btnRemoveAccount.Text = "Xóa Tài Khoản";
+            this.btnRemoveAccount.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(183, 22);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Yêu cầu xóa tài khoản";
             // 
             // panel10
             // 
@@ -979,39 +1009,6 @@ namespace ManagingClients
             this.pnlHeader.Size = new System.Drawing.Size(1073, 70);
             this.pnlHeader.TabIndex = 0;
             // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.label16);
-            this.panel16.Controls.Add(this.txtPassWordAccount);
-            this.panel16.Location = new System.Drawing.Point(3, 190);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(573, 40);
-            this.panel16.TabIndex = 3;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(42, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(93, 22);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Mật khẩu :";
-            // 
-            // txtPassWordAccount
-            // 
-            this.txtPassWordAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassWordAccount.Location = new System.Drawing.Point(150, 5);
-            this.txtPassWordAccount.Name = "txtPassWordAccount";
-            this.txtPassWordAccount.Size = new System.Drawing.Size(420, 30);
-            this.txtPassWordAccount.TabIndex = 1;
-            this.txtPassWordAccount.Text = "19062001Phi@";
-            this.txtPassWordAccount.UseSystemPasswordChar = true;
-            // 
             // frmMain_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -1071,12 +1068,14 @@ namespace ManagingClients
             this.panel6.ResumeLayout(false);
             this.tabPersonalAccount.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.pnlPurchasingOrder.ResumeLayout(false);
@@ -1085,8 +1084,6 @@ namespace ManagingClients
             ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).EndInit();
             this.spcPurchasingOrder.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1165,9 +1162,9 @@ namespace ManagingClients
         public System.Windows.Forms.TabControl tabCtrlPADetail;
         public System.Windows.Forms.Panel pnlMainControl;
         public System.Windows.Forms.SplitContainer splitContainerMainControl;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Label label16;
-        public System.Windows.Forms.TextBox txtPassWordAccount;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Label label17;
     }
 }
 

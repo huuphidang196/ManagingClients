@@ -17,7 +17,7 @@ namespace ManagingClients._Data.Scripts.DTO.Account
         
         public DateTime Date_Of_Birth { get; set; }
 
-        public Department Person_Department { get; set; }
+        public Department Department { get; set; }
 
         public Position Person_Position { get; set; }
         public LevelAccess Level_Access { get; set; }

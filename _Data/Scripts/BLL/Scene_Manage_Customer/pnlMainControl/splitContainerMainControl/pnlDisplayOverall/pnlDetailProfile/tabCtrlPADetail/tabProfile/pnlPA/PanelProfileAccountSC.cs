@@ -18,7 +18,6 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
         protected Label _lblLevelAcess;
 
         protected TextBox _txtNameRealistic;
-        protected TextBox _txtPassWordAccount;
         protected TextBox _txtEmailAccount;
 
         protected TextBox _txtAddressAccount;
@@ -37,8 +36,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
             this._lblLevelAcess = frmMain_Control.Instance.lblLevelAcess;
 
             this._txtNameRealistic = frmMain_Control.Instance.txtNameRealistic;
-            this._txtPassWordAccount = frmMain_Control.Instance.txtPassWordAccount;
-            this._txtEmailAccount = frmMain_Control.Instance.txtEmailAccount;
+                this._txtEmailAccount = frmMain_Control.Instance.txtEmailAccount;
             this._txtAddressAccount = frmMain_Control.Instance.txtAddressAccount;
 
             this._cboDayDate = frmMain_Control.Instance.cboDayDate;
