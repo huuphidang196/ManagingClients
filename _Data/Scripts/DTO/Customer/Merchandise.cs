@@ -42,6 +42,7 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public string Name_Merchandise { get; set; }
 
+        public InquiryQuotation InquiryQuotation { get; set; }
         public List<UnitsDevice> List_Units_Devices { get; private set; }
 
         public virtual void AddUnitsDevice(UnitsDevice unitsDevice)

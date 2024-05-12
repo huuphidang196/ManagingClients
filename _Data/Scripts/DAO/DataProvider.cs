@@ -42,19 +42,55 @@ namespace ManagingClients._Data.Scripts.DAO
 
         }
 
+        #region Insert
         //Insert
-        protected virtual int GetCountDataResultByQueryAndParameter(string query, object[] parameter = null)
+        protected virtual int GetCountDataResultInsertByQueryAndParameter(string query, object[] parameter = null)
         {
             this._Connection = new SqlConnection(this._ConnectionSTR);
 
             if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
 
             SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
-     
+
             if (parameter != null)
             {
-                string[] listPara = query.Split(',');
+                string listPara = query.Split(' ')[2];
+                string[] listValue = listPara.Trim('(').Trim(')').Split(',');
                 int i = 0;
+                foreach (string item in listValue)
+                {
+                    if (item.Contains('@'))
+                    {
+                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            int ret = sqlCommand.ExecuteNonQuery();
+
+            this._Connection.Close();
+
+            return ret;
+
+        }
+
+        #endregion
+
+        #region Update
+        //Update
+        protected virtual int GetCountDataResultUpdateByQueryAndParameter(string query, object[] parameter = null)
+        {
+            this._Connection = new SqlConnection(this._ConnectionSTR);
+
+            if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
+            //"UPDATE TableName SET Column1 = @NewValue1, Column2 = @NewValue2 WHERE ConditionColumn = @ConditionValue";
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 1;
                 foreach (string item in listPara)
                 {
                     if (item.Contains('@'))
@@ -72,6 +108,8 @@ namespace ManagingClients._Data.Scripts.DAO
             return ret;
 
         }
+
+        #endregion
     }
 
 }

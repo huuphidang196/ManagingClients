@@ -3,6 +3,7 @@ using ManagingClients._Data.Scripts.DTO.Account;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,7 +68,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
 
             this._lblNameLogIn.Text = profileAccount.Name_Log_In;
             this._lblPersonDepartment.Text = profileAccount.Department.Name_Department;
-            this._lblPersonPosition.Text = profileAccount.GetNamePosition;
+            this._lblPersonPosition.Text = profileAccount.GetNamePosition();
             this._lblLevelAcess.Text = profileAccount.Level_Access.ToString();
 
             this._txtNameRealistic.Text = profileAccount.Name_Realistic;
@@ -80,7 +81,15 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
             this._cboMonthDate.Text = profileAccount.Date_Of_Birth.Month.ToString();
             this._cboYearDate.Text = profileAccount.Date_Of_Birth.Year.ToString();
 
+            this._ptbAvatar.Image = this.ByteArrayToImage(profileAccount.Picture_Avatar);
 
+        }
+        // Chuyển đổi mảng byte thành hình ảnh
+        protected virtual Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
         #endregion
 
@@ -97,7 +106,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
         {
             ProfileAccount profileAccount = this.GetProfileAccountFromUI();
 
-            bool saveSuccess = DetailProfileProvider.Instance.InsertDataProfileAccount(profileAccount);
+            bool saveSuccess = DetailProfileProvider.Instance.UpdateDataProfileAccount(profileAccount);
 
             string strLog = saveSuccess ? "Lưu thành công !" : "Lưu thất bại";
 
@@ -110,8 +119,8 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
 
             profileAccount.Password = frmMain_Control.Instance.ProfileAccount.Password;
             profileAccount.Name_Log_In = this._lblNameLogIn.Text;
-            profileAccount.Name_Department = this._lblPersonDepartment.Text;
-            profileAccount.Person_Position = (Position)Enum.Parse(typeof(Position), this._lblPersonPosition.Text);
+            profileAccount.Department = frmMain_Control.Instance.ProfileAccount.Department;
+            profileAccount.Person_Position = frmMain_Control.Instance.ProfileAccount.Person_Position;
             profileAccount.Level_Access = (LevelAccess)Enum.Parse(typeof(LevelAccess), this._lblLevelAcess.Text);
 
             profileAccount.Name_Realistic = this._txtNameRealistic.Text;

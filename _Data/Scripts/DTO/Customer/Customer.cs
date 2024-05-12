@@ -16,11 +16,13 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         Cancel_Contract = 3,
 
-        Signed_Contract = 4,
+        Wait_Pay_Complete = 4,
 
-        Wait_Pay_Complete = 5,
+        Delivering = 5,
 
-        Finished_Contract = 6
+        Arriving_Customer = 6,
+
+        Finished_Contract = 7
     }
 
     public class Customer_Order

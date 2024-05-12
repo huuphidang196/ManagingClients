@@ -33,6 +33,14 @@ namespace ManagingClients
         {
             
             ProfileAccount profileAccount = DetailProfileProvider.Instance.GetProfileAccount(this.txtNameLoginAccount.Text);
+
+            if (profileAccount == null)
+            {
+                MessageBox.Show("Sai thông tin đăng nhập");
+
+                return;
+            }    
+
             this.Close();
     
             frmMain_Control.Instance.SetProfileAccount(profileAccount);
