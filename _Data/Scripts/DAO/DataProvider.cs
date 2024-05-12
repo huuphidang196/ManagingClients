@@ -10,34 +10,67 @@ namespace ManagingClients._Data.Scripts.DAO
 {
     public class DataProvider
     {
-        protected string _ConnectionSTR = "Server=DANGHUUPHI/MSSQLSERVER01;Database=CSDL_MCGSES;User Id=huuphidang2804;pwd=19062001Phi@";
+        protected string _ConnectionSTR = "Server=DANGHUUPHI\\SQLEXPRESS;Database=CSDL_GSESMC;User Id=huuphidang196;pwd=19062001Phi@";
+        protected SqlConnection _Connection;
 
+        //Read
         protected virtual SqlDataReader GetDataReaderByQueryAndParameter(string query, object[] parameter = null)
         {
-            using (SqlConnection conn = new SqlConnection(this._ConnectionSTR))
+            this._Connection = new SqlConnection(this._ConnectionSTR);
+
+            if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
+
+            if (parameter != null)
             {
-                if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
-
-                SqlCommand sqlCommand = new SqlCommand(query, conn);
-
-                if (parameter != null)
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    if (item.Contains('@'))
                     {
-                        if (item.Contains('@'))
-                        {
-                            sqlCommand.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
+                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
                     }
                 }
-
-                SqlDataReader reader = sqlCommand.ExecuteReader();
-
-                return reader;
             }
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+
+            return reader;
+
+        }
+
+        //Insert
+        protected virtual int GetCountDataResultByQueryAndParameter(string query, object[] parameter = null)
+        {
+            this._Connection = new SqlConnection(this._ConnectionSTR);
+
+            if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
+     
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(',');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            int ret = sqlCommand.ExecuteNonQuery();
+
+            this._Connection.Close();
+
+            return ret;
+
         }
     }
 

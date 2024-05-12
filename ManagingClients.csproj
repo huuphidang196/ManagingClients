@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLoginForm.Designer.cs">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\PanelMainControl.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\PanelDetailProfileSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\tabCtrlPADetail\TabControlProfileDetailSC.cs" />
@@ -65,6 +71,12 @@
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\ProfileAccount.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\ContractCustomer.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\Customer.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\DeliveryCost.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\InformationCustomer.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\InquiryQuotation.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\Merchandise.cs" />
     <Compile Include="_Data\Scripts\SaveManager\SaveManager.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -78,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserLoginForm.resx">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

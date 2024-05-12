@@ -28,6 +28,12 @@ namespace ManagingClients
             private set { frmMain_Control._instance = value; }
         }
 
+        public const float VAT = 10;//thuế vat 
+
+        protected ProfileAccount _ProfileAccount;
+        public ProfileAccount ProfileAccount => _ProfileAccount;
+        
+        public virtual void SetProfileAccount(ProfileAccount profileAccount) => this._ProfileAccount = profileAccount;
 
         public frmMain_Control()
         {
@@ -43,8 +49,12 @@ namespace ManagingClients
 
         private void frmMain_Control_Load(object sender, EventArgs e)
         {
-            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
+           // PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
 
+        }
+        private void btnProfileAccount_Click(object sender, EventArgs e)
+        {
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
         }
 
         private void btnPurchasingOrder_Click(object sender, EventArgs e)
@@ -52,22 +62,21 @@ namespace ManagingClients
             PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelPurchasingOrder();
         }
 
-        private void btnProfileAccount_Click(object sender, EventArgs e)
-        {
-            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
-        }
-
+        #region Detail_Profile_Account
+    
         private void btnSavePAC_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
-                Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ToString());
+           PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
+                Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.SaveDataProfileAccount();
         }
 
-        private void tabCtrlPADetail_Selected(object sender, TabControlEventArgs e)
+        private void btnSelectAVT_Click(object sender, EventArgs e)
         {
-            ProfileAccount profileAccount = DetailProfileProvider.Instance.GetProfileAccount();
-
-            txtNameRealistic.Text = profileAccount.Name_Realistic;
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
+                Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ProcessEventButtonSelectAvatarClick();
         }
+        #endregion
+
+       
     }
 }

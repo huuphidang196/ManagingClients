@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagingClients._Data.Scripts.DTO.Account;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace ManagingClients
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain_Control());
+            //Application.Run(new frmUserLoginForm());
+            Application.Run(frmMain_Control.Instance);
         }
     }
 }

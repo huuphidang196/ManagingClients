@@ -6,19 +6,25 @@ using System.Threading.Tasks;
 
 namespace ManagingClients._Data.Scripts.DTO.Account
 {
-    public enum Department
+    public class Department
     {
-        NO_DEPARTMENT = 0,
+        public int ID_Department { get; set; }
+        public string Name_Department { get; set; }
 
-        COMPANY = 1,
-        
-        TECHNICAL_DEPARTMENT = 2,
+        public List<ProfileAccount> List_Staff { get; private set; }
 
-        SALE_DEPARTMENT = 3,
-        
-        ACCOUNTING_DEPARTMENT = 4,
+        public virtual void AddStaffIntoDepartment(ProfileAccount profileAccount)
+        {
+            this.List_Staff.Add(profileAccount);
+        }
 
+        public Department(int id, string name_Department)
+        {
+            this.ID_Department = id;
+            this.Name_Department = name_Department;
+        }
     }
+
     public enum Position
     {
         VISITOR = 0,
@@ -55,6 +61,20 @@ namespace ManagingClients._Data.Scripts.DTO.Account
     {
         MEN = 0,
 
-        WOMAN = 1,   
+        WOMAN = 1,
     }
+
+    //public enum Department
+    //{
+    //    NO_DEPARTMENT = 0,
+
+    //    GSES_COMPANY = 1,
+
+    //    TECHNICAL_DEPARTMENT = 2,
+
+    //    SALE_DEPARTMENT = 3,
+
+    //    ACCOUNTING_DEPARTMENT = 4,
+
+    //}
 }
