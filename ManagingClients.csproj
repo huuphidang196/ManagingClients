@@ -66,17 +66,21 @@
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\tabCtrlPADetail\tabProfile\pnlPA\PanelProfileAccountSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\PanelPurchasingOrderSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\PanelDisplayOverallSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlBottomDisplay\PanelBottomDisplayOrderSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlBottomDisplay\TabControlPO\TabControlPODSKH\TabControlDSKHSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlBottomDisplay\TabControlPO\TabControlPOSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\SplitContainerOrderSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\SplitContainerMainControl.cs" />
     <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
+    <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlPurchasingOrder\PurchasingOrderProvider.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\ProfileAccount.cs" />
     <Compile Include="_Data\Scripts\DTO\Customer\ContractCustomer.cs" />
-    <Compile Include="_Data\Scripts\DTO\Customer\Customer.cs" />
-    <Compile Include="_Data\Scripts\DTO\Customer\DeliveryCost.cs" />
-    <Compile Include="_Data\Scripts\DTO\Customer\InformationCustomer.cs" />
-    <Compile Include="_Data\Scripts\DTO\Customer\InquiryQuotation.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\CustomerGSES.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\InqueryQuotation.cs" />
     <Compile Include="_Data\Scripts\DTO\Customer\Merchandise.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\ProductTypeUnitsDevice.cs" />
     <Compile Include="_Data\Scripts\SaveManager\SaveManager.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -108,6 +112,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="_Data\Scripts\SaveManager\Query\PersonalAccount\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,6 +38,22 @@ namespace ManagingClients
             this.btnPurchasingOrder = new System.Windows.Forms.Button();
             this.btnProfileAccount = new System.Windows.Forms.Button();
             this.pnlDisplayOverall = new System.Windows.Forms.Panel();
+            this.pnlPurchasingOrder = new System.Windows.Forms.Panel();
+            this.spcPurchasingOrder = new System.Windows.Forms.SplitContainer();
+            this.pnlOptions = new System.Windows.Forms.Panel();
+            this.fpnlOptionsNB = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlBottomDisplayPO = new System.Windows.Forms.Panel();
+            this.tabControlPO = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvDisplayAllCusPO = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.pnlDetailProfile = new System.Windows.Forms.Panel();
             this.tabCtrlPADetail = new System.Windows.Forms.TabControl();
             this.tabProfile = new System.Windows.Forms.TabPage();
@@ -82,7 +98,6 @@ namespace ManagingClients
             this.label19 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnSavePAC = new System.Windows.Forms.Button();
-            this.tabSettingNotify = new System.Windows.Forms.TabPage();
             this.tabPersonalAccount = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -99,22 +114,8 @@ namespace ManagingClients
             this.label11 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pnlPurchasingOrder = new System.Windows.Forms.Panel();
-            this.spcPurchasingOrder = new System.Windows.Forms.SplitContainer();
-            this.pnlOptions = new System.Windows.Forms.Panel();
-            this.fpnlOptionsNB = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlBottomDisplay = new System.Windows.Forms.Panel();
+            this.tabSettingNotify = new System.Windows.Forms.TabPage();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.tabControlPO = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.pnlMainControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainControl)).BeginInit();
             this.splitContainerMainControl.Panel1.SuspendLayout();
@@ -128,6 +129,16 @@ namespace ManagingClients
             ((System.ComponentModel.ISupportInitialize)(this.ptbGses)).BeginInit();
             this.pnlBottomNB.SuspendLayout();
             this.pnlDisplayOverall.SuspendLayout();
+            this.pnlPurchasingOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).BeginInit();
+            this.spcPurchasingOrder.Panel1.SuspendLayout();
+            this.spcPurchasingOrder.Panel2.SuspendLayout();
+            this.spcPurchasingOrder.SuspendLayout();
+            this.pnlOptions.SuspendLayout();
+            this.pnlBottomDisplayPO.SuspendLayout();
+            this.tabControlPO.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).BeginInit();
             this.pnlDetailProfile.SuspendLayout();
             this.tabCtrlPADetail.SuspendLayout();
             this.tabProfile.SuspendLayout();
@@ -153,14 +164,6 @@ namespace ManagingClients
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.pnlPurchasingOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).BeginInit();
-            this.spcPurchasingOrder.Panel1.SuspendLayout();
-            this.spcPurchasingOrder.Panel2.SuspendLayout();
-            this.spcPurchasingOrder.SuspendLayout();
-            this.pnlOptions.SuspendLayout();
-            this.pnlBottomDisplay.SuspendLayout();
-            this.tabControlPO.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainControl
@@ -279,13 +282,194 @@ namespace ManagingClients
             // pnlDisplayOverall
             // 
             this.pnlDisplayOverall.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlDisplayOverall.Controls.Add(this.pnlDetailProfile);
             this.pnlDisplayOverall.Controls.Add(this.pnlPurchasingOrder);
+            this.pnlDisplayOverall.Controls.Add(this.pnlDetailProfile);
             this.pnlDisplayOverall.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplayOverall.Location = new System.Drawing.Point(0, 0);
             this.pnlDisplayOverall.Name = "pnlDisplayOverall";
             this.pnlDisplayOverall.Size = new System.Drawing.Size(954, 782);
             this.pnlDisplayOverall.TabIndex = 0;
+            // 
+            // pnlPurchasingOrder
+            // 
+            this.pnlPurchasingOrder.AutoScroll = true;
+            this.pnlPurchasingOrder.Controls.Add(this.spcPurchasingOrder);
+            this.pnlPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPurchasingOrder.Location = new System.Drawing.Point(0, 0);
+            this.pnlPurchasingOrder.Name = "pnlPurchasingOrder";
+            this.pnlPurchasingOrder.Size = new System.Drawing.Size(954, 782);
+            this.pnlPurchasingOrder.TabIndex = 1;
+            this.pnlPurchasingOrder.Visible = false;
+            // 
+            // spcPurchasingOrder
+            // 
+            this.spcPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcPurchasingOrder.Location = new System.Drawing.Point(0, 0);
+            this.spcPurchasingOrder.Name = "spcPurchasingOrder";
+            this.spcPurchasingOrder.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // spcPurchasingOrder.Panel1
+            // 
+            this.spcPurchasingOrder.Panel1.Controls.Add(this.pnlOptions);
+            // 
+            // spcPurchasingOrder.Panel2
+            // 
+            this.spcPurchasingOrder.Panel2.Controls.Add(this.pnlBottomDisplayPO);
+            this.spcPurchasingOrder.Size = new System.Drawing.Size(954, 782);
+            this.spcPurchasingOrder.SplitterDistance = 81;
+            this.spcPurchasingOrder.SplitterWidth = 10;
+            this.spcPurchasingOrder.TabIndex = 1;
+            // 
+            // pnlOptions
+            // 
+            this.pnlOptions.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnlOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOptions.Controls.Add(this.fpnlOptionsNB);
+            this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOptions.Location = new System.Drawing.Point(0, 0);
+            this.pnlOptions.Name = "pnlOptions";
+            this.pnlOptions.Size = new System.Drawing.Size(954, 81);
+            this.pnlOptions.TabIndex = 0;
+            // 
+            // fpnlOptionsNB
+            // 
+            this.fpnlOptionsNB.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.fpnlOptionsNB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fpnlOptionsNB.Location = new System.Drawing.Point(0, 0);
+            this.fpnlOptionsNB.Name = "fpnlOptionsNB";
+            this.fpnlOptionsNB.Size = new System.Drawing.Size(952, 79);
+            this.fpnlOptionsNB.TabIndex = 0;
+            // 
+            // pnlBottomDisplayPO
+            // 
+            this.pnlBottomDisplayPO.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlBottomDisplayPO.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pnlBottomDisplayPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBottomDisplayPO.Controls.Add(this.tabControlPO);
+            this.pnlBottomDisplayPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottomDisplayPO.Location = new System.Drawing.Point(0, 0);
+            this.pnlBottomDisplayPO.Name = "pnlBottomDisplayPO";
+            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(954, 691);
+            this.pnlBottomDisplayPO.TabIndex = 2;
+            // 
+            // tabControlPO
+            // 
+            this.tabControlPO.Controls.Add(this.tabPage1);
+            this.tabControlPO.Controls.Add(this.tabPage2);
+            this.tabControlPO.Controls.Add(this.tabPage3);
+            this.tabControlPO.Controls.Add(this.tabPage4);
+            this.tabControlPO.Controls.Add(this.tabPage5);
+            this.tabControlPO.Controls.Add(this.tabPage6);
+            this.tabControlPO.Controls.Add(this.tabPage7);
+            this.tabControlPO.Controls.Add(this.tabPage8);
+            this.tabControlPO.Controls.Add(this.tabPage9);
+            this.tabControlPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPO.Location = new System.Drawing.Point(0, 0);
+            this.tabControlPO.Name = "tabControlPO";
+            this.tabControlPO.SelectedIndex = 0;
+            this.tabControlPO.Size = new System.Drawing.Size(952, 689);
+            this.tabControlPO.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dgvDisplayAllCusPO);
+            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(944, 654);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Danh sách KH";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgvDisplayAllCusPO
+            // 
+            this.dgvDisplayAllCusPO.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvDisplayAllCusPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDisplayAllCusPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDisplayAllCusPO.Location = new System.Drawing.Point(3, 3);
+            this.dgvDisplayAllCusPO.Name = "dgvDisplayAllCusPO";
+            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 648);
+            this.dgvDisplayAllCusPO.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(944, 663);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Yêu cầu Báo giá";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(944, 663);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Đã gửi Báo giá";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(944, 663);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Yêu cầu HĐ";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(944, 663);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Chưa Hoàn thành TT";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(944, 663);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "Vận Chuyển";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(944, 663);
+            this.tabPage7.TabIndex = 7;
+            this.tabPage7.Text = "Chờ Giao hàng";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(944, 663);
+            this.tabPage8.TabIndex = 8;
+            this.tabPage8.Text = "Hoàn Thành";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(944, 663);
+            this.tabPage9.TabIndex = 9;
+            this.tabPage9.Text = "Đã Hủy";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // pnlDetailProfile
             // 
@@ -781,24 +965,14 @@ namespace ManagingClients
             this.btnSavePAC.UseVisualStyleBackColor = false;
             this.btnSavePAC.Click += new System.EventHandler(this.btnSavePAC_Click);
             // 
-            // tabSettingNotify
-            // 
-            this.tabSettingNotify.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tabSettingNotify.Location = new System.Drawing.Point(4, 31);
-            this.tabSettingNotify.Name = "tabSettingNotify";
-            this.tabSettingNotify.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettingNotify.Size = new System.Drawing.Size(946, 747);
-            this.tabSettingNotify.TabIndex = 1;
-            this.tabSettingNotify.Text = "Cài đặt thông báo";
-            // 
             // tabPersonalAccount
             // 
             this.tabPersonalAccount.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabPersonalAccount.Controls.Add(this.flowLayoutPanel2);
             this.tabPersonalAccount.Controls.Add(this.panel10);
-            this.tabPersonalAccount.Location = new System.Drawing.Point(4, 31);
+            this.tabPersonalAccount.Location = new System.Drawing.Point(4, 22);
             this.tabPersonalAccount.Name = "tabPersonalAccount";
-            this.tabPersonalAccount.Size = new System.Drawing.Size(946, 747);
+            this.tabPersonalAccount.Size = new System.Drawing.Size(946, 756);
             this.tabPersonalAccount.TabIndex = 2;
             this.tabPersonalAccount.Text = "Cài đặt cá nhân";
             // 
@@ -952,66 +1126,15 @@ namespace ManagingClients
             this.label10.TabIndex = 0;
             this.label10.Text = "Privacy Settings";
             // 
-            // pnlPurchasingOrder
+            // tabSettingNotify
             // 
-            this.pnlPurchasingOrder.AutoScroll = true;
-            this.pnlPurchasingOrder.Controls.Add(this.spcPurchasingOrder);
-            this.pnlPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPurchasingOrder.Location = new System.Drawing.Point(0, 0);
-            this.pnlPurchasingOrder.Name = "pnlPurchasingOrder";
-            this.pnlPurchasingOrder.Size = new System.Drawing.Size(954, 782);
-            this.pnlPurchasingOrder.TabIndex = 1;
-            this.pnlPurchasingOrder.Visible = false;
-            // 
-            // spcPurchasingOrder
-            // 
-            this.spcPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spcPurchasingOrder.Location = new System.Drawing.Point(0, 0);
-            this.spcPurchasingOrder.Name = "spcPurchasingOrder";
-            this.spcPurchasingOrder.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // spcPurchasingOrder.Panel1
-            // 
-            this.spcPurchasingOrder.Panel1.Controls.Add(this.pnlOptions);
-            // 
-            // spcPurchasingOrder.Panel2
-            // 
-            this.spcPurchasingOrder.Panel2.Controls.Add(this.pnlBottomDisplay);
-            this.spcPurchasingOrder.Size = new System.Drawing.Size(954, 782);
-            this.spcPurchasingOrder.SplitterDistance = 81;
-            this.spcPurchasingOrder.SplitterWidth = 10;
-            this.spcPurchasingOrder.TabIndex = 1;
-            // 
-            // pnlOptions
-            // 
-            this.pnlOptions.BackColor = System.Drawing.Color.SkyBlue;
-            this.pnlOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlOptions.Controls.Add(this.fpnlOptionsNB);
-            this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOptions.Location = new System.Drawing.Point(0, 0);
-            this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(954, 81);
-            this.pnlOptions.TabIndex = 0;
-            // 
-            // fpnlOptionsNB
-            // 
-            this.fpnlOptionsNB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fpnlOptionsNB.Location = new System.Drawing.Point(0, 0);
-            this.fpnlOptionsNB.Name = "fpnlOptionsNB";
-            this.fpnlOptionsNB.Size = new System.Drawing.Size(952, 79);
-            this.fpnlOptionsNB.TabIndex = 0;
-            // 
-            // pnlBottomDisplay
-            // 
-            this.pnlBottomDisplay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlBottomDisplay.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.pnlBottomDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBottomDisplay.Controls.Add(this.tabControlPO);
-            this.pnlBottomDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottomDisplay.Location = new System.Drawing.Point(0, 0);
-            this.pnlBottomDisplay.Name = "pnlBottomDisplay";
-            this.pnlBottomDisplay.Size = new System.Drawing.Size(954, 691);
-            this.pnlBottomDisplay.TabIndex = 2;
+            this.tabSettingNotify.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabSettingNotify.Location = new System.Drawing.Point(4, 22);
+            this.tabSettingNotify.Name = "tabSettingNotify";
+            this.tabSettingNotify.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSettingNotify.Size = new System.Drawing.Size(946, 756);
+            this.tabSettingNotify.TabIndex = 1;
+            this.tabSettingNotify.Text = "Cài đặt thông báo";
             // 
             // pnlHeader
             // 
@@ -1024,114 +1147,6 @@ namespace ManagingClients
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1106, 70);
             this.pnlHeader.TabIndex = 0;
-            // 
-            // tabControlPO
-            // 
-            this.tabControlPO.Controls.Add(this.tabPage1);
-            this.tabControlPO.Controls.Add(this.tabPage2);
-            this.tabControlPO.Controls.Add(this.tabPage3);
-            this.tabControlPO.Controls.Add(this.tabPage4);
-            this.tabControlPO.Controls.Add(this.tabPage5);
-            this.tabControlPO.Controls.Add(this.tabPage6);
-            this.tabControlPO.Controls.Add(this.tabPage7);
-            this.tabControlPO.Controls.Add(this.tabPage8);
-            this.tabControlPO.Controls.Add(this.tabPage9);
-            this.tabControlPO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPO.Location = new System.Drawing.Point(0, 0);
-            this.tabControlPO.Name = "tabControlPO";
-            this.tabControlPO.SelectedIndex = 0;
-            this.tabControlPO.Size = new System.Drawing.Size(952, 689);
-            this.tabControlPO.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(944, 654);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Danh sách KH";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(944, 654);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Yêu cầu Báo giá";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 31);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(944, 654);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Đã gửi Báo giá";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 31);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(944, 654);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Yêu cầu HĐ";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 31);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(944, 654);
-            this.tabPage5.TabIndex = 5;
-            this.tabPage5.Text = "Chưa Hoàn thành TT";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 31);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(944, 654);
-            this.tabPage6.TabIndex = 6;
-            this.tabPage6.Text = "Vận Chuyển";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 31);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(944, 654);
-            this.tabPage7.TabIndex = 7;
-            this.tabPage7.Text = "Chờ Giao hàng";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 31);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(944, 654);
-            this.tabPage8.TabIndex = 8;
-            this.tabPage8.Text = "Hoàn Thành";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 31);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(944, 654);
-            this.tabPage9.TabIndex = 9;
-            this.tabPage9.Text = "Đã Hủy";
-            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // frmMain_Control
             // 
@@ -1160,6 +1175,16 @@ namespace ManagingClients
             ((System.ComponentModel.ISupportInitialize)(this.ptbGses)).EndInit();
             this.pnlBottomNB.ResumeLayout(false);
             this.pnlDisplayOverall.ResumeLayout(false);
+            this.pnlPurchasingOrder.ResumeLayout(false);
+            this.spcPurchasingOrder.Panel1.ResumeLayout(false);
+            this.spcPurchasingOrder.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).EndInit();
+            this.spcPurchasingOrder.ResumeLayout(false);
+            this.pnlOptions.ResumeLayout(false);
+            this.pnlBottomDisplayPO.ResumeLayout(false);
+            this.tabControlPO.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).EndInit();
             this.pnlDetailProfile.ResumeLayout(false);
             this.tabCtrlPADetail.ResumeLayout(false);
             this.tabProfile.ResumeLayout(false);
@@ -1202,14 +1227,6 @@ namespace ManagingClients
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.pnlPurchasingOrder.ResumeLayout(false);
-            this.spcPurchasingOrder.Panel1.ResumeLayout(false);
-            this.spcPurchasingOrder.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).EndInit();
-            this.spcPurchasingOrder.ResumeLayout(false);
-            this.pnlOptions.ResumeLayout(false);
-            this.pnlBottomDisplay.ResumeLayout(false);
-            this.tabControlPO.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1219,9 +1236,7 @@ namespace ManagingClients
         private System.Windows.Forms.PictureBox ptbGses;
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.Panel pnlBottomNB;
-        private System.Windows.Forms.Panel pnlBottomDisplay;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.SplitContainer spcPurchasingOrder;
         private System.Windows.Forms.Button btnProfileAccount;
         private System.Windows.Forms.Button btnPurchasingOrder;
         private System.Windows.Forms.FlowLayoutPanel fpnlOptionsNB;
@@ -1291,7 +1306,6 @@ namespace ManagingClients
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TabControl tabControlPO;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -1301,6 +1315,10 @@ namespace ManagingClients
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage9;
+        public System.Windows.Forms.DataGridView dgvDisplayAllCusPO;
+        public System.Windows.Forms.Panel pnlBottomDisplayPO;
+        public System.Windows.Forms.SplitContainer spcPurchasingOrder;
+        public System.Windows.Forms.TabControl tabControlPO;
     }
 }
 
