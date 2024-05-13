@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ManagingClients._Data.Scripts.DAO
 {
@@ -39,6 +40,45 @@ namespace ManagingClients._Data.Scripts.DAO
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
             return reader;
+
+        }
+
+        protected virtual DataTable GetDataTableByNameTable(string nameTable)
+        {
+            string query = "Select * from " + nameTable;
+
+            DataTable dataTable = this.GetDataTableByExecuteQueryAndParameter(query, null);
+
+            return dataTable;
+        }
+        protected virtual DataTable GetDataTableByExecuteQueryAndParameter(string query, object[] parameter = null)
+        {
+            DataTable dataTable = new DataTable();
+
+            this._Connection = new SqlConnection(this._ConnectionSTR);
+
+            if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
+
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+
+            return dataTable;
 
         }
 

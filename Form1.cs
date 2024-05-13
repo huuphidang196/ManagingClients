@@ -75,8 +75,13 @@ namespace ManagingClients
             PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
                 Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ProcessEventButtonSelectAvatarClick();
         }
+
         #endregion
 
-       
+        private void tabControlPO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
+                SplitContainerOrderSC.PanelBottomDisplayOrderSC.TabControlPOSC.ProcessTabControlPurchasingOrderSelectedChange();
+        }
     }
 }

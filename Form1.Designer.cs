@@ -41,11 +41,17 @@ namespace ManagingClients
             this.pnlPurchasingOrder = new System.Windows.Forms.Panel();
             this.spcPurchasingOrder = new System.Windows.Forms.SplitContainer();
             this.pnlOptions = new System.Windows.Forms.Panel();
-            this.fpnlOptionsNB = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlBottomDisplayPO = new System.Windows.Forms.Panel();
             this.tabControlPO = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.dgvDisplayAllCusPO = new System.Windows.Forms.DataGridView();
+            this.lvDSKH = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -116,6 +122,11 @@ namespace ManagingClients
             this.label10 = new System.Windows.Forms.Label();
             this.tabSettingNotify = new System.Windows.Forms.TabPage();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.pnlMainControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainControl)).BeginInit();
             this.splitContainerMainControl.Panel1.SuspendLayout();
@@ -138,6 +149,7 @@ namespace ManagingClients
             this.pnlBottomDisplayPO.SuspendLayout();
             this.tabControlPO.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).BeginInit();
             this.pnlDetailProfile.SuspendLayout();
             this.tabCtrlPADetail.SuspendLayout();
@@ -164,6 +176,8 @@ namespace ManagingClients
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainControl
@@ -322,23 +336,14 @@ namespace ManagingClients
             // 
             // pnlOptions
             // 
-            this.pnlOptions.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnlOptions.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pnlOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlOptions.Controls.Add(this.fpnlOptionsNB);
+            this.pnlOptions.Controls.Add(this.panel18);
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlOptions.Location = new System.Drawing.Point(0, 0);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(954, 81);
             this.pnlOptions.TabIndex = 0;
-            // 
-            // fpnlOptionsNB
-            // 
-            this.fpnlOptionsNB.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.fpnlOptionsNB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fpnlOptionsNB.Location = new System.Drawing.Point(0, 0);
-            this.fpnlOptionsNB.Name = "fpnlOptionsNB";
-            this.fpnlOptionsNB.Size = new System.Drawing.Size(952, 79);
-            this.fpnlOptionsNB.TabIndex = 0;
             // 
             // pnlBottomDisplayPO
             // 
@@ -369,10 +374,11 @@ namespace ManagingClients
             this.tabControlPO.SelectedIndex = 0;
             this.tabControlPO.Size = new System.Drawing.Size(952, 689);
             this.tabControlPO.TabIndex = 0;
+            this.tabControlPO.SelectedIndexChanged += new System.EventHandler(this.tabControlPO_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dgvDisplayAllCusPO);
+            this.tabPage1.Controls.Add(this.panel16);
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -381,15 +387,83 @@ namespace ManagingClients
             this.tabPage1.Text = "Danh sách KH";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.dgvDisplayAllCusPO);
+            this.panel16.Controls.Add(this.lvDSKH);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(3, 3);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(938, 648);
+            this.panel16.TabIndex = 1;
+            // 
             // dgvDisplayAllCusPO
             // 
+            this.dgvDisplayAllCusPO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDisplayAllCusPO.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDisplayAllCusPO.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvDisplayAllCusPO.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dgvDisplayAllCusPO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvDisplayAllCusPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDisplayAllCusPO.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvDisplayAllCusPO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDisplayAllCusPO.Location = new System.Drawing.Point(3, 3);
+            this.dgvDisplayAllCusPO.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvDisplayAllCusPO.Location = new System.Drawing.Point(0, 0);
             this.dgvDisplayAllCusPO.Name = "dgvDisplayAllCusPO";
+            this.dgvDisplayAllCusPO.ReadOnly = true;
+            this.dgvDisplayAllCusPO.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 648);
-            this.dgvDisplayAllCusPO.TabIndex = 0;
+            this.dgvDisplayAllCusPO.TabIndex = 2;
+            // 
+            // lvDSKH
+            // 
+            this.lvDSKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lvDSKH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvDSKH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDSKH.FullRowSelect = true;
+            this.lvDSKH.GridLines = true;
+            this.lvDSKH.HideSelection = false;
+            this.lvDSKH.Location = new System.Drawing.Point(0, 0);
+            this.lvDSKH.Name = "lvDSKH";
+            this.lvDSKH.Size = new System.Drawing.Size(938, 648);
+            this.lvDSKH.TabIndex = 1;
+            this.lvDSKH.UseCompatibleStateImageBehavior = false;
+            this.lvDSKH.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên Khách Hàng";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 500;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Địa chỉ Công Ty";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 500;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Số điện thoại";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 250;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Mã số thuế";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 250;
             // 
             // tabPage2
             // 
@@ -1148,6 +1222,46 @@ namespace ManagingClients
             this.pnlHeader.Size = new System.Drawing.Size(1106, 70);
             this.pnlHeader.TabIndex = 0;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmToolStripMenuItem,
+            this.xóaKháchHàngToolStripMenuItem,
+            this.sửaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(952, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // thêmToolStripMenuItem
+            // 
+            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.thêmToolStripMenuItem.Text = "Thêm mới";
+            // 
+            // xóaKháchHàngToolStripMenuItem
+            // 
+            this.xóaKháchHàngToolStripMenuItem.Name = "xóaKháchHàngToolStripMenuItem";
+            this.xóaKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.xóaKháchHàngToolStripMenuItem.Text = "           Xóa         ";
+            // 
+            // sửaToolStripMenuItem
+            // 
+            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
+            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.sửaToolStripMenuItem.Text = "            Sửa          ";
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.menuStrip1);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(952, 37);
+            this.panel18.TabIndex = 1;
+            // 
             // frmMain_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -1157,6 +1271,7 @@ namespace ManagingClients
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlMainControl);
             this.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmMain_Control";
             this.Text = "Managing_Customer";
@@ -1184,6 +1299,7 @@ namespace ManagingClients
             this.pnlBottomDisplayPO.ResumeLayout(false);
             this.tabControlPO.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).EndInit();
             this.pnlDetailProfile.ResumeLayout(false);
             this.tabCtrlPADetail.ResumeLayout(false);
@@ -1227,6 +1343,10 @@ namespace ManagingClients
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1239,7 +1359,6 @@ namespace ManagingClients
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button btnProfileAccount;
         private System.Windows.Forms.Button btnPurchasingOrder;
-        private System.Windows.Forms.FlowLayoutPanel fpnlOptionsNB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -1315,10 +1434,22 @@ namespace ManagingClients
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage9;
-        public System.Windows.Forms.DataGridView dgvDisplayAllCusPO;
         public System.Windows.Forms.Panel pnlBottomDisplayPO;
         public System.Windows.Forms.SplitContainer spcPurchasingOrder;
         public System.Windows.Forms.TabControl tabControlPO;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        public System.Windows.Forms.ListView lvDSKH;
+        public System.Windows.Forms.DataGridView dgvDisplayAllCusPO;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaKháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
+        private System.Windows.Forms.Panel panel18;
     }
 }
 
