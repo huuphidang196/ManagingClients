@@ -83,5 +83,18 @@ namespace ManagingClients
             PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
                 SplitContainerOrderSC.PanelBottomDisplayOrderSC.TabControlPOSC.ProcessTabControlPurchasingOrderSelectedChange();
         }
+
+        #region pnlBottomOption
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click");
+        }
+
+        private void cboSortOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
+               SplitContainerOrderSC.PanelOptionsSC.PanelBottomOption.SortListDataGridViewBySorting();
+        }
+        #endregion pnlBottomOption
     }
 }

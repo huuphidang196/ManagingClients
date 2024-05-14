@@ -69,8 +69,12 @@
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlBottomDisplay\PanelBottomDisplayOrderSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlBottomDisplay\TabControlPO\TabControlPODSKH\TabControlDSKHSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlBottomDisplay\TabControlPO\TabControlPOSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlOptions\PanelOptionsSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlOptions\pnlBottomOption\PanelBottomOption.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlOptions\pnlHeaderOption\PanelHeaderOptionSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\SplitContainerOrderSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\SplitContainerMainControl.cs" />
+    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\TransferEnumString.cs" />
     <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlPurchasingOrder\PurchasingOrderProvider.cs" />
