@@ -49,7 +49,7 @@ namespace ManagingClients
 
         private void frmMain_Control_Load(object sender, EventArgs e)
         {
-            // PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
 
         }
         private void btnProfileAccount_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace ManagingClients
         private void btnSelectAVT_Click(object sender, EventArgs e)
         {
             PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
-                Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ProcessEventButtonSelectAvatarClick();
+            Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.ProcessEventButtonSelectAvatarClick();
         }
 
         #endregion
@@ -81,7 +81,7 @@ namespace ManagingClients
         private void tabControlPO_SelectedIndexChanged(object sender, EventArgs e)
         {
             PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
-                SplitContainerOrderSC.PanelBottomDisplayOrderSC.TabControlPOSC.ProcessTabControlPurchasingOrderSelectedChange();
+               SplitContainerOrderSC.PanelBottomDisplayOrderSC.TabControlPOSC.ProcessTabControlPurchasingOrderSelectedChange();
         }
 
         #region pnlBottomOption
@@ -92,11 +92,11 @@ namespace ManagingClients
 
         private void cboSortOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
-               SplitContainerOrderSC.PanelOptionsSC.PanelBottomOption.SortListDataGridViewBySorting();
+            //PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
+              // SplitContainerOrderSC.PanelOptionsSC.PanelBottomOption.SortListDataGridViewBySorting();
         }
         #endregion pnlBottomOption
 
-      
+
     }
 }

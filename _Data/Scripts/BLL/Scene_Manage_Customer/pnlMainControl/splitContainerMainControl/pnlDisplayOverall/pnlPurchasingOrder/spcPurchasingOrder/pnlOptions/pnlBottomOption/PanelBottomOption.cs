@@ -30,6 +30,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
             this._cboPeriodOptions = frmMain_Control.Instance.cboPeriodOptions;
             this._cboSortOptions = frmMain_Control.Instance.cboSortOptions;
+            this._cboSortOptions.SelectedIndexChanged += this.SortListDataGridViewBySorting;
 
             this._dtpFromTimeOptions = frmMain_Control.Instance.dtpFromTimeOptions;
             this._dtpFromTimeOptions.Format = DateTimePickerFormat.Custom;
@@ -79,7 +80,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         }
         #endregion
 
-        public virtual void SortListDataGridViewBySorting()
+        public virtual void SortListDataGridViewBySorting(object sender, EventArgs e)
         {
             // Lấy chỉ số được chọn trong ComboBox
             int selectedIndex = this._cboSortOptions.SelectedIndex;

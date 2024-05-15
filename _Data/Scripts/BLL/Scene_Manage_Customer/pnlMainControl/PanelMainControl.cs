@@ -21,7 +21,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
             private set { PanelMainControl._instance = value; }
         }
-   
+
         protected Panel _pnlMainControl;
         public Panel pnlMainControl => _pnlMainControl;
 
@@ -32,6 +32,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         {
             this._pnlMainControl = frmMain_Control.Instance.pnlMainControl;
             this._SplitContainerMainControl = new SplitContainerMainControl();
+
         }
 
     }

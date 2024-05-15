@@ -18,17 +18,21 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         public TabControlDSKHSC()
         {
             this._dgvDisplayAllCusPO = frmMain_Control.Instance.dgvDisplayAllCusPO;
+            this._dgvDisplayAllCusPO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this._dgvDisplayAllCusPO.CellDoubleClick += DataGridView_CellDoubleClick;
+
             this.ShowAllListCustomer();
         }
         private void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // Xử lý sự kiện double-click tại đây
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewCell cell = dgvDisplayAllCusPO.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                MessageBox.Show($"Double-clicked cell value: {cell.Value}");
-            }
+            if (e.RowIndex < 0) return;
+
+            DataGridViewCell cell = this.dgvDisplayAllCusPO.Rows[e.RowIndex].Cells[e.ColumnIndex];
+           
+            frmNewCustomer frmNewCustomer = new frmNewCustomer();
+            frmNewCustomer.Show();
+
         }
 
 
