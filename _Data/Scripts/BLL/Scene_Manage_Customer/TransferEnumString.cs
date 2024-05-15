@@ -25,7 +25,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer
                 default:
                     break;
             }
-            return "Không sắp xếp";
+            return "Theo ID Khách Hàng";
         }
 
         public static string TransferDurationTimeToString(DurationTime durationTime)
@@ -50,7 +50,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer
     }
     public enum SortingMethod
     {
-        No_Sort = 0,
+        Sort_By_ID = 0,
 
         Sort_A_Z = 1,
         Sort_Z_A = 2,

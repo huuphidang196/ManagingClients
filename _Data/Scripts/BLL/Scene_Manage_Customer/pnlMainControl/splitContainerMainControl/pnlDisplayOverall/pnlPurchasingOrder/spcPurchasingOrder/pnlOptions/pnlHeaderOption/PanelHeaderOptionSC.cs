@@ -16,5 +16,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         {
             this._mnsOptionHeader = frmMain_Control.Instance.mnsOptionHeader;
         }
+
+
     }
 }

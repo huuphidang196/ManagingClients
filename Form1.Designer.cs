@@ -52,7 +52,7 @@ namespace ManagingClients
             this.label16 = new System.Windows.Forms.Label();
             this.pnlHeaderOption = new System.Windows.Forms.Panel();
             this.mnsOptionHeader = new System.Windows.Forms.MenuStrip();
-            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsOptionAddCus = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -472,7 +472,7 @@ namespace ManagingClients
             this.mnsOptionHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mnsOptionHeader.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnsOptionHeader.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmToolStripMenuItem,
+            this.mnsOptionAddCus,
             this.toolStripMenuItem1,
             this.sửaToolStripMenuItem,
             this.xóaKháchHàngToolStripMenuItem});
@@ -482,12 +482,12 @@ namespace ManagingClients
             this.mnsOptionHeader.TabIndex = 0;
             this.mnsOptionHeader.Text = "Options";
             // 
-            // thêmToolStripMenuItem
+            // mnsOptionAddCus
             // 
-            this.thêmToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(94, 34);
-            this.thêmToolStripMenuItem.Text = "  Thêm mới  ";
+            this.mnsOptionAddCus.ForeColor = System.Drawing.Color.Black;
+            this.mnsOptionAddCus.Name = "mnsOptionAddCus";
+            this.mnsOptionAddCus.Size = new System.Drawing.Size(94, 34);
+            this.mnsOptionAddCus.Text = "  Thêm mới  ";
             // 
             // toolStripMenuItem1
             // 
@@ -580,7 +580,6 @@ namespace ManagingClients
             this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 593);
             this.dgvDisplayAllCusPO.TabIndex = 2;
-            this.dgvDisplayAllCusPO.Sorted += new System.EventHandler(this.dgvDisplayAllCusPO_Sorted);
             // 
             // lvDSKH
             // 
@@ -633,10 +632,10 @@ namespace ManagingClients
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(944, 599);
+            this.tabPage2.Size = new System.Drawing.Size(944, 608);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Yêu cầu Báo giá";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1579,7 +1578,7 @@ namespace ManagingClients
         public System.Windows.Forms.ListView lvDSKH;
         public System.Windows.Forms.DataGridView dgvDisplayAllCusPO;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnsOptionAddCus;
         private System.Windows.Forms.ToolStripMenuItem xóaKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;

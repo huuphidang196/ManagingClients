@@ -18,10 +18,19 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         public TabControlDSKHSC()
         {
             this._dgvDisplayAllCusPO = frmMain_Control.Instance.dgvDisplayAllCusPO;
-
-             this.ShowAllListCustomer();
-            // this.UpdateRowNumbers();
+            this._dgvDisplayAllCusPO.CellDoubleClick += DataGridView_CellDoubleClick;
+            this.ShowAllListCustomer();
         }
+        private void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Xử lý sự kiện double-click tại đây
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell cell = dgvDisplayAllCusPO.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                MessageBox.Show($"Double-clicked cell value: {cell.Value}");
+            }
+        }
+
 
         public virtual void ShowAllListCustomer()
         {
@@ -43,46 +52,8 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             }
 
             //Sort A -> Z
-             this.SortObjectByCondition(SortingMethod.Sort_A_Z);
-            //this.AddRowNumberColumn();
-            this.UpdateRowNumbers();
+            this.SortObjectByCondition(SortingMethod.Sort_By_ID);
         }
-        protected virtual void AddRowNumberColumn()
-        {
-            
-            // Kiểm tra xem cột "STT" đã tồn tại chưa
-            if (this._dgvDisplayAllCusPO.Columns["STT"] != null) return;
-
-            // Thêm cột mới vào DataGridView
-            DataGridViewTextBoxColumn column = new DataGridViewTextBoxColumn
-            {
-                HeaderText = "STT",
-                Name = "STT",
-
-            };
-            column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this._dgvDisplayAllCusPO.Columns.Insert(0, column);
-
-        }
-
-        public virtual void UpdateRowNumbers()
-        {
-          
-            // Đảm bảo cột STT đã tồn tại
-            this.AddRowNumberColumn();
-
-            if (this._dgvDisplayAllCusPO.Columns["STT"] != null)
-                //MessageBox.Show("existed, row = " + this._dgvDisplayAllCusPO.Rows.Count);
-
-            // Chạy vòng lặp qua tất cả các hàng trong DataGridView và gán giá trị số thứ tự
-            for (int i = 0; i < this._dgvDisplayAllCusPO.Rows.Count - 1; i++)
-            {
-                this._dgvDisplayAllCusPO.Rows[i].Cells["STT"].Value = (i + 1).ToString();
-                //MessageBox.Show("i :" + (i + 1).ToString() + ", Stt_I: " + this._dgvDisplayAllCusPO.Rows[i].Cells["STT"].Value);
-            }
-        }
-
 
         public virtual void SortObjectByCondition(SortingMethod sortingMethod)
         {
@@ -92,6 +63,9 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             string columnSort = "";
             switch (sortingMethod)
             {
+                case SortingMethod.Sort_By_ID:
+                    columnSort = "ID_Customer ASC";
+                    break;
                 case SortingMethod.Sort_A_Z:
                     columnSort = "Name_Customer ASC";
                     break;
@@ -109,8 +83,6 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             }
             dt.DefaultView.Sort = columnSort;
             this._dgvDisplayAllCusPO.DataSource = dt;
-
-            this.UpdateRowNumbers();
         }
     }
 }

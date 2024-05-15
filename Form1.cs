@@ -97,11 +97,6 @@ namespace ManagingClients
         }
         #endregion pnlBottomOption
 
-        private void dgvDisplayAllCusPO_Sorted(object sender, EventArgs e)
-        {
-            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
-               SplitContainerOrderSC.PanelOptionsSC.SplitContainerOrderSC.PanelBottomDisplayOrderSC.
-                TabControlPOSC.TabControlDSKHSC.UpdateRowNumbers();
-        }
+      
     }
 }
