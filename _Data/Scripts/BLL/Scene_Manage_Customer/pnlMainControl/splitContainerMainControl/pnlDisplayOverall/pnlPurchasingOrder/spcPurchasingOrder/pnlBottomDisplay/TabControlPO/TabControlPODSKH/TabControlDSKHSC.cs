@@ -19,7 +19,8 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         {
             this._dgvDisplayAllCusPO = frmMain_Control.Instance.dgvDisplayAllCusPO;
 
-            this.ShowAllListCustomer();
+             this.ShowAllListCustomer();
+            // this.UpdateRowNumbers();
         }
 
         public virtual void ShowAllListCustomer()
@@ -42,10 +43,13 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             }
 
             //Sort A -> Z
-            this.SortObjectByCondition(SortingMethod.Sort_A_Z);
+             this.SortObjectByCondition(SortingMethod.Sort_A_Z);
+            //this.AddRowNumberColumn();
+            this.UpdateRowNumbers();
         }
         protected virtual void AddRowNumberColumn()
         {
+            
             // Kiểm tra xem cột "STT" đã tồn tại chưa
             if (this._dgvDisplayAllCusPO.Columns["STT"] != null) return;
 
@@ -54,7 +58,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             {
                 HeaderText = "STT",
                 Name = "STT",
-     
+
             };
             column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -62,15 +66,20 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
         }
 
-        protected virtual void UpdateRowNumbers()
+        public virtual void UpdateRowNumbers()
         {
+          
             // Đảm bảo cột STT đã tồn tại
             this.AddRowNumberColumn();
+
+            if (this._dgvDisplayAllCusPO.Columns["STT"] != null)
+                //MessageBox.Show("existed, row = " + this._dgvDisplayAllCusPO.Rows.Count);
 
             // Chạy vòng lặp qua tất cả các hàng trong DataGridView và gán giá trị số thứ tự
             for (int i = 0; i < this._dgvDisplayAllCusPO.Rows.Count - 1; i++)
             {
                 this._dgvDisplayAllCusPO.Rows[i].Cells["STT"].Value = (i + 1).ToString();
+                //MessageBox.Show("i :" + (i + 1).ToString() + ", Stt_I: " + this._dgvDisplayAllCusPO.Rows[i].Cells["STT"].Value);
             }
         }
 

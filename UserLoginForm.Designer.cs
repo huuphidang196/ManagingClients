@@ -122,6 +122,7 @@ namespace ManagingClients
             this.Name = "frmUserLoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUserLoginForm_FormClosed);
             this.Load += new System.EventHandler(this.frmUserLoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

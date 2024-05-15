@@ -42,6 +42,8 @@ namespace ManagingClients
             this.spcPurchasingOrder = new System.Windows.Forms.SplitContainer();
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.pnlBottomOption = new System.Windows.Forms.Panel();
+            this.dtpToTimeOptions = new System.Windows.Forms.DateTimePicker();
+            this.dtpFromTimeOptions = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.cboSortOptions = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -136,8 +138,6 @@ namespace ManagingClients
             this.tabSettingNotify = new System.Windows.Forms.TabPage();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.dtpFromTimeOptions = new System.Windows.Forms.DateTimePicker();
-            this.dtpToTimeOptions = new System.Windows.Forms.DateTimePicker();
             this.pnlMainControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainControl)).BeginInit();
             this.splitContainerMainControl.Panel1.SuspendLayout();
@@ -375,6 +375,26 @@ namespace ManagingClients
             this.pnlBottomOption.Size = new System.Drawing.Size(952, 94);
             this.pnlBottomOption.TabIndex = 2;
             // 
+            // dtpToTimeOptions
+            // 
+            this.dtpToTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpToTimeOptions.Location = new System.Drawing.Point(426, 52);
+            this.dtpToTimeOptions.Name = "dtpToTimeOptions";
+            this.dtpToTimeOptions.Size = new System.Drawing.Size(130, 26);
+            this.dtpToTimeOptions.TabIndex = 3;
+            // 
+            // dtpFromTimeOptions
+            // 
+            this.dtpFromTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFromTimeOptions.Location = new System.Drawing.Point(426, 15);
+            this.dtpFromTimeOptions.Name = "dtpFromTimeOptions";
+            this.dtpFromTimeOptions.Size = new System.Drawing.Size(130, 26);
+            this.dtpFromTimeOptions.TabIndex = 3;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -560,6 +580,7 @@ namespace ManagingClients
             this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 593);
             this.dgvDisplayAllCusPO.TabIndex = 2;
+            this.dgvDisplayAllCusPO.Sorted += new System.EventHandler(this.dgvDisplayAllCusPO_Sorted);
             // 
             // lvDSKH
             // 
@@ -612,10 +633,10 @@ namespace ManagingClients
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(944, 608);
+            this.tabPage2.Size = new System.Drawing.Size(944, 599);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Yêu cầu Báo giá";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1377,26 +1398,6 @@ namespace ManagingClients
             this.panel18.Size = new System.Drawing.Size(1104, 38);
             this.panel18.TabIndex = 1;
             // 
-            // dtpFromTimeOptions
-            // 
-            this.dtpFromTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFromTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFromTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFromTimeOptions.Location = new System.Drawing.Point(426, 15);
-            this.dtpFromTimeOptions.Name = "dtpFromTimeOptions";
-            this.dtpFromTimeOptions.Size = new System.Drawing.Size(130, 26);
-            this.dtpFromTimeOptions.TabIndex = 3;
-            // 
-            // dtpToTimeOptions
-            // 
-            this.dtpToTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpToTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpToTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpToTimeOptions.Location = new System.Drawing.Point(426, 52);
-            this.dtpToTimeOptions.Name = "dtpToTimeOptions";
-            this.dtpToTimeOptions.Size = new System.Drawing.Size(130, 26);
-            this.dtpToTimeOptions.TabIndex = 3;
-            // 
             // frmMain_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -1408,6 +1409,7 @@ namespace ManagingClients
             this.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mnsOptionHeader;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain_Control";
             this.Text = "Managing_Customer";

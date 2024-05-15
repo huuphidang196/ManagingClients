@@ -32,7 +32,7 @@ namespace ManagingClients
 
         protected ProfileAccount _ProfileAccount;
         public ProfileAccount ProfileAccount => _ProfileAccount;
-        
+
         public virtual void SetProfileAccount(ProfileAccount profileAccount) => this._ProfileAccount = profileAccount;
 
         public frmMain_Control()
@@ -49,7 +49,7 @@ namespace ManagingClients
 
         private void frmMain_Control_Load(object sender, EventArgs e)
         {
-           // PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
+            // PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.TurnOnPanelProfileAccount();
 
         }
         private void btnProfileAccount_Click(object sender, EventArgs e)
@@ -63,11 +63,11 @@ namespace ManagingClients
         }
 
         #region Detail_Profile_Account
-    
+
         private void btnSavePAC_Click(object sender, EventArgs e)
         {
-           PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
-                Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.SaveDataProfileAccount();
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.
+                 Panel_Detail_Profile.TabControlProfileDetailSC.PanelProfileAccountSC.SaveDataProfileAccount();
         }
 
         private void btnSelectAVT_Click(object sender, EventArgs e)
@@ -96,5 +96,12 @@ namespace ManagingClients
                SplitContainerOrderSC.PanelOptionsSC.PanelBottomOption.SortListDataGridViewBySorting();
         }
         #endregion pnlBottomOption
+
+        private void dgvDisplayAllCusPO_Sorted(object sender, EventArgs e)
+        {
+            PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
+               SplitContainerOrderSC.PanelOptionsSC.SplitContainerOrderSC.PanelBottomDisplayOrderSC.
+                TabControlPOSC.TabControlDSKHSC.UpdateRowNumbers();
+        }
     }
 }
