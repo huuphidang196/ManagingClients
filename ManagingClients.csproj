@@ -58,6 +58,12 @@
     <Compile Include="frmNewCustomer.Designer.cs">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPDFFileReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPDFFileReader.Designer.cs">
+      <DependentUpon>frmPDFFileReader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserLoginForm.cs">
@@ -67,12 +73,16 @@
       <DependentUpon>UserLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\PanelCenterCusICSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlInqueryContract\PanelInqueryContractSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlInqueryContract\pnlInqueryCustomer\grbDetailInquery\flpDetailInquery\FlowLayoutPanelDetailInquerySC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlInqueryContract\pnlInqueryCustomer\PanelInqueryCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\PanelBelowCusICSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\TabCtrlInqueryContractSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\tabCtrlInqueryContract\TabPageInqueryCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlCustomerInfo\grbCustomerInfo\GroupBoxCustomerInfoSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlCustomerInfo\PanelCustomerInfo.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\flpUINegative\FlowLayOutPanelUINegativeSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\PanelTopCusICSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\PanelMainControl.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\PanelDetailProfileSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\tabCtrlPADetail\TabControlProfileDetailSC.cs" />
@@ -104,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewCustomer.resx">
       <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPDFFileReader.resx">
+      <DependentUpon>frmPDFFileReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

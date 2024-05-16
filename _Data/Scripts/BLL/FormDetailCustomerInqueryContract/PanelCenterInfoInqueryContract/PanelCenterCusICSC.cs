@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.PanelCenterInfoInqueryContract.pnlCustomerInfo;
+﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlInqueryContract;
+using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.PanelCenterInfoInqueryContract.pnlCustomerInfo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected PanelCustomerInfo _PanelCustomerInfo;
         public PanelCustomerInfo PanelCustomerInfo => _PanelCustomerInfo;
+
+        protected PanelInqueryContractSC _PanelInqueryContractSC;
+        public PanelInqueryContractSC PanelInqueryContractSC => _PanelInqueryContractSC;
+        
         private PanelCenterCusICSC()
         {
             this._PanelCustomerInfo = new PanelCustomerInfo();
+            this._PanelInqueryContractSC = new PanelInqueryContractSC();
         }
 
         public virtual void ShowAllInformationAfterOpen()

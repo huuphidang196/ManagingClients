@@ -9,6 +9,17 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
 {
     public class PanelBelowCusICSC
     {
+        private static PanelBelowCusICSC _instance;
+        public static PanelBelowCusICSC Instance
+        {
+            get
+            {
+                if (_instance == null) _instance = new PanelBelowCusICSC();
+                return PanelBelowCusICSC._instance;
+            }
+
+            private set { PanelBelowCusICSC._instance = value; }
+        }
         protected TabCtrlInqueryContractSC _TabCtrlInqueryContractSC;
         public TabCtrlInqueryContractSC TabCtrlInqueryContractSC => _TabCtrlInqueryContractSC;
 

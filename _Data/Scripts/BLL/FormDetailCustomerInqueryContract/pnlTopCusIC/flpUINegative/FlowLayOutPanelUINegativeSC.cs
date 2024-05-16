@@ -35,17 +35,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         // Phương thức xử lý sự kiện click của button
         protected virtual void ButtonAddClick(object sender, EventArgs e)
         {
-            //foreach (Control c in t.Controls)
-            //{
-            //    if (c is TextBox)
-            //    {
-            //        c.Text = "";
-            //    }
-            //    else if (c.Controls.Count > 0)
-            //    {
-            //        ClearAllTextBoxes(c); // Đệ quy để kiểm tra tất cả các điều khiển con
-            //    }
-            //}
+            PanelCenterCusICSC.Instance.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
         }
     }
 }
