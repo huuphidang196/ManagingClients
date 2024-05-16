@@ -343,7 +343,7 @@ namespace ManagingClients
             // 
             this.spcPurchasingOrder.Panel2.Controls.Add(this.pnlBottomDisplayPO);
             this.spcPurchasingOrder.Size = new System.Drawing.Size(954, 782);
-            this.spcPurchasingOrder.SplitterDistance = 136;
+            this.spcPurchasingOrder.SplitterDistance = 127;
             this.spcPurchasingOrder.SplitterWidth = 10;
             this.spcPurchasingOrder.TabIndex = 1;
             // 
@@ -356,7 +356,7 @@ namespace ManagingClients
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlOptions.Location = new System.Drawing.Point(0, 0);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(954, 136);
+            this.pnlOptions.Size = new System.Drawing.Size(954, 127);
             this.pnlOptions.TabIndex = 0;
             // 
             // pnlBottomOption
@@ -372,11 +372,13 @@ namespace ManagingClients
             this.pnlBottomOption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottomOption.Location = new System.Drawing.Point(0, 40);
             this.pnlBottomOption.Name = "pnlBottomOption";
-            this.pnlBottomOption.Size = new System.Drawing.Size(952, 94);
+            this.pnlBottomOption.Size = new System.Drawing.Size(952, 85);
             this.pnlBottomOption.TabIndex = 2;
             // 
             // dtpToTimeOptions
             // 
+            this.dtpToTimeOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpToTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpToTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpToTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -387,6 +389,8 @@ namespace ManagingClients
             // 
             // dtpFromTimeOptions
             // 
+            this.dtpFromTimeOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpFromTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFromTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFromTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -397,6 +401,8 @@ namespace ManagingClients
             // 
             // label21
             // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(375, 55);
@@ -407,6 +413,8 @@ namespace ManagingClients
             // 
             // cboSortOptions
             // 
+            this.cboSortOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.cboSortOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSortOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSortOptions.FormattingEnabled = true;
@@ -418,6 +426,8 @@ namespace ManagingClients
             // 
             // label18
             // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(23, 55);
@@ -428,6 +438,8 @@ namespace ManagingClients
             // 
             // label20
             // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(375, 18);
@@ -438,6 +450,8 @@ namespace ManagingClients
             // 
             // cboPeriodOptions
             // 
+            this.cboPeriodOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.cboPeriodOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPeriodOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPeriodOptions.FormattingEnabled = true;
@@ -448,6 +462,8 @@ namespace ManagingClients
             // 
             // label16
             // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(23, 18);
@@ -519,7 +535,7 @@ namespace ManagingClients
             this.pnlBottomDisplayPO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottomDisplayPO.Location = new System.Drawing.Point(0, 0);
             this.pnlBottomDisplayPO.Name = "pnlBottomDisplayPO";
-            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(954, 636);
+            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(954, 645);
             this.pnlBottomDisplayPO.TabIndex = 2;
             // 
             // tabControlPO
@@ -537,7 +553,7 @@ namespace ManagingClients
             this.tabControlPO.Location = new System.Drawing.Point(0, 0);
             this.tabControlPO.Name = "tabControlPO";
             this.tabControlPO.SelectedIndex = 0;
-            this.tabControlPO.Size = new System.Drawing.Size(952, 634);
+            this.tabControlPO.Size = new System.Drawing.Size(952, 643);
             this.tabControlPO.TabIndex = 1;
             this.tabControlPO.SelectedIndexChanged += new System.EventHandler(this.tabControlPO_SelectedIndexChanged);
             // 
@@ -547,7 +563,7 @@ namespace ManagingClients
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(944, 599);
+            this.tabPage1.Size = new System.Drawing.Size(944, 608);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách Khách Hàng";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -559,7 +575,7 @@ namespace ManagingClients
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(3, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(938, 593);
+            this.panel16.Size = new System.Drawing.Size(938, 602);
             this.panel16.TabIndex = 1;
             // 
             // dgvDisplayAllCusPO
@@ -578,7 +594,7 @@ namespace ManagingClients
             this.dgvDisplayAllCusPO.ReadOnly = true;
             this.dgvDisplayAllCusPO.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 593);
+            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 602);
             this.dgvDisplayAllCusPO.TabIndex = 2;
             // 
             // lvDSKH
@@ -596,7 +612,7 @@ namespace ManagingClients
             this.lvDSKH.HideSelection = false;
             this.lvDSKH.Location = new System.Drawing.Point(0, 0);
             this.lvDSKH.Name = "lvDSKH";
-            this.lvDSKH.Size = new System.Drawing.Size(938, 593);
+            this.lvDSKH.Size = new System.Drawing.Size(938, 602);
             this.lvDSKH.TabIndex = 1;
             this.lvDSKH.UseCompatibleStateImageBehavior = false;
             this.lvDSKH.View = System.Windows.Forms.View.Details;

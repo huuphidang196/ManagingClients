@@ -20,6 +20,8 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             this._dgvDisplayAllCusPO = frmMain_Control.Instance.dgvDisplayAllCusPO;
             this._dgvDisplayAllCusPO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this._dgvDisplayAllCusPO.CellDoubleClick += DataGridView_CellDoubleClick;
+            // Giả sử dataGridView1 đã được thêm vào form
+            _dgvDisplayAllCusPO.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(dataGridView1_DataBindingComplete);
 
             this.ShowAllListCustomer();
         }
@@ -28,11 +30,18 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             // Xử lý sự kiện double-click tại đây
             if (e.RowIndex < 0) return;
 
-            DataGridViewCell cell = this.dgvDisplayAllCusPO.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            DataGridViewRow row_Selected = this.dgvDisplayAllCusPO.Rows[e.RowIndex];
+            int id_Customer = int.Parse(row_Selected.Cells[0].Value.ToString());
+            CustomerGSES customerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
            
-            frmNewCustomer frmNewCustomer = new frmNewCustomer();
-            frmNewCustomer.Show();
+            if (customerGSES == null)
+            {
+                MessageBox.Show("Vui lòng chọn lại Khách Hàng cần kiểm tra");
+                return;
+            }
 
+            frmDetailCustomer.Instance.SetCustomerGSES(customerGSES);
+            DialogResult ret = frmDetailCustomer.Instance.ShowDialog();
         }
 
 
@@ -40,23 +49,36 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         {
             DataTable dataTable = PurchasingOrderProvider.Instance.GetDataTableAllCustomer();
 
-            this._dgvDisplayAllCusPO.DataSource = dataTable;
+            this._dgvDisplayAllCusPO.DataSource = dataTable;          
 
+            //Sort A -> Z
+            this.SortObjectByCondition(SortingMethod.Sort_By_ID);
+
+        }
+
+        protected virtual void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            // Đảm bảo rằng DataGridView có ít nhất một cột
+            if (_dgvDisplayAllCusPO.Columns.Count < 0) return;
             //recify column name
-            this._dgvDisplayAllCusPO.Columns["ID_Customer"].HeaderText = "ID Khách Hàng";
+            this._dgvDisplayAllCusPO.Columns["ID_Customer"].HeaderText = "ID KH";
+
             this._dgvDisplayAllCusPO.Columns["Name_Customer"].HeaderText = "Tên Khách hàng";
+
             this._dgvDisplayAllCusPO.Columns["Address_Company"].HeaderText = "Địa chỉ Công Ty";
+
             this._dgvDisplayAllCusPO.Columns["Address_Email"].HeaderText = "Email Công Ty";
+
             this._dgvDisplayAllCusPO.Columns["Phone_Number"].HeaderText = "Số điện thoại";
+
             this._dgvDisplayAllCusPO.Columns["Tax_Number"].HeaderText = "Mã số thuế";
+
             // Tiếp tục cho tất cả các cột cần đổi tên
             foreach (DataGridViewColumn column in this._dgvDisplayAllCusPO.Columns)
             {
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
-            //Sort A -> Z
-            this.SortObjectByCondition(SortingMethod.Sort_By_ID);
         }
 
         public virtual void SortObjectByCondition(SortingMethod sortingMethod)
