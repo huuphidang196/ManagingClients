@@ -144,6 +144,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="_Data\Scripts\DAO\FormDetailCustomerIC\" />
     <Folder Include="_Data\Scripts\SaveManager\Query\PersonalAccount\" />
   </ItemGroup>
   <ItemGroup>

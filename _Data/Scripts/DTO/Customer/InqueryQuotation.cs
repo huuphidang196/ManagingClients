@@ -34,10 +34,12 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         
         public DateTime Expired_Time_Inquiry { get; set; }
 
-        public float Benefit_Percent { get; set; }//Phần trăm
+        public float Selected_Exchange_Rate { get; set; }// Tỉ giá báo 
 
         public byte[] File_Data_Inquiry_Quotation { get; set; }
 
+        public string Purpose_Purchasing { get; set; }
+        public string Name_Of_EndUser { get; set; }
         public int ID_Customer_Order { get; set; }   //  public Customer_Order Customer_Order { get; set; }
 
         public List<Merchandise> List_Merchandise_IntoInquery { get; private set; }

@@ -9,11 +9,19 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 {
     public class TabPageInqueryCustomerSC
     {
-        protected ListView _lsvInqueryCus;
+        protected ListView _lsvOrdersCustomer;
 
         public TabPageInqueryCustomerSC()
         {
-            this._lsvInqueryCus = frmDetailCustomer.Instance.lsvInqueryCus;
+            this._lsvOrdersCustomer = frmDetailCustomer.Instance.lsvOrdersCustomer;
+            this._lsvOrdersCustomer.MultiSelect = false;
+        }
+
+        public virtual void AddNewInquery()
+        {
+            if (this._lsvOrdersCustomer.SelectedItems.Count == 0) return;
+
+            this._lsvOrdersCustomer.SelectedItems[0].Selected = false;
         }
     }
 }

@@ -204,7 +204,7 @@ namespace ManagingClients
             this.pnlMainControl.Controls.Add(this.splitContainerMainControl);
             this.pnlMainControl.Location = new System.Drawing.Point(0, 78);
             this.pnlMainControl.Name = "pnlMainControl";
-            this.pnlMainControl.Size = new System.Drawing.Size(1108, 786);
+            this.pnlMainControl.Size = new System.Drawing.Size(1163, 786);
             this.pnlMainControl.TabIndex = 1;
             // 
             // splitContainerMainControl
@@ -222,8 +222,8 @@ namespace ManagingClients
             // splitContainerMainControl.Panel2
             // 
             this.splitContainerMainControl.Panel2.Controls.Add(this.pnlDisplayOverall);
-            this.splitContainerMainControl.Size = new System.Drawing.Size(1106, 784);
-            this.splitContainerMainControl.SplitterDistance = 140;
+            this.splitContainerMainControl.Size = new System.Drawing.Size(1161, 784);
+            this.splitContainerMainControl.SplitterDistance = 146;
             this.splitContainerMainControl.SplitterWidth = 10;
             this.splitContainerMainControl.TabIndex = 2;
             // 
@@ -241,7 +241,7 @@ namespace ManagingClients
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.pnlBottomNB);
-            this.splitContainer3.Size = new System.Drawing.Size(138, 782);
+            this.splitContainer3.Size = new System.Drawing.Size(144, 782);
             this.splitContainer3.SplitterDistance = 92;
             this.splitContainer3.SplitterWidth = 10;
             this.splitContainer3.TabIndex = 1;
@@ -254,7 +254,7 @@ namespace ManagingClients
             this.pnlLeftHeadControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLeftHeadControl.Location = new System.Drawing.Point(0, 0);
             this.pnlLeftHeadControl.Name = "pnlLeftHeadControl";
-            this.pnlLeftHeadControl.Size = new System.Drawing.Size(138, 92);
+            this.pnlLeftHeadControl.Size = new System.Drawing.Size(144, 92);
             this.pnlLeftHeadControl.TabIndex = 0;
             // 
             // ptbGses
@@ -263,7 +263,7 @@ namespace ManagingClients
             this.ptbGses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptbGses.Location = new System.Drawing.Point(0, 0);
             this.ptbGses.Name = "ptbGses";
-            this.ptbGses.Size = new System.Drawing.Size(136, 90);
+            this.ptbGses.Size = new System.Drawing.Size(142, 90);
             this.ptbGses.TabIndex = 0;
             this.ptbGses.TabStop = false;
             // 
@@ -276,7 +276,7 @@ namespace ManagingClients
             this.pnlBottomNB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottomNB.Location = new System.Drawing.Point(0, 0);
             this.pnlBottomNB.Name = "pnlBottomNB";
-            this.pnlBottomNB.Size = new System.Drawing.Size(138, 680);
+            this.pnlBottomNB.Size = new System.Drawing.Size(144, 680);
             this.pnlBottomNB.TabIndex = 0;
             // 
             // btnPurchasingOrder
@@ -286,7 +286,7 @@ namespace ManagingClients
             this.btnPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPurchasingOrder.Location = new System.Drawing.Point(0, 38);
             this.btnPurchasingOrder.Name = "btnPurchasingOrder";
-            this.btnPurchasingOrder.Size = new System.Drawing.Size(138, 38);
+            this.btnPurchasingOrder.Size = new System.Drawing.Size(144, 38);
             this.btnPurchasingOrder.TabIndex = 1;
             this.btnPurchasingOrder.Text = "Đơn Mua";
             this.btnPurchasingOrder.UseVisualStyleBackColor = false;
@@ -300,7 +300,7 @@ namespace ManagingClients
             this.btnProfileAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProfileAccount.Location = new System.Drawing.Point(0, 0);
             this.btnProfileAccount.Name = "btnProfileAccount";
-            this.btnProfileAccount.Size = new System.Drawing.Size(138, 38);
+            this.btnProfileAccount.Size = new System.Drawing.Size(144, 38);
             this.btnProfileAccount.TabIndex = 0;
             this.btnProfileAccount.Text = "Tài khoản của tôi";
             this.btnProfileAccount.UseVisualStyleBackColor = false;
@@ -309,12 +309,12 @@ namespace ManagingClients
             // pnlDisplayOverall
             // 
             this.pnlDisplayOverall.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlDisplayOverall.Controls.Add(this.pnlPurchasingOrder);
             this.pnlDisplayOverall.Controls.Add(this.pnlDetailProfile);
+            this.pnlDisplayOverall.Controls.Add(this.pnlPurchasingOrder);
             this.pnlDisplayOverall.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplayOverall.Location = new System.Drawing.Point(0, 0);
             this.pnlDisplayOverall.Name = "pnlDisplayOverall";
-            this.pnlDisplayOverall.Size = new System.Drawing.Size(954, 782);
+            this.pnlDisplayOverall.Size = new System.Drawing.Size(1003, 782);
             this.pnlDisplayOverall.TabIndex = 0;
             // 
             // pnlPurchasingOrder
@@ -324,7 +324,7 @@ namespace ManagingClients
             this.pnlPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPurchasingOrder.Location = new System.Drawing.Point(0, 0);
             this.pnlPurchasingOrder.Name = "pnlPurchasingOrder";
-            this.pnlPurchasingOrder.Size = new System.Drawing.Size(954, 782);
+            this.pnlPurchasingOrder.Size = new System.Drawing.Size(1003, 782);
             this.pnlPurchasingOrder.TabIndex = 1;
             this.pnlPurchasingOrder.Visible = false;
             // 
@@ -342,7 +342,7 @@ namespace ManagingClients
             // spcPurchasingOrder.Panel2
             // 
             this.spcPurchasingOrder.Panel2.Controls.Add(this.pnlBottomDisplayPO);
-            this.spcPurchasingOrder.Size = new System.Drawing.Size(954, 782);
+            this.spcPurchasingOrder.Size = new System.Drawing.Size(1003, 782);
             this.spcPurchasingOrder.SplitterDistance = 127;
             this.spcPurchasingOrder.SplitterWidth = 10;
             this.spcPurchasingOrder.TabIndex = 1;
@@ -356,7 +356,7 @@ namespace ManagingClients
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlOptions.Location = new System.Drawing.Point(0, 0);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(954, 127);
+            this.pnlOptions.Size = new System.Drawing.Size(1003, 127);
             this.pnlOptions.TabIndex = 0;
             // 
             // pnlBottomOption
@@ -372,7 +372,7 @@ namespace ManagingClients
             this.pnlBottomOption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottomOption.Location = new System.Drawing.Point(0, 40);
             this.pnlBottomOption.Name = "pnlBottomOption";
-            this.pnlBottomOption.Size = new System.Drawing.Size(952, 85);
+            this.pnlBottomOption.Size = new System.Drawing.Size(1001, 85);
             this.pnlBottomOption.TabIndex = 2;
             // 
             // dtpToTimeOptions
@@ -479,7 +479,7 @@ namespace ManagingClients
             this.pnlHeaderOption.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeaderOption.Location = new System.Drawing.Point(0, 0);
             this.pnlHeaderOption.Name = "pnlHeaderOption";
-            this.pnlHeaderOption.Size = new System.Drawing.Size(952, 40);
+            this.pnlHeaderOption.Size = new System.Drawing.Size(1001, 40);
             this.pnlHeaderOption.TabIndex = 0;
             // 
             // mnsOptionHeader
@@ -494,7 +494,7 @@ namespace ManagingClients
             this.xóaKháchHàngToolStripMenuItem});
             this.mnsOptionHeader.Location = new System.Drawing.Point(0, 0);
             this.mnsOptionHeader.Name = "mnsOptionHeader";
-            this.mnsOptionHeader.Size = new System.Drawing.Size(950, 38);
+            this.mnsOptionHeader.Size = new System.Drawing.Size(999, 38);
             this.mnsOptionHeader.TabIndex = 0;
             this.mnsOptionHeader.Text = "Options";
             // 
@@ -535,7 +535,7 @@ namespace ManagingClients
             this.pnlBottomDisplayPO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBottomDisplayPO.Location = new System.Drawing.Point(0, 0);
             this.pnlBottomDisplayPO.Name = "pnlBottomDisplayPO";
-            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(954, 645);
+            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(1003, 645);
             this.pnlBottomDisplayPO.TabIndex = 2;
             // 
             // tabControlPO
@@ -553,7 +553,7 @@ namespace ManagingClients
             this.tabControlPO.Location = new System.Drawing.Point(0, 0);
             this.tabControlPO.Name = "tabControlPO";
             this.tabControlPO.SelectedIndex = 0;
-            this.tabControlPO.Size = new System.Drawing.Size(952, 643);
+            this.tabControlPO.Size = new System.Drawing.Size(1001, 643);
             this.tabControlPO.TabIndex = 1;
             this.tabControlPO.SelectedIndexChanged += new System.EventHandler(this.tabControlPO_SelectedIndexChanged);
             // 
@@ -563,7 +563,7 @@ namespace ManagingClients
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(944, 608);
+            this.tabPage1.Size = new System.Drawing.Size(993, 608);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách Khách Hàng";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -575,7 +575,7 @@ namespace ManagingClients
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(3, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(938, 602);
+            this.panel16.Size = new System.Drawing.Size(987, 602);
             this.panel16.TabIndex = 1;
             // 
             // dgvDisplayAllCusPO
@@ -594,7 +594,7 @@ namespace ManagingClients
             this.dgvDisplayAllCusPO.ReadOnly = true;
             this.dgvDisplayAllCusPO.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(938, 602);
+            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(987, 602);
             this.dgvDisplayAllCusPO.TabIndex = 2;
             // 
             // lvDSKH
@@ -612,7 +612,7 @@ namespace ManagingClients
             this.lvDSKH.HideSelection = false;
             this.lvDSKH.Location = new System.Drawing.Point(0, 0);
             this.lvDSKH.Name = "lvDSKH";
-            this.lvDSKH.Size = new System.Drawing.Size(938, 602);
+            this.lvDSKH.Size = new System.Drawing.Size(987, 602);
             this.lvDSKH.TabIndex = 1;
             this.lvDSKH.UseCompatibleStateImageBehavior = false;
             this.lvDSKH.View = System.Windows.Forms.View.Details;
@@ -651,7 +651,7 @@ namespace ManagingClients
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(944, 608);
+            this.tabPage2.Size = new System.Drawing.Size(944, 617);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Yêu cầu Báo giá";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -661,7 +661,7 @@ namespace ManagingClients
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(944, 608);
+            this.tabPage3.Size = new System.Drawing.Size(944, 617);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Đã gửi Báo giá";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -671,7 +671,7 @@ namespace ManagingClients
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(944, 608);
+            this.tabPage4.Size = new System.Drawing.Size(944, 617);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Yêu cầu Hợp Đồng";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -681,7 +681,7 @@ namespace ManagingClients
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(944, 608);
+            this.tabPage5.Size = new System.Drawing.Size(944, 617);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Chưa Hoàn thành TT";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -691,7 +691,7 @@ namespace ManagingClients
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(944, 608);
+            this.tabPage6.Size = new System.Drawing.Size(944, 617);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Đang Vận Chuyển";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -701,7 +701,7 @@ namespace ManagingClients
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(944, 608);
+            this.tabPage7.Size = new System.Drawing.Size(944, 617);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Chờ Giao hàng";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -711,7 +711,7 @@ namespace ManagingClients
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(944, 608);
+            this.tabPage8.Size = new System.Drawing.Size(944, 617);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Hoàn Thành";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -721,7 +721,7 @@ namespace ManagingClients
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(944, 608);
+            this.tabPage9.Size = new System.Drawing.Size(944, 617);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Đã Hủy";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -733,7 +733,7 @@ namespace ManagingClients
             this.pnlDetailProfile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDetailProfile.Location = new System.Drawing.Point(0, 0);
             this.pnlDetailProfile.Name = "pnlDetailProfile";
-            this.pnlDetailProfile.Size = new System.Drawing.Size(954, 782);
+            this.pnlDetailProfile.Size = new System.Drawing.Size(1003, 782);
             this.pnlDetailProfile.TabIndex = 0;
             this.pnlDetailProfile.Visible = false;
             // 
@@ -746,7 +746,7 @@ namespace ManagingClients
             this.tabCtrlPADetail.Location = new System.Drawing.Point(0, 0);
             this.tabCtrlPADetail.Name = "tabCtrlPADetail";
             this.tabCtrlPADetail.SelectedIndex = 0;
-            this.tabCtrlPADetail.Size = new System.Drawing.Size(954, 782);
+            this.tabCtrlPADetail.Size = new System.Drawing.Size(1003, 782);
             this.tabCtrlPADetail.TabIndex = 1;
             // 
             // tabProfile
@@ -758,7 +758,7 @@ namespace ManagingClients
             this.tabProfile.Location = new System.Drawing.Point(4, 31);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfile.Size = new System.Drawing.Size(946, 747);
+            this.tabProfile.Size = new System.Drawing.Size(995, 747);
             this.tabProfile.TabIndex = 0;
             this.tabProfile.Text = "Hồ sơ của tôi";
             // 
@@ -771,7 +771,7 @@ namespace ManagingClients
             this.pnlProfileAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlProfileAccount.Location = new System.Drawing.Point(3, 3);
             this.pnlProfileAccount.Name = "pnlProfileAccount";
-            this.pnlProfileAccount.Size = new System.Drawing.Size(940, 741);
+            this.pnlProfileAccount.Size = new System.Drawing.Size(989, 741);
             this.pnlProfileAccount.TabIndex = 5;
             // 
             // panel8
@@ -785,13 +785,13 @@ namespace ManagingClients
             this.panel8.Controls.Add(this.ptbAvatar);
             this.panel8.Location = new System.Drawing.Point(716, 100);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(220, 641);
+            this.panel8.Size = new System.Drawing.Size(269, 641);
             this.panel8.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 372);
+            this.label8.Location = new System.Drawing.Point(35, 372);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(210, 22);
             this.label8.TabIndex = 2;
@@ -800,7 +800,7 @@ namespace ManagingClients
             // btnSelectAVT
             // 
             this.btnSelectAVT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSelectAVT.Location = new System.Drawing.Point(37, 414);
+            this.btnSelectAVT.Location = new System.Drawing.Point(65, 414);
             this.btnSelectAVT.Name = "btnSelectAVT";
             this.btnSelectAVT.Size = new System.Drawing.Size(148, 41);
             this.btnSelectAVT.TabIndex = 1;
@@ -811,7 +811,7 @@ namespace ManagingClients
             // ptbAvatar
             // 
             this.ptbAvatar.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ptbAvatar.Location = new System.Drawing.Point(11, 43);
+            this.ptbAvatar.Location = new System.Drawing.Point(39, 43);
             this.ptbAvatar.Name = "ptbAvatar";
             this.ptbAvatar.Size = new System.Drawing.Size(200, 300);
             this.ptbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -828,7 +828,7 @@ namespace ManagingClients
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(940, 100);
+            this.panel7.Size = new System.Drawing.Size(989, 100);
             this.panel7.TabIndex = 3;
             // 
             // label1
@@ -1401,7 +1401,7 @@ namespace ManagingClients
             this.pnlHeader.Controls.Add(this.panel18);
             this.pnlHeader.Location = new System.Drawing.Point(2, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1106, 70);
+            this.pnlHeader.Size = new System.Drawing.Size(1161, 70);
             this.pnlHeader.TabIndex = 0;
             // 
             // panel18
@@ -1410,7 +1410,7 @@ namespace ManagingClients
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(1104, 38);
+            this.panel18.Size = new System.Drawing.Size(1159, 38);
             this.panel18.TabIndex = 1;
             // 
             // frmMain_Control
@@ -1418,7 +1418,7 @@ namespace ManagingClients
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1112, 864);
+            this.ClientSize = new System.Drawing.Size(1167, 864);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlMainControl);
             this.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

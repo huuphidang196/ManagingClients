@@ -16,6 +16,9 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected FlowLayoutPanel _flowDetailInquery;
         public FlowLayoutPanel FlowDetailInquery => _flowDetailInquery;
 
+        protected TextBox _txtNameInquery;
+        public TextBox TxtNameInquery => _txtNameInquery;
+
         protected TextBox _txtNumberInquery;
         public TextBox TxtNumberInquery => _txtNumberInquery;
 
@@ -31,8 +34,15 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected TextBox _txtMaxTimeDurationShip;
         public TextBox TxtMaxTimeDurationShip => _txtMaxTimeDurationShip;
 
-        protected TextBox _txtBenefitPercent;
-        public TextBox TxtBenefitPercent => _txtBenefitPercent;
+        protected TextBox _txtSelected_Exchange_Rate;
+        public TextBox TxtSelectedExchangeRate => _txtSelected_Exchange_Rate;
+
+        protected TextBox _txtPurposePurchasing;
+        public TextBox TxtPurposePurchasing => _txtPurposePurchasing;
+
+        protected TextBox _txtEndUser;
+        public TextBox TxtEndUser => _txtEndUser;
+
 
         protected DateTimePicker _dtpDateSendInquery;
         public DateTimePicker DtpDateSendInquery => _dtpDateSendInquery;
@@ -48,6 +58,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._InqueryQuotation = new InqueryQuotation();
 
+            this._txtNameInquery = frmDetailCustomer.Instance.txtNameInquery;
             this._flowDetailInquery = frmDetailCustomer.Instance.flpDetailInquery;
 
             this._txtNumberInquery = frmDetailCustomer.Instance.txtInqueryNumber;
@@ -55,19 +66,24 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._txtCostDeliveryKH = frmDetailCustomer.Instance.txtCostDeliveryKH;
             this._txtMinTimeDurationShip = frmDetailCustomer.Instance.txtMinTimeDurationShip;
             this._txtMaxTimeDurationShip = frmDetailCustomer.Instance.txtMaxTimeDurationShip;
-            this._txtBenefitPercent = frmDetailCustomer.Instance.txtBenefitPercent;
+            this._txtSelected_Exchange_Rate = frmDetailCustomer.Instance.txtSelectedExchangeRate;
+            this._txtPurposePurchasing = frmDetailCustomer.Instance.txtPurposePurchasing;
+            this._txtEndUser = frmDetailCustomer.Instance.txtEndUser;
 
             this._dtpDateSendInquery = frmDetailCustomer.Instance.dtpDateSendInquery;
             this._dtpDateExpiredInquery = frmDetailCustomer.Instance.dtpDateExpiredInquery;
 
             this._lblShowFileInquery = frmDetailCustomer.Instance.lblShowFileInquery;
             this._lblShowFileInquery.Click += new EventHandler(ShowFileOrAddFilePDF);
+
             this._btnDeleteFileInquery = frmDetailCustomer.Instance.btnDeleteFileInquery;
+            this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearInqueryButton);
 
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
 
+        #region Add_Event
         protected virtual void ShowFileOrAddFilePDF(object sender, EventArgs e)
         {
             if (this._InqueryQuotation.File_Data_Inquiry_Quotation == null)
@@ -108,21 +124,45 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             frmPDFFileReader.SetFileNameByte(this._InqueryQuotation.File_Data_Inquiry_Quotation);
             frmPDFFileReader.Show();
         }
-        public virtual void CreatNewInqueryOfCustomer()
+        protected virtual void AddEventClearInqueryButton(object sender , EventArgs e)
         {
-            this.ClearTextBoxInControl();
+            this.ClearFileInquery();
         }
+        #endregion
 
+        #region Internal_Function
         protected virtual void ClearTextBoxInControl()
         {
+            this._txtNameInquery.Text = "";
             this._txtNumberInquery.Text = "";
             this._txtCostDeliveryVN.Text = "";
             this._txtCostDeliveryKH.Text = "";
             this._txtMinTimeDurationShip.Text = "";
             this._txtMaxTimeDurationShip.Text = "";
-            this._txtBenefitPercent.Text = "";
+            this._txtSelected_Exchange_Rate.Text = "";
+            this._txtPurposePurchasing.Text = "";
+            this._txtEndUser.Text = "";
+
+            this.ClearFileInquery();
+            this._InqueryQuotation = new InqueryQuotation();
+            //Listview selected = 0
+
+        }
+        protected virtual void ClearFileInquery()
+        {
 
             this._lblShowFileInquery.Text = "Tải file PDF";
+
+            this._InqueryQuotation.File_Data_Inquiry_Quotation = null;
         }
+        #endregion
+
+        #region Outside_Reference
+        public virtual void CreatNewInqueryOfCustomer()
+        {
+            this.ClearTextBoxInControl();
+        }
+        #endregion
+
     }
 }

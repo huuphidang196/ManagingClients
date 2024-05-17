@@ -35,6 +35,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
         {
             this.Panel_Detail_Profile.PanelDetail_Profile.Visible = false;
             this.PanelPurchasingOrder.PanelPurchasingOrder.Visible = true;
+
         }
     }
 }

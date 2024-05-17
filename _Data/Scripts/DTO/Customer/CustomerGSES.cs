@@ -30,9 +30,14 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
     {
         public int ID_Customer_Order { get; set; }
 
+        public string Name_Order { get; set; }
+
         public StatusOrder Status_Order { get; set; }
+
+        public string Name_Log_In { get; set; }//ID người tạo// nameLogin Person generated
         public Position Level_Pos_Access_Order { get; set; }
         public LevelAccess Level_Access_Order { get; set; }
+
         public int ID_Customer { get; set; }            //public Customer Customer { get; set; }
 
 

@@ -18,7 +18,7 @@ namespace ManagingClients
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmUserLoginForm());
-            Application.Run(new frmMain_Control());
+            Application.Run(frmMain_Control.Instance);
         }
     }
 }

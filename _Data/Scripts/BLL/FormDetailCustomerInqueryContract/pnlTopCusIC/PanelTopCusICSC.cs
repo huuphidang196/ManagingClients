@@ -35,6 +35,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
             this._FlowLayOutPanelUINegativeSC = new FlowLayOutPanelUINegativeSC();
         }
 
+        public virtual void ShowAllDataWhenBegin()
+        {
+
+        }
 
     }
 }

@@ -63,7 +63,7 @@ namespace ManagingClients
             this.grbDetailInquery = new System.Windows.Forms.GroupBox();
             this.flpDetailInquery = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtNameInquery = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtInqueryNumber = new System.Windows.Forms.TextBox();
@@ -85,43 +85,47 @@ namespace ManagingClients
             this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnDeleteFileInquery = new System.Windows.Forms.Button();
-            this.txtBenefitPercent = new System.Windows.Forms.TextBox();
+            this.txtSelectedExchangeRate = new System.Windows.Forms.TextBox();
+            this.lblShowFileInquery = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.txtPurposePurchasing = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlContract = new System.Windows.Forms.Panel();
             this.grbDetailContract = new System.Windows.Forms.GroupBox();
             this.flpDetailContract = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.pnlCenterBottom = new System.Windows.Forms.Panel();
             this.pnlBelowCusIC = new System.Windows.Forms.Panel();
             this.tabCtrlInqueryContract = new System.Windows.Forms.TabControl();
             this.tabPageInqueryCus = new System.Windows.Forms.TabPage();
-            this.lsvInqueryCus = new System.Windows.Forms.ListView();
+            this.lsvOrdersCustomer = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPageContractCus = new System.Windows.Forms.TabPage();
-            this.lblShowFileInquery = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.txtEndUser = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -143,17 +147,20 @@ namespace ManagingClients
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.panel16.SuspendLayout();
             this.pnlContract.SuspendLayout();
             this.grbDetailContract.SuspendLayout();
             this.flpDetailContract.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.pnlBelowCusIC.SuspendLayout();
             this.tabCtrlInqueryContract.SuspendLayout();
             this.tabPageInqueryCus.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopCusIC
@@ -161,9 +168,9 @@ namespace ManagingClients
             this.pnlTopCusIC.Controls.Add(this.flpUINegative);
             this.pnlTopCusIC.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopCusIC.Location = new System.Drawing.Point(0, 0);
-            this.pnlTopCusIC.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlTopCusIC.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.pnlTopCusIC.Name = "pnlTopCusIC";
-            this.pnlTopCusIC.Size = new System.Drawing.Size(1220, 76);
+            this.pnlTopCusIC.Size = new System.Drawing.Size(1119, 63);
             this.pnlTopCusIC.TabIndex = 0;
             // 
             // flpUINegative
@@ -181,7 +188,7 @@ namespace ManagingClients
             this.flpUINegative.Location = new System.Drawing.Point(0, 0);
             this.flpUINegative.Margin = new System.Windows.Forms.Padding(0);
             this.flpUINegative.Name = "flpUINegative";
-            this.flpUINegative.Size = new System.Drawing.Size(1220, 76);
+            this.flpUINegative.Size = new System.Drawing.Size(1119, 63);
             this.flpUINegative.TabIndex = 0;
             // 
             // btnAddICForCus
@@ -189,7 +196,7 @@ namespace ManagingClients
             this.btnAddICForCus.Location = new System.Drawing.Point(30, 12);
             this.btnAddICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnAddICForCus.Name = "btnAddICForCus";
-            this.btnAddICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnAddICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnAddICForCus.TabIndex = 0;
             this.btnAddICForCus.Text = "Thêm";
             this.btnAddICForCus.UseVisualStyleBackColor = true;
@@ -199,7 +206,7 @@ namespace ManagingClients
             this.btnEditICForCus.Location = new System.Drawing.Point(154, 12);
             this.btnEditICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnEditICForCus.Name = "btnEditICForCus";
-            this.btnEditICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnEditICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnEditICForCus.TabIndex = 0;
             this.btnEditICForCus.Text = "Sửa";
             this.btnEditICForCus.UseVisualStyleBackColor = true;
@@ -209,7 +216,7 @@ namespace ManagingClients
             this.btnRemoveICForCus.Location = new System.Drawing.Point(278, 12);
             this.btnRemoveICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnRemoveICForCus.Name = "btnRemoveICForCus";
-            this.btnRemoveICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnRemoveICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnRemoveICForCus.TabIndex = 0;
             this.btnRemoveICForCus.Text = "Xóa";
             this.btnRemoveICForCus.UseVisualStyleBackColor = true;
@@ -219,7 +226,7 @@ namespace ManagingClients
             this.btnDetailICForCus.Location = new System.Drawing.Point(402, 12);
             this.btnDetailICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnDetailICForCus.Name = "btnDetailICForCus";
-            this.btnDetailICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnDetailICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnDetailICForCus.TabIndex = 0;
             this.btnDetailICForCus.Text = "Chi tiết";
             this.btnDetailICForCus.UseVisualStyleBackColor = true;
@@ -229,7 +236,7 @@ namespace ManagingClients
             this.btnSaveICForCusSys.Location = new System.Drawing.Point(526, 12);
             this.btnSaveICForCusSys.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnSaveICForCusSys.Name = "btnSaveICForCusSys";
-            this.btnSaveICForCusSys.Size = new System.Drawing.Size(94, 51);
+            this.btnSaveICForCusSys.Size = new System.Drawing.Size(94, 35);
             this.btnSaveICForCusSys.TabIndex = 0;
             this.btnSaveICForCusSys.Text = "Lưu";
             this.btnSaveICForCusSys.UseVisualStyleBackColor = true;
@@ -239,7 +246,7 @@ namespace ManagingClients
             this.btnPrintICForCus.Location = new System.Drawing.Point(650, 12);
             this.btnPrintICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnPrintICForCus.Name = "btnPrintICForCus";
-            this.btnPrintICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnPrintICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnPrintICForCus.TabIndex = 0;
             this.btnPrintICForCus.Text = "In ";
             this.btnPrintICForCus.UseVisualStyleBackColor = true;
@@ -249,7 +256,7 @@ namespace ManagingClients
             this.btnHelpICForCus.Location = new System.Drawing.Point(774, 12);
             this.btnHelpICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnHelpICForCus.Name = "btnHelpICForCus";
-            this.btnHelpICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnHelpICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnHelpICForCus.TabIndex = 0;
             this.btnHelpICForCus.Text = "Giúp";
             this.btnHelpICForCus.UseVisualStyleBackColor = true;
@@ -259,7 +266,7 @@ namespace ManagingClients
             this.btnCloseICForCus.Location = new System.Drawing.Point(898, 12);
             this.btnCloseICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnCloseICForCus.Name = "btnCloseICForCus";
-            this.btnCloseICForCus.Size = new System.Drawing.Size(94, 51);
+            this.btnCloseICForCus.Size = new System.Drawing.Size(94, 35);
             this.btnCloseICForCus.TabIndex = 0;
             this.btnCloseICForCus.Text = "Đóng";
             this.btnCloseICForCus.UseVisualStyleBackColor = true;
@@ -270,20 +277,20 @@ namespace ManagingClients
             this.pnlCenterCusIC.Controls.Add(this.pnlCustomerInfo);
             this.pnlCenterCusIC.Controls.Add(this.pnlInqueryContract);
             this.pnlCenterCusIC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenterCusIC.Location = new System.Drawing.Point(0, 76);
+            this.pnlCenterCusIC.Location = new System.Drawing.Point(0, 63);
             this.pnlCenterCusIC.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCenterCusIC.Name = "pnlCenterCusIC";
-            this.pnlCenterCusIC.Size = new System.Drawing.Size(1220, 328);
+            this.pnlCenterCusIC.Size = new System.Drawing.Size(1119, 529);
             this.pnlCenterCusIC.TabIndex = 1;
             // 
             // pnlCustomerInfo
             // 
             this.pnlCustomerInfo.Controls.Add(this.grbCustomerInfo);
-            this.pnlCustomerInfo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlCustomerInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCustomerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnlCustomerInfo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCustomerInfo.Name = "pnlCustomerInfo";
-            this.pnlCustomerInfo.Size = new System.Drawing.Size(540, 326);
+            this.pnlCustomerInfo.Size = new System.Drawing.Size(1117, 160);
             this.pnlCustomerInfo.TabIndex = 0;
             // 
             // grbCustomerInfo
@@ -295,13 +302,14 @@ namespace ManagingClients
             this.grbCustomerInfo.Margin = new System.Windows.Forms.Padding(4);
             this.grbCustomerInfo.Name = "grbCustomerInfo";
             this.grbCustomerInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.grbCustomerInfo.Size = new System.Drawing.Size(540, 326);
+            this.grbCustomerInfo.Size = new System.Drawing.Size(1117, 160);
             this.grbCustomerInfo.TabIndex = 0;
             this.grbCustomerInfo.TabStop = false;
             this.grbCustomerInfo.Text = "Thông tin Khách Hàng";
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel2.Controls.Add(this.panel4);
             this.flowLayoutPanel2.Controls.Add(this.panel5);
             this.flowLayoutPanel2.Controls.Add(this.panel6);
@@ -310,23 +318,24 @@ namespace ManagingClients
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 23);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(532, 299);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1109, 133);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.txtNameCustomer);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Location = new System.Drawing.Point(3, 10);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(525, 44);
+            this.panel4.Size = new System.Drawing.Size(531, 44);
             this.panel4.TabIndex = 2;
             // 
             // txtNameCustomer
             // 
-            this.txtNameCustomer.Location = new System.Drawing.Point(142, 9);
+            this.txtNameCustomer.Location = new System.Drawing.Point(134, 9);
             this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(380, 26);
+            this.txtNameCustomer.Size = new System.Drawing.Size(389, 26);
             this.txtNameCustomer.TabIndex = 1;
             this.txtNameCustomer.Text = "PECC4 - Công ty cố phần tư vấn xây dựng Điện 4";
             // 
@@ -334,26 +343,27 @@ namespace ManagingClients
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 12);
+            this.label1.Location = new System.Drawing.Point(15, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 19);
+            this.label1.Size = new System.Drawing.Size(115, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên khách Hàng   :";
+            this.label1.Text = "Tên khách Hàng :";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.txtAddressCustomer);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(3, 53);
+            this.panel5.Location = new System.Drawing.Point(540, 10);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(525, 44);
+            this.panel5.Size = new System.Drawing.Size(564, 44);
             this.panel5.TabIndex = 2;
             // 
             // txtAddressCustomer
             // 
-            this.txtAddressCustomer.Location = new System.Drawing.Point(142, 9);
+            this.txtAddressCustomer.Location = new System.Drawing.Point(133, 9);
             this.txtAddressCustomer.Name = "txtAddressCustomer";
-            this.txtAddressCustomer.Size = new System.Drawing.Size(380, 26);
+            this.txtAddressCustomer.Size = new System.Drawing.Size(427, 26);
             this.txtAddressCustomer.TabIndex = 1;
             this.txtAddressCustomer.Text = "11 Hoàng Hoa Thám, Phường Lộc Thọ, Thành phố Nha Trang, Tỉnh Khánh Hòa, Việt Nam";
             // 
@@ -361,26 +371,27 @@ namespace ManagingClients
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 12);
+            this.label2.Location = new System.Drawing.Point(15, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Địa chỉ Công ty    :";
+            this.label2.Text = "Địa chỉ Công ty  :";
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.txtEmailCustomer);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Location = new System.Drawing.Point(3, 103);
+            this.panel6.Location = new System.Drawing.Point(3, 67);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(525, 44);
+            this.panel6.Size = new System.Drawing.Size(460, 44);
             this.panel6.TabIndex = 2;
             // 
             // txtEmailCustomer
             // 
-            this.txtEmailCustomer.Location = new System.Drawing.Point(142, 9);
+            this.txtEmailCustomer.Location = new System.Drawing.Point(134, 9);
             this.txtEmailCustomer.Name = "txtEmailCustomer";
-            this.txtEmailCustomer.Size = new System.Drawing.Size(380, 26);
+            this.txtEmailCustomer.Size = new System.Drawing.Size(318, 26);
             this.txtEmailCustomer.TabIndex = 1;
             this.txtEmailCustomer.Text = "tv4@pecc4.vn";
             // 
@@ -388,26 +399,27 @@ namespace ManagingClients
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 12);
+            this.label3.Location = new System.Drawing.Point(15, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 19);
+            this.label3.Size = new System.Drawing.Size(113, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Email                   :";
+            this.label3.Text = "Email                 :";
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.txtPhoneCustomer);
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(3, 153);
+            this.panel7.Location = new System.Drawing.Point(469, 67);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(525, 44);
+            this.panel7.Size = new System.Drawing.Size(363, 44);
             this.panel7.TabIndex = 2;
             // 
             // txtPhoneCustomer
             // 
-            this.txtPhoneCustomer.Location = new System.Drawing.Point(142, 9);
+            this.txtPhoneCustomer.Location = new System.Drawing.Point(126, 9);
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
-            this.txtPhoneCustomer.Size = new System.Drawing.Size(380, 26);
+            this.txtPhoneCustomer.Size = new System.Drawing.Size(231, 26);
             this.txtPhoneCustomer.TabIndex = 1;
             this.txtPhoneCustomer.Text = "(+84) 258 - 3563999";
             // 
@@ -415,26 +427,27 @@ namespace ManagingClients
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 12);
+            this.label4.Location = new System.Drawing.Point(22, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 19);
+            this.label4.Size = new System.Drawing.Size(99, 19);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Số điện thoại       :";
+            this.label4.Text = "Số điện thoại  :";
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.txtTaxCustomer);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Location = new System.Drawing.Point(3, 203);
+            this.panel8.Location = new System.Drawing.Point(838, 67);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(525, 44);
+            this.panel8.Size = new System.Drawing.Size(266, 44);
             this.panel8.TabIndex = 2;
             // 
             // txtTaxCustomer
             // 
-            this.txtTaxCustomer.Location = new System.Drawing.Point(142, 9);
+            this.txtTaxCustomer.Location = new System.Drawing.Point(117, 9);
             this.txtTaxCustomer.Name = "txtTaxCustomer";
-            this.txtTaxCustomer.Size = new System.Drawing.Size(380, 26);
+            this.txtTaxCustomer.Size = new System.Drawing.Size(145, 26);
             this.txtTaxCustomer.TabIndex = 1;
             this.txtTaxCustomer.Text = "4200385474";
             // 
@@ -442,30 +455,30 @@ namespace ManagingClients
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 12);
+            this.label5.Location = new System.Drawing.Point(22, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 19);
+            this.label5.Size = new System.Drawing.Size(88, 19);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Mã số thuế         :";
+            this.label5.Text = "Mã số thuế  :";
             // 
             // pnlInqueryContract
             // 
             this.pnlInqueryContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlInqueryContract.Controls.Add(this.pnlInqueryCustomer);
             this.pnlInqueryContract.Controls.Add(this.pnlContract);
-            this.pnlInqueryContract.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlInqueryContract.Location = new System.Drawing.Point(566, 0);
+            this.pnlInqueryContract.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlInqueryContract.Location = new System.Drawing.Point(0, 167);
             this.pnlInqueryContract.Name = "pnlInqueryContract";
-            this.pnlInqueryContract.Size = new System.Drawing.Size(652, 326);
+            this.pnlInqueryContract.Size = new System.Drawing.Size(1117, 360);
             this.pnlInqueryContract.TabIndex = 1;
             // 
             // pnlInqueryCustomer
             // 
             this.pnlInqueryCustomer.Controls.Add(this.grbDetailInquery);
-            this.pnlInqueryCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInqueryCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlInqueryCustomer.Location = new System.Drawing.Point(0, 0);
             this.pnlInqueryCustomer.Name = "pnlInqueryCustomer";
-            this.pnlInqueryCustomer.Size = new System.Drawing.Size(652, 326);
+            this.pnlInqueryCustomer.Size = new System.Drawing.Size(651, 360);
             this.pnlInqueryCustomer.TabIndex = 0;
             // 
             // grbDetailInquery
@@ -476,7 +489,7 @@ namespace ManagingClients
             this.grbDetailInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDetailInquery.Location = new System.Drawing.Point(0, 0);
             this.grbDetailInquery.Name = "grbDetailInquery";
-            this.grbDetailInquery.Size = new System.Drawing.Size(652, 326);
+            this.grbDetailInquery.Size = new System.Drawing.Size(651, 360);
             this.grbDetailInquery.TabIndex = 0;
             this.grbDetailInquery.TabStop = false;
             this.grbDetailInquery.Text = "Chi tiết Báo Giá ";
@@ -491,30 +504,32 @@ namespace ManagingClients
             this.flpDetailInquery.Controls.Add(this.panel9);
             this.flpDetailInquery.Controls.Add(this.panel10);
             this.flpDetailInquery.Controls.Add(this.panel11);
+            this.flpDetailInquery.Controls.Add(this.panel18);
+            this.flpDetailInquery.Controls.Add(this.panel19);
             this.flpDetailInquery.Controls.Add(this.panel16);
             this.flpDetailInquery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDetailInquery.Location = new System.Drawing.Point(3, 22);
             this.flpDetailInquery.Name = "flpDetailInquery";
-            this.flpDetailInquery.Size = new System.Drawing.Size(646, 301);
+            this.flpDetailInquery.Size = new System.Drawing.Size(645, 335);
             this.flpDetailInquery.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtNameInquery);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 44);
             this.panel1.TabIndex = 0;
             // 
-            // textBox6
+            // txtNameInquery
             // 
-            this.textBox6.Location = new System.Drawing.Point(167, 9);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(441, 26);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
+            this.txtNameInquery.Location = new System.Drawing.Point(167, 9);
+            this.txtNameInquery.Name = "txtNameInquery";
+            this.txtNameInquery.Size = new System.Drawing.Size(441, 26);
+            this.txtNameInquery.TabIndex = 1;
+            this.txtNameInquery.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
             // 
             // label6
             // 
@@ -704,7 +719,7 @@ namespace ManagingClients
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.btnDeleteFileInquery);
-            this.panel11.Controls.Add(this.txtBenefitPercent);
+            this.panel11.Controls.Add(this.txtSelectedExchangeRate);
             this.panel11.Controls.Add(this.lblShowFileInquery);
             this.panel11.Controls.Add(this.label16);
             this.panel11.Controls.Add(this.label15);
@@ -716,21 +731,32 @@ namespace ManagingClients
             // btnDeleteFileInquery
             // 
             this.btnDeleteFileInquery.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDeleteFileInquery.Location = new System.Drawing.Point(571, 8);
+            this.btnDeleteFileInquery.Location = new System.Drawing.Point(571, 9);
             this.btnDeleteFileInquery.Name = "btnDeleteFileInquery";
             this.btnDeleteFileInquery.Size = new System.Drawing.Size(37, 26);
             this.btnDeleteFileInquery.TabIndex = 2;
             this.btnDeleteFileInquery.Text = "X";
             this.btnDeleteFileInquery.UseVisualStyleBackColor = false;
             // 
-            // txtBenefitPercent
+            // txtSelectedExchangeRate
             // 
-            this.txtBenefitPercent.Location = new System.Drawing.Point(167, 9);
-            this.txtBenefitPercent.Name = "txtBenefitPercent";
-            this.txtBenefitPercent.Size = new System.Drawing.Size(132, 26);
-            this.txtBenefitPercent.TabIndex = 1;
-            this.txtBenefitPercent.Text = "50";
-            this.txtBenefitPercent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSelectedExchangeRate.Location = new System.Drawing.Point(167, 9);
+            this.txtSelectedExchangeRate.Name = "txtSelectedExchangeRate";
+            this.txtSelectedExchangeRate.Size = new System.Drawing.Size(132, 26);
+            this.txtSelectedExchangeRate.TabIndex = 1;
+            this.txtSelectedExchangeRate.Text = "29,000";
+            this.txtSelectedExchangeRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblShowFileInquery
+            // 
+            this.lblShowFileInquery.BackColor = System.Drawing.Color.LightBlue;
+            this.lblShowFileInquery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblShowFileInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowFileInquery.Location = new System.Drawing.Point(479, 11);
+            this.lblShowFileInquery.Name = "lblShowFileInquery";
+            this.lblShowFileInquery.Size = new System.Drawing.Size(86, 21);
+            this.lblShowFileInquery.TabIndex = 0;
+            this.lblShowFileInquery.Text = "Tải lên";
             // 
             // label16
             // 
@@ -748,18 +774,46 @@ namespace ManagingClients
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(9, 12);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 19);
+            this.label15.Size = new System.Drawing.Size(152, 19);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Phần trăm lợi nhuận(%):";
+            this.label15.Text = "Báo tại Tỉ giá (VNĐ)   :";
+            // 
+            // panel18
+            // 
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel18.Controls.Add(this.txtPurposePurchasing);
+            this.panel18.Controls.Add(this.label24);
+            this.panel18.Location = new System.Drawing.Point(3, 303);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(618, 44);
+            this.panel18.TabIndex = 7;
+            // 
+            // txtPurposePurchasing
+            // 
+            this.txtPurposePurchasing.Location = new System.Drawing.Point(167, 9);
+            this.txtPurposePurchasing.Name = "txtPurposePurchasing";
+            this.txtPurposePurchasing.Size = new System.Drawing.Size(441, 26);
+            this.txtPurposePurchasing.TabIndex = 1;
+            this.txtPurposePurchasing.Text = "Dự phòng cho OLTC";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(9, 12);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(154, 19);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Mục đích mua hàng      :";
             // 
             // panel16
             // 
             this.panel16.Controls.Add(this.button2);
             this.panel16.Controls.Add(this.button1);
-            this.panel16.Location = new System.Drawing.Point(3, 303);
+            this.panel16.Location = new System.Drawing.Point(3, 403);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(618, 58);
-            this.panel16.TabIndex = 5;
+            this.panel16.TabIndex = 6;
             // 
             // button2
             // 
@@ -784,10 +838,10 @@ namespace ManagingClients
             // pnlContract
             // 
             this.pnlContract.Controls.Add(this.grbDetailContract);
-            this.pnlContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContract.Location = new System.Drawing.Point(0, 0);
+            this.pnlContract.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlContract.Location = new System.Drawing.Point(687, 0);
             this.pnlContract.Name = "pnlContract";
-            this.pnlContract.Size = new System.Drawing.Size(652, 326);
+            this.pnlContract.Size = new System.Drawing.Size(430, 360);
             this.pnlContract.TabIndex = 1;
             // 
             // grbDetailContract
@@ -798,70 +852,44 @@ namespace ManagingClients
             this.grbDetailContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDetailContract.Location = new System.Drawing.Point(0, 0);
             this.grbDetailContract.Name = "grbDetailContract";
-            this.grbDetailContract.Size = new System.Drawing.Size(652, 326);
+            this.grbDetailContract.Size = new System.Drawing.Size(430, 360);
             this.grbDetailContract.TabIndex = 1;
             this.grbDetailContract.TabStop = false;
-            this.grbDetailContract.Text = "Chi tiết Báo Giá ";
+            this.grbDetailContract.Text = "Chi tiết Hợp Đồng";
             // 
             // flpDetailContract
             // 
             this.flpDetailContract.AutoScroll = true;
             this.flpDetailContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flpDetailContract.Controls.Add(this.panel12);
             this.flpDetailContract.Controls.Add(this.panel13);
+            this.flpDetailContract.Controls.Add(this.panel17);
             this.flpDetailContract.Controls.Add(this.panel14);
             this.flpDetailContract.Controls.Add(this.panel15);
+            this.flpDetailContract.Controls.Add(this.panel12);
             this.flpDetailContract.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDetailContract.Location = new System.Drawing.Point(3, 22);
             this.flpDetailContract.Name = "flpDetailContract";
-            this.flpDetailContract.Size = new System.Drawing.Size(646, 301);
+            this.flpDetailContract.Size = new System.Drawing.Size(424, 335);
             this.flpDetailContract.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.textBox13);
-            this.panel12.Controls.Add(this.label13);
-            this.panel12.Location = new System.Drawing.Point(3, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(632, 44);
-            this.panel12.TabIndex = 0;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(178, 9);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(444, 26);
-            this.textBox13.TabIndex = 1;
-            this.textBox13.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(9, 12);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(167, 19);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Tên Hợp Đồng                :";
             // 
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.textBox14);
             this.panel13.Controls.Add(this.label17);
-            this.panel13.Location = new System.Drawing.Point(3, 53);
+            this.panel13.Location = new System.Drawing.Point(5, 10);
+            this.panel13.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(632, 44);
+            this.panel13.Size = new System.Drawing.Size(414, 44);
             this.panel13.TabIndex = 1;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(178, 9);
+            this.textBox14.Location = new System.Drawing.Point(193, 9);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(444, 26);
+            this.textBox14.Size = new System.Drawing.Size(208, 26);
             this.textBox14.TabIndex = 1;
-            this.textBox14.Text = "GSES/123456";
+            this.textBox14.Text = "01042024/HĐMB/GSES-3C";
             // 
             // label17
             // 
@@ -873,95 +901,84 @@ namespace ManagingClients
             this.label17.TabIndex = 0;
             this.label17.Text = "Hợp Đồng Số                 :";
             // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Controls.Add(this.dateTimePicker2);
+            this.panel17.Controls.Add(this.label23);
+            this.panel17.Location = new System.Drawing.Point(5, 74);
+            this.panel17.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(414, 44);
+            this.panel17.TabIndex = 2;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(193, 8);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(208, 26);
+            this.dateTimePicker2.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(9, 12);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(164, 19);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Ngày kí Hợp Đồng         :";
+            // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.dateTimePicker3);
             this.panel14.Controls.Add(this.label18);
-            this.panel14.Controls.Add(this.dateTimePicker4);
-            this.panel14.Controls.Add(this.label19);
-            this.panel14.Location = new System.Drawing.Point(3, 103);
+            this.panel14.Location = new System.Drawing.Point(5, 138);
+            this.panel14.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(632, 44);
+            this.panel14.Size = new System.Drawing.Size(414, 44);
             this.panel14.TabIndex = 2;
             // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(490, 7);
+            this.dateTimePicker3.Location = new System.Drawing.Point(192, 7);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(132, 26);
+            this.dateTimePicker3.Size = new System.Drawing.Size(208, 26);
             this.dateTimePicker3.TabIndex = 1;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(322, 11);
+            this.label18.Location = new System.Drawing.Point(8, 11);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(164, 19);
             this.label18.TabIndex = 0;
-            this.label18.Text = "Ngày hết hạn Hợp Đồng :";
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(178, 8);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(132, 26);
-            this.dateTimePicker4.TabIndex = 1;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(9, 12);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(164, 19);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Ngày kí Hợp Đồng         :";
+            this.label18.Text = "Ngày hết hiệu lực HĐ     :";
             // 
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.button9);
             this.panel15.Controls.Add(this.textBox16);
-            this.panel15.Controls.Add(this.label20);
             this.panel15.Controls.Add(this.label21);
-            this.panel15.Location = new System.Drawing.Point(3, 153);
+            this.panel15.Location = new System.Drawing.Point(5, 202);
+            this.panel15.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(632, 44);
+            this.panel15.Size = new System.Drawing.Size(414, 44);
             this.panel15.TabIndex = 3;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button9.Location = new System.Drawing.Point(487, 9);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(132, 26);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Click Xem PDF";
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(178, 9);
+            this.textBox16.Location = new System.Drawing.Point(193, 9);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(132, 26);
+            this.textBox16.Size = new System.Drawing.Size(208, 26);
             this.textBox16.TabIndex = 1;
-            this.textBox16.Text = "GSES/123456";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(323, 12);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(163, 19);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "File Hợp Đồng PDF       :";
+            this.textBox16.Text = "125,056,357,125";
             // 
             // label21
             // 
@@ -973,123 +990,165 @@ namespace ManagingClients
             this.label21.TabIndex = 0;
             this.label21.Text = "Tổng Giá Trị HĐ (VNĐ) :";
             // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.button3);
+            this.panel12.Controls.Add(this.label13);
+            this.panel12.Controls.Add(this.label20);
+            this.panel12.Location = new System.Drawing.Point(5, 266);
+            this.panel12.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(414, 44);
+            this.panel12.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button3.Location = new System.Drawing.Point(365, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(37, 26);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 19);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "File Hợp Đồng PDF       :";
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.LightBlue;
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(196, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(159, 21);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Tải File PDF đính kèm";
+            // 
             // pnlCenterBottom
             // 
             this.pnlCenterBottom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenterBottom.Location = new System.Drawing.Point(0, 404);
+            this.pnlCenterBottom.Location = new System.Drawing.Point(0, 592);
             this.pnlCenterBottom.Name = "pnlCenterBottom";
-            this.pnlCenterBottom.Size = new System.Drawing.Size(1220, 44);
+            this.pnlCenterBottom.Size = new System.Drawing.Size(1119, 38);
             this.pnlCenterBottom.TabIndex = 2;
             // 
             // pnlBelowCusIC
             // 
             this.pnlBelowCusIC.Controls.Add(this.tabCtrlInqueryContract);
             this.pnlBelowCusIC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 448);
+            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 630);
             this.pnlBelowCusIC.Name = "pnlBelowCusIC";
-            this.pnlBelowCusIC.Size = new System.Drawing.Size(1220, 401);
+            this.pnlBelowCusIC.Size = new System.Drawing.Size(1119, 331);
             this.pnlBelowCusIC.TabIndex = 3;
             // 
             // tabCtrlInqueryContract
             // 
             this.tabCtrlInqueryContract.Controls.Add(this.tabPageInqueryCus);
-            this.tabCtrlInqueryContract.Controls.Add(this.tabPageContractCus);
             this.tabCtrlInqueryContract.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCtrlInqueryContract.Location = new System.Drawing.Point(0, 0);
             this.tabCtrlInqueryContract.Name = "tabCtrlInqueryContract";
             this.tabCtrlInqueryContract.SelectedIndex = 0;
-            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1220, 401);
+            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1119, 331);
             this.tabCtrlInqueryContract.TabIndex = 0;
             // 
             // tabPageInqueryCus
             // 
-            this.tabPageInqueryCus.Controls.Add(this.lsvInqueryCus);
+            this.tabPageInqueryCus.Controls.Add(this.lsvOrdersCustomer);
             this.tabPageInqueryCus.Location = new System.Drawing.Point(4, 28);
             this.tabPageInqueryCus.Name = "tabPageInqueryCus";
             this.tabPageInqueryCus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInqueryCus.Size = new System.Drawing.Size(1212, 369);
+            this.tabPageInqueryCus.Size = new System.Drawing.Size(1111, 299);
             this.tabPageInqueryCus.TabIndex = 0;
-            this.tabPageInqueryCus.Text = "Báo Giá";
+            this.tabPageInqueryCus.Text = "Đơn Hàng Khách Hàng";
             this.tabPageInqueryCus.UseVisualStyleBackColor = true;
             // 
-            // lsvInqueryCus
+            // lsvOrdersCustomer
             // 
-            this.lsvInqueryCus.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lsvInqueryCus.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvOrdersCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lsvOrdersCustomer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.lsvInqueryCus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvInqueryCus.FullRowSelect = true;
-            this.lsvInqueryCus.GridLines = true;
-            this.lsvInqueryCus.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lsvInqueryCus.HideSelection = false;
-            this.lsvInqueryCus.Location = new System.Drawing.Point(3, 3);
-            this.lsvInqueryCus.Name = "lsvInqueryCus";
-            this.lsvInqueryCus.Size = new System.Drawing.Size(1206, 363);
-            this.lsvInqueryCus.TabIndex = 0;
-            this.lsvInqueryCus.UseCompatibleStateImageBehavior = false;
-            this.lsvInqueryCus.View = System.Windows.Forms.View.Details;
+            this.columnHeader4});
+            this.lsvOrdersCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvOrdersCustomer.FullRowSelect = true;
+            this.lsvOrdersCustomer.GridLines = true;
+            this.lsvOrdersCustomer.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lsvOrdersCustomer.HideSelection = false;
+            this.lsvOrdersCustomer.Location = new System.Drawing.Point(3, 3);
+            this.lsvOrdersCustomer.Name = "lsvOrdersCustomer";
+            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1105, 293);
+            this.lsvOrdersCustomer.TabIndex = 0;
+            this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
+            this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Tên Báo Giá";
+            this.columnHeader1.Text = "Tên Đơn Hàng";
             this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 400;
+            this.columnHeader1.Width = 450;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Số";
+            this.columnHeader2.Text = "Tình trạng đơn hàng";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Width = 250;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Ngày gửi";
+            this.columnHeader3.Text = "Cấp độ truy cập Phòng Ban";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 200;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Thời hạn Báo Giá";
+            this.columnHeader4.Text = "Cấp độ truy cập Chung";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 200;
             // 
-            // columnHeader5
+            // panel19
             // 
-            this.columnHeader5.Text = "File Báo Giá PDF";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 200;
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel19.Controls.Add(this.txtEndUser);
+            this.panel19.Controls.Add(this.label19);
+            this.panel19.Location = new System.Drawing.Point(3, 353);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(618, 44);
+            this.panel19.TabIndex = 7;
             // 
-            // tabPageContractCus
+            // txtEndUser
             // 
-            this.tabPageContractCus.Location = new System.Drawing.Point(4, 28);
-            this.tabPageContractCus.Name = "tabPageContractCus";
-            this.tabPageContractCus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageContractCus.Size = new System.Drawing.Size(1212, 369);
-            this.tabPageContractCus.TabIndex = 1;
-            this.tabPageContractCus.Text = "Hợp Đồng";
-            this.tabPageContractCus.UseVisualStyleBackColor = true;
+            this.txtEndUser.Location = new System.Drawing.Point(167, 9);
+            this.txtEndUser.Name = "txtEndUser";
+            this.txtEndUser.Size = new System.Drawing.Size(441, 26);
+            this.txtEndUser.TabIndex = 1;
+            this.txtEndUser.Text = "EVNCPC";
             // 
-            // lblShowFileInquery
+            // label19
             // 
-            this.lblShowFileInquery.BackColor = System.Drawing.Color.LightBlue;
-            this.lblShowFileInquery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblShowFileInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowFileInquery.Location = new System.Drawing.Point(479, 11);
-            this.lblShowFileInquery.Name = "lblShowFileInquery";
-            this.lblShowFileInquery.Size = new System.Drawing.Size(86, 21);
-            this.lblShowFileInquery.TabIndex = 0;
-            this.lblShowFileInquery.Text = "Tải lên";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(9, 12);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(155, 19);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "End User cung cấp       :";
             // 
             // frmDetailCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1220, 849);
+            this.ClientSize = new System.Drawing.Size(1119, 961);
             this.Controls.Add(this.pnlBelowCusIC);
             this.Controls.Add(this.pnlCenterBottom);
             this.Controls.Add(this.pnlCenterCusIC);
@@ -1132,21 +1191,27 @@ namespace ManagingClients
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.pnlContract.ResumeLayout(false);
             this.grbDetailContract.ResumeLayout(false);
             this.flpDetailContract.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.pnlBelowCusIC.ResumeLayout(false);
             this.tabCtrlInqueryContract.ResumeLayout(false);
             this.tabPageInqueryCus.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1168,17 +1233,10 @@ namespace ManagingClients
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlCenterBottom;
         private System.Windows.Forms.Panel pnlBelowCusIC;
-        private System.Windows.Forms.TabPage tabPageInqueryCus;
-        private System.Windows.Forms.TabPage tabPageContractCus;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Panel pnlInqueryContract;
         private System.Windows.Forms.GroupBox grbDetailInquery;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox txtNameInquery;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox txtInqueryNumber;
@@ -1202,28 +1260,21 @@ namespace ManagingClients
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel11;
-        public System.Windows.Forms.TextBox txtBenefitPercent;
+        public System.Windows.Forms.TextBox txtSelectedExchangeRate;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel pnlContract;
         private System.Windows.Forms.GroupBox grbDetailContract;
         private System.Windows.Forms.FlowLayoutPanel flpDetailContract;
-        private System.Windows.Forms.Panel panel12;
-        public System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel13;
         public System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel15;
         public System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.DateTimePicker dateTimePicker3;
-        public System.Windows.Forms.DateTimePicker dateTimePicker4;
-        public System.Windows.Forms.Button button9;
         public System.Windows.Forms.Panel pnlCustomerInfo;
         public System.Windows.Forms.GroupBox grbCustomerInfo;
         public System.Windows.Forms.Button btnEditICForCus;
@@ -1235,8 +1286,6 @@ namespace ManagingClients
         public System.Windows.Forms.Button btnHelpICForCus;
         public System.Windows.Forms.Button btnCloseICForCus;
         private System.Windows.Forms.Panel panel16;
-        public System.Windows.Forms.ListView lsvInqueryCus;
-        public System.Windows.Forms.TabControl tabCtrlInqueryContract;
         public System.Windows.Forms.FlowLayoutPanel flpUINegative;
         public System.Windows.Forms.DateTimePicker dtpDateSendInquery;
         public System.Windows.Forms.DateTimePicker dtpDateExpiredInquery;
@@ -1246,5 +1295,25 @@ namespace ManagingClients
         public System.Windows.Forms.FlowLayoutPanel flpDetailInquery;
         public System.Windows.Forms.Panel pnlInqueryCustomer;
         public System.Windows.Forms.Label lblShowFileInquery;
+        public System.Windows.Forms.TabControl tabCtrlInqueryContract;
+        private System.Windows.Forms.TabPage tabPageInqueryCus;
+        public System.Windows.Forms.ListView lsvOrdersCustomer;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel17;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel18;
+        public System.Windows.Forms.TextBox txtPurposePurchasing;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel19;
+        public System.Windows.Forms.TextBox txtEndUser;
+        private System.Windows.Forms.Label label19;
     }
 }

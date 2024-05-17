@@ -1,4 +1,5 @@
 ﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlTopCusIC;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,7 @@ namespace ManagingClients
 
         private void frmNewCustomer_Load(object sender, EventArgs e)
         {
+            PanelTopCusICSC.Instance.ShowAllDataWhenBegin();
             PanelCenterCusICSC.Instance.ShowAllInformationAfterOpen();
         }
     }
