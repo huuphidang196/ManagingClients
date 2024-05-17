@@ -19,7 +19,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
         public TabControlPOSC()
         {
-            this._tabControlPO = frmMain_Control.Instance.tabControlPO;
+            this._tabControlPO = FrmMain_Control.Instance.tabControlPO;
             this._tabControlPO.DrawMode = TabDrawMode.OwnerDrawFixed;
             this._tabControlPO.DrawItem += new DrawItemEventHandler(YourTabControl_DrawItem);
 

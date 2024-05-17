@@ -1,7 +1,7 @@
 ﻿
 namespace ManagingClients
 {
-    partial class frmMain_Control
+    partial class FrmMain_Control
     {
         /// <summary>
         /// Required designer variable.

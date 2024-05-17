@@ -29,7 +29,9 @@ namespace ManagingClients
         public frmDetailCustomer()
         {
             InitializeComponent();
+
         }
+
 
         protected CustomerGSES _CustomerGSESPreview;
         public CustomerGSES CustomerGSES => _CustomerGSESPreview;
@@ -41,5 +43,7 @@ namespace ManagingClients
             PanelTopCusICSC.Instance.ShowAllDataWhenBegin();
             PanelCenterCusICSC.Instance.ShowAllInformationAfterOpen();
         }
+
+   
     }
 }

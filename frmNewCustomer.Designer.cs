@@ -34,7 +34,6 @@ namespace ManagingClients
             this.btnAddICForCus = new System.Windows.Forms.Button();
             this.btnEditICForCus = new System.Windows.Forms.Button();
             this.btnRemoveICForCus = new System.Windows.Forms.Button();
-            this.btnDetailICForCus = new System.Windows.Forms.Button();
             this.btnSaveICForCusSys = new System.Windows.Forms.Button();
             this.btnPrintICForCus = new System.Windows.Forms.Button();
             this.btnHelpICForCus = new System.Windows.Forms.Button();
@@ -58,6 +57,8 @@ namespace ManagingClients
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtTaxCustomer = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlOrderPurchasingParent = new System.Windows.Forms.Panel();
+            this.grbOrderPurchasingParent = new System.Windows.Forms.GroupBox();
             this.pnlInqueryContract = new System.Windows.Forms.Panel();
             this.pnlInqueryCustomer = new System.Windows.Forms.Panel();
             this.grbDetailInquery = new System.Windows.Forms.GroupBox();
@@ -92,28 +93,47 @@ namespace ManagingClients
             this.panel18 = new System.Windows.Forms.Panel();
             this.txtPurposePurchasing = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.txtEndUser = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRemoveInquery = new System.Windows.Forms.Button();
+            this.btnSaveInquery = new System.Windows.Forms.Button();
             this.pnlContract = new System.Windows.Forms.Panel();
             this.grbDetailContract = new System.Windows.Forms.GroupBox();
             this.flpDetailContract = new System.Windows.Forms.FlowLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtNumberContract = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateSigned = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateExpired = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtTotalValueContract = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDeleteFileContract = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.lblFileContract = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.btnRemoveContract = new System.Windows.Forms.Button();
+            this.btnSaveContract = new System.Windows.Forms.Button();
+            this.pnlSettingOrderPurchasing = new System.Windows.Forms.Panel();
+            this.grbSettingOrderPurchasing = new System.Windows.Forms.GroupBox();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.cboLevelCompanyAccessOrder = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.cboLevelPosAccessOrder = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.cboStatusOrder = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtNameOrder = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.pnlCenterBottom = new System.Windows.Forms.Panel();
             this.pnlBelowCusIC = new System.Windows.Forms.Panel();
             this.tabCtrlInqueryContract = new System.Windows.Forms.TabControl();
@@ -123,9 +143,6 @@ namespace ManagingClients
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.txtEndUser = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -137,6 +154,8 @@ namespace ManagingClients
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.pnlOrderPurchasingParent.SuspendLayout();
+            this.grbOrderPurchasingParent.SuspendLayout();
             this.pnlInqueryContract.SuspendLayout();
             this.pnlInqueryCustomer.SuspendLayout();
             this.grbDetailInquery.SuspendLayout();
@@ -148,6 +167,7 @@ namespace ManagingClients
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel18.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.panel16.SuspendLayout();
             this.pnlContract.SuspendLayout();
             this.grbDetailContract.SuspendLayout();
@@ -157,10 +177,14 @@ namespace ManagingClients
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.pnlSettingOrderPurchasing.SuspendLayout();
+            this.grbSettingOrderPurchasing.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.pnlBelowCusIC.SuspendLayout();
             this.tabCtrlInqueryContract.SuspendLayout();
             this.tabPageInqueryCus.SuspendLayout();
-            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopCusIC
@@ -179,7 +203,6 @@ namespace ManagingClients
             this.flpUINegative.Controls.Add(this.btnAddICForCus);
             this.flpUINegative.Controls.Add(this.btnEditICForCus);
             this.flpUINegative.Controls.Add(this.btnRemoveICForCus);
-            this.flpUINegative.Controls.Add(this.btnDetailICForCus);
             this.flpUINegative.Controls.Add(this.btnSaveICForCusSys);
             this.flpUINegative.Controls.Add(this.btnPrintICForCus);
             this.flpUINegative.Controls.Add(this.btnHelpICForCus);
@@ -196,77 +219,67 @@ namespace ManagingClients
             this.btnAddICForCus.Location = new System.Drawing.Point(30, 12);
             this.btnAddICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnAddICForCus.Name = "btnAddICForCus";
-            this.btnAddICForCus.Size = new System.Drawing.Size(94, 35);
+            this.btnAddICForCus.Size = new System.Drawing.Size(107, 35);
             this.btnAddICForCus.TabIndex = 0;
-            this.btnAddICForCus.Text = "Thêm";
+            this.btnAddICForCus.Text = "Thêm ĐH";
             this.btnAddICForCus.UseVisualStyleBackColor = true;
             // 
             // btnEditICForCus
             // 
-            this.btnEditICForCus.Location = new System.Drawing.Point(154, 12);
+            this.btnEditICForCus.Location = new System.Drawing.Point(167, 12);
             this.btnEditICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnEditICForCus.Name = "btnEditICForCus";
-            this.btnEditICForCus.Size = new System.Drawing.Size(94, 35);
+            this.btnEditICForCus.Size = new System.Drawing.Size(107, 35);
             this.btnEditICForCus.TabIndex = 0;
-            this.btnEditICForCus.Text = "Sửa";
+            this.btnEditICForCus.Text = "Sửa ĐH";
             this.btnEditICForCus.UseVisualStyleBackColor = true;
             // 
             // btnRemoveICForCus
             // 
-            this.btnRemoveICForCus.Location = new System.Drawing.Point(278, 12);
+            this.btnRemoveICForCus.Location = new System.Drawing.Point(304, 12);
             this.btnRemoveICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnRemoveICForCus.Name = "btnRemoveICForCus";
-            this.btnRemoveICForCus.Size = new System.Drawing.Size(94, 35);
+            this.btnRemoveICForCus.Size = new System.Drawing.Size(107, 35);
             this.btnRemoveICForCus.TabIndex = 0;
-            this.btnRemoveICForCus.Text = "Xóa";
+            this.btnRemoveICForCus.Text = "Xóa ĐH";
             this.btnRemoveICForCus.UseVisualStyleBackColor = true;
-            // 
-            // btnDetailICForCus
-            // 
-            this.btnDetailICForCus.Location = new System.Drawing.Point(402, 12);
-            this.btnDetailICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
-            this.btnDetailICForCus.Name = "btnDetailICForCus";
-            this.btnDetailICForCus.Size = new System.Drawing.Size(94, 35);
-            this.btnDetailICForCus.TabIndex = 0;
-            this.btnDetailICForCus.Text = "Chi tiết";
-            this.btnDetailICForCus.UseVisualStyleBackColor = true;
             // 
             // btnSaveICForCusSys
             // 
-            this.btnSaveICForCusSys.Location = new System.Drawing.Point(526, 12);
+            this.btnSaveICForCusSys.Location = new System.Drawing.Point(441, 12);
             this.btnSaveICForCusSys.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnSaveICForCusSys.Name = "btnSaveICForCusSys";
-            this.btnSaveICForCusSys.Size = new System.Drawing.Size(94, 35);
+            this.btnSaveICForCusSys.Size = new System.Drawing.Size(107, 35);
             this.btnSaveICForCusSys.TabIndex = 0;
-            this.btnSaveICForCusSys.Text = "Lưu";
+            this.btnSaveICForCusSys.Text = "Lưu Toàn Bộ";
             this.btnSaveICForCusSys.UseVisualStyleBackColor = true;
             // 
             // btnPrintICForCus
             // 
-            this.btnPrintICForCus.Location = new System.Drawing.Point(650, 12);
+            this.btnPrintICForCus.Location = new System.Drawing.Point(578, 12);
             this.btnPrintICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnPrintICForCus.Name = "btnPrintICForCus";
-            this.btnPrintICForCus.Size = new System.Drawing.Size(94, 35);
+            this.btnPrintICForCus.Size = new System.Drawing.Size(107, 35);
             this.btnPrintICForCus.TabIndex = 0;
             this.btnPrintICForCus.Text = "In ";
             this.btnPrintICForCus.UseVisualStyleBackColor = true;
             // 
             // btnHelpICForCus
             // 
-            this.btnHelpICForCus.Location = new System.Drawing.Point(774, 12);
+            this.btnHelpICForCus.Location = new System.Drawing.Point(715, 12);
             this.btnHelpICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnHelpICForCus.Name = "btnHelpICForCus";
-            this.btnHelpICForCus.Size = new System.Drawing.Size(94, 35);
+            this.btnHelpICForCus.Size = new System.Drawing.Size(107, 35);
             this.btnHelpICForCus.TabIndex = 0;
             this.btnHelpICForCus.Text = "Giúp";
             this.btnHelpICForCus.UseVisualStyleBackColor = true;
             // 
             // btnCloseICForCus
             // 
-            this.btnCloseICForCus.Location = new System.Drawing.Point(898, 12);
+            this.btnCloseICForCus.Location = new System.Drawing.Point(852, 12);
             this.btnCloseICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnCloseICForCus.Name = "btnCloseICForCus";
-            this.btnCloseICForCus.Size = new System.Drawing.Size(94, 35);
+            this.btnCloseICForCus.Size = new System.Drawing.Size(107, 35);
             this.btnCloseICForCus.TabIndex = 0;
             this.btnCloseICForCus.Text = "Đóng";
             this.btnCloseICForCus.UseVisualStyleBackColor = true;
@@ -275,16 +288,18 @@ namespace ManagingClients
             // 
             this.pnlCenterCusIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCenterCusIC.Controls.Add(this.pnlCustomerInfo);
-            this.pnlCenterCusIC.Controls.Add(this.pnlInqueryContract);
+            this.pnlCenterCusIC.Controls.Add(this.pnlOrderPurchasingParent);
             this.pnlCenterCusIC.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCenterCusIC.Location = new System.Drawing.Point(0, 63);
             this.pnlCenterCusIC.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCenterCusIC.Name = "pnlCenterCusIC";
-            this.pnlCenterCusIC.Size = new System.Drawing.Size(1119, 529);
+            this.pnlCenterCusIC.Size = new System.Drawing.Size(1119, 591);
             this.pnlCenterCusIC.TabIndex = 1;
             // 
             // pnlCustomerInfo
             // 
+            this.pnlCustomerInfo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pnlCustomerInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCustomerInfo.Controls.Add(this.grbCustomerInfo);
             this.pnlCustomerInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCustomerInfo.Location = new System.Drawing.Point(0, 0);
@@ -302,7 +317,7 @@ namespace ManagingClients
             this.grbCustomerInfo.Margin = new System.Windows.Forms.Padding(4);
             this.grbCustomerInfo.Name = "grbCustomerInfo";
             this.grbCustomerInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.grbCustomerInfo.Size = new System.Drawing.Size(1117, 160);
+            this.grbCustomerInfo.Size = new System.Drawing.Size(1115, 158);
             this.grbCustomerInfo.TabIndex = 0;
             this.grbCustomerInfo.TabStop = false;
             this.grbCustomerInfo.Text = "Thông tin Khách Hàng";
@@ -318,7 +333,7 @@ namespace ManagingClients
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 23);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1109, 133);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1107, 131);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // panel4
@@ -356,14 +371,14 @@ namespace ManagingClients
             this.panel5.Location = new System.Drawing.Point(540, 10);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(564, 44);
+            this.panel5.Size = new System.Drawing.Size(558, 44);
             this.panel5.TabIndex = 2;
             // 
             // txtAddressCustomer
             // 
             this.txtAddressCustomer.Location = new System.Drawing.Point(133, 9);
             this.txtAddressCustomer.Name = "txtAddressCustomer";
-            this.txtAddressCustomer.Size = new System.Drawing.Size(427, 26);
+            this.txtAddressCustomer.Size = new System.Drawing.Size(422, 26);
             this.txtAddressCustomer.TabIndex = 1;
             this.txtAddressCustomer.Text = "11 Hoàng Hoa Thám, Phường Lộc Thọ, Thành phố Nha Trang, Tỉnh Khánh Hòa, Việt Nam";
             // 
@@ -384,7 +399,7 @@ namespace ManagingClients
             this.panel6.Location = new System.Drawing.Point(3, 67);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(460, 44);
+            this.panel6.Size = new System.Drawing.Size(455, 44);
             this.panel6.TabIndex = 2;
             // 
             // txtEmailCustomer
@@ -409,7 +424,7 @@ namespace ManagingClients
             // 
             this.panel7.Controls.Add(this.txtPhoneCustomer);
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(469, 67);
+            this.panel7.Location = new System.Drawing.Point(464, 67);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(363, 44);
@@ -437,7 +452,7 @@ namespace ManagingClients
             // 
             this.panel8.Controls.Add(this.txtTaxCustomer);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Location = new System.Drawing.Point(838, 67);
+            this.panel8.Location = new System.Drawing.Point(833, 67);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(266, 44);
@@ -461,15 +476,40 @@ namespace ManagingClients
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã số thuế  :";
             // 
+            // pnlOrderPurchasingParent
+            // 
+            this.pnlOrderPurchasingParent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlOrderPurchasingParent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pnlOrderPurchasingParent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOrderPurchasingParent.Controls.Add(this.grbOrderPurchasingParent);
+            this.pnlOrderPurchasingParent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlOrderPurchasingParent.Location = new System.Drawing.Point(0, 167);
+            this.pnlOrderPurchasingParent.Name = "pnlOrderPurchasingParent";
+            this.pnlOrderPurchasingParent.Size = new System.Drawing.Size(1117, 422);
+            this.pnlOrderPurchasingParent.TabIndex = 0;
+            // 
+            // grbOrderPurchasingParent
+            // 
+            this.grbOrderPurchasingParent.Controls.Add(this.pnlInqueryContract);
+            this.grbOrderPurchasingParent.Controls.Add(this.pnlSettingOrderPurchasing);
+            this.grbOrderPurchasingParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbOrderPurchasingParent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbOrderPurchasingParent.Location = new System.Drawing.Point(0, 0);
+            this.grbOrderPurchasingParent.Name = "grbOrderPurchasingParent";
+            this.grbOrderPurchasingParent.Size = new System.Drawing.Size(1115, 420);
+            this.grbOrderPurchasingParent.TabIndex = 1;
+            this.grbOrderPurchasingParent.TabStop = false;
+            this.grbOrderPurchasingParent.Text = "Chi tiết Đơn Hàng";
+            // 
             // pnlInqueryContract
             // 
             this.pnlInqueryContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlInqueryContract.Controls.Add(this.pnlInqueryCustomer);
             this.pnlInqueryContract.Controls.Add(this.pnlContract);
-            this.pnlInqueryContract.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInqueryContract.Location = new System.Drawing.Point(0, 167);
+            this.pnlInqueryContract.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInqueryContract.Location = new System.Drawing.Point(3, 154);
             this.pnlInqueryContract.Name = "pnlInqueryContract";
-            this.pnlInqueryContract.Size = new System.Drawing.Size(1117, 360);
+            this.pnlInqueryContract.Size = new System.Drawing.Size(1109, 263);
             this.pnlInqueryContract.TabIndex = 1;
             // 
             // pnlInqueryCustomer
@@ -478,7 +518,7 @@ namespace ManagingClients
             this.pnlInqueryCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlInqueryCustomer.Location = new System.Drawing.Point(0, 0);
             this.pnlInqueryCustomer.Name = "pnlInqueryCustomer";
-            this.pnlInqueryCustomer.Size = new System.Drawing.Size(651, 360);
+            this.pnlInqueryCustomer.Size = new System.Drawing.Size(651, 263);
             this.pnlInqueryCustomer.TabIndex = 0;
             // 
             // grbDetailInquery
@@ -489,7 +529,7 @@ namespace ManagingClients
             this.grbDetailInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDetailInquery.Location = new System.Drawing.Point(0, 0);
             this.grbDetailInquery.Name = "grbDetailInquery";
-            this.grbDetailInquery.Size = new System.Drawing.Size(651, 360);
+            this.grbDetailInquery.Size = new System.Drawing.Size(651, 263);
             this.grbDetailInquery.TabIndex = 0;
             this.grbDetailInquery.TabStop = false;
             this.grbDetailInquery.Text = "Chi tiết Báo Giá ";
@@ -510,7 +550,7 @@ namespace ManagingClients
             this.flpDetailInquery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDetailInquery.Location = new System.Drawing.Point(3, 22);
             this.flpDetailInquery.Name = "flpDetailInquery";
-            this.flpDetailInquery.Size = new System.Drawing.Size(645, 335);
+            this.flpDetailInquery.Size = new System.Drawing.Size(645, 238);
             this.flpDetailInquery.TabIndex = 0;
             // 
             // panel1
@@ -806,315 +846,6 @@ namespace ManagingClients
             this.label24.TabIndex = 0;
             this.label24.Text = "Mục đích mua hàng      :";
             // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.button2);
-            this.panel16.Controls.Add(this.button1);
-            this.panel16.Location = new System.Drawing.Point(3, 403);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(618, 58);
-            this.panel16.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DeepPink;
-            this.button2.Location = new System.Drawing.Point(321, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.GreenYellow;
-            this.button1.Location = new System.Drawing.Point(139, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pnlContract
-            // 
-            this.pnlContract.Controls.Add(this.grbDetailContract);
-            this.pnlContract.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlContract.Location = new System.Drawing.Point(687, 0);
-            this.pnlContract.Name = "pnlContract";
-            this.pnlContract.Size = new System.Drawing.Size(430, 360);
-            this.pnlContract.TabIndex = 1;
-            // 
-            // grbDetailContract
-            // 
-            this.grbDetailContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grbDetailContract.Controls.Add(this.flpDetailContract);
-            this.grbDetailContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbDetailContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDetailContract.Location = new System.Drawing.Point(0, 0);
-            this.grbDetailContract.Name = "grbDetailContract";
-            this.grbDetailContract.Size = new System.Drawing.Size(430, 360);
-            this.grbDetailContract.TabIndex = 1;
-            this.grbDetailContract.TabStop = false;
-            this.grbDetailContract.Text = "Chi tiết Hợp Đồng";
-            // 
-            // flpDetailContract
-            // 
-            this.flpDetailContract.AutoScroll = true;
-            this.flpDetailContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flpDetailContract.Controls.Add(this.panel13);
-            this.flpDetailContract.Controls.Add(this.panel17);
-            this.flpDetailContract.Controls.Add(this.panel14);
-            this.flpDetailContract.Controls.Add(this.panel15);
-            this.flpDetailContract.Controls.Add(this.panel12);
-            this.flpDetailContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpDetailContract.Location = new System.Drawing.Point(3, 22);
-            this.flpDetailContract.Name = "flpDetailContract";
-            this.flpDetailContract.Size = new System.Drawing.Size(424, 335);
-            this.flpDetailContract.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.textBox14);
-            this.panel13.Controls.Add(this.label17);
-            this.panel13.Location = new System.Drawing.Point(5, 10);
-            this.panel13.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(414, 44);
-            this.panel13.TabIndex = 1;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(193, 9);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(208, 26);
-            this.textBox14.TabIndex = 1;
-            this.textBox14.Text = "01042024/HĐMB/GSES-3C";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(9, 12);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(165, 19);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Hợp Đồng Số                 :";
-            // 
-            // panel17
-            // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.dateTimePicker2);
-            this.panel17.Controls.Add(this.label23);
-            this.panel17.Location = new System.Drawing.Point(5, 74);
-            this.panel17.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(414, 44);
-            this.panel17.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(193, 8);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(208, 26);
-            this.dateTimePicker2.TabIndex = 1;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(9, 12);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(164, 19);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Ngày kí Hợp Đồng         :";
-            // 
-            // panel14
-            // 
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.dateTimePicker3);
-            this.panel14.Controls.Add(this.label18);
-            this.panel14.Location = new System.Drawing.Point(5, 138);
-            this.panel14.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(414, 44);
-            this.panel14.TabIndex = 2;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(192, 7);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(208, 26);
-            this.dateTimePicker3.TabIndex = 1;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(8, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(164, 19);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Ngày hết hiệu lực HĐ     :";
-            // 
-            // panel15
-            // 
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.textBox16);
-            this.panel15.Controls.Add(this.label21);
-            this.panel15.Location = new System.Drawing.Point(5, 202);
-            this.panel15.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(414, 44);
-            this.panel15.TabIndex = 3;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(193, 9);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(208, 26);
-            this.textBox16.TabIndex = 1;
-            this.textBox16.Text = "125,056,357,125";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(9, 12);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(166, 19);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Tổng Giá Trị HĐ (VNĐ) :";
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.button3);
-            this.panel12.Controls.Add(this.label13);
-            this.panel12.Controls.Add(this.label20);
-            this.panel12.Location = new System.Drawing.Point(5, 266);
-            this.panel12.Margin = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(414, 44);
-            this.panel12.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button3.Location = new System.Drawing.Point(365, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 26);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 12);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 19);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "File Hợp Đồng PDF       :";
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.LightBlue;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(196, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(159, 21);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Tải File PDF đính kèm";
-            // 
-            // pnlCenterBottom
-            // 
-            this.pnlCenterBottom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenterBottom.Location = new System.Drawing.Point(0, 592);
-            this.pnlCenterBottom.Name = "pnlCenterBottom";
-            this.pnlCenterBottom.Size = new System.Drawing.Size(1119, 38);
-            this.pnlCenterBottom.TabIndex = 2;
-            // 
-            // pnlBelowCusIC
-            // 
-            this.pnlBelowCusIC.Controls.Add(this.tabCtrlInqueryContract);
-            this.pnlBelowCusIC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 630);
-            this.pnlBelowCusIC.Name = "pnlBelowCusIC";
-            this.pnlBelowCusIC.Size = new System.Drawing.Size(1119, 331);
-            this.pnlBelowCusIC.TabIndex = 3;
-            // 
-            // tabCtrlInqueryContract
-            // 
-            this.tabCtrlInqueryContract.Controls.Add(this.tabPageInqueryCus);
-            this.tabCtrlInqueryContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabCtrlInqueryContract.Location = new System.Drawing.Point(0, 0);
-            this.tabCtrlInqueryContract.Name = "tabCtrlInqueryContract";
-            this.tabCtrlInqueryContract.SelectedIndex = 0;
-            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1119, 331);
-            this.tabCtrlInqueryContract.TabIndex = 0;
-            // 
-            // tabPageInqueryCus
-            // 
-            this.tabPageInqueryCus.Controls.Add(this.lsvOrdersCustomer);
-            this.tabPageInqueryCus.Location = new System.Drawing.Point(4, 28);
-            this.tabPageInqueryCus.Name = "tabPageInqueryCus";
-            this.tabPageInqueryCus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInqueryCus.Size = new System.Drawing.Size(1111, 299);
-            this.tabPageInqueryCus.TabIndex = 0;
-            this.tabPageInqueryCus.Text = "Đơn Hàng Khách Hàng";
-            this.tabPageInqueryCus.UseVisualStyleBackColor = true;
-            // 
-            // lsvOrdersCustomer
-            // 
-            this.lsvOrdersCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lsvOrdersCustomer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lsvOrdersCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvOrdersCustomer.FullRowSelect = true;
-            this.lsvOrdersCustomer.GridLines = true;
-            this.lsvOrdersCustomer.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lsvOrdersCustomer.HideSelection = false;
-            this.lsvOrdersCustomer.Location = new System.Drawing.Point(3, 3);
-            this.lsvOrdersCustomer.Name = "lsvOrdersCustomer";
-            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1105, 293);
-            this.lsvOrdersCustomer.TabIndex = 0;
-            this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
-            this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tên Đơn Hàng";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 450;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tình trạng đơn hàng";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 250;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Cấp độ truy cập Phòng Ban";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 200;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Cấp độ truy cập Chung";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 200;
-            // 
             // panel19
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1142,6 +873,480 @@ namespace ManagingClients
             this.label19.Size = new System.Drawing.Size(155, 19);
             this.label19.TabIndex = 0;
             this.label19.Text = "End User cung cấp       :";
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.btnRemoveInquery);
+            this.panel16.Controls.Add(this.btnSaveInquery);
+            this.panel16.Location = new System.Drawing.Point(3, 403);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(618, 58);
+            this.panel16.TabIndex = 6;
+            // 
+            // btnRemoveInquery
+            // 
+            this.btnRemoveInquery.BackColor = System.Drawing.Color.DeepPink;
+            this.btnRemoveInquery.Location = new System.Drawing.Point(321, 9);
+            this.btnRemoveInquery.Name = "btnRemoveInquery";
+            this.btnRemoveInquery.Size = new System.Drawing.Size(121, 40);
+            this.btnRemoveInquery.TabIndex = 2;
+            this.btnRemoveInquery.Text = "Xóa";
+            this.btnRemoveInquery.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveInquery
+            // 
+            this.btnSaveInquery.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnSaveInquery.Location = new System.Drawing.Point(139, 9);
+            this.btnSaveInquery.Name = "btnSaveInquery";
+            this.btnSaveInquery.Size = new System.Drawing.Size(121, 40);
+            this.btnSaveInquery.TabIndex = 2;
+            this.btnSaveInquery.Text = "Lưu";
+            this.btnSaveInquery.UseVisualStyleBackColor = false;
+            // 
+            // pnlContract
+            // 
+            this.pnlContract.Controls.Add(this.grbDetailContract);
+            this.pnlContract.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlContract.Location = new System.Drawing.Point(649, 0);
+            this.pnlContract.Name = "pnlContract";
+            this.pnlContract.Size = new System.Drawing.Size(460, 263);
+            this.pnlContract.TabIndex = 1;
+            // 
+            // grbDetailContract
+            // 
+            this.grbDetailContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbDetailContract.Controls.Add(this.flpDetailContract);
+            this.grbDetailContract.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbDetailContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDetailContract.Location = new System.Drawing.Point(0, 0);
+            this.grbDetailContract.Name = "grbDetailContract";
+            this.grbDetailContract.Size = new System.Drawing.Size(460, 263);
+            this.grbDetailContract.TabIndex = 1;
+            this.grbDetailContract.TabStop = false;
+            this.grbDetailContract.Text = "Chi tiết Hợp Đồng";
+            // 
+            // flpDetailContract
+            // 
+            this.flpDetailContract.AutoScroll = true;
+            this.flpDetailContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpDetailContract.Controls.Add(this.panel13);
+            this.flpDetailContract.Controls.Add(this.panel17);
+            this.flpDetailContract.Controls.Add(this.panel14);
+            this.flpDetailContract.Controls.Add(this.panel15);
+            this.flpDetailContract.Controls.Add(this.panel12);
+            this.flpDetailContract.Controls.Add(this.panel20);
+            this.flpDetailContract.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDetailContract.Location = new System.Drawing.Point(3, 22);
+            this.flpDetailContract.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.flpDetailContract.Name = "flpDetailContract";
+            this.flpDetailContract.Size = new System.Drawing.Size(454, 238);
+            this.flpDetailContract.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.txtNumberContract);
+            this.panel13.Controls.Add(this.label17);
+            this.panel13.Location = new System.Drawing.Point(10, 10);
+            this.panel13.Margin = new System.Windows.Forms.Padding(10);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(414, 44);
+            this.panel13.TabIndex = 1;
+            // 
+            // txtNumberContract
+            // 
+            this.txtNumberContract.Location = new System.Drawing.Point(193, 9);
+            this.txtNumberContract.Name = "txtNumberContract";
+            this.txtNumberContract.Size = new System.Drawing.Size(216, 26);
+            this.txtNumberContract.TabIndex = 1;
+            this.txtNumberContract.Text = "01042024/HĐMB/GSES-3C";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(9, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(165, 19);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Hợp Đồng Số                 :";
+            // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Controls.Add(this.dtpDateSigned);
+            this.panel17.Controls.Add(this.label23);
+            this.panel17.Location = new System.Drawing.Point(10, 74);
+            this.panel17.Margin = new System.Windows.Forms.Padding(10);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(414, 44);
+            this.panel17.TabIndex = 2;
+            // 
+            // dtpDateSigned
+            // 
+            this.dtpDateSigned.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateSigned.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateSigned.Location = new System.Drawing.Point(193, 8);
+            this.dtpDateSigned.Name = "dtpDateSigned";
+            this.dtpDateSigned.Size = new System.Drawing.Size(216, 26);
+            this.dtpDateSigned.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(9, 12);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(164, 19);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Ngày kí Hợp Đồng         :";
+            // 
+            // panel14
+            // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.dtpDateExpired);
+            this.panel14.Controls.Add(this.label18);
+            this.panel14.Location = new System.Drawing.Point(10, 138);
+            this.panel14.Margin = new System.Windows.Forms.Padding(10);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(414, 44);
+            this.panel14.TabIndex = 2;
+            // 
+            // dtpDateExpired
+            // 
+            this.dtpDateExpired.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateExpired.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateExpired.Location = new System.Drawing.Point(192, 7);
+            this.dtpDateExpired.Name = "dtpDateExpired";
+            this.dtpDateExpired.Size = new System.Drawing.Size(216, 26);
+            this.dtpDateExpired.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(8, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(164, 19);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Ngày hết hiệu lực HĐ     :";
+            // 
+            // panel15
+            // 
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.txtTotalValueContract);
+            this.panel15.Controls.Add(this.label21);
+            this.panel15.Location = new System.Drawing.Point(10, 202);
+            this.panel15.Margin = new System.Windows.Forms.Padding(10);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(414, 44);
+            this.panel15.TabIndex = 3;
+            // 
+            // txtTotalValueContract
+            // 
+            this.txtTotalValueContract.Location = new System.Drawing.Point(193, 9);
+            this.txtTotalValueContract.Name = "txtTotalValueContract";
+            this.txtTotalValueContract.Size = new System.Drawing.Size(216, 26);
+            this.txtTotalValueContract.TabIndex = 1;
+            this.txtTotalValueContract.Text = "125,056,357,125";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(9, 12);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(166, 19);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Tổng Giá Trị HĐ (VNĐ) :";
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.btnDeleteFileContract);
+            this.panel12.Controls.Add(this.label13);
+            this.panel12.Controls.Add(this.lblFileContract);
+            this.panel12.Location = new System.Drawing.Point(10, 266);
+            this.panel12.Margin = new System.Windows.Forms.Padding(10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(414, 44);
+            this.panel12.TabIndex = 3;
+            // 
+            // btnDeleteFileContract
+            // 
+            this.btnDeleteFileContract.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDeleteFileContract.Location = new System.Drawing.Point(366, 7);
+            this.btnDeleteFileContract.Name = "btnDeleteFileContract";
+            this.btnDeleteFileContract.Size = new System.Drawing.Size(37, 26);
+            this.btnDeleteFileContract.TabIndex = 2;
+            this.btnDeleteFileContract.Text = "X";
+            this.btnDeleteFileContract.UseVisualStyleBackColor = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 19);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "File Hợp Đồng PDF       :";
+            // 
+            // lblFileContract
+            // 
+            this.lblFileContract.BackColor = System.Drawing.Color.LightBlue;
+            this.lblFileContract.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFileContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFileContract.Location = new System.Drawing.Point(196, 9);
+            this.lblFileContract.Name = "lblFileContract";
+            this.lblFileContract.Size = new System.Drawing.Size(159, 21);
+            this.lblFileContract.TabIndex = 0;
+            this.lblFileContract.Text = "Tải File PDF đính kèm";
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.btnRemoveContract);
+            this.panel20.Controls.Add(this.btnSaveContract);
+            this.panel20.Location = new System.Drawing.Point(10, 330);
+            this.panel20.Margin = new System.Windows.Forms.Padding(10);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(414, 58);
+            this.panel20.TabIndex = 6;
+            // 
+            // btnRemoveContract
+            // 
+            this.btnRemoveContract.BackColor = System.Drawing.Color.DeepPink;
+            this.btnRemoveContract.Location = new System.Drawing.Point(233, 10);
+            this.btnRemoveContract.Name = "btnRemoveContract";
+            this.btnRemoveContract.Size = new System.Drawing.Size(121, 40);
+            this.btnRemoveContract.TabIndex = 2;
+            this.btnRemoveContract.Text = "Xóa";
+            this.btnRemoveContract.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveContract
+            // 
+            this.btnSaveContract.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnSaveContract.Location = new System.Drawing.Point(51, 10);
+            this.btnSaveContract.Name = "btnSaveContract";
+            this.btnSaveContract.Size = new System.Drawing.Size(121, 40);
+            this.btnSaveContract.TabIndex = 2;
+            this.btnSaveContract.Text = "Lưu";
+            this.btnSaveContract.UseVisualStyleBackColor = false;
+            // 
+            // pnlSettingOrderPurchasing
+            // 
+            this.pnlSettingOrderPurchasing.Controls.Add(this.grbSettingOrderPurchasing);
+            this.pnlSettingOrderPurchasing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSettingOrderPurchasing.Location = new System.Drawing.Point(3, 22);
+            this.pnlSettingOrderPurchasing.Name = "pnlSettingOrderPurchasing";
+            this.pnlSettingOrderPurchasing.Size = new System.Drawing.Size(1109, 132);
+            this.pnlSettingOrderPurchasing.TabIndex = 1;
+            // 
+            // grbSettingOrderPurchasing
+            // 
+            this.grbSettingOrderPurchasing.Controls.Add(this.panel21);
+            this.grbSettingOrderPurchasing.Controls.Add(this.panel22);
+            this.grbSettingOrderPurchasing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbSettingOrderPurchasing.Location = new System.Drawing.Point(0, 0);
+            this.grbSettingOrderPurchasing.Name = "grbSettingOrderPurchasing";
+            this.grbSettingOrderPurchasing.Size = new System.Drawing.Size(1109, 132);
+            this.grbSettingOrderPurchasing.TabIndex = 2;
+            this.grbSettingOrderPurchasing.TabStop = false;
+            this.grbSettingOrderPurchasing.Text = "Thiết lập Cài đặt Đơn Hàng";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.cboLevelCompanyAccessOrder);
+            this.panel21.Controls.Add(this.label26);
+            this.panel21.Controls.Add(this.cboLevelPosAccessOrder);
+            this.panel21.Controls.Add(this.label20);
+            this.panel21.Controls.Add(this.label25);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel21.Location = new System.Drawing.Point(543, 22);
+            this.panel21.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(563, 107);
+            this.panel21.TabIndex = 2;
+            // 
+            // cboLevelCompanyAccessOrder
+            // 
+            this.cboLevelCompanyAccessOrder.FormattingEnabled = true;
+            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(412, 61);
+            this.cboLevelCompanyAccessOrder.Name = "cboLevelCompanyAccessOrder";
+            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(145, 27);
+            this.cboLevelCompanyAccessOrder.TabIndex = 1;
+            this.cboLevelCompanyAccessOrder.Text = "Level_01";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(317, 67);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(72, 19);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Công ty   :";
+            // 
+            // cboLevelPosAccessOrder
+            // 
+            this.cboLevelPosAccessOrder.FormattingEnabled = true;
+            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(109, 61);
+            this.cboLevelPosAccessOrder.Name = "cboLevelPosAccessOrder";
+            this.cboLevelPosAccessOrder.Size = new System.Drawing.Size(174, 27);
+            this.cboLevelPosAccessOrder.TabIndex = 1;
+            this.cboLevelPosAccessOrder.Text = "Trưởng Phòng";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(12, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(271, 19);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Thiết lập Cấp độ Truy Cập Đơn Hàng  :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(12, 67);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(84, 19);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Phòng ban  :";
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.cboStatusOrder);
+            this.panel22.Controls.Add(this.label27);
+            this.panel22.Controls.Add(this.txtNameOrder);
+            this.panel22.Controls.Add(this.label22);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel22.Location = new System.Drawing.Point(3, 22);
+            this.panel22.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(536, 107);
+            this.panel22.TabIndex = 2;
+            // 
+            // cboStatusOrder
+            // 
+            this.cboStatusOrder.FormattingEnabled = true;
+            this.cboStatusOrder.Location = new System.Drawing.Point(163, 64);
+            this.cboStatusOrder.Name = "cboStatusOrder";
+            this.cboStatusOrder.Size = new System.Drawing.Size(202, 27);
+            this.cboStatusOrder.TabIndex = 1;
+            this.cboStatusOrder.Text = "Đang vận chuyển";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(15, 67);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(142, 19);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Tính trạng Đơn Hàng :";
+            // 
+            // txtNameOrder
+            // 
+            this.txtNameOrder.Location = new System.Drawing.Point(163, 14);
+            this.txtNameOrder.Name = "txtNameOrder";
+            this.txtNameOrder.Size = new System.Drawing.Size(365, 26);
+            this.txtNameOrder.TabIndex = 1;
+            this.txtNameOrder.Text = "Đơn hàng đặt mua bộ OLTC";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(15, 17);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(145, 19);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Tên Đơn Hàng           :";
+            // 
+            // pnlCenterBottom
+            // 
+            this.pnlCenterBottom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCenterBottom.Location = new System.Drawing.Point(0, 654);
+            this.pnlCenterBottom.Name = "pnlCenterBottom";
+            this.pnlCenterBottom.Size = new System.Drawing.Size(1119, 38);
+            this.pnlCenterBottom.TabIndex = 2;
+            // 
+            // pnlBelowCusIC
+            // 
+            this.pnlBelowCusIC.Controls.Add(this.tabCtrlInqueryContract);
+            this.pnlBelowCusIC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 692);
+            this.pnlBelowCusIC.Name = "pnlBelowCusIC";
+            this.pnlBelowCusIC.Size = new System.Drawing.Size(1119, 269);
+            this.pnlBelowCusIC.TabIndex = 3;
+            // 
+            // tabCtrlInqueryContract
+            // 
+            this.tabCtrlInqueryContract.Controls.Add(this.tabPageInqueryCus);
+            this.tabCtrlInqueryContract.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCtrlInqueryContract.Location = new System.Drawing.Point(0, 0);
+            this.tabCtrlInqueryContract.Name = "tabCtrlInqueryContract";
+            this.tabCtrlInqueryContract.SelectedIndex = 0;
+            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1119, 269);
+            this.tabCtrlInqueryContract.TabIndex = 0;
+            // 
+            // tabPageInqueryCus
+            // 
+            this.tabPageInqueryCus.Controls.Add(this.lsvOrdersCustomer);
+            this.tabPageInqueryCus.Location = new System.Drawing.Point(4, 28);
+            this.tabPageInqueryCus.Name = "tabPageInqueryCus";
+            this.tabPageInqueryCus.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageInqueryCus.Size = new System.Drawing.Size(1111, 237);
+            this.tabPageInqueryCus.TabIndex = 0;
+            this.tabPageInqueryCus.Text = "Đơn Hàng Khách Hàng";
+            this.tabPageInqueryCus.UseVisualStyleBackColor = true;
+            // 
+            // lsvOrdersCustomer
+            // 
+            this.lsvOrdersCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lsvOrdersCustomer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lsvOrdersCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvOrdersCustomer.FullRowSelect = true;
+            this.lsvOrdersCustomer.GridLines = true;
+            this.lsvOrdersCustomer.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lsvOrdersCustomer.HideSelection = false;
+            this.lsvOrdersCustomer.Location = new System.Drawing.Point(3, 3);
+            this.lsvOrdersCustomer.Name = "lsvOrdersCustomer";
+            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1105, 231);
+            this.lsvOrdersCustomer.TabIndex = 0;
+            this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
+            this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên Đơn Hàng";
+            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader1.Width = 450;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tình trạng đơn hàng";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 250;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Cấp độ truy cập Phòng Ban";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 200;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Cấp độ truy cập Chung";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 200;
             // 
             // frmDetailCustomer
             // 
@@ -1175,6 +1380,8 @@ namespace ManagingClients
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.pnlOrderPurchasingParent.ResumeLayout(false);
+            this.grbOrderPurchasingParent.ResumeLayout(false);
             this.pnlInqueryContract.ResumeLayout(false);
             this.pnlInqueryCustomer.ResumeLayout(false);
             this.grbDetailInquery.ResumeLayout(false);
@@ -1193,6 +1400,8 @@ namespace ManagingClients
             this.panel11.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.pnlContract.ResumeLayout(false);
             this.grbDetailContract.ResumeLayout(false);
@@ -1207,11 +1416,16 @@ namespace ManagingClients
             this.panel15.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.pnlSettingOrderPurchasing.ResumeLayout(false);
+            this.grbSettingOrderPurchasing.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
             this.pnlBelowCusIC.ResumeLayout(false);
             this.tabCtrlInqueryContract.ResumeLayout(false);
             this.tabPageInqueryCus.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1267,20 +1481,19 @@ namespace ManagingClients
         private System.Windows.Forms.GroupBox grbDetailContract;
         private System.Windows.Forms.FlowLayoutPanel flpDetailContract;
         private System.Windows.Forms.Panel panel13;
-        public System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.TextBox txtNumberContract;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel15;
-        public System.Windows.Forms.TextBox textBox16;
+        public System.Windows.Forms.TextBox txtTotalValueContract;
         private System.Windows.Forms.Label label21;
-        public System.Windows.Forms.DateTimePicker dateTimePicker3;
+        public System.Windows.Forms.DateTimePicker dtpDateExpired;
         public System.Windows.Forms.Panel pnlCustomerInfo;
         public System.Windows.Forms.GroupBox grbCustomerInfo;
         public System.Windows.Forms.Button btnEditICForCus;
         public System.Windows.Forms.Button btnSaveICForCusSys;
         public System.Windows.Forms.Button btnRemoveICForCus;
-        public System.Windows.Forms.Button btnDetailICForCus;
         public System.Windows.Forms.Button btnPrintICForCus;
         public System.Windows.Forms.Button btnAddICForCus;
         public System.Windows.Forms.Button btnHelpICForCus;
@@ -1290,8 +1503,8 @@ namespace ManagingClients
         public System.Windows.Forms.DateTimePicker dtpDateSendInquery;
         public System.Windows.Forms.DateTimePicker dtpDateExpiredInquery;
         public System.Windows.Forms.Button btnDeleteFileInquery;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnRemoveInquery;
+        public System.Windows.Forms.Button btnSaveInquery;
         public System.Windows.Forms.FlowLayoutPanel flpDetailInquery;
         public System.Windows.Forms.Panel pnlInqueryCustomer;
         public System.Windows.Forms.Label lblShowFileInquery;
@@ -1304,10 +1517,10 @@ namespace ManagingClients
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Label label20;
+        public System.Windows.Forms.Button btnDeleteFileContract;
+        public System.Windows.Forms.Label lblFileContract;
         private System.Windows.Forms.Panel panel17;
-        public System.Windows.Forms.DateTimePicker dateTimePicker2;
+        public System.Windows.Forms.DateTimePicker dtpDateSigned;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel18;
         public System.Windows.Forms.TextBox txtPurposePurchasing;
@@ -1315,5 +1528,23 @@ namespace ManagingClients
         private System.Windows.Forms.Panel panel19;
         public System.Windows.Forms.TextBox txtEndUser;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel20;
+        public System.Windows.Forms.Button btnRemoveContract;
+        public System.Windows.Forms.Button btnSaveContract;
+        public System.Windows.Forms.TextBox txtNameOrder;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label20;
+        public System.Windows.Forms.ComboBox cboLevelCompanyAccessOrder;
+        public System.Windows.Forms.ComboBox cboLevelPosAccessOrder;
+        public System.Windows.Forms.ComboBox cboStatusOrder;
+        public System.Windows.Forms.Panel pnlSettingOrderPurchasing;
+        public System.Windows.Forms.GroupBox grbOrderPurchasingParent;
+        public System.Windows.Forms.GroupBox grbSettingOrderPurchasing;
+        public System.Windows.Forms.Panel pnlOrderPurchasingParent;
+        public System.Windows.Forms.Panel panel22;
+        public System.Windows.Forms.Panel panel21;
     }
 }

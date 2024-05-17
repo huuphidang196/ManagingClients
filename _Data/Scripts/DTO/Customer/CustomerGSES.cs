@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.DTO.Account;
+﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer;
+using ManagingClients._Data.Scripts.DTO.Account;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,24 +8,7 @@ using System.Threading.Tasks;
 
 namespace ManagingClients._Data.Scripts.DTO.Customer
 {
-    public enum StatusOrder
-    {
-        Require_Inquiry = 0,
-
-        Send_Inquiry = 1,
-
-        Require_Contract = 2,
-
-        Cancel_Contract = 3,
-
-        Wait_Pay_Complete = 4,
-
-        Delivering = 5,
-
-        Arriving_Customer = 6,
-
-        Finished_Contract = 7
-    }
+  
 
     public class CustomerOrder
     {

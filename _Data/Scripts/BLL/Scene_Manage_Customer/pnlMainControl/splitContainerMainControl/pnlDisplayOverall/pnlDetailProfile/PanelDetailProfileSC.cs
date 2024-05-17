@@ -18,7 +18,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
 
         public PanelDetailProfileSC()
         {
-            this._pnlDetail_Profile = frmMain_Control.Instance.pnlDetailProfile;
+            this._pnlDetail_Profile = FrmMain_Control.Instance.pnlDetailProfile;
             this._TabControlProfileDetailSC = new TabControlProfileDetailSC();
 
         }

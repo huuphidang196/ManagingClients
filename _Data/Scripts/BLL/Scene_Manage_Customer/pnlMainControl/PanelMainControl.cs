@@ -30,7 +30,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
         private PanelMainControl()
         {
-            this._pnlMainControl = frmMain_Control.Instance.pnlMainControl;
+            this._pnlMainControl = FrmMain_Control.Instance.pnlMainControl;
             this._SplitContainerMainControl = new SplitContainerMainControl();
 
         }

@@ -18,7 +18,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
         public SplitContainerMainControl()
         {
-            this._spltContainerMainControl = frmMain_Control.Instance.splitContainerMainControl;
+            this._spltContainerMainControl = FrmMain_Control.Instance.splitContainerMainControl;
             this._PanelDisplayOverallSC = new PanelDisplayOverallSC();
         }
     }

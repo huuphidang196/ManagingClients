@@ -18,7 +18,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
 
         public PanelPurchasingOrderSC()
         {
-            this._pnlPurchasing_Order = frmMain_Control.Instance.pnlPurchasingOrder;
+            this._pnlPurchasing_Order = FrmMain_Control.Instance.pnlPurchasingOrder;
             this._SplitContainerOrderSC = new SplitContainerOrderSC();
         }
     }

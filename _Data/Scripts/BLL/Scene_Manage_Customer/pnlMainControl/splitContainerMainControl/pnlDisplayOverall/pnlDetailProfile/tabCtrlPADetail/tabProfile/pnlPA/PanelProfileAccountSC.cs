@@ -38,33 +38,33 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
         #region Initialize
         public PanelProfileAccountSC()
         {
-            this._PanelProfileAccount = frmMain_Control.Instance.pnlProfileAccount;
+            this._PanelProfileAccount = FrmMain_Control.Instance.pnlProfileAccount;
 
 
-            this._lblNameLogIn = frmMain_Control.Instance.lblNameLogIn;
-            this._lblPersonDepartment = frmMain_Control.Instance.lblPersonDepartment;
-            this._lblPersonPosition = frmMain_Control.Instance.lblPersonPosition;
-            this._lblLevelAcess = frmMain_Control.Instance.lblLevelAcess;
+            this._lblNameLogIn = FrmMain_Control.Instance.lblNameLogIn;
+            this._lblPersonDepartment = FrmMain_Control.Instance.lblPersonDepartment;
+            this._lblPersonPosition = FrmMain_Control.Instance.lblPersonPosition;
+            this._lblLevelAcess = FrmMain_Control.Instance.lblLevelAcess;
 
-            this._txtNameRealistic = frmMain_Control.Instance.txtNameRealistic;
-            this._txtEmailAccount = frmMain_Control.Instance.txtEmailAccount;
-            this._txtAddressAccount = frmMain_Control.Instance.txtAddressAccount;
+            this._txtNameRealistic = FrmMain_Control.Instance.txtNameRealistic;
+            this._txtEmailAccount = FrmMain_Control.Instance.txtEmailAccount;
+            this._txtAddressAccount = FrmMain_Control.Instance.txtAddressAccount;
 
-            this._radNam = frmMain_Control.Instance.radNam;
-            this._radNu = frmMain_Control.Instance.radNu;
+            this._radNam = FrmMain_Control.Instance.radNam;
+            this._radNu = FrmMain_Control.Instance.radNu;
 
-            this._cboDayDate = frmMain_Control.Instance.cboDayOfBirth;
-            this._cboMonthDate = frmMain_Control.Instance.cboMonthOfBirth;
-            this._cboYearDate = frmMain_Control.Instance.cboYearOfBirth;
+            this._cboDayDate = FrmMain_Control.Instance.cboDayOfBirth;
+            this._cboMonthDate = FrmMain_Control.Instance.cboMonthOfBirth;
+            this._cboYearDate = FrmMain_Control.Instance.cboYearOfBirth;
 
-            this._ptbAvatar = frmMain_Control.Instance.ptbAvatar;
+            this._ptbAvatar = FrmMain_Control.Instance.ptbAvatar;
 
             this.SetDataToDisplay();
         }
 
         protected virtual void SetDataToDisplay()
         {
-            ProfileAccount profileAccount = frmMain_Control.Instance.ProfileAccount;
+            ProfileAccount profileAccount = FrmMain_Control.Instance.ProfileAccount;
 
             this._lblNameLogIn.Text = profileAccount.Name_Log_In;
             this._lblPersonDepartment.Text = profileAccount.Department.Name_Department;
@@ -117,10 +117,10 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
         {
             ProfileAccount profileAccount = new ProfileAccount();
 
-            profileAccount.Password = frmMain_Control.Instance.ProfileAccount.Password;
+            profileAccount.Password = FrmMain_Control.Instance.ProfileAccount.Password;
             profileAccount.Name_Log_In = this._lblNameLogIn.Text;
-            profileAccount.Department = frmMain_Control.Instance.ProfileAccount.Department;
-            profileAccount.Person_Position = frmMain_Control.Instance.ProfileAccount.Person_Position;
+            profileAccount.Department = FrmMain_Control.Instance.ProfileAccount.Department;
+            profileAccount.Person_Position = FrmMain_Control.Instance.ProfileAccount.Person_Position;
             profileAccount.Level_Access = (LevelAccess)Enum.Parse(typeof(LevelAccess), this._lblLevelAcess.Text);
 
             profileAccount.Name_Realistic = this._txtNameRealistic.Text;

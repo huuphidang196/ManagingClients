@@ -73,9 +73,13 @@
       <DependentUpon>UserLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\PanelCenterCusICSC.cs" />
-    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlInqueryContract\PanelInqueryContractSC.cs" />
-    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlInqueryContract\pnlInqueryCustomer\grbDetailInquery\flpDetailInquery\FlowLayoutPanelDetailInquerySC.cs" />
-    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlInqueryContract\pnlInqueryCustomer\PanelInqueryCustomerSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\PanelOrderPurchasingCustomerSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\PanelInqueryContractSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlContractCustomer\grbDetailContract\flpDetailContract\FlowLayoutPanelDetailContractSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlInqueryCustomer\grbDetailInquery\flpDetailInquery\FlowLayoutPanelDetailInquerySC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlInqueryCustomer\PanelInqueryCustomerSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlSettingOrderPurchasing\grbSettingOrderPurchasing\GrbSettingOrderPurchasingSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlSettingOrderPurchasing\PanelSettingOrderPurchasingSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\PanelBelowCusICSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\TabCtrlInqueryContractSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\tabCtrlInqueryContract\TabPageInqueryCustomerSC.cs" />
@@ -97,7 +101,7 @@
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\pnlOptions\pnlHeaderOption\PanelHeaderOptionSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlPurchasingOrder\spcPurchasingOrder\SplitContainerOrderSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\SplitContainerMainControl.cs" />
-    <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\TransferEnumString.cs" />
+    <Compile Include="_Data\Scripts\BLL\TransferEnumString.cs" />
     <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlPurchasingOrder\PurchasingOrderProvider.cs" />

@@ -78,7 +78,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._btnDeleteFileInquery = frmDetailCustomer.Instance.btnDeleteFileInquery;
             this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearInqueryButton);
-
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
@@ -131,7 +130,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #endregion
 
         #region Internal_Function
-        protected virtual void ClearTextBoxInControl()
+        protected virtual void ClearContentOfControl()
         {
             this._txtNameInquery.Text = "";
             this._txtNumberInquery.Text = "";
@@ -160,7 +159,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Outside_Reference
         public virtual void CreatNewInqueryOfCustomer()
         {
-            this.ClearTextBoxInControl();
+            this.ClearContentOfControl();
         }
         #endregion
 

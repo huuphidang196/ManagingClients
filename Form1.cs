@@ -14,18 +14,18 @@ using System.Windows.Forms;
 
 namespace ManagingClients
 {
-    public partial class frmMain_Control : Form
+    public partial class FrmMain_Control : Form
     {
-        private static frmMain_Control _instance;
-        public static frmMain_Control Instance
+        private static FrmMain_Control _instance;
+        public static FrmMain_Control Instance
         {
             get
             {
-                if (_instance == null) _instance = new frmMain_Control();
-                return frmMain_Control._instance;
+                if (_instance == null) _instance = new FrmMain_Control();
+                return FrmMain_Control._instance;
             }
 
-            private set { frmMain_Control._instance = value; }
+            private set { FrmMain_Control._instance = value; }
         }
 
         public const float VAT = 10;//thuế vat 
@@ -35,15 +35,9 @@ namespace ManagingClients
 
         public virtual void SetProfileAccount(ProfileAccount profileAccount) => this._ProfileAccount = profileAccount;
 
-        public frmMain_Control()
+        private FrmMain_Control()
         {
             InitializeComponent();
-
-            this.SetAllValue();
-        }
-
-        protected virtual void SetAllValue()
-        {
 
         }
 
@@ -87,7 +81,7 @@ namespace ManagingClients
         #region pnlBottomOption
         private void comboBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Click");
+        
         }
 
         private void cboSortOptions_SelectedIndexChanged(object sender, EventArgs e)

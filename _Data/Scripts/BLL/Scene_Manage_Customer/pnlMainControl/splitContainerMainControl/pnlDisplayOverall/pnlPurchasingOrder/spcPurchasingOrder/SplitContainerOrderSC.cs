@@ -21,7 +21,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         public PanelOptionsSC PanelOptionsSC => _PanelOptionsSC;
         public SplitContainerOrderSC()
         {
-            this._spcContainerOrder = frmMain_Control.Instance.spcPurchasingOrder;
+            this._spcContainerOrder = FrmMain_Control.Instance.spcPurchasingOrder;
             this._PanelBottomDisplayOrderSC = new PanelBottomDisplayOrderSC();
             this._PanelOptionsSC = new PanelOptionsSC(this);
         }

@@ -13,7 +13,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected Button _btnAddICForCus;
         protected Button _btnEditICForCus;
         protected Button _btnRemoveICForCus;
-        protected Button _btnDetailICForCus;
+        //protected Button _btnDetailICForCus;
         protected Button _btnSaveICForCus;
         protected Button _btnPrintICForCus;
         protected Button _btnHelpICForCus;
@@ -26,7 +26,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._btnEditICForCus = frmDetailCustomer.Instance.btnEditICForCus;
             this._btnRemoveICForCus = frmDetailCustomer.Instance.btnRemoveICForCus;
-            this._btnDetailICForCus = frmDetailCustomer.Instance.btnDetailICForCus;
+            //this._btnDetailICForCus = frmDetailCustomer.Instance.btnDetailICForCus;
             this._btnSaveICForCus = frmDetailCustomer.Instance.btnSaveICForCusSys;
             this._btnPrintICForCus = frmDetailCustomer.Instance.btnPrintICForCus;
             this._btnHelpICForCus = frmDetailCustomer.Instance.btnHelpICForCus;
@@ -36,8 +36,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         // Phương thức xử lý sự kiện click của button
         protected virtual void ButtonAddClick(object sender, EventArgs e)
         {
-            PanelCenterCusICSC.Instance.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
+            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
+            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailContractSC.CreatNewContractOfCustomer();
             PanelBelowCusICSC.Instance.TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.AddNewInquery();
+     
         }
     }
 }

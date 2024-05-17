@@ -28,15 +28,15 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         {
             this._PanelOptionsSC = panelOptionsSC;
 
-            this._cboPeriodOptions = frmMain_Control.Instance.cboPeriodOptions;
-            this._cboSortOptions = frmMain_Control.Instance.cboSortOptions;
+            this._cboPeriodOptions = FrmMain_Control.Instance.cboPeriodOptions;
+            this._cboSortOptions = FrmMain_Control.Instance.cboSortOptions;
             this._cboSortOptions.SelectedIndexChanged += this.SortListDataGridViewBySorting;
 
-            this._dtpFromTimeOptions = frmMain_Control.Instance.dtpFromTimeOptions;
+            this._dtpFromTimeOptions = FrmMain_Control.Instance.dtpFromTimeOptions;
             this._dtpFromTimeOptions.Format = DateTimePickerFormat.Custom;
             this._dtpFromTimeOptions.CustomFormat = "dd/MM/yyyy"; // Đặt định dạng ngày tháng
 
-            this._dtpToTimeOptions = frmMain_Control.Instance.dtpToTimeOptions;
+            this._dtpToTimeOptions = FrmMain_Control.Instance.dtpToTimeOptions;
             this._dtpToTimeOptions.Format = DateTimePickerFormat.Custom;
             this._dtpToTimeOptions.CustomFormat = "dd/MM/yyyy";
 

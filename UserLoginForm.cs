@@ -42,7 +42,7 @@ namespace ManagingClients
 
             this.Close();
 
-            frmMain_Control.Instance.SetProfileAccount(profileAccount);
+            FrmMain_Control.Instance.SetProfileAccount(profileAccount);
         }
 
         private void frmUserLoginForm_FormClosed(object sender, FormClosedEventArgs e)

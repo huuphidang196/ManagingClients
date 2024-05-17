@@ -19,7 +19,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
         
         public TabControlProfileDetailSC()
         {
-            this._TabControlProfileAccount = frmMain_Control.Instance.tabCtrlPADetail;
+            this._TabControlProfileAccount = FrmMain_Control.Instance.tabCtrlPADetail;
             this._PanelProfileAccountSC = new PanelProfileAccountSC();
         }
 

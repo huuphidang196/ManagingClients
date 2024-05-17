@@ -17,7 +17,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         public TabControlPOSC TabControlPOSC => _TabControlPOSC;
         public PanelBottomDisplayOrderSC()
         {
-            this._pnlBottomDisplayPO = frmMain_Control.Instance.pnlBottomDisplayPO;
+            this._pnlBottomDisplayPO = FrmMain_Control.Instance.pnlBottomDisplayPO;
             this._TabControlPOSC = new TabControlPOSC();
         }
 

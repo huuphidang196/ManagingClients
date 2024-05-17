@@ -28,7 +28,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
         protected FlowLayOutPanelUINegativeSC _FlowLayOutPanelUINegativeSC;
         public FlowLayOutPanelUINegativeSC FlowLayOutPanelUINegativeSC => _FlowLayOutPanelUINegativeSC;
 
-        public PanelTopCusICSC()
+        private PanelTopCusICSC()
         {
             this._pnlTopCus = frmDetailCustomer.Instance.pnlCustomerInfo;
 
@@ -37,7 +37,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
 
         public virtual void ShowAllDataWhenBegin()
         {
-
+            MessageBox.Show("Show");
         }
 
     }
