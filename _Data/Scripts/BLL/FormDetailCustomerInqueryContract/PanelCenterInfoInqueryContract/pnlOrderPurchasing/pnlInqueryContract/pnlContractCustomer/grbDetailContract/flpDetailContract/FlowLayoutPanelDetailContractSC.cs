@@ -31,18 +31,18 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._ContractCustomer = new ContractCustomer();
 
-            this._txtNumberContract = frmDetailCustomer.Instance.txtNumberContract;
-            this._dtpDateSigned = frmDetailCustomer.Instance.dtpDateSigned;
-            this._dtpDateExpired = frmDetailCustomer.Instance.dtpDateExpired;
-            this._txtTotalValueContract = frmDetailCustomer.Instance.txtTotalValueContract;
+            this._txtNumberContract = FrmDetailCustomer.Instance.txtNumberContract;
+            this._dtpDateSigned = FrmDetailCustomer.Instance.dtpDateSigned;
+            this._dtpDateExpired = FrmDetailCustomer.Instance.dtpDateExpired;
+            this._txtTotalValueContract = FrmDetailCustomer.Instance.txtTotalValueContract;
 
-            this._lblFileContract = frmDetailCustomer.Instance.lblFileContract;
+            this._lblFileContract = FrmDetailCustomer.Instance.lblFileContract;
             this._lblFileContract.DoubleClick += new EventHandler(this.AddEventDoubleClickForLabelFileContract);
 
-            this._btnDeleteFileContract = frmDetailCustomer.Instance.btnDeleteFileContract;
+            this._btnDeleteFileContract = FrmDetailCustomer.Instance.btnDeleteFileContract;
             this._btnDeleteFileContract.Click += new EventHandler(this.AddEventClickForButtonDeletedFileContract);
 
-            this._btnSaveContract = frmDetailCustomer.Instance.btnSaveContract;
+            this._btnSaveContract = FrmDetailCustomer.Instance.btnSaveContract;
             this._btnSaveContract.Click += new EventHandler(this.AddEventClickForButtonSaveContract);
         }
 

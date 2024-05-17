@@ -34,11 +34,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._PanelCustomerInfo = new PanelCustomerInfo();
             this._PanelOrderPurchasingCustomerSC = new PanelOrderPurchasingCustomerSC();
+
         }
 
         public virtual void ShowAllInformationAfterOpen()
         {
-            MessageBox.Show("RunShow");
+            
         }
+
+      
     }
 }

@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract;
+﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlTopCusIC;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
@@ -13,20 +14,20 @@ using System.Windows.Forms;
 
 namespace ManagingClients
 {
-    public partial class frmDetailCustomer : Form
+    public partial class FrmDetailCustomer : Form
     {
-        private static frmDetailCustomer _instance;
-        public static frmDetailCustomer Instance
+        private static FrmDetailCustomer _instance;
+        public static FrmDetailCustomer Instance
         {
             get
             {
-                if (_instance == null) _instance = new frmDetailCustomer();
-                return frmDetailCustomer._instance;
+                if (_instance == null) _instance = new FrmDetailCustomer();
+                return FrmDetailCustomer._instance;
             }
 
-            private set { frmDetailCustomer._instance = value; }
+            private set { FrmDetailCustomer._instance = value; }
         }
-        public frmDetailCustomer()
+        private FrmDetailCustomer()
         {
             InitializeComponent();
 
@@ -43,7 +44,5 @@ namespace ManagingClients
             PanelTopCusICSC.Instance.ShowAllDataWhenBegin();
             PanelCenterCusICSC.Instance.ShowAllInformationAfterOpen();
         }
-
-   
     }
 }

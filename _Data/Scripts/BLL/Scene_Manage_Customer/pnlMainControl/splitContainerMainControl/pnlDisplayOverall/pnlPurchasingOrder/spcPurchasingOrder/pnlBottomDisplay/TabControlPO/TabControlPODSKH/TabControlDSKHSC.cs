@@ -40,8 +40,8 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
                 return;
             }
 
-            frmDetailCustomer.Instance.SetCustomerGSES(customerGSES);
-            DialogResult ret = frmDetailCustomer.Instance.ShowDialog();
+            FrmDetailCustomer.Instance.SetCustomerGSES(customerGSES);
+            DialogResult ret = FrmDetailCustomer.Instance.ShowDialog();
 
         }
 

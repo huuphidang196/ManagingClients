@@ -16,7 +16,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public TabPageInqueryCustomerSC TabPageInqueryCustomerSC => _TabPageInqueryCustomerSC;
         public TabCtrlInqueryContractSC()
         {
-            this._tabCtrlInqueryContract = frmDetailCustomer.Instance.tabCtrlInqueryContract;
+            this._tabCtrlInqueryContract = FrmDetailCustomer.Instance.tabCtrlInqueryContract;
             this._TabPageInqueryCustomerSC = new TabPageInqueryCustomerSC();
 
         }

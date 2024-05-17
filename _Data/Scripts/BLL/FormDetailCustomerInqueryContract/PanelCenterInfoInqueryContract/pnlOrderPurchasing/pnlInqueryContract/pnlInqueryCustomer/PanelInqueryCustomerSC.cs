@@ -17,13 +17,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected FlowLayoutPanelDetailInquerySC _FlowLayoutPanelDetailInquerySC;
         public FlowLayoutPanelDetailInquerySC FlowLayoutPanelDetailInquerySC => _FlowLayoutPanelDetailInquerySC;
 
-        protected FlowLayoutPanelDetailContractSC _FlowLayoutPanelDetailContractSC;
-        public FlowLayoutPanelDetailContractSC FlowLayoutPanelDetailContractSC => _FlowLayoutPanelDetailContractSC;
         public PanelInqueryCustomerSC()
         {
-            this._pnlInqueryCustomer = frmDetailCustomer.Instance.pnlInqueryCustomer;
+            this._pnlInqueryCustomer = FrmDetailCustomer.Instance.pnlInqueryCustomer;
             this._FlowLayoutPanelDetailInquerySC = new FlowLayoutPanelDetailInquerySC();
-            this._FlowLayoutPanelDetailContractSC = new FlowLayoutPanelDetailContractSC();
         }
     }
 }

@@ -76,6 +76,8 @@
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\PanelOrderPurchasingCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\PanelInqueryContractSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlContractCustomer\grbDetailContract\flpDetailContract\FlowLayoutPanelDetailContractSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlContractCustomer\grbDetailContract\GroupBoxDetailContractSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlContractCustomer\PanelContractCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlInqueryCustomer\grbDetailInquery\flpDetailInquery\FlowLayoutPanelDetailInquerySC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlInqueryContract\pnlInqueryCustomer\PanelInqueryCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlSettingOrderPurchasing\grbSettingOrderPurchasing\GrbSettingOrderPurchasingSC.cs" />

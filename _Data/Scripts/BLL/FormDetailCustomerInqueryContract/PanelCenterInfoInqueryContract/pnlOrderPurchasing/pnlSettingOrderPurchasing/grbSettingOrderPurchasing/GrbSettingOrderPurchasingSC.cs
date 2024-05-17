@@ -28,14 +28,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._CustomerOrder = new CustomerOrder();
 
-            this._grbSettingOrderPurchasing = frmDetailCustomer.Instance.grbSettingOrderPurchasing;
+            this._grbSettingOrderPurchasing = FrmDetailCustomer.Instance.grbSettingOrderPurchasing;
 
-            this._txtNameOrder = frmDetailCustomer.Instance.txtNameOrder;
+            this._txtNameOrder = FrmDetailCustomer.Instance.txtNameOrder;
             // this.
 
-            this._cboStatusOrder = frmDetailCustomer.Instance.cboStatusOrder;
-            this._cboLevelPosAccessOrder = frmDetailCustomer.Instance.cboLevelPosAccessOrder;
-            this._cboLevelCompanyAccessOrder = frmDetailCustomer.Instance.cboLevelCompanyAccessOrder;
+            this._cboStatusOrder = FrmDetailCustomer.Instance.cboStatusOrder;
+            this._cboLevelPosAccessOrder = FrmDetailCustomer.Instance.cboLevelPosAccessOrder;
+            this._cboLevelCompanyAccessOrder = FrmDetailCustomer.Instance.cboLevelCompanyAccessOrder;
 
             this.InitilizingAllValue();
         }
@@ -50,7 +50,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected virtual void InitilizingAllValue()
         {
-            this._txtNameOrder.Text = "Ini";
             this.InitializingValueComboBoxStatusOrder();
 
             this.InitializingValueComboBoxLevelPosAccess();

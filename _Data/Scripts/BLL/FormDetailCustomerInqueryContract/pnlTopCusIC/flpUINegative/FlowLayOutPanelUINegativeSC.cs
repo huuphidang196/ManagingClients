@@ -21,23 +21,23 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         public FlowLayOutPanelUINegativeSC()
         {
-            this._btnAddICForCus = frmDetailCustomer.Instance.btnAddICForCus;
+            this._btnAddICForCus = FrmDetailCustomer.Instance.btnAddICForCus;
             this._btnAddICForCus.Click += new EventHandler(this.ButtonAddClick);
 
-            this._btnEditICForCus = frmDetailCustomer.Instance.btnEditICForCus;
-            this._btnRemoveICForCus = frmDetailCustomer.Instance.btnRemoveICForCus;
+            this._btnEditICForCus = FrmDetailCustomer.Instance.btnEditICForCus;
+            this._btnRemoveICForCus = FrmDetailCustomer.Instance.btnRemoveICForCus;
             //this._btnDetailICForCus = frmDetailCustomer.Instance.btnDetailICForCus;
-            this._btnSaveICForCus = frmDetailCustomer.Instance.btnSaveICForCusSys;
-            this._btnPrintICForCus = frmDetailCustomer.Instance.btnPrintICForCus;
-            this._btnHelpICForCus = frmDetailCustomer.Instance.btnHelpICForCus;
-            this._btnCloseICForCus = frmDetailCustomer.Instance.btnCloseICForCus;
+            this._btnSaveICForCus = FrmDetailCustomer.Instance.btnSaveICForCusSys;
+            this._btnPrintICForCus = FrmDetailCustomer.Instance.btnPrintICForCus;
+            this._btnHelpICForCus = FrmDetailCustomer.Instance.btnHelpICForCus;
+            this._btnCloseICForCus = FrmDetailCustomer.Instance.btnCloseICForCus;
         }
 
         // Phương thức xử lý sự kiện click của button
         protected virtual void ButtonAddClick(object sender, EventArgs e)
         {
-            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
-            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailContractSC.CreatNewContractOfCustomer();
+           // PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
+            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.ButtonAddOrderCustomer();
             PanelBelowCusICSC.Instance.TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.AddNewInquery();
      
         }

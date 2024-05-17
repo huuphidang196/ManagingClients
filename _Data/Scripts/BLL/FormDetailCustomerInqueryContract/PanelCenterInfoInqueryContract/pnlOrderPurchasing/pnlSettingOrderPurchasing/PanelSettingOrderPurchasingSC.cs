@@ -13,16 +13,17 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
     public class PanelSettingOrderPurchasingSC
     {
         protected GrbSettingOrderPurchasingSC _GrbSettingOrderPurchasingSC;
+        public GrbSettingOrderPurchasingSC GrbSettingOrderPurchasingSC => _GrbSettingOrderPurchasingSC;
 
         protected Panel _pnlSettingOrderPurchasing;
         public Panel PnlSettingOrderPurchasing => _pnlSettingOrderPurchasing;
         public PanelSettingOrderPurchasingSC()
-        {
+        {           
+            this._pnlSettingOrderPurchasing = FrmDetailCustomer.Instance.pnlSettingOrderPurchasing;
             this._GrbSettingOrderPurchasingSC = new GrbSettingOrderPurchasingSC();
-            this._pnlSettingOrderPurchasing = frmDetailCustomer.Instance.pnlSettingOrderPurchasing;
-
         }
 
+      
 
     }
 }

@@ -58,25 +58,25 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._InqueryQuotation = new InqueryQuotation();
 
-            this._txtNameInquery = frmDetailCustomer.Instance.txtNameInquery;
-            this._flowDetailInquery = frmDetailCustomer.Instance.flpDetailInquery;
+            this._txtNameInquery = FrmDetailCustomer.Instance.txtNameInquery;
+            this._flowDetailInquery = FrmDetailCustomer.Instance.flpDetailInquery;
 
-            this._txtNumberInquery = frmDetailCustomer.Instance.txtInqueryNumber;
-            this._txtCostDeliveryVN = frmDetailCustomer.Instance.txtCostDeliveryVN;
-            this._txtCostDeliveryKH = frmDetailCustomer.Instance.txtCostDeliveryKH;
-            this._txtMinTimeDurationShip = frmDetailCustomer.Instance.txtMinTimeDurationShip;
-            this._txtMaxTimeDurationShip = frmDetailCustomer.Instance.txtMaxTimeDurationShip;
-            this._txtSelected_Exchange_Rate = frmDetailCustomer.Instance.txtSelectedExchangeRate;
-            this._txtPurposePurchasing = frmDetailCustomer.Instance.txtPurposePurchasing;
-            this._txtEndUser = frmDetailCustomer.Instance.txtEndUser;
+            this._txtNumberInquery = FrmDetailCustomer.Instance.txtInqueryNumber;
+            this._txtCostDeliveryVN = FrmDetailCustomer.Instance.txtCostDeliveryVN;
+            this._txtCostDeliveryKH = FrmDetailCustomer.Instance.txtCostDeliveryKH;
+            this._txtMinTimeDurationShip = FrmDetailCustomer.Instance.txtMinTimeDurationShip;
+            this._txtMaxTimeDurationShip = FrmDetailCustomer.Instance.txtMaxTimeDurationShip;
+            this._txtSelected_Exchange_Rate = FrmDetailCustomer.Instance.txtSelectedExchangeRate;
+            this._txtPurposePurchasing = FrmDetailCustomer.Instance.txtPurposePurchasing;
+            this._txtEndUser = FrmDetailCustomer.Instance.txtEndUser;
 
-            this._dtpDateSendInquery = frmDetailCustomer.Instance.dtpDateSendInquery;
-            this._dtpDateExpiredInquery = frmDetailCustomer.Instance.dtpDateExpiredInquery;
+            this._dtpDateSendInquery = FrmDetailCustomer.Instance.dtpDateSendInquery;
+            this._dtpDateExpiredInquery = FrmDetailCustomer.Instance.dtpDateExpiredInquery;
 
-            this._lblShowFileInquery = frmDetailCustomer.Instance.lblShowFileInquery;
+            this._lblShowFileInquery = FrmDetailCustomer.Instance.lblShowFileInquery;
             this._lblShowFileInquery.Click += new EventHandler(ShowFileOrAddFilePDF);
 
-            this._btnDeleteFileInquery = frmDetailCustomer.Instance.btnDeleteFileInquery;
+            this._btnDeleteFileInquery = FrmDetailCustomer.Instance.btnDeleteFileInquery;
             this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearInqueryButton);
         }
 

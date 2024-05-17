@@ -18,12 +18,25 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected PanelSettingOrderPurchasingSC _PanelSettingOrderPurchasingSC;
         public PanelSettingOrderPurchasingSC PanelSettingOrderPurchasingSC => _PanelSettingOrderPurchasingSC;
+     
         public PanelOrderPurchasingCustomerSC()
         {
-            this._pnlOrderPurchasingCustomerParent = frmDetailCustomer.Instance.pnlOrderPurchasingParent;
+            this._pnlOrderPurchasingCustomerParent = FrmDetailCustomer.Instance.pnlOrderPurchasingParent;
 
             this._PanelInqueryContractSC = new PanelInqueryContractSC();
             this._PanelSettingOrderPurchasingSC = new PanelSettingOrderPurchasingSC();
+        }
+
+        public virtual void ButtonAddOrderCustomer()
+        {
+            //new Setting Order
+            this._PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CreatNewInqueryAndContractOfCustomer();
+            //New Contract
+            this._PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.CreatNewContractOfCustomer();
+            
+            //New Inquery
+            this._PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
+
         }
     }
 }

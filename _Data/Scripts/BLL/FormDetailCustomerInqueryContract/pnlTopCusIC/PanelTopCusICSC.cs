@@ -30,14 +30,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
 
         private PanelTopCusICSC()
         {
-            this._pnlTopCus = frmDetailCustomer.Instance.pnlCustomerInfo;
+            this._pnlTopCus = FrmDetailCustomer.Instance.pnlCustomerInfo;
 
             this._FlowLayOutPanelUINegativeSC = new FlowLayOutPanelUINegativeSC();
         }
 
         public virtual void ShowAllDataWhenBegin()
         {
-            MessageBox.Show("Show");
+            
         }
 
     }

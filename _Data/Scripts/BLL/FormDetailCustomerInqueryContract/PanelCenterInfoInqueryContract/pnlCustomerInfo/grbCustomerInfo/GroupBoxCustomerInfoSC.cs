@@ -18,18 +18,18 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.PanelCenterInf
 
         public GroupBoxCustomerInfoSC()
         {
-            this._txtNameCustomer = frmDetailCustomer.Instance.txtNameCustomer;
-            this._txtAddressCustomer = frmDetailCustomer.Instance.txtAddressCustomer;
-            this._txtEmailCustomer = frmDetailCustomer.Instance.txtEmailCustomer;
-            this._txtPhoneCustomer = frmDetailCustomer.Instance.txtPhoneCustomer;
-            this._txtTaxCustomer = frmDetailCustomer.Instance.txtTaxCustomer;
+            this._txtNameCustomer = FrmDetailCustomer.Instance.txtNameCustomer;
+            this._txtAddressCustomer = FrmDetailCustomer.Instance.txtAddressCustomer;
+            this._txtEmailCustomer = FrmDetailCustomer.Instance.txtEmailCustomer;
+            this._txtPhoneCustomer = FrmDetailCustomer.Instance.txtPhoneCustomer;
+            this._txtTaxCustomer = FrmDetailCustomer.Instance.txtTaxCustomer;
 
             this.SetValueBegin();
         }
 
         protected virtual void SetValueBegin()
         {
-            CustomerGSES customerGSES = frmDetailCustomer.Instance.CustomerGSES;
+            CustomerGSES customerGSES = FrmDetailCustomer.Instance.CustomerGSES;
 
             this._txtNameCustomer.Text = customerGSES.Name_Customer;
             this._txtAddressCustomer.Text = customerGSES.Address_Company;

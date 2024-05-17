@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl;
+﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer;
+using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl;
 using ManagingClients._Data.Scripts.DTO.Account;
 using System;
 using System.Collections.Generic;

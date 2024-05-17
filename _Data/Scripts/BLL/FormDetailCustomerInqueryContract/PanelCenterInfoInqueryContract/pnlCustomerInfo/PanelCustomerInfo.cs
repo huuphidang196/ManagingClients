@@ -18,7 +18,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.PanelCenterInf
         public GroupBoxCustomerInfoSC GroupBoxCustomerInfoSC => _GroupBoxCustomerInfoSC;
         public PanelCustomerInfo()
         {
-            this._pnlCustomerInfor = frmDetailCustomer.Instance.pnlCustomerInfo;
+            this._pnlCustomerInfor = FrmDetailCustomer.Instance.pnlCustomerInfo;
 
             this._GroupBoxCustomerInfoSC = new GroupBoxCustomerInfoSC();
         }

@@ -13,7 +13,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         public TabPageInqueryCustomerSC()
         {
-            this._lsvOrdersCustomer = frmDetailCustomer.Instance.lsvOrdersCustomer;
+            this._lsvOrdersCustomer = FrmDetailCustomer.Instance.lsvOrdersCustomer;
             this._lsvOrdersCustomer.MultiSelect = false;
         }
 

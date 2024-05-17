@@ -1,7 +1,7 @@
 ﻿
 namespace ManagingClients
 {
-    partial class frmDetailCustomer
+    partial class FrmDetailCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@ namespace ManagingClients
             this.panel16 = new System.Windows.Forms.Panel();
             this.btnRemoveInquery = new System.Windows.Forms.Button();
             this.btnSaveInquery = new System.Windows.Forms.Button();
-            this.pnlContract = new System.Windows.Forms.Panel();
+            this.pnlContractOrderCus = new System.Windows.Forms.Panel();
             this.grbDetailContract = new System.Windows.Forms.GroupBox();
             this.flpDetailContract = new System.Windows.Forms.FlowLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -169,7 +169,7 @@ namespace ManagingClients
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.pnlContract.SuspendLayout();
+            this.pnlContractOrderCus.SuspendLayout();
             this.grbDetailContract.SuspendLayout();
             this.flpDetailContract.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -486,7 +486,7 @@ namespace ManagingClients
             this.pnlOrderPurchasingParent.Location = new System.Drawing.Point(0, 167);
             this.pnlOrderPurchasingParent.Name = "pnlOrderPurchasingParent";
             this.pnlOrderPurchasingParent.Size = new System.Drawing.Size(1117, 422);
-            this.pnlOrderPurchasingParent.TabIndex = 0;
+            this.pnlOrderPurchasingParent.TabIndex = 1;
             // 
             // grbOrderPurchasingParent
             // 
@@ -497,7 +497,7 @@ namespace ManagingClients
             this.grbOrderPurchasingParent.Location = new System.Drawing.Point(0, 0);
             this.grbOrderPurchasingParent.Name = "grbOrderPurchasingParent";
             this.grbOrderPurchasingParent.Size = new System.Drawing.Size(1115, 420);
-            this.grbOrderPurchasingParent.TabIndex = 1;
+            this.grbOrderPurchasingParent.TabIndex = 0;
             this.grbOrderPurchasingParent.TabStop = false;
             this.grbOrderPurchasingParent.Text = "Chi tiết Đơn Hàng";
             // 
@@ -505,7 +505,7 @@ namespace ManagingClients
             // 
             this.pnlInqueryContract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlInqueryContract.Controls.Add(this.pnlInqueryCustomer);
-            this.pnlInqueryContract.Controls.Add(this.pnlContract);
+            this.pnlInqueryContract.Controls.Add(this.pnlContractOrderCus);
             this.pnlInqueryContract.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInqueryContract.Location = new System.Drawing.Point(3, 154);
             this.pnlInqueryContract.Name = "pnlInqueryContract";
@@ -725,7 +725,6 @@ namespace ManagingClients
             this.txtMaxTimeDurationShip.Name = "txtMaxTimeDurationShip";
             this.txtMaxTimeDurationShip.Size = new System.Drawing.Size(132, 26);
             this.txtMaxTimeDurationShip.TabIndex = 1;
-            this.txtMaxTimeDurationShip.Text = "GSES/123456";
             // 
             // txtMinTimeDurationShip
             // 
@@ -733,7 +732,6 @@ namespace ManagingClients
             this.txtMinTimeDurationShip.Name = "txtMinTimeDurationShip";
             this.txtMinTimeDurationShip.Size = new System.Drawing.Size(132, 26);
             this.txtMinTimeDurationShip.TabIndex = 1;
-            this.txtMinTimeDurationShip.Text = "GSES/123456";
             // 
             // label11
             // 
@@ -784,7 +782,6 @@ namespace ManagingClients
             this.txtSelectedExchangeRate.Name = "txtSelectedExchangeRate";
             this.txtSelectedExchangeRate.Size = new System.Drawing.Size(132, 26);
             this.txtSelectedExchangeRate.TabIndex = 1;
-            this.txtSelectedExchangeRate.Text = "29,000";
             this.txtSelectedExchangeRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblShowFileInquery
@@ -834,7 +831,6 @@ namespace ManagingClients
             this.txtPurposePurchasing.Name = "txtPurposePurchasing";
             this.txtPurposePurchasing.Size = new System.Drawing.Size(441, 26);
             this.txtPurposePurchasing.TabIndex = 1;
-            this.txtPurposePurchasing.Text = "Dự phòng cho OLTC";
             // 
             // label24
             // 
@@ -862,7 +858,6 @@ namespace ManagingClients
             this.txtEndUser.Name = "txtEndUser";
             this.txtEndUser.Size = new System.Drawing.Size(441, 26);
             this.txtEndUser.TabIndex = 1;
-            this.txtEndUser.Text = "EVNCPC";
             // 
             // label19
             // 
@@ -903,14 +898,14 @@ namespace ManagingClients
             this.btnSaveInquery.Text = "Lưu";
             this.btnSaveInquery.UseVisualStyleBackColor = false;
             // 
-            // pnlContract
+            // pnlContractOrderCus
             // 
-            this.pnlContract.Controls.Add(this.grbDetailContract);
-            this.pnlContract.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlContract.Location = new System.Drawing.Point(649, 0);
-            this.pnlContract.Name = "pnlContract";
-            this.pnlContract.Size = new System.Drawing.Size(460, 263);
-            this.pnlContract.TabIndex = 1;
+            this.pnlContractOrderCus.Controls.Add(this.grbDetailContract);
+            this.pnlContractOrderCus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlContractOrderCus.Location = new System.Drawing.Point(649, 0);
+            this.pnlContractOrderCus.Name = "pnlContractOrderCus";
+            this.pnlContractOrderCus.Size = new System.Drawing.Size(460, 263);
+            this.pnlContractOrderCus.TabIndex = 1;
             // 
             // grbDetailContract
             // 
@@ -959,7 +954,6 @@ namespace ManagingClients
             this.txtNumberContract.Name = "txtNumberContract";
             this.txtNumberContract.Size = new System.Drawing.Size(216, 26);
             this.txtNumberContract.TabIndex = 1;
-            this.txtNumberContract.Text = "01042024/HĐMB/GSES-3C";
             // 
             // label17
             // 
@@ -1048,7 +1042,6 @@ namespace ManagingClients
             this.txtTotalValueContract.Name = "txtTotalValueContract";
             this.txtTotalValueContract.Size = new System.Drawing.Size(216, 26);
             this.txtTotalValueContract.TabIndex = 1;
-            this.txtTotalValueContract.Text = "125,056,357,125";
             // 
             // label21
             // 
@@ -1166,7 +1159,7 @@ namespace ManagingClients
             this.panel21.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(563, 107);
-            this.panel21.TabIndex = 2;
+            this.panel21.TabIndex = 0;
             // 
             // cboLevelCompanyAccessOrder
             // 
@@ -1175,7 +1168,6 @@ namespace ManagingClients
             this.cboLevelCompanyAccessOrder.Name = "cboLevelCompanyAccessOrder";
             this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(145, 27);
             this.cboLevelCompanyAccessOrder.TabIndex = 1;
-            this.cboLevelCompanyAccessOrder.Text = "Level_01";
             // 
             // label26
             // 
@@ -1194,7 +1186,6 @@ namespace ManagingClients
             this.cboLevelPosAccessOrder.Name = "cboLevelPosAccessOrder";
             this.cboLevelPosAccessOrder.Size = new System.Drawing.Size(174, 27);
             this.cboLevelPosAccessOrder.TabIndex = 1;
-            this.cboLevelPosAccessOrder.Text = "Trưởng Phòng";
             // 
             // label20
             // 
@@ -1227,7 +1218,7 @@ namespace ManagingClients
             this.panel22.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(536, 107);
-            this.panel22.TabIndex = 2;
+            this.panel22.TabIndex = 1;
             // 
             // cboStatusOrder
             // 
@@ -1254,7 +1245,6 @@ namespace ManagingClients
             this.txtNameOrder.Name = "txtNameOrder";
             this.txtNameOrder.Size = new System.Drawing.Size(365, 26);
             this.txtNameOrder.TabIndex = 1;
-            this.txtNameOrder.Text = "Đơn hàng đặt mua bộ OLTC";
             // 
             // label22
             // 
@@ -1360,6 +1350,8 @@ namespace ManagingClients
             this.Controls.Add(this.pnlTopCusIC);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDetailCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết Khách Hàng Báo Giá";
@@ -1403,7 +1395,7 @@ namespace ManagingClients
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel16.ResumeLayout(false);
-            this.pnlContract.ResumeLayout(false);
+            this.pnlContractOrderCus.ResumeLayout(false);
             this.grbDetailContract.ResumeLayout(false);
             this.flpDetailContract.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -1447,7 +1439,6 @@ namespace ManagingClients
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlCenterBottom;
         private System.Windows.Forms.Panel pnlBelowCusIC;
-        private System.Windows.Forms.Panel pnlInqueryContract;
         private System.Windows.Forms.GroupBox grbDetailInquery;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtNameInquery;
@@ -1477,9 +1468,6 @@ namespace ManagingClients
         public System.Windows.Forms.TextBox txtSelectedExchangeRate;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel pnlContract;
-        private System.Windows.Forms.GroupBox grbDetailContract;
-        private System.Windows.Forms.FlowLayoutPanel flpDetailContract;
         private System.Windows.Forms.Panel panel13;
         public System.Windows.Forms.TextBox txtNumberContract;
         private System.Windows.Forms.Label label17;
@@ -1546,5 +1534,9 @@ namespace ManagingClients
         public System.Windows.Forms.Panel pnlOrderPurchasingParent;
         public System.Windows.Forms.Panel panel22;
         public System.Windows.Forms.Panel panel21;
+        public System.Windows.Forms.Panel pnlInqueryContract;
+        public System.Windows.Forms.Panel pnlContractOrderCus;
+        public System.Windows.Forms.GroupBox grbDetailContract;
+        public System.Windows.Forms.FlowLayoutPanel flpDetailContract;
     }
 }
