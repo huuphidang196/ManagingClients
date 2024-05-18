@@ -57,7 +57,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         public FlowLayoutPanelDetailInquerySC()
         {
-           // this._InqueryQuotation = new InqueryQuotation();
+            // this._InqueryQuotation = new InqueryQuotation();
 
             this._txtNameInquery = FrmDetailCustomer.Instance.txtNameInquery;
             this._flowDetailInquery = FrmDetailCustomer.Instance.flpDetailInquery;
@@ -126,7 +126,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             frmPDFFileReader.SetFileNameByte(this._InqueryQuotation.File_Data_Inquiry_Quotation);
             frmPDFFileReader.Show();
         }
-        protected virtual void AddEventClearInqueryButton(object sender , EventArgs e)
+        protected virtual void AddEventClearInqueryButton(object sender, EventArgs e)
         {
             this.ClearFileInquery();
         }
@@ -154,6 +154,12 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._txtSelected_Exchange_Rate.Text = inqueryQuotation.Selected_Exchange_Rate.ToString();
             this._txtPurposePurchasing.Text = inqueryQuotation.Purpose_Purchasing;
             this._txtEndUser.Text = inqueryQuotation.Name_Of_EndUser;
+
+            this._dtpDateSendInquery.Value = (inqueryQuotation.Date_Sending <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Date_Sending;
+            this._dtpDateExpiredInquery.Value = (inqueryQuotation.Expired_Time_Inquiry <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Expired_Time_Inquiry;
+
+            this._lblShowFileInquery.Text = (inqueryQuotation.File_Data_Inquiry_Quotation == null) ? "Tải file PDF" : "File Báo giá";
+
         }
         protected virtual void ClearFileInquery()
         {
@@ -175,6 +181,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.SetContentControlByInquery(this._InqueryQuotation);
         }
         #endregion
-       
+
     }
 }

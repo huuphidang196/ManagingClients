@@ -15,6 +15,9 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         public DataGridView _dgvDisplayAllCusPO;
         public DataGridView dgvDisplayAllCusPO => _dgvDisplayAllCusPO;
 
+        protected CustomerGSES _CustomerGSES;
+        public CustomerGSES CustomerGSES => _CustomerGSES;
+
         public TabControlDSKHSC()
         {
             this._dgvDisplayAllCusPO = FrmMain_Control.Instance.dgvDisplayAllCusPO;
@@ -32,15 +35,15 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
             DataGridViewRow row_Selected = this.dgvDisplayAllCusPO.Rows[e.RowIndex];
             int id_Customer = int.Parse(row_Selected.Cells[0].Value.ToString());
-            CustomerGSES customerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
+            this._CustomerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
 
-            if (customerGSES == null)
+            if (this._CustomerGSES == null)
             {
                 MessageBox.Show("Vui lòng chọn lại Khách Hàng cần kiểm tra");
                 return;
             }
 
-            FrmDetailCustomer.Instance.SetCustomerGSES(customerGSES);
+            FrmDetailCustomer.Instance.SetCustomerGSES(this._CustomerGSES);
             FrmDetailCustomer.Instance.Show();
 
         }

@@ -27,11 +27,17 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         {
 
         }
+
+        #region Inquery
+
+        //InqueryQuotation
         public virtual InqueryQuotation GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
         {
             string query = "Select * from InqueryQuotation where ID_Customer_Order=" + id_Customer_Order;
 
             List<InqueryQuotation> listInqueryCustomer_Order = this.GetListInqueryCustomerOrderOfCustomerByIDCustomer(query);
+
+            if (listInqueryCustomer_Order.Count == 0) return new InqueryQuotation();
 
             return listInqueryCustomer_Order[0];
         }
@@ -54,9 +60,9 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 Inquery_CustomerOrder.Date_Sending = reader.GetDateTime(3);
 
-                Inquery_CustomerOrder.DeliveryCost_To_VietNam = reader.GetFloat(4);
+                Inquery_CustomerOrder.DeliveryCost_To_VietNam = (float)reader.GetDecimal(4);
 
-                Inquery_CustomerOrder.DeliveryCost_To_Customer = reader.GetFloat(5);
+                Inquery_CustomerOrder.DeliveryCost_To_Customer = (float)reader.GetDecimal(5);
 
                 Inquery_CustomerOrder.Min_Time_Delivery = reader.GetInt32(6);
 
@@ -64,9 +70,9 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 Inquery_CustomerOrder.Expired_Time_Inquiry = reader.GetDateTime(8);
 
-                Inquery_CustomerOrder.Selected_Exchange_Rate = reader.GetFloat(9);
+                Inquery_CustomerOrder.Selected_Exchange_Rate = (float)reader.GetDecimal(9);
 
-                Inquery_CustomerOrder.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
+                if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) Inquery_CustomerOrder.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
 
                 Inquery_CustomerOrder.Purpose_Purchasing = reader.GetString(11);
 
@@ -82,6 +88,52 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             this._Connection.Close();
 
             return listInqueryCustomer_Order;
+        }
+
+        //Contract Quotation
+        public virtual ContractCustomer GetContractQuotationrOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
+        {
+            string query = "Select * from ContractCustomer where ID_Customer_Order=" + id_Customer_Order;
+
+            List<ContractCustomer> listInqueryCustomer_Order = this.GetListContractCustomerOrderOfCustomerByIDCustomer(query);
+
+            if (listInqueryCustomer_Order.Count == 0) return new ContractCustomer();
+
+            return listInqueryCustomer_Order[0];
+        }
+
+        public virtual List<ContractCustomer> GetListContractCustomerOrderOfCustomerByIDCustomer(string query)
+        {
+            List<ContractCustomer> listContractCustomer_Order = new List<ContractCustomer>();
+
+            SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
+
+            while (reader.Read())
+            {
+                ContractCustomer contract_CustomerOrder = new ContractCustomer();
+
+                contract_CustomerOrder.ID_Contract_Customer = reader.GetInt32(0);
+
+                contract_CustomerOrder.Number_Contract = reader.GetString(1);
+
+                contract_CustomerOrder.Signed_Time = reader.GetDateTime(2);
+
+                contract_CustomerOrder.Expired_Time = reader.GetDateTime(3);
+
+                contract_CustomerOrder.Total_Contract_Value = (float)reader.GetDecimal(4);
+
+                if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Contract"))) contract_CustomerOrder.File_Data_Contract = (byte[])reader["File_Data_Contract"];
+
+                contract_CustomerOrder.ID_Customer_Order = reader.GetInt32(6);
+
+                listContractCustomer_Order.Add(contract_CustomerOrder);
+            }
+
+            reader.Close();
+
+            this._Connection.Close();
+
+            return listContractCustomer_Order;
         }
 
         //CustomerOrder
@@ -126,5 +178,11 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             return listCustomer_Order;
         }
+
+        #endregion Inquery
+
+        #region Insert
+
+        #endregion Insert
     }
 }

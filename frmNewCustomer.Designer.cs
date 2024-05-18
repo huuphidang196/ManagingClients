@@ -139,11 +139,12 @@ namespace ManagingClients
             this.tabCtrlInqueryContract = new System.Windows.Forms.TabControl();
             this.tabPageInqueryCus = new System.Windows.Forms.TabPage();
             this.lsvOrdersCustomer = new System.Windows.Forms.ListView();
+            this.ID_Customer_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Pos_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ID_Customer_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSaveSetting = new System.Windows.Forms.Button();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -566,6 +567,7 @@ namespace ManagingClients
             // 
             // txtNameInquery
             // 
+            this.txtNameInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameInquery.Location = new System.Drawing.Point(167, 9);
             this.txtNameInquery.Name = "txtNameInquery";
             this.txtNameInquery.Size = new System.Drawing.Size(441, 26);
@@ -594,6 +596,7 @@ namespace ManagingClients
             // 
             // txtInqueryNumber
             // 
+            this.txtInqueryNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInqueryNumber.Location = new System.Drawing.Point(167, 9);
             this.txtInqueryNumber.Name = "txtInqueryNumber";
             this.txtInqueryNumber.Size = new System.Drawing.Size(441, 26);
@@ -625,6 +628,7 @@ namespace ManagingClients
             // dtpDateExpiredInquery
             // 
             this.dtpDateExpiredInquery.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateExpiredInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateExpiredInquery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateExpiredInquery.Location = new System.Drawing.Point(476, 7);
             this.dtpDateExpiredInquery.Name = "dtpDateExpiredInquery";
@@ -644,6 +648,7 @@ namespace ManagingClients
             // dtpDateSendInquery
             // 
             this.dtpDateSendInquery.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateSendInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateSendInquery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateSendInquery.Location = new System.Drawing.Point(167, 8);
             this.dtpDateSendInquery.Name = "dtpDateSendInquery";
@@ -674,6 +679,7 @@ namespace ManagingClients
             // 
             // txtCostDeliveryKH
             // 
+            this.txtCostDeliveryKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCostDeliveryKH.Location = new System.Drawing.Point(476, 9);
             this.txtCostDeliveryKH.Name = "txtCostDeliveryKH";
             this.txtCostDeliveryKH.Size = new System.Drawing.Size(132, 26);
@@ -682,6 +688,7 @@ namespace ManagingClients
             // 
             // txtCostDeliveryVN
             // 
+            this.txtCostDeliveryVN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCostDeliveryVN.Location = new System.Drawing.Point(167, 9);
             this.txtCostDeliveryVN.Name = "txtCostDeliveryVN";
             this.txtCostDeliveryVN.Size = new System.Drawing.Size(132, 26);
@@ -722,6 +729,7 @@ namespace ManagingClients
             // 
             // txtMaxTimeDurationShip
             // 
+            this.txtMaxTimeDurationShip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaxTimeDurationShip.Location = new System.Drawing.Point(476, 9);
             this.txtMaxTimeDurationShip.Name = "txtMaxTimeDurationShip";
             this.txtMaxTimeDurationShip.Size = new System.Drawing.Size(132, 26);
@@ -729,6 +737,7 @@ namespace ManagingClients
             // 
             // txtMinTimeDurationShip
             // 
+            this.txtMinTimeDurationShip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMinTimeDurationShip.Location = new System.Drawing.Point(167, 6);
             this.txtMinTimeDurationShip.Name = "txtMinTimeDurationShip";
             this.txtMinTimeDurationShip.Size = new System.Drawing.Size(132, 26);
@@ -779,6 +788,7 @@ namespace ManagingClients
             // 
             // txtSelectedExchangeRate
             // 
+            this.txtSelectedExchangeRate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSelectedExchangeRate.Location = new System.Drawing.Point(167, 9);
             this.txtSelectedExchangeRate.Name = "txtSelectedExchangeRate";
             this.txtSelectedExchangeRate.Size = new System.Drawing.Size(132, 26);
@@ -828,6 +838,7 @@ namespace ManagingClients
             // 
             // txtPurposePurchasing
             // 
+            this.txtPurposePurchasing.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPurposePurchasing.Location = new System.Drawing.Point(167, 9);
             this.txtPurposePurchasing.Name = "txtPurposePurchasing";
             this.txtPurposePurchasing.Size = new System.Drawing.Size(441, 26);
@@ -855,6 +866,7 @@ namespace ManagingClients
             // 
             // txtEndUser
             // 
+            this.txtEndUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndUser.Location = new System.Drawing.Point(167, 9);
             this.txtEndUser.Name = "txtEndUser";
             this.txtEndUser.Size = new System.Drawing.Size(441, 26);
@@ -951,6 +963,7 @@ namespace ManagingClients
             // 
             // txtNumberContract
             // 
+            this.txtNumberContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumberContract.Location = new System.Drawing.Point(193, 9);
             this.txtNumberContract.Name = "txtNumberContract";
             this.txtNumberContract.Size = new System.Drawing.Size(216, 26);
@@ -980,6 +993,7 @@ namespace ManagingClients
             // dtpDateSigned
             // 
             this.dtpDateSigned.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateSigned.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateSigned.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateSigned.Location = new System.Drawing.Point(193, 8);
             this.dtpDateSigned.Name = "dtpDateSigned";
@@ -1010,6 +1024,7 @@ namespace ManagingClients
             // dtpDateExpired
             // 
             this.dtpDateExpired.CustomFormat = "dd/MM/yyyy";
+            this.dtpDateExpired.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateExpired.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateExpired.Location = new System.Drawing.Point(192, 7);
             this.dtpDateExpired.Name = "dtpDateExpired";
@@ -1039,6 +1054,7 @@ namespace ManagingClients
             // 
             // txtTotalValueContract
             // 
+            this.txtTotalValueContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalValueContract.Location = new System.Drawing.Point(193, 9);
             this.txtTotalValueContract.Name = "txtTotalValueContract";
             this.txtTotalValueContract.Size = new System.Drawing.Size(216, 26);
@@ -1150,40 +1166,38 @@ namespace ManagingClients
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.cboLevelCompanyAccessOrder);
-            this.panel21.Controls.Add(this.label26);
-            this.panel21.Controls.Add(this.cboLevelPosAccessOrder);
-            this.panel21.Controls.Add(this.label20);
-            this.panel21.Controls.Add(this.label25);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel21.Location = new System.Drawing.Point(643, 22);
+            this.panel21.Controls.Add(this.btnSaveSetting);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(1012, 22);
             this.panel21.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(563, 111);
+            this.panel21.Size = new System.Drawing.Size(194, 111);
             this.panel21.TabIndex = 0;
             // 
             // cboLevelCompanyAccessOrder
             // 
+            this.cboLevelCompanyAccessOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLevelCompanyAccessOrder.FormattingEnabled = true;
-            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(377, 61);
+            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(801, 61);
             this.cboLevelCompanyAccessOrder.Name = "cboLevelCompanyAccessOrder";
-            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(182, 27);
+            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(202, 27);
             this.cboLevelCompanyAccessOrder.TabIndex = 1;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(306, 67);
+            this.label26.Location = new System.Drawing.Point(653, 69);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(72, 19);
+            this.label26.Size = new System.Drawing.Size(144, 19);
             this.label26.TabIndex = 0;
-            this.label26.Text = "Công ty   :";
+            this.label26.Text = "Công ty                     :";
             // 
             // cboLevelPosAccessOrder
             // 
+            this.cboLevelPosAccessOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLevelPosAccessOrder.FormattingEnabled = true;
-            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(103, 61);
+            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(407, 63);
             this.cboLevelPosAccessOrder.Name = "cboLevelPosAccessOrder";
             this.cboLevelPosAccessOrder.Size = new System.Drawing.Size(174, 27);
             this.cboLevelPosAccessOrder.TabIndex = 1;
@@ -1192,17 +1206,17 @@ namespace ManagingClients
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(12, 17);
+            this.label20.Location = new System.Drawing.Point(18, 69);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(271, 19);
+            this.label20.Size = new System.Drawing.Size(258, 19);
             this.label20.TabIndex = 0;
-            this.label20.Text = "Thiết lập Cấp độ Truy Cập Đơn Hàng  :";
+            this.label20.Text = "Thiết lập Cấp độ Truy Cập Đơn Hàng";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(12, 67);
+            this.label25.Location = new System.Drawing.Point(316, 69);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 19);
             this.label25.TabIndex = 0;
@@ -1214,17 +1228,23 @@ namespace ManagingClients
             this.panel22.Controls.Add(this.label27);
             this.panel22.Controls.Add(this.txtNameOrder);
             this.panel22.Controls.Add(this.label22);
+            this.panel22.Controls.Add(this.cboLevelCompanyAccessOrder);
+            this.panel22.Controls.Add(this.label20);
+            this.panel22.Controls.Add(this.label26);
+            this.panel22.Controls.Add(this.label25);
+            this.panel22.Controls.Add(this.cboLevelPosAccessOrder);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel22.Location = new System.Drawing.Point(3, 22);
             this.panel22.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(536, 111);
+            this.panel22.Size = new System.Drawing.Size(1009, 111);
             this.panel22.TabIndex = 1;
             // 
             // cboStatusOrder
             // 
+            this.cboStatusOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboStatusOrder.FormattingEnabled = true;
-            this.cboStatusOrder.Location = new System.Drawing.Point(163, 64);
+            this.cboStatusOrder.Location = new System.Drawing.Point(801, 14);
             this.cboStatusOrder.Name = "cboStatusOrder";
             this.cboStatusOrder.Size = new System.Drawing.Size(202, 27);
             this.cboStatusOrder.TabIndex = 1;
@@ -1234,17 +1254,18 @@ namespace ManagingClients
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(15, 67);
+            this.label27.Location = new System.Drawing.Point(653, 17);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(142, 19);
+            this.label27.Size = new System.Drawing.Size(146, 19);
             this.label27.TabIndex = 0;
-            this.label27.Text = "Tính trạng Đơn Hàng :";
+            this.label27.Text = "Tính trạng Đơn Hàng  :";
             // 
             // txtNameOrder
             // 
+            this.txtNameOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameOrder.Location = new System.Drawing.Point(163, 14);
             this.txtNameOrder.Name = "txtNameOrder";
-            this.txtNameOrder.Size = new System.Drawing.Size(365, 26);
+            this.txtNameOrder.Size = new System.Drawing.Size(418, 26);
             this.txtNameOrder.TabIndex = 1;
             // 
             // label22
@@ -1316,6 +1337,11 @@ namespace ManagingClients
             this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
             this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
             // 
+            // ID_Customer_Order
+            // 
+            this.ID_Customer_Order.Text = "Mã Đơn Hàng";
+            this.ID_Customer_Order.Width = 100;
+            // 
             // Name_Order
             // 
             this.Name_Order.Text = "Tên Đơn Hàng";
@@ -1340,10 +1366,15 @@ namespace ManagingClients
             this.Level_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Level_Access_Order.Width = 200;
             // 
-            // ID_Customer_Order
+            // btnSaveSetting
             // 
-            this.ID_Customer_Order.Text = "Mã Đơn Hàng";
-            this.ID_Customer_Order.Width = 100;
+            this.btnSaveSetting.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnSaveSetting.Location = new System.Drawing.Point(46, 33);
+            this.btnSaveSetting.Name = "btnSaveSetting";
+            this.btnSaveSetting.Size = new System.Drawing.Size(121, 40);
+            this.btnSaveSetting.TabIndex = 2;
+            this.btnSaveSetting.Text = "Lưu";
+            this.btnSaveSetting.UseVisualStyleBackColor = false;
             // 
             // FrmDetailCustomer
             // 
@@ -1362,6 +1393,7 @@ namespace ManagingClients
             this.Name = "FrmDetailCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết Khách Hàng Báo Giá";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDetailCustomer_FormClosed);
             this.Load += new System.EventHandler(this.frmNewCustomer_Load);
             this.pnlTopCusIC.ResumeLayout(false);
             this.flpUINegative.ResumeLayout(false);
@@ -1419,7 +1451,6 @@ namespace ManagingClients
             this.pnlSettingOrderPurchasing.ResumeLayout(false);
             this.grbSettingOrderPurchasing.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.pnlBelowCusIC.ResumeLayout(false);
@@ -1546,5 +1577,6 @@ namespace ManagingClients
         public System.Windows.Forms.GroupBox grbDetailContract;
         public System.Windows.Forms.FlowLayoutPanel flpDetailContract;
         private System.Windows.Forms.ColumnHeader ID_Customer_Order;
+        public System.Windows.Forms.Button btnSaveSetting;
     }
 }

@@ -24,13 +24,17 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._lsvOrdersCustomer = FrmDetailCustomer.Instance.lsvOrdersCustomer;
             this._lsvOrdersCustomer.MultiSelect = false;
+            this._lsvOrdersCustomer.FullRowSelect = true;
             this._lsvOrdersCustomer.SelectedIndexChanged += new EventHandler(ListViewCustomerOrder);
 
-            //  FrmDetailCustomer.Instance.Load += new EventHandler(this.ClearOldDataEventListViewAfterFormDetailCustomerLoad);
+           // FrmDetailCustomer.Instance.Load += new EventHandler(this.ShowDataListViewAfterFormDetailCustomerLoad);
         }
 
         #region Add_Events
-
+        //protected virtual void ShowDataListViewAfterFormDetailCustomerLoad(object sender, EventArgs e)
+        //{
+        //   this.ShowDataListViewAfterFormDetailCustomerLoad();
+        //}
         #endregion
         public virtual void ShowDataListViewAfterFormDetailCustomerLoad()
         {

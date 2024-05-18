@@ -21,7 +21,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
                 return PanelCenterCusICSC._instance;
             }
 
-            private set { PanelCenterCusICSC._instance = value; }
+             set { PanelCenterCusICSC._instance = value; }
         }
 
         protected PanelCustomerInfo _PanelCustomerInfo;

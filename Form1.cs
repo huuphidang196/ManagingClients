@@ -32,7 +32,7 @@ namespace ManagingClients
 
         protected ProfileAccount _ProfileAccount;
         public ProfileAccount ProfileAccount => _ProfileAccount;
-
+        
         public virtual void SetProfileAccount(ProfileAccount profileAccount) => this._ProfileAccount = profileAccount;
 
         private FrmMain_Control()

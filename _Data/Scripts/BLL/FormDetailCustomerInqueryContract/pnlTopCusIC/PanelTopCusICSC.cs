@@ -19,7 +19,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
                 return PanelTopCusICSC._instance;
             }
 
-            private set { PanelTopCusICSC._instance = value; }
+            set { PanelTopCusICSC._instance = value; }
         }
 
         protected Panel _pnlTopCus;
@@ -37,7 +37,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
 
         public virtual void ShowAllDataWhenBegin()
         {
-            
+
         }
 
     }

@@ -41,8 +41,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Add_Events
         protected virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
         {
+            //setting
+            this._PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ListViewCustomerOrderChangeSelected(customerOrder);
             //Inquery
             this._PanelInqueryContractSC.PanelInqueryCustomerSC.ListViewCustomerOrderChangeSelected(customerOrder);
+
+            //Contract 
+            this._PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.ListViewCustomerOrderChangeSelected(customerOrder);
         }
         #endregion
         public virtual void ButtonAddOrderCustomer()

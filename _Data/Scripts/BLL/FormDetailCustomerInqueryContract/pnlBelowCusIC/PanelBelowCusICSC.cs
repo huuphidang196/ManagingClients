@@ -18,7 +18,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
                 return PanelBelowCusICSC._instance;
             }
 
-            private set { PanelBelowCusICSC._instance = value; }
+            set { PanelBelowCusICSC._instance = value; }
         }
         protected TabCtrlInqueryContractSC _TabCtrlInqueryContractSC;
         public TabCtrlInqueryContractSC TabCtrlInqueryContractSC => _TabCtrlInqueryContractSC;

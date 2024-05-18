@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.DTO.Customer;
+﻿using ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC;
+using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -118,13 +119,24 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         }
         protected virtual void ClearContentOfControl()
         {
-            this._txtNumberContract.Text = "";
-            this._txtTotalValueContract.Text = "";
+            this._ContractCustomer = new ContractCustomer();
+
+            this.SetContentControlByInquery(this._ContractCustomer);
 
             this.ClearFileContractAndlabelContract();
-            this._ContractCustomer = new ContractCustomer();
+
             //Listview selected = 0
 
+        }
+        protected virtual void SetContentControlByInquery(ContractCustomer contractCustomer)
+        {
+            this._txtNumberContract.Text = contractCustomer.Number_Contract;
+            this._txtTotalValueContract.Text = contractCustomer.Total_Contract_Value.ToString();
+
+            this._dtpDateSigned.Value = (contractCustomer.Signed_Time <= DateTime.MinValue) ? DateTime.Today : contractCustomer.Signed_Time;
+            this._dtpDateExpired.Value = (contractCustomer.Expired_Time <= DateTime.MinValue) ? DateTime.Today : contractCustomer.Expired_Time;
+
+            this._lblFileContract.Text = (contractCustomer.File_Data_Contract == null) ? "Tải file PDF" : "File Hợp Đồng";
         }
         protected virtual void ClearFileContractAndlabelContract()
         {
@@ -138,6 +150,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public virtual void CreatNewContractOfCustomer()
         {
             this.ClearContentOfControl();
+        }
+        public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
+        {
+            this._ContractCustomer = CustomerOrderDataProvider.Instance.GetContractQuotationrOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
+            this.SetContentControlByInquery(this._ContractCustomer);
         }
         #endregion
     }
