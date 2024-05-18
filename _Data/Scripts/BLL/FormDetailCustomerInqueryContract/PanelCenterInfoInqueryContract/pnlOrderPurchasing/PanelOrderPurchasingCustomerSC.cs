@@ -1,5 +1,8 @@
-﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlInqueryContract;
+﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlBelow.tabCtrlInqueryContract;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlInqueryContract;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlOrderPurchasing.pnlSettingOrderPurchasing;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlBelowCusIC;
+using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +15,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
     public class PanelOrderPurchasingCustomerSC
     {
         protected Panel _pnlOrderPurchasingCustomerParent;
-        
+
+        protected CustomerOrder _CustomerOrder;
+        public CustomerOrder CustomerOrder => _CustomerOrder;
+
         protected PanelInqueryContractSC _PanelInqueryContractSC;
         public PanelInqueryContractSC PanelInqueryContractSC => _PanelInqueryContractSC;
 
@@ -21,12 +27,24 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
      
         public PanelOrderPurchasingCustomerSC()
         {
+            this._CustomerOrder = new CustomerOrder();
+
             this._pnlOrderPurchasingCustomerParent = FrmDetailCustomer.Instance.pnlOrderPurchasingParent;
 
             this._PanelInqueryContractSC = new PanelInqueryContractSC();
             this._PanelSettingOrderPurchasingSC = new PanelSettingOrderPurchasingSC();
+
+            //Signed event ListViewCustomerOrderChangeSelected
+            TabPageInqueryCustomerSC.EventShowDataICOfOrder += this.ListViewCustomerOrderChangeSelected;
         }
 
+        #region Add_Events
+        protected virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
+        {
+            //Inquery
+            this._PanelInqueryContractSC.PanelInqueryCustomerSC.ListViewCustomerOrderChangeSelected(customerOrder);
+        }
+        #endregion
         public virtual void ButtonAddOrderCustomer()
         {
             //new Setting Order

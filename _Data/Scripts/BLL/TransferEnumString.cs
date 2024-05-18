@@ -70,6 +70,28 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer
 
             return "Khách";
         }
+        public static Position TransferStringToPosition(string str_Pos)
+        {
+            switch (str_Pos)
+            {
+                case "Chủ Tịch" :
+                    return Position.PRESIDENT;
+                case "Giám Đốc" :
+                    return Position.DIRECTOR;
+                case "Trưởng Phòng" :
+                    return Position.HEAD_OF_DEPARTMENT;
+                case "Phó Phòng" :
+                    return Position.DEPUTY_OF_DEPARTMENT;
+                case "Trưởng Nhóm" :
+                    return Position.LEADER_TEAM_DEPARTMENT;
+                case "Nhân viên" :
+                    return Position.EMPLOYEE;
+                default:
+                    break;
+            }
+
+            return Position.VISITOR;
+        }
 
         public static string TransferStatusOrderToString(StatusOrder statusOrder)
         {
@@ -94,6 +116,70 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer
             }
 
             return "Hoàn Thành Hợp Đồng";
+        }
+        public static StatusOrder TransferStringToStatusOrder(string str_StatusOrder)
+        {
+            switch (str_StatusOrder)
+            {
+                case "Yêu cầu Báo Giá":
+                    return StatusOrder.Require_Inquiry;
+                case "Đã gủi Báo Giá":
+                    return StatusOrder.Send_Inquiry;
+                case "Yêu cầu Hợp Đồng":
+                    return StatusOrder.Require_Contract;
+                case "Đã Hủy Hợp Đồng":
+                    return StatusOrder.Cancel_Contract;
+                case "Chưa Hoàn thành Thanh Toán":
+                    return StatusOrder.Wait_Pay_Complete;
+                case "Đang vận chuyển đến VN":
+                    return StatusOrder.Delivering;
+                case "Đang vận chuyển đến Khách Hàng":
+                    return StatusOrder.Arriving_Customer;
+                default:
+                    break;
+            }
+
+            return StatusOrder.Finished_Contract;
+        }
+
+        public static string TransferLevelAccessToString(LevelAccess levelAccess)
+        {
+            switch (levelAccess)
+            {
+                case LevelAccess.LEVEL_05:
+                    return levelAccess.ToString() + " - CT,GĐ";
+                case LevelAccess.LEVEL_04:
+                    return levelAccess.ToString() + " - TP";
+                case LevelAccess.LEVEL_03:
+                    return levelAccess.ToString() + " - PP";
+                case LevelAccess.LEVEL_02:
+                    return levelAccess.ToString() + " - TN";
+                case LevelAccess.LEVEL_01:
+                    return levelAccess.ToString() + " - NV";
+                default:
+                    break;
+            }
+            return levelAccess.ToString() + " - GUEST";
+        }
+        public static LevelAccess TransferStringToLevelAccess(string str_LevelAccess)
+        {
+
+            switch (str_LevelAccess)
+            {
+                case ("LEVEL_05 - CT,GĐ"):
+                    return LevelAccess.LEVEL_05;
+                case "LEVEL_04 - TP":
+                    return LevelAccess.LEVEL_04;
+                case "LEVEL_03 - PP":
+                    return LevelAccess.LEVEL_03;
+                case "LEVEL_02 - TN":
+                    return LevelAccess.LEVEL_02;
+                case "LEVEL_01 - NV":
+                    return LevelAccess.LEVEL_01;
+                default:
+                    break;
+            }
+            return LevelAccess.LEVEL_ZERO;
         }
     }
     public enum SortingMethod

@@ -84,7 +84,7 @@
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlOrderPurchasing\pnlSettingOrderPurchasing\PanelSettingOrderPurchasingSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\PanelBelowCusICSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\TabCtrlInqueryContractSC.cs" />
-    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\tabCtrlInqueryContract\TabPageInqueryCustomerSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\tabPageInqueryContract\TabPageInqueryCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlCustomerInfo\grbCustomerInfo\GroupBoxCustomerInfoSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlCustomerInfo\PanelCustomerInfo.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\flpUINegative\FlowLayOutPanelUINegativeSC.cs" />
@@ -105,6 +105,7 @@
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\SplitContainerMainControl.cs" />
     <Compile Include="_Data\Scripts\BLL\TransferEnumString.cs" />
     <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
+    <Compile Include="_Data\Scripts\DAO\FormDetailCustomerIC\CustomerOrderDataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlPurchasingOrder\PurchasingOrderProvider.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
@@ -150,7 +151,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_Data\Scripts\DAO\FormDetailCustomerIC\" />
     <Folder Include="_Data\Scripts\SaveManager\Query\PersonalAccount\" />
   </ItemGroup>
   <ItemGroup>

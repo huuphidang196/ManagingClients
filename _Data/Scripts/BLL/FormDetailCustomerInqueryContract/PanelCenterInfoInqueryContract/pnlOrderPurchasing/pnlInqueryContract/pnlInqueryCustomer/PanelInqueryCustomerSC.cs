@@ -1,5 +1,8 @@
-﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlInqueryContract.pnlContractCustomer.grbDetailContract.flpDetailContract;
+﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlBelow.tabCtrlInqueryContract;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlInqueryContract.pnlContractCustomer.grbDetailContract.flpDetailContract;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlInqueryContract.pnlInqueryCustomer.grbDetailInquery.flpDetailInquery;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlBelowCusIC;
+using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +23,16 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public PanelInqueryCustomerSC()
         {
             this._pnlInqueryCustomer = FrmDetailCustomer.Instance.pnlInqueryCustomer;
-            this._FlowLayoutPanelDetailInquerySC = new FlowLayoutPanelDetailInquerySC();
+            this._FlowLayoutPanelDetailInquerySC = new FlowLayoutPanelDetailInquerySC();   
+          
         }
+
+        public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
+        {
+            //Find Inquery by Id customerOrder
+            this._FlowLayoutPanelDetailInquerySC.ListViewCustomerOrderChangeSelected(customerOrder);
+
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.DTO.Customer;
+﻿using ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC;
+using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -56,7 +57,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         public FlowLayoutPanelDetailInquerySC()
         {
-            this._InqueryQuotation = new InqueryQuotation();
+           // this._InqueryQuotation = new InqueryQuotation();
 
             this._txtNameInquery = FrmDetailCustomer.Instance.txtNameInquery;
             this._flowDetailInquery = FrmDetailCustomer.Instance.flpDetailInquery;
@@ -78,6 +79,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._btnDeleteFileInquery = FrmDetailCustomer.Instance.btnDeleteFileInquery;
             this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearInqueryButton);
+
+            this.ClearContentOfControl();
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
@@ -132,20 +135,25 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Internal_Function
         protected virtual void ClearContentOfControl()
         {
-            this._txtNameInquery.Text = "";
-            this._txtNumberInquery.Text = "";
-            this._txtCostDeliveryVN.Text = "";
-            this._txtCostDeliveryKH.Text = "";
-            this._txtMinTimeDurationShip.Text = "";
-            this._txtMaxTimeDurationShip.Text = "";
-            this._txtSelected_Exchange_Rate.Text = "";
-            this._txtPurposePurchasing.Text = "";
-            this._txtEndUser.Text = "";
-
-            this.ClearFileInquery();
             this._InqueryQuotation = new InqueryQuotation();
+            this.SetContentControlByInquery(this._InqueryQuotation);
+            this.ClearFileInquery();
+
             //Listview selected = 0
 
+        }
+
+        protected virtual void SetContentControlByInquery(InqueryQuotation inqueryQuotation)
+        {
+            this._txtNameInquery.Text = inqueryQuotation.Name_Inquiry_Quotation;
+            this._txtNumberInquery.Text = inqueryQuotation.Number_Inquiry_Quotation;
+            this._txtCostDeliveryVN.Text = inqueryQuotation.DeliveryCost_To_VietNam.ToString();
+            this._txtCostDeliveryKH.Text = inqueryQuotation.DeliveryCost_To_Customer.ToString();
+            this._txtMinTimeDurationShip.Text = inqueryQuotation.Min_Time_Delivery.ToString();
+            this._txtMaxTimeDurationShip.Text = inqueryQuotation.Max_Time_Delivery.ToString();
+            this._txtSelected_Exchange_Rate.Text = inqueryQuotation.Selected_Exchange_Rate.ToString();
+            this._txtPurposePurchasing.Text = inqueryQuotation.Purpose_Purchasing;
+            this._txtEndUser.Text = inqueryQuotation.Name_Of_EndUser;
         }
         protected virtual void ClearFileInquery()
         {
@@ -161,7 +169,12 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.ClearContentOfControl();
         }
+        public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
+        {
+            this._InqueryQuotation = CustomerOrderDataProvider.Instance.GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
+            this.SetContentControlByInquery(this._InqueryQuotation);
+        }
         #endregion
-
+       
     }
 }

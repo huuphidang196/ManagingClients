@@ -44,6 +44,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._btnSaveContract = FrmDetailCustomer.Instance.btnSaveContract;
             this._btnSaveContract.Click += new EventHandler(this.AddEventClickForButtonSaveContract);
+
+            this.ClearContentOfControl();
         }
 
 

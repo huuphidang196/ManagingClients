@@ -33,7 +33,7 @@ namespace ManagingClients
         {
             ProfileAccount profileAccount = this.GetProfileAccount();
 
-            if (profileAccount == null)
+            if (profileAccount == null || this.txtPasswordAccount.Text != profileAccount.Password)
             {
                 MessageBox.Show("Sai thông tin đăng nhập");
 

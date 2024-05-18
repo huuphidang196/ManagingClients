@@ -139,10 +139,11 @@ namespace ManagingClients
             this.tabCtrlInqueryContract = new System.Windows.Forms.TabControl();
             this.tabPageInqueryCus = new System.Windows.Forms.TabPage();
             this.lsvOrdersCustomer = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Name_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Status_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Level_Pos_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Level_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID_Customer_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -194,7 +195,7 @@ namespace ManagingClients
             this.pnlTopCusIC.Location = new System.Drawing.Point(0, 0);
             this.pnlTopCusIC.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.pnlTopCusIC.Name = "pnlTopCusIC";
-            this.pnlTopCusIC.Size = new System.Drawing.Size(1119, 63);
+            this.pnlTopCusIC.Size = new System.Drawing.Size(1219, 63);
             this.pnlTopCusIC.TabIndex = 0;
             // 
             // flpUINegative
@@ -211,7 +212,7 @@ namespace ManagingClients
             this.flpUINegative.Location = new System.Drawing.Point(0, 0);
             this.flpUINegative.Margin = new System.Windows.Forms.Padding(0);
             this.flpUINegative.Name = "flpUINegative";
-            this.flpUINegative.Size = new System.Drawing.Size(1119, 63);
+            this.flpUINegative.Size = new System.Drawing.Size(1219, 63);
             this.flpUINegative.TabIndex = 0;
             // 
             // btnAddICForCus
@@ -293,7 +294,7 @@ namespace ManagingClients
             this.pnlCenterCusIC.Location = new System.Drawing.Point(0, 63);
             this.pnlCenterCusIC.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCenterCusIC.Name = "pnlCenterCusIC";
-            this.pnlCenterCusIC.Size = new System.Drawing.Size(1119, 591);
+            this.pnlCenterCusIC.Size = new System.Drawing.Size(1219, 591);
             this.pnlCenterCusIC.TabIndex = 1;
             // 
             // pnlCustomerInfo
@@ -305,7 +306,7 @@ namespace ManagingClients
             this.pnlCustomerInfo.Location = new System.Drawing.Point(0, 0);
             this.pnlCustomerInfo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCustomerInfo.Name = "pnlCustomerInfo";
-            this.pnlCustomerInfo.Size = new System.Drawing.Size(1117, 160);
+            this.pnlCustomerInfo.Size = new System.Drawing.Size(1217, 160);
             this.pnlCustomerInfo.TabIndex = 0;
             // 
             // grbCustomerInfo
@@ -317,7 +318,7 @@ namespace ManagingClients
             this.grbCustomerInfo.Margin = new System.Windows.Forms.Padding(4);
             this.grbCustomerInfo.Name = "grbCustomerInfo";
             this.grbCustomerInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.grbCustomerInfo.Size = new System.Drawing.Size(1115, 158);
+            this.grbCustomerInfo.Size = new System.Drawing.Size(1215, 158);
             this.grbCustomerInfo.TabIndex = 0;
             this.grbCustomerInfo.TabStop = false;
             this.grbCustomerInfo.Text = "Thông tin Khách Hàng";
@@ -333,7 +334,7 @@ namespace ManagingClients
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 23);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1107, 131);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1207, 131);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // panel4
@@ -343,7 +344,7 @@ namespace ManagingClients
             this.panel4.Location = new System.Drawing.Point(3, 10);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(531, 44);
+            this.panel4.Size = new System.Drawing.Size(582, 44);
             this.panel4.TabIndex = 2;
             // 
             // txtNameCustomer
@@ -368,17 +369,17 @@ namespace ManagingClients
             // 
             this.panel5.Controls.Add(this.txtAddressCustomer);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(540, 10);
+            this.panel5.Location = new System.Drawing.Point(591, 10);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(558, 44);
+            this.panel5.Size = new System.Drawing.Size(609, 44);
             this.panel5.TabIndex = 2;
             // 
             // txtAddressCustomer
             // 
             this.txtAddressCustomer.Location = new System.Drawing.Point(133, 9);
             this.txtAddressCustomer.Name = "txtAddressCustomer";
-            this.txtAddressCustomer.Size = new System.Drawing.Size(422, 26);
+            this.txtAddressCustomer.Size = new System.Drawing.Size(473, 26);
             this.txtAddressCustomer.TabIndex = 1;
             this.txtAddressCustomer.Text = "11 Hoàng Hoa Thám, Phường Lộc Thọ, Thành phố Nha Trang, Tỉnh Khánh Hòa, Việt Nam";
             // 
@@ -399,14 +400,14 @@ namespace ManagingClients
             this.panel6.Location = new System.Drawing.Point(3, 67);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(455, 44);
+            this.panel6.Size = new System.Drawing.Size(499, 44);
             this.panel6.TabIndex = 2;
             // 
             // txtEmailCustomer
             // 
             this.txtEmailCustomer.Location = new System.Drawing.Point(134, 9);
             this.txtEmailCustomer.Name = "txtEmailCustomer";
-            this.txtEmailCustomer.Size = new System.Drawing.Size(318, 26);
+            this.txtEmailCustomer.Size = new System.Drawing.Size(360, 26);
             this.txtEmailCustomer.TabIndex = 1;
             this.txtEmailCustomer.Text = "tv4@pecc4.vn";
             // 
@@ -424,17 +425,17 @@ namespace ManagingClients
             // 
             this.panel7.Controls.Add(this.txtPhoneCustomer);
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(464, 67);
+            this.panel7.Location = new System.Drawing.Point(508, 67);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(363, 44);
+            this.panel7.Size = new System.Drawing.Size(412, 44);
             this.panel7.TabIndex = 2;
             // 
             // txtPhoneCustomer
             // 
             this.txtPhoneCustomer.Location = new System.Drawing.Point(126, 9);
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
-            this.txtPhoneCustomer.Size = new System.Drawing.Size(231, 26);
+            this.txtPhoneCustomer.Size = new System.Drawing.Size(280, 26);
             this.txtPhoneCustomer.TabIndex = 1;
             this.txtPhoneCustomer.Text = "(+84) 258 - 3563999";
             // 
@@ -452,17 +453,17 @@ namespace ManagingClients
             // 
             this.panel8.Controls.Add(this.txtTaxCustomer);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Location = new System.Drawing.Point(833, 67);
+            this.panel8.Location = new System.Drawing.Point(926, 67);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(266, 44);
+            this.panel8.Size = new System.Drawing.Size(274, 44);
             this.panel8.TabIndex = 2;
             // 
             // txtTaxCustomer
             // 
-            this.txtTaxCustomer.Location = new System.Drawing.Point(117, 9);
+            this.txtTaxCustomer.Location = new System.Drawing.Point(109, 9);
             this.txtTaxCustomer.Name = "txtTaxCustomer";
-            this.txtTaxCustomer.Size = new System.Drawing.Size(145, 26);
+            this.txtTaxCustomer.Size = new System.Drawing.Size(162, 26);
             this.txtTaxCustomer.TabIndex = 1;
             this.txtTaxCustomer.Text = "4200385474";
             // 
@@ -470,7 +471,7 @@ namespace ManagingClients
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 12);
+            this.label5.Location = new System.Drawing.Point(14, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 19);
             this.label5.TabIndex = 0;
@@ -485,7 +486,7 @@ namespace ManagingClients
             this.pnlOrderPurchasingParent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlOrderPurchasingParent.Location = new System.Drawing.Point(0, 167);
             this.pnlOrderPurchasingParent.Name = "pnlOrderPurchasingParent";
-            this.pnlOrderPurchasingParent.Size = new System.Drawing.Size(1117, 422);
+            this.pnlOrderPurchasingParent.Size = new System.Drawing.Size(1217, 422);
             this.pnlOrderPurchasingParent.TabIndex = 1;
             // 
             // grbOrderPurchasingParent
@@ -496,7 +497,7 @@ namespace ManagingClients
             this.grbOrderPurchasingParent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbOrderPurchasingParent.Location = new System.Drawing.Point(0, 0);
             this.grbOrderPurchasingParent.Name = "grbOrderPurchasingParent";
-            this.grbOrderPurchasingParent.Size = new System.Drawing.Size(1115, 420);
+            this.grbOrderPurchasingParent.Size = new System.Drawing.Size(1215, 420);
             this.grbOrderPurchasingParent.TabIndex = 0;
             this.grbOrderPurchasingParent.TabStop = false;
             this.grbOrderPurchasingParent.Text = "Chi tiết Đơn Hàng";
@@ -507,9 +508,9 @@ namespace ManagingClients
             this.pnlInqueryContract.Controls.Add(this.pnlInqueryCustomer);
             this.pnlInqueryContract.Controls.Add(this.pnlContractOrderCus);
             this.pnlInqueryContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInqueryContract.Location = new System.Drawing.Point(3, 154);
+            this.pnlInqueryContract.Location = new System.Drawing.Point(3, 158);
             this.pnlInqueryContract.Name = "pnlInqueryContract";
-            this.pnlInqueryContract.Size = new System.Drawing.Size(1109, 263);
+            this.pnlInqueryContract.Size = new System.Drawing.Size(1209, 259);
             this.pnlInqueryContract.TabIndex = 1;
             // 
             // pnlInqueryCustomer
@@ -518,7 +519,7 @@ namespace ManagingClients
             this.pnlInqueryCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlInqueryCustomer.Location = new System.Drawing.Point(0, 0);
             this.pnlInqueryCustomer.Name = "pnlInqueryCustomer";
-            this.pnlInqueryCustomer.Size = new System.Drawing.Size(651, 263);
+            this.pnlInqueryCustomer.Size = new System.Drawing.Size(651, 259);
             this.pnlInqueryCustomer.TabIndex = 0;
             // 
             // grbDetailInquery
@@ -529,7 +530,7 @@ namespace ManagingClients
             this.grbDetailInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDetailInquery.Location = new System.Drawing.Point(0, 0);
             this.grbDetailInquery.Name = "grbDetailInquery";
-            this.grbDetailInquery.Size = new System.Drawing.Size(651, 263);
+            this.grbDetailInquery.Size = new System.Drawing.Size(651, 259);
             this.grbDetailInquery.TabIndex = 0;
             this.grbDetailInquery.TabStop = false;
             this.grbDetailInquery.Text = "Chi tiết Báo Giá ";
@@ -550,7 +551,7 @@ namespace ManagingClients
             this.flpDetailInquery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDetailInquery.Location = new System.Drawing.Point(3, 22);
             this.flpDetailInquery.Name = "flpDetailInquery";
-            this.flpDetailInquery.Size = new System.Drawing.Size(645, 238);
+            this.flpDetailInquery.Size = new System.Drawing.Size(645, 234);
             this.flpDetailInquery.TabIndex = 0;
             // 
             // panel1
@@ -902,9 +903,9 @@ namespace ManagingClients
             // 
             this.pnlContractOrderCus.Controls.Add(this.grbDetailContract);
             this.pnlContractOrderCus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlContractOrderCus.Location = new System.Drawing.Point(649, 0);
+            this.pnlContractOrderCus.Location = new System.Drawing.Point(730, 0);
             this.pnlContractOrderCus.Name = "pnlContractOrderCus";
-            this.pnlContractOrderCus.Size = new System.Drawing.Size(460, 263);
+            this.pnlContractOrderCus.Size = new System.Drawing.Size(479, 259);
             this.pnlContractOrderCus.TabIndex = 1;
             // 
             // grbDetailContract
@@ -915,7 +916,7 @@ namespace ManagingClients
             this.grbDetailContract.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDetailContract.Location = new System.Drawing.Point(0, 0);
             this.grbDetailContract.Name = "grbDetailContract";
-            this.grbDetailContract.Size = new System.Drawing.Size(460, 263);
+            this.grbDetailContract.Size = new System.Drawing.Size(479, 259);
             this.grbDetailContract.TabIndex = 1;
             this.grbDetailContract.TabStop = false;
             this.grbDetailContract.Text = "Chi tiết Hợp Đồng";
@@ -934,7 +935,7 @@ namespace ManagingClients
             this.flpDetailContract.Location = new System.Drawing.Point(3, 22);
             this.flpDetailContract.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.flpDetailContract.Name = "flpDetailContract";
-            this.flpDetailContract.Size = new System.Drawing.Size(454, 238);
+            this.flpDetailContract.Size = new System.Drawing.Size(473, 234);
             this.flpDetailContract.TabIndex = 0;
             // 
             // panel13
@@ -942,8 +943,8 @@ namespace ManagingClients
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.txtNumberContract);
             this.panel13.Controls.Add(this.label17);
-            this.panel13.Location = new System.Drawing.Point(10, 10);
-            this.panel13.Margin = new System.Windows.Forms.Padding(10);
+            this.panel13.Location = new System.Drawing.Point(20, 10);
+            this.panel13.Margin = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(414, 44);
             this.panel13.TabIndex = 1;
@@ -970,8 +971,8 @@ namespace ManagingClients
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.dtpDateSigned);
             this.panel17.Controls.Add(this.label23);
-            this.panel17.Location = new System.Drawing.Point(10, 74);
-            this.panel17.Margin = new System.Windows.Forms.Padding(10);
+            this.panel17.Location = new System.Drawing.Point(20, 74);
+            this.panel17.Margin = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(414, 44);
             this.panel17.TabIndex = 2;
@@ -1000,8 +1001,8 @@ namespace ManagingClients
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.dtpDateExpired);
             this.panel14.Controls.Add(this.label18);
-            this.panel14.Location = new System.Drawing.Point(10, 138);
-            this.panel14.Margin = new System.Windows.Forms.Padding(10);
+            this.panel14.Location = new System.Drawing.Point(20, 138);
+            this.panel14.Margin = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(414, 44);
             this.panel14.TabIndex = 2;
@@ -1030,8 +1031,8 @@ namespace ManagingClients
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.txtTotalValueContract);
             this.panel15.Controls.Add(this.label21);
-            this.panel15.Location = new System.Drawing.Point(10, 202);
-            this.panel15.Margin = new System.Windows.Forms.Padding(10);
+            this.panel15.Location = new System.Drawing.Point(20, 202);
+            this.panel15.Margin = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(414, 44);
             this.panel15.TabIndex = 3;
@@ -1059,8 +1060,8 @@ namespace ManagingClients
             this.panel12.Controls.Add(this.btnDeleteFileContract);
             this.panel12.Controls.Add(this.label13);
             this.panel12.Controls.Add(this.lblFileContract);
-            this.panel12.Location = new System.Drawing.Point(10, 266);
-            this.panel12.Margin = new System.Windows.Forms.Padding(10);
+            this.panel12.Location = new System.Drawing.Point(20, 266);
+            this.panel12.Margin = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(414, 44);
             this.panel12.TabIndex = 3;
@@ -1100,8 +1101,8 @@ namespace ManagingClients
             // 
             this.panel20.Controls.Add(this.btnRemoveContract);
             this.panel20.Controls.Add(this.btnSaveContract);
-            this.panel20.Location = new System.Drawing.Point(10, 330);
-            this.panel20.Margin = new System.Windows.Forms.Padding(10);
+            this.panel20.Location = new System.Drawing.Point(20, 330);
+            this.panel20.Margin = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(414, 58);
             this.panel20.TabIndex = 6;
@@ -1132,7 +1133,7 @@ namespace ManagingClients
             this.pnlSettingOrderPurchasing.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSettingOrderPurchasing.Location = new System.Drawing.Point(3, 22);
             this.pnlSettingOrderPurchasing.Name = "pnlSettingOrderPurchasing";
-            this.pnlSettingOrderPurchasing.Size = new System.Drawing.Size(1109, 132);
+            this.pnlSettingOrderPurchasing.Size = new System.Drawing.Size(1209, 136);
             this.pnlSettingOrderPurchasing.TabIndex = 1;
             // 
             // grbSettingOrderPurchasing
@@ -1142,7 +1143,7 @@ namespace ManagingClients
             this.grbSettingOrderPurchasing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbSettingOrderPurchasing.Location = new System.Drawing.Point(0, 0);
             this.grbSettingOrderPurchasing.Name = "grbSettingOrderPurchasing";
-            this.grbSettingOrderPurchasing.Size = new System.Drawing.Size(1109, 132);
+            this.grbSettingOrderPurchasing.Size = new System.Drawing.Size(1209, 136);
             this.grbSettingOrderPurchasing.TabIndex = 2;
             this.grbSettingOrderPurchasing.TabStop = false;
             this.grbSettingOrderPurchasing.Text = "Thiết lập Cài đặt Đơn Hàng";
@@ -1155,25 +1156,25 @@ namespace ManagingClients
             this.panel21.Controls.Add(this.label20);
             this.panel21.Controls.Add(this.label25);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel21.Location = new System.Drawing.Point(543, 22);
+            this.panel21.Location = new System.Drawing.Point(643, 22);
             this.panel21.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(563, 107);
+            this.panel21.Size = new System.Drawing.Size(563, 111);
             this.panel21.TabIndex = 0;
             // 
             // cboLevelCompanyAccessOrder
             // 
             this.cboLevelCompanyAccessOrder.FormattingEnabled = true;
-            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(412, 61);
+            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(377, 61);
             this.cboLevelCompanyAccessOrder.Name = "cboLevelCompanyAccessOrder";
-            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(145, 27);
+            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(182, 27);
             this.cboLevelCompanyAccessOrder.TabIndex = 1;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(317, 67);
+            this.label26.Location = new System.Drawing.Point(306, 67);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(72, 19);
             this.label26.TabIndex = 0;
@@ -1182,7 +1183,7 @@ namespace ManagingClients
             // cboLevelPosAccessOrder
             // 
             this.cboLevelPosAccessOrder.FormattingEnabled = true;
-            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(109, 61);
+            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(103, 61);
             this.cboLevelPosAccessOrder.Name = "cboLevelPosAccessOrder";
             this.cboLevelPosAccessOrder.Size = new System.Drawing.Size(174, 27);
             this.cboLevelPosAccessOrder.TabIndex = 1;
@@ -1217,7 +1218,7 @@ namespace ManagingClients
             this.panel22.Location = new System.Drawing.Point(3, 22);
             this.panel22.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(536, 107);
+            this.panel22.Size = new System.Drawing.Size(536, 111);
             this.panel22.TabIndex = 1;
             // 
             // cboStatusOrder
@@ -1261,7 +1262,7 @@ namespace ManagingClients
             this.pnlCenterBottom.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCenterBottom.Location = new System.Drawing.Point(0, 654);
             this.pnlCenterBottom.Name = "pnlCenterBottom";
-            this.pnlCenterBottom.Size = new System.Drawing.Size(1119, 38);
+            this.pnlCenterBottom.Size = new System.Drawing.Size(1219, 38);
             this.pnlCenterBottom.TabIndex = 2;
             // 
             // pnlBelowCusIC
@@ -1270,7 +1271,7 @@ namespace ManagingClients
             this.pnlBelowCusIC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 692);
             this.pnlBelowCusIC.Name = "pnlBelowCusIC";
-            this.pnlBelowCusIC.Size = new System.Drawing.Size(1119, 269);
+            this.pnlBelowCusIC.Size = new System.Drawing.Size(1219, 269);
             this.pnlBelowCusIC.TabIndex = 3;
             // 
             // tabCtrlInqueryContract
@@ -1280,7 +1281,7 @@ namespace ManagingClients
             this.tabCtrlInqueryContract.Location = new System.Drawing.Point(0, 0);
             this.tabCtrlInqueryContract.Name = "tabCtrlInqueryContract";
             this.tabCtrlInqueryContract.SelectedIndex = 0;
-            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1119, 269);
+            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1219, 269);
             this.tabCtrlInqueryContract.TabIndex = 0;
             // 
             // tabPageInqueryCus
@@ -1289,7 +1290,7 @@ namespace ManagingClients
             this.tabPageInqueryCus.Location = new System.Drawing.Point(4, 28);
             this.tabPageInqueryCus.Name = "tabPageInqueryCus";
             this.tabPageInqueryCus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInqueryCus.Size = new System.Drawing.Size(1111, 237);
+            this.tabPageInqueryCus.Size = new System.Drawing.Size(1211, 237);
             this.tabPageInqueryCus.TabIndex = 0;
             this.tabPageInqueryCus.Text = "Đơn Hàng Khách Hàng";
             this.tabPageInqueryCus.UseVisualStyleBackColor = true;
@@ -1298,10 +1299,11 @@ namespace ManagingClients
             // 
             this.lsvOrdersCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lsvOrdersCustomer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.ID_Customer_Order,
+            this.Name_Order,
+            this.Status_Order,
+            this.Level_Pos_Access_Order,
+            this.Level_Access_Order});
             this.lsvOrdersCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvOrdersCustomer.FullRowSelect = true;
             this.lsvOrdersCustomer.GridLines = true;
@@ -1309,41 +1311,46 @@ namespace ManagingClients
             this.lsvOrdersCustomer.HideSelection = false;
             this.lsvOrdersCustomer.Location = new System.Drawing.Point(3, 3);
             this.lsvOrdersCustomer.Name = "lsvOrdersCustomer";
-            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1105, 231);
+            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1205, 231);
             this.lsvOrdersCustomer.TabIndex = 0;
             this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
             this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // Name_Order
             // 
-            this.columnHeader1.Text = "Tên Đơn Hàng";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 450;
+            this.Name_Order.Text = "Tên Đơn Hàng";
+            this.Name_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Name_Order.Width = 450;
             // 
-            // columnHeader2
+            // Status_Order
             // 
-            this.columnHeader2.Text = "Tình trạng đơn hàng";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 250;
+            this.Status_Order.Text = "Tình trạng đơn hàng";
+            this.Status_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Status_Order.Width = 250;
             // 
-            // columnHeader3
+            // Level_Pos_Access_Order
             // 
-            this.columnHeader3.Text = "Cấp độ truy cập Phòng Ban";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 200;
+            this.Level_Pos_Access_Order.Text = "Cấp độ truy cập Phòng Ban";
+            this.Level_Pos_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Level_Pos_Access_Order.Width = 200;
             // 
-            // columnHeader4
+            // Level_Access_Order
             // 
-            this.columnHeader4.Text = "Cấp độ truy cập Chung";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 200;
+            this.Level_Access_Order.Text = "Cấp độ truy cập Chung";
+            this.Level_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Level_Access_Order.Width = 200;
             // 
-            // frmDetailCustomer
+            // ID_Customer_Order
+            // 
+            this.ID_Customer_Order.Text = "Mã Đơn Hàng";
+            this.ID_Customer_Order.Width = 100;
+            // 
+            // FrmDetailCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1119, 961);
+            this.ClientSize = new System.Drawing.Size(1219, 961);
             this.Controls.Add(this.pnlBelowCusIC);
             this.Controls.Add(this.pnlCenterBottom);
             this.Controls.Add(this.pnlCenterCusIC);
@@ -1352,7 +1359,7 @@ namespace ManagingClients
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmDetailCustomer";
+            this.Name = "FrmDetailCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết Khách Hàng Báo Giá";
             this.Load += new System.EventHandler(this.frmNewCustomer_Load);
@@ -1499,10 +1506,10 @@ namespace ManagingClients
         public System.Windows.Forms.TabControl tabCtrlInqueryContract;
         private System.Windows.Forms.TabPage tabPageInqueryCus;
         public System.Windows.Forms.ListView lsvOrdersCustomer;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader Name_Order;
+        private System.Windows.Forms.ColumnHeader Status_Order;
+        private System.Windows.Forms.ColumnHeader Level_Pos_Access_Order;
+        private System.Windows.Forms.ColumnHeader Level_Access_Order;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.Button btnDeleteFileContract;
@@ -1538,5 +1545,6 @@ namespace ManagingClients
         public System.Windows.Forms.Panel pnlContractOrderCus;
         public System.Windows.Forms.GroupBox grbDetailContract;
         public System.Windows.Forms.FlowLayoutPanel flpDetailContract;
+        private System.Windows.Forms.ColumnHeader ID_Customer_Order;
     }
 }

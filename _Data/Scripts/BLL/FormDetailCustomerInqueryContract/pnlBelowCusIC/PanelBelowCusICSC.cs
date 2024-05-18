@@ -23,9 +23,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pn
         protected TabCtrlInqueryContractSC _TabCtrlInqueryContractSC;
         public TabCtrlInqueryContractSC TabCtrlInqueryContractSC => _TabCtrlInqueryContractSC;
 
-        public PanelBelowCusICSC()
+        private PanelBelowCusICSC()
         {
             this._TabCtrlInqueryContractSC = new TabCtrlInqueryContractSC();
+        }
+
+        public virtual void ShowAllInformationAfterOpen()
+        {
+            this._TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.ShowDataListViewAfterFormDetailCustomerLoad();
         }
     }
 }

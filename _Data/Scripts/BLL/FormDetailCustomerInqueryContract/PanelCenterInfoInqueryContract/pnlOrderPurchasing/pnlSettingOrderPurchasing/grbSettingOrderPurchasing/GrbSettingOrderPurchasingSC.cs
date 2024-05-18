@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract.pnlOrderPurchasing.pnlSettingOrderPurchasing.grbSettingOrderPurchasing
 {
-  public  class GrbSettingOrderPurchasingSC
+    public class GrbSettingOrderPurchasingSC
     {
         protected CustomerOrder _CustomerOrder;
 
@@ -40,10 +40,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.InitilizingAllValue();
         }
         #region Add_Events
-        //protected virtual void AddEventOfTextBox(object sender , EventArgs e)
-        //{
+        protected virtual void AddEventOfListViewCustomerOrderSelectedChange(CustomerOrder customerOrder)
+        {
+            this._txtNameOrder.Text = customerOrder.Name_Order;
+            this._cboStatusOrder.SelectedIndex = (int)customerOrder.Status_Order;
+            this._cboLevelPosAccessOrder.SelectedIndex = (int)customerOrder.Level_Pos_Access_Order;
+            this._cboLevelCompanyAccessOrder.SelectedIndex = (int)customerOrder.Level_Access_Order;
 
-        //}
+        }
         #endregion
 
         #region Internal_Function
@@ -59,7 +63,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected virtual void InitializingValueComboBoxStatusOrder()
         {
-           // MessageBox.Show("Ini");
+            // MessageBox.Show("Ini");
             this._cboStatusOrder.Items.Clear();
 
             // Gán các giá trị enum vào ComboBox
@@ -78,13 +82,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected virtual void InitializingValueComboBoxLevelPosAccess()
         {
             this._cboLevelPosAccessOrder.Items.Clear();
-            // Lấy tất cả các giá trị của enum
-            var position = Enum.GetValues(typeof(Position));
 
             // Gán các giá trị enum vào ComboBox
-            foreach (var pos in position)
+            foreach (Position pos in Enum.GetValues(typeof(Position)))
             {
-                this._cboLevelPosAccessOrder.Items.Add(pos);
+                string content = TransferEnumString.TransferPostionToString(pos);
+
+                this._cboLevelPosAccessOrder.Items.Add(content);
             }
 
             // Tùy chọn: Đặt giá trị mặc định được chọn cho ComboBox
@@ -96,13 +100,12 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected virtual void InitializingValueComboBoxLevelCompanyAccess()
         {
             this._cboLevelCompanyAccessOrder.Items.Clear();
-            // Lấy tất cả các giá trị của enum
-            var LevelAccess = Enum.GetValues(enumType: typeof(LevelAccess));
 
             // Gán các giá trị enum vào ComboBox
-            foreach (var level in LevelAccess)
+            foreach (LevelAccess level in Enum.GetValues(enumType: typeof(LevelAccess)))
             {
-                this._cboLevelCompanyAccessOrder.Items.Add(level);
+                string content = TransferEnumString.TransferLevelAccessToString(level);
+                this._cboLevelCompanyAccessOrder.Items.Add(content);
             }
 
             // Tùy chọn: Đặt giá trị mặc định được chọn cho ComboBox

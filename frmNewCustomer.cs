@@ -1,5 +1,6 @@
 ﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlBelowCusIC;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlTopCusIC;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
@@ -43,6 +44,7 @@ namespace ManagingClients
         {
             PanelTopCusICSC.Instance.ShowAllDataWhenBegin();
             PanelCenterCusICSC.Instance.ShowAllInformationAfterOpen();
+            PanelBelowCusICSC.Instance.ShowAllInformationAfterOpen();
         }
     }
 }

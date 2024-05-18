@@ -33,7 +33,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             DataGridViewRow row_Selected = this.dgvDisplayAllCusPO.Rows[e.RowIndex];
             int id_Customer = int.Parse(row_Selected.Cells[0].Value.ToString());
             CustomerGSES customerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
-           
+
             if (customerGSES == null)
             {
                 MessageBox.Show("Vui lòng chọn lại Khách Hàng cần kiểm tra");
@@ -41,7 +41,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             }
 
             FrmDetailCustomer.Instance.SetCustomerGSES(customerGSES);
-            DialogResult ret = FrmDetailCustomer.Instance.ShowDialog();
+            FrmDetailCustomer.Instance.Show();
 
         }
 
@@ -50,7 +50,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
         {
             DataTable dataTable = PurchasingOrderProvider.Instance.GetDataTableAllCustomer();
 
-            this._dgvDisplayAllCusPO.DataSource = dataTable;          
+            this._dgvDisplayAllCusPO.DataSource = dataTable;
 
             //Sort A -> Z
             this.SortObjectByCondition(SortingMethod.Sort_By_ID);

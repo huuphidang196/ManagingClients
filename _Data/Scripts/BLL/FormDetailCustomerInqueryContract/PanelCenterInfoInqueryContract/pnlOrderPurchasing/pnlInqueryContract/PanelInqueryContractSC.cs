@@ -26,5 +26,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._PanelInqueryCustomerSC = new PanelInqueryCustomerSC();
         }
 
+
     }
 }

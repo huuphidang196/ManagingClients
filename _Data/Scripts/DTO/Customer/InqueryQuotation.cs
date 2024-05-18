@@ -23,14 +23,14 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public DateTime Date_Sending { get; set; }
     
-        public int DeliveryCost_To_VietNam { get; set; }
+        public float DeliveryCost_To_VietNam { get; set; }
 
-        public int DeliveryCost_To_Customer { get; set; }        //public DeliveryCost DeliveryCost { get; set; }
+        public float DeliveryCost_To_Customer { get; set; }        //public DeliveryCost DeliveryCost { get; set; }
 
-        public float Min_Time_Delivery { get; set; }        //public RangeValue Time_Delivery { get; set; }
+        public int Min_Time_Delivery { get; set; }        //public RangeValue Time_Delivery { get; set; }
 
 
-        public float Max_Time_Delivery { get; set; }
+        public int Max_Time_Delivery { get; set; }
         
         public DateTime Expired_Time_Inquiry { get; set; }
 
