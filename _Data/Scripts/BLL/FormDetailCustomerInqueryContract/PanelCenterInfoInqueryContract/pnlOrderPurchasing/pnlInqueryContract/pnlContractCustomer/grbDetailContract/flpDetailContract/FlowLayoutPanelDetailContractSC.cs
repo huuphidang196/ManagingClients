@@ -27,6 +27,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected Button _btnDeleteFileContract;
 
         protected Button _btnSaveContract;
+        protected Button _btnRemoveContract;
 
         public FlowLayoutPanelDetailContractSC()
         {
@@ -46,13 +47,16 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnSaveContract = FrmDetailCustomer.Instance.btnSaveContract;
             this._btnSaveContract.Click += new EventHandler(this.AddEventClickForButtonSaveContract);
 
+            this._btnRemoveContract = FrmDetailCustomer.Instance.btnRemoveContract;
             this.ClearContentOfControl();
+            this.ActiveOrUnActiveAllControl(false);
         }
 
 
         #region Add_Events
         protected virtual void AddEventDoubleClickForLabelFileContract(object sender, EventArgs e)
         {
+            if (this._lblFileContract.Enabled == false) return;
 
             if (this._ContractCustomer.File_Data_Contract == null)
             {
@@ -144,6 +148,19 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._ContractCustomer.File_Data_Contract = null;
         }
+        protected virtual void ActiveOrUnActiveAllControl(bool active)
+        {
+            this._txtNumberContract.ReadOnly = !active;
+            this._txtTotalValueContract.ReadOnly = !active;
+
+            this._dtpDateSigned.Enabled = active;
+            this._dtpDateExpired.Enabled = active;
+            this._lblFileContract.Enabled = active;
+
+            this._btnDeleteFileContract.Visible = active;
+            this._btnSaveContract.Visible = active;
+            this._btnRemoveContract.Visible = active;
+        }
         #endregion
 
         #region Outside_Reference
@@ -155,6 +172,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._ContractCustomer = CustomerOrderDataProvider.Instance.GetContractQuotationrOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
             this.SetContentControlByInquery(this._ContractCustomer);
+
+            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
+
+        }
+
+        public virtual void AllowEditCustomerOrder()
+        {
+            this.ActiveOrUnActiveAllControl(true);
         }
         #endregion
     }

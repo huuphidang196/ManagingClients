@@ -25,6 +25,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected ComboBox _cboLevelCompanyAccessOrder;
 
+        protected Button _btnSaveSettingCusOrder;
+
         public GrbSettingOrderPurchasingSC()
         {
             this._CustomerOrder = new CustomerOrder();
@@ -43,10 +45,15 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._cboLevelCompanyAccessOrder = FrmDetailCustomer.Instance.cboLevelCompanyAccessOrder;
             this._cboLevelCompanyAccessOrder.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            this._btnSaveSettingCusOrder = FrmDetailCustomer.Instance.btnSaveSettingCusOrder;
+
             this.InitilizingAllValue();
+            this.ActiveOrUnActiveAllControl(false);
+
         }
+
         #region Add_Events
-       
+
         #endregion
 
         #region Internal_Function
@@ -113,13 +120,23 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
                 this._cboLevelCompanyAccessOrder.SelectedIndex = 0; // Chọn mục đầu tiên
             }
         }
-        
+
+        protected virtual void ActiveOrUnActiveAllControl(bool active)
+        {
+            this._txtNameOrder.ReadOnly = !active;
+            this._cboStatusOrder.Enabled = active;
+            this._cboLevelPosAccessOrder.Enabled = active;
+            this._cboLevelCompanyAccessOrder.Enabled = active;
+            this._btnSaveSettingCusOrder.Visible = active;
+        }
         protected virtual void SetContentControlByInquery(CustomerOrder customerOrder)
         {
+
             this._txtNameOrder.Text = customerOrder.Name_Order;
             this._cboStatusOrder.SelectedIndex = (int)customerOrder.Status_Order;
             this._cboLevelPosAccessOrder.SelectedIndex = (int)customerOrder.Level_Pos_Access_Order;
             this._cboLevelCompanyAccessOrder.SelectedIndex = (int)customerOrder.Level_Access_Order;
+
 
         }
         protected virtual void ClearContentOfControl()
@@ -135,7 +152,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #endregion
 
         #region Reference_outside
-        public virtual void CreatNewInqueryAndContractOfCustomer()
+        public virtual void CreatNewInqueryAndContractOfCustomerAndSetSetting()
         {
             this.ClearContentOfControl();
         }
@@ -143,6 +160,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
         {
             this.SetContentControlByInquery(customerOrder);
+
+            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
+        }
+
+        public virtual void AllowEditCustomerOrder()
+        {
+            this.ActiveOrUnActiveAllControl(true);
         }
         #endregion
     }

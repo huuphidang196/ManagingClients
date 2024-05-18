@@ -21,8 +21,11 @@ namespace ManagingClients
         {
             get
             {
-                if (_instance == null) _instance = new FrmMain_Control();
-                return FrmMain_Control._instance;
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new FrmMain_Control();
+                }
+                return _instance;
             }
 
             private set { FrmMain_Control._instance = value; }
@@ -86,11 +89,15 @@ namespace ManagingClients
 
         private void cboSortOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //PanelMainControl.Instance.SplitContainerMainControl.PanelDisplayOverallSC.PanelPurchasingOrder.
-              // SplitContainerOrderSC.PanelOptionsSC.PanelBottomOption.SortListDataGridViewBySorting();
+            
         }
+
         #endregion pnlBottomOption
 
-
+        private void FrmMain_Control_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
+            PanelMainControl.Instance = null;
+        }
     }
 }

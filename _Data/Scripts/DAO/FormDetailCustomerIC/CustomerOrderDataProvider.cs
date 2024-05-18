@@ -28,7 +28,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
         }
 
-        #region Inquery
+        #region Query
 
         //InqueryQuotation
         public virtual InqueryQuotation GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
@@ -179,10 +179,21 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             return listCustomer_Order;
         }
 
-        #endregion Inquery
+        public virtual int GetCountCustomerOrderByQuery()
+        {
+            string query = "Select count(*) from CustomerOrder";
+
+            return this.InqueryScalarByQueryAndParameter(query, null);
+        }    
+        #endregion Query
 
         #region Insert
+        public virtual void InsertCustomerOrder(CustomerOrder customerOrder)
+        {
+            int current_Count_CO = this.GetCountCustomerOrderByQuery();
 
+
+        }
         #endregion Insert
     }
 }

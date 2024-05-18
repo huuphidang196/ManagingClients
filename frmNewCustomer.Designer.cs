@@ -124,16 +124,17 @@ namespace ManagingClients
             this.pnlSettingOrderPurchasing = new System.Windows.Forms.Panel();
             this.grbSettingOrderPurchasing = new System.Windows.Forms.GroupBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.cboLevelCompanyAccessOrder = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.cboLevelPosAccessOrder = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.btnSaveSettingCusOrder = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.cboStatusOrder = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.txtNameOrder = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.cboLevelCompanyAccessOrder = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cboLevelPosAccessOrder = new System.Windows.Forms.ComboBox();
             this.pnlCenterBottom = new System.Windows.Forms.Panel();
             this.pnlBelowCusIC = new System.Windows.Forms.Panel();
             this.tabCtrlInqueryContract = new System.Windows.Forms.TabControl();
@@ -144,7 +145,6 @@ namespace ManagingClients
             this.Status_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Pos_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSaveSetting = new System.Windows.Forms.Button();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -196,7 +196,7 @@ namespace ManagingClients
             this.pnlTopCusIC.Location = new System.Drawing.Point(0, 0);
             this.pnlTopCusIC.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.pnlTopCusIC.Name = "pnlTopCusIC";
-            this.pnlTopCusIC.Size = new System.Drawing.Size(1219, 63);
+            this.pnlTopCusIC.Size = new System.Drawing.Size(1219, 59);
             this.pnlTopCusIC.TabIndex = 0;
             // 
             // flpUINegative
@@ -213,7 +213,7 @@ namespace ManagingClients
             this.flpUINegative.Location = new System.Drawing.Point(0, 0);
             this.flpUINegative.Margin = new System.Windows.Forms.Padding(0);
             this.flpUINegative.Name = "flpUINegative";
-            this.flpUINegative.Size = new System.Drawing.Size(1219, 63);
+            this.flpUINegative.Size = new System.Drawing.Size(1219, 59);
             this.flpUINegative.TabIndex = 0;
             // 
             // btnAddICForCus
@@ -292,7 +292,7 @@ namespace ManagingClients
             this.pnlCenterCusIC.Controls.Add(this.pnlCustomerInfo);
             this.pnlCenterCusIC.Controls.Add(this.pnlOrderPurchasingParent);
             this.pnlCenterCusIC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenterCusIC.Location = new System.Drawing.Point(0, 63);
+            this.pnlCenterCusIC.Location = new System.Drawing.Point(0, 59);
             this.pnlCenterCusIC.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCenterCusIC.Name = "pnlCenterCusIC";
             this.pnlCenterCusIC.Size = new System.Drawing.Size(1219, 591);
@@ -1166,7 +1166,7 @@ namespace ManagingClients
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.btnSaveSetting);
+            this.panel21.Controls.Add(this.btnSaveSettingCusOrder);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(1012, 22);
             this.panel21.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
@@ -1174,53 +1174,15 @@ namespace ManagingClients
             this.panel21.Size = new System.Drawing.Size(194, 111);
             this.panel21.TabIndex = 0;
             // 
-            // cboLevelCompanyAccessOrder
+            // btnSaveSettingCusOrder
             // 
-            this.cboLevelCompanyAccessOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLevelCompanyAccessOrder.FormattingEnabled = true;
-            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(801, 61);
-            this.cboLevelCompanyAccessOrder.Name = "cboLevelCompanyAccessOrder";
-            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(202, 27);
-            this.cboLevelCompanyAccessOrder.TabIndex = 1;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(653, 69);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(144, 19);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Công ty                     :";
-            // 
-            // cboLevelPosAccessOrder
-            // 
-            this.cboLevelPosAccessOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLevelPosAccessOrder.FormattingEnabled = true;
-            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(407, 63);
-            this.cboLevelPosAccessOrder.Name = "cboLevelPosAccessOrder";
-            this.cboLevelPosAccessOrder.Size = new System.Drawing.Size(174, 27);
-            this.cboLevelPosAccessOrder.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(18, 69);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(258, 19);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Thiết lập Cấp độ Truy Cập Đơn Hàng";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(316, 69);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(84, 19);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Phòng ban  :";
+            this.btnSaveSettingCusOrder.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnSaveSettingCusOrder.Location = new System.Drawing.Point(46, 33);
+            this.btnSaveSettingCusOrder.Name = "btnSaveSettingCusOrder";
+            this.btnSaveSettingCusOrder.Size = new System.Drawing.Size(121, 40);
+            this.btnSaveSettingCusOrder.TabIndex = 2;
+            this.btnSaveSettingCusOrder.Text = "Lưu";
+            this.btnSaveSettingCusOrder.UseVisualStyleBackColor = false;
             // 
             // panel22
             // 
@@ -1278,10 +1240,58 @@ namespace ManagingClients
             this.label22.TabIndex = 0;
             this.label22.Text = "Tên Đơn Hàng           :";
             // 
+            // cboLevelCompanyAccessOrder
+            // 
+            this.cboLevelCompanyAccessOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLevelCompanyAccessOrder.FormattingEnabled = true;
+            this.cboLevelCompanyAccessOrder.Location = new System.Drawing.Point(801, 61);
+            this.cboLevelCompanyAccessOrder.Name = "cboLevelCompanyAccessOrder";
+            this.cboLevelCompanyAccessOrder.Size = new System.Drawing.Size(202, 27);
+            this.cboLevelCompanyAccessOrder.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(18, 69);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(258, 19);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Thiết lập Cấp độ Truy Cập Đơn Hàng";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(653, 69);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(144, 19);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Công ty                     :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(316, 69);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(84, 19);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Phòng ban  :";
+            // 
+            // cboLevelPosAccessOrder
+            // 
+            this.cboLevelPosAccessOrder.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLevelPosAccessOrder.FormattingEnabled = true;
+            this.cboLevelPosAccessOrder.Location = new System.Drawing.Point(407, 63);
+            this.cboLevelPosAccessOrder.Name = "cboLevelPosAccessOrder";
+            this.cboLevelPosAccessOrder.Size = new System.Drawing.Size(174, 27);
+            this.cboLevelPosAccessOrder.TabIndex = 1;
+            // 
             // pnlCenterBottom
             // 
             this.pnlCenterBottom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenterBottom.Location = new System.Drawing.Point(0, 654);
+            this.pnlCenterBottom.Location = new System.Drawing.Point(0, 650);
             this.pnlCenterBottom.Name = "pnlCenterBottom";
             this.pnlCenterBottom.Size = new System.Drawing.Size(1219, 38);
             this.pnlCenterBottom.TabIndex = 2;
@@ -1290,9 +1300,9 @@ namespace ManagingClients
             // 
             this.pnlBelowCusIC.Controls.Add(this.tabCtrlInqueryContract);
             this.pnlBelowCusIC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 692);
+            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 688);
             this.pnlBelowCusIC.Name = "pnlBelowCusIC";
-            this.pnlBelowCusIC.Size = new System.Drawing.Size(1219, 269);
+            this.pnlBelowCusIC.Size = new System.Drawing.Size(1219, 273);
             this.pnlBelowCusIC.TabIndex = 3;
             // 
             // tabCtrlInqueryContract
@@ -1302,7 +1312,7 @@ namespace ManagingClients
             this.tabCtrlInqueryContract.Location = new System.Drawing.Point(0, 0);
             this.tabCtrlInqueryContract.Name = "tabCtrlInqueryContract";
             this.tabCtrlInqueryContract.SelectedIndex = 0;
-            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1219, 269);
+            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1219, 273);
             this.tabCtrlInqueryContract.TabIndex = 0;
             // 
             // tabPageInqueryCus
@@ -1311,7 +1321,7 @@ namespace ManagingClients
             this.tabPageInqueryCus.Location = new System.Drawing.Point(4, 28);
             this.tabPageInqueryCus.Name = "tabPageInqueryCus";
             this.tabPageInqueryCus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInqueryCus.Size = new System.Drawing.Size(1211, 237);
+            this.tabPageInqueryCus.Size = new System.Drawing.Size(1211, 241);
             this.tabPageInqueryCus.TabIndex = 0;
             this.tabPageInqueryCus.Text = "Đơn Hàng Khách Hàng";
             this.tabPageInqueryCus.UseVisualStyleBackColor = true;
@@ -1332,7 +1342,7 @@ namespace ManagingClients
             this.lsvOrdersCustomer.HideSelection = false;
             this.lsvOrdersCustomer.Location = new System.Drawing.Point(3, 3);
             this.lsvOrdersCustomer.Name = "lsvOrdersCustomer";
-            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1205, 231);
+            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1205, 235);
             this.lsvOrdersCustomer.TabIndex = 0;
             this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
             this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
@@ -1365,16 +1375,6 @@ namespace ManagingClients
             this.Level_Access_Order.Text = "Cấp độ truy cập Chung";
             this.Level_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Level_Access_Order.Width = 200;
-            // 
-            // btnSaveSetting
-            // 
-            this.btnSaveSetting.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnSaveSetting.Location = new System.Drawing.Point(46, 33);
-            this.btnSaveSetting.Name = "btnSaveSetting";
-            this.btnSaveSetting.Size = new System.Drawing.Size(121, 40);
-            this.btnSaveSetting.TabIndex = 2;
-            this.btnSaveSetting.Text = "Lưu";
-            this.btnSaveSetting.UseVisualStyleBackColor = false;
             // 
             // FrmDetailCustomer
             // 
@@ -1577,6 +1577,6 @@ namespace ManagingClients
         public System.Windows.Forms.GroupBox grbDetailContract;
         public System.Windows.Forms.FlowLayoutPanel flpDetailContract;
         private System.Windows.Forms.ColumnHeader ID_Customer_Order;
-        public System.Windows.Forms.Button btnSaveSetting;
+        public System.Windows.Forms.Button btnSaveSettingCusOrder;
     }
 }

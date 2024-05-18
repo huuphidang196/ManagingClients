@@ -14,6 +14,36 @@ namespace ManagingClients._Data.Scripts.DAO
         protected string _ConnectionSTR = "Server=DANGHUUPHI\\SQLEXPRESS;Database=CSDL_GSESMC;User Id=huuphidang196;pwd=19062001Phi@";
         protected SqlConnection _Connection;
 
+        protected virtual int InqueryScalarByQueryAndParameter(string query, object[] parameter = null)
+        {
+            this._Connection = new SqlConnection(this._ConnectionSTR);
+
+            if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
+
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            int count = (int)sqlCommand.ExecuteScalar();
+
+            this._Connection.Close();
+
+            return count;
+
+        }
+
         //Read
         protected virtual SqlDataReader GetDataReaderByQueryAndParameter(string query, object[] parameter = null)
         {

@@ -38,43 +38,6 @@ namespace ManagingClients
             this.btnPurchasingOrder = new System.Windows.Forms.Button();
             this.btnProfileAccount = new System.Windows.Forms.Button();
             this.pnlDisplayOverall = new System.Windows.Forms.Panel();
-            this.pnlPurchasingOrder = new System.Windows.Forms.Panel();
-            this.spcPurchasingOrder = new System.Windows.Forms.SplitContainer();
-            this.pnlOptions = new System.Windows.Forms.Panel();
-            this.pnlBottomOption = new System.Windows.Forms.Panel();
-            this.dtpToTimeOptions = new System.Windows.Forms.DateTimePicker();
-            this.dtpFromTimeOptions = new System.Windows.Forms.DateTimePicker();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cboSortOptions = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.cboPeriodOptions = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pnlHeaderOption = new System.Windows.Forms.Panel();
-            this.mnsOptionHeader = new System.Windows.Forms.MenuStrip();
-            this.mnsOptionAddCus = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlBottomDisplayPO = new System.Windows.Forms.Panel();
-            this.tabControlPO = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.dgvDisplayAllCusPO = new System.Windows.Forms.DataGridView();
-            this.lvDSKH = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.pnlDetailProfile = new System.Windows.Forms.Panel();
             this.tabCtrlPADetail = new System.Windows.Forms.TabControl();
             this.tabProfile = new System.Windows.Forms.TabPage();
@@ -136,6 +99,43 @@ namespace ManagingClients
             this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.tabSettingNotify = new System.Windows.Forms.TabPage();
+            this.pnlPurchasingOrder = new System.Windows.Forms.Panel();
+            this.spcPurchasingOrder = new System.Windows.Forms.SplitContainer();
+            this.pnlOptions = new System.Windows.Forms.Panel();
+            this.pnlBottomOption = new System.Windows.Forms.Panel();
+            this.dtpToTimeOptions = new System.Windows.Forms.DateTimePicker();
+            this.dtpFromTimeOptions = new System.Windows.Forms.DateTimePicker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cboSortOptions = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cboPeriodOptions = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pnlHeaderOption = new System.Windows.Forms.Panel();
+            this.mnsOptionHeader = new System.Windows.Forms.MenuStrip();
+            this.mnsOptionAddCus = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlBottomDisplayPO = new System.Windows.Forms.Panel();
+            this.tabControlPO = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.dgvDisplayAllCusPO = new System.Windows.Forms.DataGridView();
+            this.lvDSKH = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.pnlMainControl.SuspendLayout();
@@ -151,20 +151,6 @@ namespace ManagingClients
             ((System.ComponentModel.ISupportInitialize)(this.ptbGses)).BeginInit();
             this.pnlBottomNB.SuspendLayout();
             this.pnlDisplayOverall.SuspendLayout();
-            this.pnlPurchasingOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).BeginInit();
-            this.spcPurchasingOrder.Panel1.SuspendLayout();
-            this.spcPurchasingOrder.Panel2.SuspendLayout();
-            this.spcPurchasingOrder.SuspendLayout();
-            this.pnlOptions.SuspendLayout();
-            this.pnlBottomOption.SuspendLayout();
-            this.pnlHeaderOption.SuspendLayout();
-            this.mnsOptionHeader.SuspendLayout();
-            this.pnlBottomDisplayPO.SuspendLayout();
-            this.tabControlPO.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).BeginInit();
             this.pnlDetailProfile.SuspendLayout();
             this.tabCtrlPADetail.SuspendLayout();
             this.tabProfile.SuspendLayout();
@@ -190,6 +176,20 @@ namespace ManagingClients
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.pnlPurchasingOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).BeginInit();
+            this.spcPurchasingOrder.Panel1.SuspendLayout();
+            this.spcPurchasingOrder.Panel2.SuspendLayout();
+            this.spcPurchasingOrder.SuspendLayout();
+            this.pnlOptions.SuspendLayout();
+            this.pnlBottomOption.SuspendLayout();
+            this.pnlHeaderOption.SuspendLayout();
+            this.mnsOptionHeader.SuspendLayout();
+            this.pnlBottomDisplayPO.SuspendLayout();
+            this.tabControlPO.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -316,415 +316,6 @@ namespace ManagingClients
             this.pnlDisplayOverall.Name = "pnlDisplayOverall";
             this.pnlDisplayOverall.Size = new System.Drawing.Size(1003, 782);
             this.pnlDisplayOverall.TabIndex = 0;
-            // 
-            // pnlPurchasingOrder
-            // 
-            this.pnlPurchasingOrder.AutoScroll = true;
-            this.pnlPurchasingOrder.Controls.Add(this.spcPurchasingOrder);
-            this.pnlPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPurchasingOrder.Location = new System.Drawing.Point(0, 0);
-            this.pnlPurchasingOrder.Name = "pnlPurchasingOrder";
-            this.pnlPurchasingOrder.Size = new System.Drawing.Size(1003, 782);
-            this.pnlPurchasingOrder.TabIndex = 1;
-            this.pnlPurchasingOrder.Visible = false;
-            // 
-            // spcPurchasingOrder
-            // 
-            this.spcPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spcPurchasingOrder.Location = new System.Drawing.Point(0, 0);
-            this.spcPurchasingOrder.Name = "spcPurchasingOrder";
-            this.spcPurchasingOrder.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // spcPurchasingOrder.Panel1
-            // 
-            this.spcPurchasingOrder.Panel1.Controls.Add(this.pnlOptions);
-            // 
-            // spcPurchasingOrder.Panel2
-            // 
-            this.spcPurchasingOrder.Panel2.Controls.Add(this.pnlBottomDisplayPO);
-            this.spcPurchasingOrder.Size = new System.Drawing.Size(1003, 782);
-            this.spcPurchasingOrder.SplitterDistance = 127;
-            this.spcPurchasingOrder.SplitterWidth = 10;
-            this.spcPurchasingOrder.TabIndex = 1;
-            // 
-            // pnlOptions
-            // 
-            this.pnlOptions.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnlOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlOptions.Controls.Add(this.pnlBottomOption);
-            this.pnlOptions.Controls.Add(this.pnlHeaderOption);
-            this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOptions.Location = new System.Drawing.Point(0, 0);
-            this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(1003, 127);
-            this.pnlOptions.TabIndex = 0;
-            // 
-            // pnlBottomOption
-            // 
-            this.pnlBottomOption.Controls.Add(this.dtpToTimeOptions);
-            this.pnlBottomOption.Controls.Add(this.dtpFromTimeOptions);
-            this.pnlBottomOption.Controls.Add(this.label21);
-            this.pnlBottomOption.Controls.Add(this.cboSortOptions);
-            this.pnlBottomOption.Controls.Add(this.label18);
-            this.pnlBottomOption.Controls.Add(this.label20);
-            this.pnlBottomOption.Controls.Add(this.cboPeriodOptions);
-            this.pnlBottomOption.Controls.Add(this.label16);
-            this.pnlBottomOption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottomOption.Location = new System.Drawing.Point(0, 40);
-            this.pnlBottomOption.Name = "pnlBottomOption";
-            this.pnlBottomOption.Size = new System.Drawing.Size(1001, 85);
-            this.pnlBottomOption.TabIndex = 2;
-            // 
-            // dtpToTimeOptions
-            // 
-            this.dtpToTimeOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpToTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpToTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpToTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpToTimeOptions.Location = new System.Drawing.Point(426, 52);
-            this.dtpToTimeOptions.Name = "dtpToTimeOptions";
-            this.dtpToTimeOptions.Size = new System.Drawing.Size(130, 26);
-            this.dtpToTimeOptions.TabIndex = 3;
-            // 
-            // dtpFromTimeOptions
-            // 
-            this.dtpFromTimeOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpFromTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFromTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFromTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFromTimeOptions.Location = new System.Drawing.Point(426, 15);
-            this.dtpFromTimeOptions.Name = "dtpFromTimeOptions";
-            this.dtpFromTimeOptions.Size = new System.Drawing.Size(130, 26);
-            this.dtpFromTimeOptions.TabIndex = 3;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(375, 55);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 19);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Đến :";
-            // 
-            // cboSortOptions
-            // 
-            this.cboSortOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cboSortOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSortOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSortOptions.FormattingEnabled = true;
-            this.cboSortOptions.Location = new System.Drawing.Point(136, 51);
-            this.cboSortOptions.Name = "cboSortOptions";
-            this.cboSortOptions.Size = new System.Drawing.Size(178, 27);
-            this.cboSortOptions.TabIndex = 2;
-            this.cboSortOptions.SelectedIndexChanged += new System.EventHandler(this.cboSortOptions_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(23, 55);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(96, 19);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Sắp xếp theo :";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(375, 18);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 19);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Từ   :";
-            // 
-            // cboPeriodOptions
-            // 
-            this.cboPeriodOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.cboPeriodOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPeriodOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboPeriodOptions.FormattingEnabled = true;
-            this.cboPeriodOptions.Location = new System.Drawing.Point(136, 14);
-            this.cboPeriodOptions.Name = "cboPeriodOptions";
-            this.cboPeriodOptions.Size = new System.Drawing.Size(178, 27);
-            this.cboPeriodOptions.TabIndex = 2;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(23, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(95, 19);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Kỳ                :";
-            // 
-            // pnlHeaderOption
-            // 
-            this.pnlHeaderOption.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlHeaderOption.Controls.Add(this.mnsOptionHeader);
-            this.pnlHeaderOption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeaderOption.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeaderOption.Name = "pnlHeaderOption";
-            this.pnlHeaderOption.Size = new System.Drawing.Size(1001, 40);
-            this.pnlHeaderOption.TabIndex = 0;
-            // 
-            // mnsOptionHeader
-            // 
-            this.mnsOptionHeader.BackColor = System.Drawing.Color.SteelBlue;
-            this.mnsOptionHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mnsOptionHeader.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnsOptionHeader.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnsOptionAddCus,
-            this.toolStripMenuItem1,
-            this.sửaToolStripMenuItem,
-            this.xóaKháchHàngToolStripMenuItem});
-            this.mnsOptionHeader.Location = new System.Drawing.Point(0, 0);
-            this.mnsOptionHeader.Name = "mnsOptionHeader";
-            this.mnsOptionHeader.Size = new System.Drawing.Size(999, 38);
-            this.mnsOptionHeader.TabIndex = 0;
-            this.mnsOptionHeader.Text = "Options";
-            // 
-            // mnsOptionAddCus
-            // 
-            this.mnsOptionAddCus.ForeColor = System.Drawing.Color.Black;
-            this.mnsOptionAddCus.Name = "mnsOptionAddCus";
-            this.mnsOptionAddCus.Size = new System.Drawing.Size(94, 34);
-            this.mnsOptionAddCus.Text = "  Thêm mới  ";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 34);
-            this.toolStripMenuItem1.Text = "      Xem     ";
-            // 
-            // sửaToolStripMenuItem
-            // 
-            this.sửaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(114, 34);
-            this.sửaToolStripMenuItem.Text = "         Sửa         ";
-            // 
-            // xóaKháchHàngToolStripMenuItem
-            // 
-            this.xóaKháchHàngToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.xóaKháchHàngToolStripMenuItem.Name = "xóaKháchHàngToolStripMenuItem";
-            this.xóaKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(99, 34);
-            this.xóaKháchHàngToolStripMenuItem.Text = "       Xóa       ";
-            // 
-            // pnlBottomDisplayPO
-            // 
-            this.pnlBottomDisplayPO.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlBottomDisplayPO.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.pnlBottomDisplayPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBottomDisplayPO.Controls.Add(this.tabControlPO);
-            this.pnlBottomDisplayPO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottomDisplayPO.Location = new System.Drawing.Point(0, 0);
-            this.pnlBottomDisplayPO.Name = "pnlBottomDisplayPO";
-            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(1003, 645);
-            this.pnlBottomDisplayPO.TabIndex = 2;
-            // 
-            // tabControlPO
-            // 
-            this.tabControlPO.Controls.Add(this.tabPage1);
-            this.tabControlPO.Controls.Add(this.tabPage2);
-            this.tabControlPO.Controls.Add(this.tabPage3);
-            this.tabControlPO.Controls.Add(this.tabPage4);
-            this.tabControlPO.Controls.Add(this.tabPage5);
-            this.tabControlPO.Controls.Add(this.tabPage6);
-            this.tabControlPO.Controls.Add(this.tabPage7);
-            this.tabControlPO.Controls.Add(this.tabPage8);
-            this.tabControlPO.Controls.Add(this.tabPage9);
-            this.tabControlPO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPO.Location = new System.Drawing.Point(0, 0);
-            this.tabControlPO.Name = "tabControlPO";
-            this.tabControlPO.SelectedIndex = 0;
-            this.tabControlPO.Size = new System.Drawing.Size(1001, 643);
-            this.tabControlPO.TabIndex = 1;
-            this.tabControlPO.SelectedIndexChanged += new System.EventHandler(this.tabControlPO_SelectedIndexChanged);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.panel16);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(993, 608);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Danh sách Khách Hàng";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.dgvDisplayAllCusPO);
-            this.panel16.Controls.Add(this.lvDSKH);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(3, 3);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(987, 602);
-            this.panel16.TabIndex = 1;
-            // 
-            // dgvDisplayAllCusPO
-            // 
-            this.dgvDisplayAllCusPO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDisplayAllCusPO.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDisplayAllCusPO.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dgvDisplayAllCusPO.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dgvDisplayAllCusPO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvDisplayAllCusPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDisplayAllCusPO.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvDisplayAllCusPO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDisplayAllCusPO.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvDisplayAllCusPO.Location = new System.Drawing.Point(0, 0);
-            this.dgvDisplayAllCusPO.Name = "dgvDisplayAllCusPO";
-            this.dgvDisplayAllCusPO.ReadOnly = true;
-            this.dgvDisplayAllCusPO.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(987, 602);
-            this.dgvDisplayAllCusPO.TabIndex = 2;
-            // 
-            // lvDSKH
-            // 
-            this.lvDSKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lvDSKH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.lvDSKH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvDSKH.FullRowSelect = true;
-            this.lvDSKH.GridLines = true;
-            this.lvDSKH.HideSelection = false;
-            this.lvDSKH.Location = new System.Drawing.Point(0, 0);
-            this.lvDSKH.Name = "lvDSKH";
-            this.lvDSKH.Size = new System.Drawing.Size(987, 602);
-            this.lvDSKH.TabIndex = 1;
-            this.lvDSKH.UseCompatibleStateImageBehavior = false;
-            this.lvDSKH.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 50;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên Khách Hàng";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 500;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Địa chỉ Công Ty";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 500;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Số điện thoại";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 250;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Mã số thuế";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 250;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(944, 617);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Yêu cầu Báo giá";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(944, 617);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Đã gửi Báo giá";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(944, 617);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Yêu cầu Hợp Đồng";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(944, 617);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Chưa Hoàn thành TT";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(944, 617);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Đang Vận Chuyển";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(944, 617);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Chờ Giao hàng";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(944, 617);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Hoàn Thành";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(944, 617);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "Đã Hủy";
-            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // pnlDetailProfile
             // 
@@ -1227,7 +818,7 @@ namespace ManagingClients
             this.tabPersonalAccount.Controls.Add(this.panel10);
             this.tabPersonalAccount.Location = new System.Drawing.Point(4, 22);
             this.tabPersonalAccount.Name = "tabPersonalAccount";
-            this.tabPersonalAccount.Size = new System.Drawing.Size(946, 756);
+            this.tabPersonalAccount.Size = new System.Drawing.Size(995, 756);
             this.tabPersonalAccount.TabIndex = 2;
             this.tabPersonalAccount.Text = "Cài đặt cá nhân";
             // 
@@ -1368,7 +959,7 @@ namespace ManagingClients
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(946, 100);
+            this.panel10.Size = new System.Drawing.Size(995, 100);
             this.panel10.TabIndex = 0;
             // 
             // label10
@@ -1387,9 +978,418 @@ namespace ManagingClients
             this.tabSettingNotify.Location = new System.Drawing.Point(4, 22);
             this.tabSettingNotify.Name = "tabSettingNotify";
             this.tabSettingNotify.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettingNotify.Size = new System.Drawing.Size(946, 756);
+            this.tabSettingNotify.Size = new System.Drawing.Size(995, 756);
             this.tabSettingNotify.TabIndex = 1;
             this.tabSettingNotify.Text = "Cài đặt thông báo";
+            // 
+            // pnlPurchasingOrder
+            // 
+            this.pnlPurchasingOrder.AutoScroll = true;
+            this.pnlPurchasingOrder.Controls.Add(this.spcPurchasingOrder);
+            this.pnlPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPurchasingOrder.Location = new System.Drawing.Point(0, 0);
+            this.pnlPurchasingOrder.Name = "pnlPurchasingOrder";
+            this.pnlPurchasingOrder.Size = new System.Drawing.Size(1003, 782);
+            this.pnlPurchasingOrder.TabIndex = 1;
+            this.pnlPurchasingOrder.Visible = false;
+            // 
+            // spcPurchasingOrder
+            // 
+            this.spcPurchasingOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcPurchasingOrder.Location = new System.Drawing.Point(0, 0);
+            this.spcPurchasingOrder.Name = "spcPurchasingOrder";
+            this.spcPurchasingOrder.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // spcPurchasingOrder.Panel1
+            // 
+            this.spcPurchasingOrder.Panel1.Controls.Add(this.pnlOptions);
+            // 
+            // spcPurchasingOrder.Panel2
+            // 
+            this.spcPurchasingOrder.Panel2.Controls.Add(this.pnlBottomDisplayPO);
+            this.spcPurchasingOrder.Size = new System.Drawing.Size(1003, 782);
+            this.spcPurchasingOrder.SplitterDistance = 127;
+            this.spcPurchasingOrder.SplitterWidth = 10;
+            this.spcPurchasingOrder.TabIndex = 1;
+            // 
+            // pnlOptions
+            // 
+            this.pnlOptions.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnlOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOptions.Controls.Add(this.pnlBottomOption);
+            this.pnlOptions.Controls.Add(this.pnlHeaderOption);
+            this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOptions.Location = new System.Drawing.Point(0, 0);
+            this.pnlOptions.Name = "pnlOptions";
+            this.pnlOptions.Size = new System.Drawing.Size(1003, 127);
+            this.pnlOptions.TabIndex = 0;
+            // 
+            // pnlBottomOption
+            // 
+            this.pnlBottomOption.Controls.Add(this.dtpToTimeOptions);
+            this.pnlBottomOption.Controls.Add(this.dtpFromTimeOptions);
+            this.pnlBottomOption.Controls.Add(this.label21);
+            this.pnlBottomOption.Controls.Add(this.cboSortOptions);
+            this.pnlBottomOption.Controls.Add(this.label18);
+            this.pnlBottomOption.Controls.Add(this.label20);
+            this.pnlBottomOption.Controls.Add(this.cboPeriodOptions);
+            this.pnlBottomOption.Controls.Add(this.label16);
+            this.pnlBottomOption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottomOption.Location = new System.Drawing.Point(0, 40);
+            this.pnlBottomOption.Name = "pnlBottomOption";
+            this.pnlBottomOption.Size = new System.Drawing.Size(1001, 85);
+            this.pnlBottomOption.TabIndex = 2;
+            // 
+            // dtpToTimeOptions
+            // 
+            this.dtpToTimeOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtpToTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpToTimeOptions.Location = new System.Drawing.Point(426, 52);
+            this.dtpToTimeOptions.Name = "dtpToTimeOptions";
+            this.dtpToTimeOptions.Size = new System.Drawing.Size(130, 26);
+            this.dtpToTimeOptions.TabIndex = 3;
+            // 
+            // dtpFromTimeOptions
+            // 
+            this.dtpFromTimeOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtpFromTimeOptions.CalendarFont = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromTimeOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromTimeOptions.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFromTimeOptions.Location = new System.Drawing.Point(426, 15);
+            this.dtpFromTimeOptions.Name = "dtpFromTimeOptions";
+            this.dtpFromTimeOptions.Size = new System.Drawing.Size(130, 26);
+            this.dtpFromTimeOptions.TabIndex = 3;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(375, 55);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 19);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Đến :";
+            // 
+            // cboSortOptions
+            // 
+            this.cboSortOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cboSortOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSortOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSortOptions.FormattingEnabled = true;
+            this.cboSortOptions.Location = new System.Drawing.Point(136, 51);
+            this.cboSortOptions.Name = "cboSortOptions";
+            this.cboSortOptions.Size = new System.Drawing.Size(178, 27);
+            this.cboSortOptions.TabIndex = 2;
+            this.cboSortOptions.SelectedIndexChanged += new System.EventHandler(this.cboSortOptions_SelectedIndexChanged);
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(23, 55);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(96, 19);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Sắp xếp theo :";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(375, 18);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(42, 19);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Từ   :";
+            // 
+            // cboPeriodOptions
+            // 
+            this.cboPeriodOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cboPeriodOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPeriodOptions.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPeriodOptions.FormattingEnabled = true;
+            this.cboPeriodOptions.Location = new System.Drawing.Point(136, 14);
+            this.cboPeriodOptions.Name = "cboPeriodOptions";
+            this.cboPeriodOptions.Size = new System.Drawing.Size(178, 27);
+            this.cboPeriodOptions.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(23, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(95, 19);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Kỳ                :";
+            // 
+            // pnlHeaderOption
+            // 
+            this.pnlHeaderOption.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlHeaderOption.Controls.Add(this.mnsOptionHeader);
+            this.pnlHeaderOption.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeaderOption.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeaderOption.Name = "pnlHeaderOption";
+            this.pnlHeaderOption.Size = new System.Drawing.Size(1001, 40);
+            this.pnlHeaderOption.TabIndex = 0;
+            // 
+            // mnsOptionHeader
+            // 
+            this.mnsOptionHeader.BackColor = System.Drawing.Color.SteelBlue;
+            this.mnsOptionHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mnsOptionHeader.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnsOptionHeader.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsOptionAddCus,
+            this.toolStripMenuItem1,
+            this.sửaToolStripMenuItem,
+            this.xóaKháchHàngToolStripMenuItem});
+            this.mnsOptionHeader.Location = new System.Drawing.Point(0, 0);
+            this.mnsOptionHeader.Name = "mnsOptionHeader";
+            this.mnsOptionHeader.Size = new System.Drawing.Size(999, 38);
+            this.mnsOptionHeader.TabIndex = 0;
+            this.mnsOptionHeader.Text = "Options";
+            // 
+            // mnsOptionAddCus
+            // 
+            this.mnsOptionAddCus.ForeColor = System.Drawing.Color.Black;
+            this.mnsOptionAddCus.Name = "mnsOptionAddCus";
+            this.mnsOptionAddCus.Size = new System.Drawing.Size(94, 34);
+            this.mnsOptionAddCus.Text = "  Thêm mới  ";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 34);
+            this.toolStripMenuItem1.Text = "      Xem     ";
+            // 
+            // sửaToolStripMenuItem
+            // 
+            this.sửaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
+            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(114, 34);
+            this.sửaToolStripMenuItem.Text = "         Sửa         ";
+            // 
+            // xóaKháchHàngToolStripMenuItem
+            // 
+            this.xóaKháchHàngToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.xóaKháchHàngToolStripMenuItem.Name = "xóaKháchHàngToolStripMenuItem";
+            this.xóaKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(99, 34);
+            this.xóaKháchHàngToolStripMenuItem.Text = "       Xóa       ";
+            // 
+            // pnlBottomDisplayPO
+            // 
+            this.pnlBottomDisplayPO.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlBottomDisplayPO.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pnlBottomDisplayPO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBottomDisplayPO.Controls.Add(this.tabControlPO);
+            this.pnlBottomDisplayPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBottomDisplayPO.Location = new System.Drawing.Point(0, 0);
+            this.pnlBottomDisplayPO.Name = "pnlBottomDisplayPO";
+            this.pnlBottomDisplayPO.Size = new System.Drawing.Size(1003, 645);
+            this.pnlBottomDisplayPO.TabIndex = 2;
+            // 
+            // tabControlPO
+            // 
+            this.tabControlPO.Controls.Add(this.tabPage1);
+            this.tabControlPO.Controls.Add(this.tabPage2);
+            this.tabControlPO.Controls.Add(this.tabPage3);
+            this.tabControlPO.Controls.Add(this.tabPage4);
+            this.tabControlPO.Controls.Add(this.tabPage5);
+            this.tabControlPO.Controls.Add(this.tabPage6);
+            this.tabControlPO.Controls.Add(this.tabPage7);
+            this.tabControlPO.Controls.Add(this.tabPage8);
+            this.tabControlPO.Controls.Add(this.tabPage9);
+            this.tabControlPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPO.Location = new System.Drawing.Point(0, 0);
+            this.tabControlPO.Name = "tabControlPO";
+            this.tabControlPO.SelectedIndex = 0;
+            this.tabControlPO.Size = new System.Drawing.Size(1001, 643);
+            this.tabControlPO.TabIndex = 1;
+            this.tabControlPO.SelectedIndexChanged += new System.EventHandler(this.tabControlPO_SelectedIndexChanged);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel16);
+            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(993, 608);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Danh sách Khách Hàng";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.dgvDisplayAllCusPO);
+            this.panel16.Controls.Add(this.lvDSKH);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(3, 3);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(987, 602);
+            this.panel16.TabIndex = 1;
+            // 
+            // dgvDisplayAllCusPO
+            // 
+            this.dgvDisplayAllCusPO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDisplayAllCusPO.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDisplayAllCusPO.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvDisplayAllCusPO.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dgvDisplayAllCusPO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvDisplayAllCusPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDisplayAllCusPO.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dgvDisplayAllCusPO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDisplayAllCusPO.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvDisplayAllCusPO.Location = new System.Drawing.Point(0, 0);
+            this.dgvDisplayAllCusPO.Name = "dgvDisplayAllCusPO";
+            this.dgvDisplayAllCusPO.ReadOnly = true;
+            this.dgvDisplayAllCusPO.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvDisplayAllCusPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDisplayAllCusPO.Size = new System.Drawing.Size(987, 602);
+            this.dgvDisplayAllCusPO.TabIndex = 2;
+            // 
+            // lvDSKH
+            // 
+            this.lvDSKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lvDSKH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvDSKH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDSKH.FullRowSelect = true;
+            this.lvDSKH.GridLines = true;
+            this.lvDSKH.HideSelection = false;
+            this.lvDSKH.Location = new System.Drawing.Point(0, 0);
+            this.lvDSKH.Name = "lvDSKH";
+            this.lvDSKH.Size = new System.Drawing.Size(987, 602);
+            this.lvDSKH.TabIndex = 1;
+            this.lvDSKH.UseCompatibleStateImageBehavior = false;
+            this.lvDSKH.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên Khách Hàng";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 500;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Địa chỉ Công Ty";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 500;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Số điện thoại";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 250;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Mã số thuế";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 250;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(993, 617);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Yêu cầu Báo giá";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(993, 617);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Đã gửi Báo giá";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(993, 617);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Yêu cầu Hợp Đồng";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(993, 617);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Chưa Hoàn thành TT";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(993, 617);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Đang Vận Chuyển";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(993, 617);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Chờ Giao hàng";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(993, 617);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Hoàn Thành";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(993, 617);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "Đã Hủy";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // pnlHeader
             // 
@@ -1413,7 +1413,7 @@ namespace ManagingClients
             this.panel18.Size = new System.Drawing.Size(1159, 38);
             this.panel18.TabIndex = 1;
             // 
-            // frmMain_Control
+            // FrmMain_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1426,9 +1426,10 @@ namespace ManagingClients
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMain_Control";
+            this.Name = "FrmMain_Control";
             this.Text = "Managing_Customer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_Control_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Control_Load);
             this.pnlMainControl.ResumeLayout(false);
             this.splitContainerMainControl.Panel1.ResumeLayout(false);
@@ -1443,23 +1444,6 @@ namespace ManagingClients
             ((System.ComponentModel.ISupportInitialize)(this.ptbGses)).EndInit();
             this.pnlBottomNB.ResumeLayout(false);
             this.pnlDisplayOverall.ResumeLayout(false);
-            this.pnlPurchasingOrder.ResumeLayout(false);
-            this.spcPurchasingOrder.Panel1.ResumeLayout(false);
-            this.spcPurchasingOrder.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).EndInit();
-            this.spcPurchasingOrder.ResumeLayout(false);
-            this.pnlOptions.ResumeLayout(false);
-            this.pnlBottomOption.ResumeLayout(false);
-            this.pnlBottomOption.PerformLayout();
-            this.pnlHeaderOption.ResumeLayout(false);
-            this.pnlHeaderOption.PerformLayout();
-            this.mnsOptionHeader.ResumeLayout(false);
-            this.mnsOptionHeader.PerformLayout();
-            this.pnlBottomDisplayPO.ResumeLayout(false);
-            this.tabControlPO.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).EndInit();
             this.pnlDetailProfile.ResumeLayout(false);
             this.tabCtrlPADetail.ResumeLayout(false);
             this.tabProfile.ResumeLayout(false);
@@ -1502,6 +1486,23 @@ namespace ManagingClients
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.pnlPurchasingOrder.ResumeLayout(false);
+            this.spcPurchasingOrder.Panel1.ResumeLayout(false);
+            this.spcPurchasingOrder.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spcPurchasingOrder)).EndInit();
+            this.spcPurchasingOrder.ResumeLayout(false);
+            this.pnlOptions.ResumeLayout(false);
+            this.pnlBottomOption.ResumeLayout(false);
+            this.pnlBottomOption.PerformLayout();
+            this.pnlHeaderOption.ResumeLayout(false);
+            this.pnlHeaderOption.PerformLayout();
+            this.mnsOptionHeader.ResumeLayout(false);
+            this.mnsOptionHeader.PerformLayout();
+            this.pnlBottomDisplayPO.ResumeLayout(false);
+            this.tabControlPO.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayAllCusPO)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 

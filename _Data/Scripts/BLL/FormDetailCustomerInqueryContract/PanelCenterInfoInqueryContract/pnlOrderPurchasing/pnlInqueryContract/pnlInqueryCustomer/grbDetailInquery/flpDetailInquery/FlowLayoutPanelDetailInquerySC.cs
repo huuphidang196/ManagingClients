@@ -54,6 +54,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected Label _lblShowFileInquery;
 
         protected Button _btnDeleteFileInquery;
+        protected Button _btnDeleteInqueryQuotation;
+        protected Button _btnSaveInquery;
 
         public FlowLayoutPanelDetailInquerySC()
         {
@@ -80,7 +82,12 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnDeleteFileInquery = FrmDetailCustomer.Instance.btnDeleteFileInquery;
             this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearInqueryButton);
 
+
+            this._btnSaveInquery = FrmDetailCustomer.Instance.btnSaveInquery;
+            this._btnDeleteInqueryQuotation = FrmDetailCustomer.Instance.btnRemoveInquery;
+
             this.ClearContentOfControl();
+            this.ActiveOrUnActiveAllControl(false);
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
@@ -88,6 +95,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Add_Event
         protected virtual void ShowFileOrAddFilePDF(object sender, EventArgs e)
         {
+            if (this._lblShowFileInquery.Enabled == false) return;
+
             if (this._InqueryQuotation.File_Data_Inquiry_Quotation == null)
             {
                 // Hiển thị hộp thoại chọn file
@@ -168,6 +177,27 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._InqueryQuotation.File_Data_Inquiry_Quotation = null;
         }
+
+        protected virtual void ActiveOrUnActiveAllControl(bool active)
+        {
+            this._txtNameInquery.ReadOnly = !active;
+            this._txtNumberInquery.ReadOnly = !active;
+            this._txtCostDeliveryVN.ReadOnly = !active;
+            this._txtCostDeliveryKH.ReadOnly = !active;
+            this._txtMinTimeDurationShip.ReadOnly = !active;
+            this._txtMaxTimeDurationShip.ReadOnly = !active;
+            this._txtSelected_Exchange_Rate.ReadOnly = !active;
+            this._txtPurposePurchasing.ReadOnly = !active;
+            this._txtEndUser.ReadOnly = !active;
+
+            this._dtpDateSendInquery.Enabled = active;
+            this._dtpDateExpiredInquery.Enabled = active;
+            this._lblShowFileInquery.Enabled = active;
+
+            this._btnDeleteFileInquery.Visible = active;
+            this._btnSaveInquery.Visible = active;
+            this._btnDeleteInqueryQuotation.Visible = active;
+        }
         #endregion
 
         #region Outside_Reference
@@ -179,6 +209,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._InqueryQuotation = CustomerOrderDataProvider.Instance.GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
             this.SetContentControlByInquery(this._InqueryQuotation);
+
+            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
+        }
+
+        public virtual void AllowEditCustomerOrder()
+        {
+            this.ActiveOrUnActiveAllControl(true);
         }
         #endregion
 

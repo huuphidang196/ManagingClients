@@ -27,6 +27,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
      
         public PanelOrderPurchasingCustomerSC()
         {
+
             this._CustomerOrder = new CustomerOrder();
 
             this._pnlOrderPurchasingCustomerParent = FrmDetailCustomer.Instance.pnlOrderPurchasingParent;
@@ -48,18 +49,32 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             //Contract 
             this._PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.ListViewCustomerOrderChangeSelected(customerOrder);
+           
+
         }
         #endregion
         public virtual void ButtonAddOrderCustomer()
         {
             //new Setting Order
-            this._PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CreatNewInqueryAndContractOfCustomer();
+            this._PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CreatNewInqueryAndContractOfCustomerAndSetSetting();
             //New Contract
             this._PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.CreatNewContractOfCustomer();
             
             //New Inquery
             this._PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
 
+        }
+
+        public virtual void AllowEditCustomerOrderAndContractInquery()
+        {
+            //setting co
+            this.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.AllowEditCustomerOrder();
+
+            //Inquery
+            this._PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.AllowEditCustomerOrder();
+
+            //Contract
+            this._PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.AllowEditCustomerOrder();
         }
     }
 }

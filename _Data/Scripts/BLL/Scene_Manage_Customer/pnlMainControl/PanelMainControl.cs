@@ -19,7 +19,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
                 return PanelMainControl._instance;
             }
 
-            private set { PanelMainControl._instance = value; }
+            set { PanelMainControl._instance = value; }
         }
 
         protected Panel _pnlMainControl;
