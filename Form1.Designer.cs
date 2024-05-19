@@ -309,8 +309,8 @@ namespace ManagingClients
             // pnlDisplayOverall
             // 
             this.pnlDisplayOverall.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlDisplayOverall.Controls.Add(this.pnlDetailProfile);
             this.pnlDisplayOverall.Controls.Add(this.pnlPurchasingOrder);
+            this.pnlDisplayOverall.Controls.Add(this.pnlDetailProfile);
             this.pnlDisplayOverall.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplayOverall.Location = new System.Drawing.Point(0, 0);
             this.pnlDisplayOverall.Name = "pnlDisplayOverall";
@@ -1313,10 +1313,10 @@ namespace ManagingClients
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(993, 617);
+            this.tabPage2.Size = new System.Drawing.Size(993, 608);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Yêu cầu Báo giá";
             this.tabPage2.UseVisualStyleBackColor = true;

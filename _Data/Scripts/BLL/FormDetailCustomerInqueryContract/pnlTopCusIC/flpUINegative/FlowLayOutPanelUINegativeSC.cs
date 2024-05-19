@@ -14,7 +14,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected Button _btnEditICForCus;
         protected Button _btnRemoveICForCus;
         //protected Button _btnDetailICForCus;
-        protected Button _btnSaveICForCus;
+
         protected Button _btnPrintICForCus;
         protected Button _btnHelpICForCus;
         protected Button _btnCloseICForCus;
@@ -29,10 +29,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             this._btnRemoveICForCus = FrmDetailCustomer.Instance.btnRemoveICForCus;
             //this._btnDetailICForCus = frmDetailCustomer.Instance.btnDetailICForCus;
-            this._btnSaveICForCus = FrmDetailCustomer.Instance.btnSaveICForCusSys;
+
             this._btnPrintICForCus = FrmDetailCustomer.Instance.btnPrintICForCus;
             this._btnHelpICForCus = FrmDetailCustomer.Instance.btnHelpICForCus;
             this._btnCloseICForCus = FrmDetailCustomer.Instance.btnCloseICForCus;
+
         }
 
         // Phương thức xử lý sự kiện click của button
@@ -49,9 +50,9 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             // PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.CreatNewInqueryOfCustomer();
             PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.AllowEditCustomerOrderAndContractInquery();
-           
-            //for listview call get list again
-            //PanelBelowCusICSC.Instance.TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.AddNewInquery();
+
+            //for Custommer Info
+            PanelCenterCusICSC.Instance.PanelCustomerInfo.GroupBoxCustomerInfoSC.AllowEditAllControlOfCustomerOrder();  
 
         }
     }

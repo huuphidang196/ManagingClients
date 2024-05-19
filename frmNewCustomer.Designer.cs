@@ -34,7 +34,6 @@ namespace ManagingClients
             this.btnAddICForCus = new System.Windows.Forms.Button();
             this.btnEditICForCus = new System.Windows.Forms.Button();
             this.btnRemoveICForCus = new System.Windows.Forms.Button();
-            this.btnSaveICForCusSys = new System.Windows.Forms.Button();
             this.btnPrintICForCus = new System.Windows.Forms.Button();
             this.btnHelpICForCus = new System.Windows.Forms.Button();
             this.btnCloseICForCus = new System.Windows.Forms.Button();
@@ -145,6 +144,8 @@ namespace ManagingClients
             this.Status_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Pos_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.btnSaveDataCustomer = new System.Windows.Forms.Button();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -187,6 +188,7 @@ namespace ManagingClients
             this.pnlBelowCusIC.SuspendLayout();
             this.tabCtrlInqueryContract.SuspendLayout();
             this.tabPageInqueryCus.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopCusIC
@@ -205,7 +207,6 @@ namespace ManagingClients
             this.flpUINegative.Controls.Add(this.btnAddICForCus);
             this.flpUINegative.Controls.Add(this.btnEditICForCus);
             this.flpUINegative.Controls.Add(this.btnRemoveICForCus);
-            this.flpUINegative.Controls.Add(this.btnSaveICForCusSys);
             this.flpUINegative.Controls.Add(this.btnPrintICForCus);
             this.flpUINegative.Controls.Add(this.btnHelpICForCus);
             this.flpUINegative.Controls.Add(this.btnCloseICForCus);
@@ -246,19 +247,9 @@ namespace ManagingClients
             this.btnRemoveICForCus.Text = "Xóa ĐH";
             this.btnRemoveICForCus.UseVisualStyleBackColor = true;
             // 
-            // btnSaveICForCusSys
-            // 
-            this.btnSaveICForCusSys.Location = new System.Drawing.Point(441, 12);
-            this.btnSaveICForCusSys.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
-            this.btnSaveICForCusSys.Name = "btnSaveICForCusSys";
-            this.btnSaveICForCusSys.Size = new System.Drawing.Size(107, 35);
-            this.btnSaveICForCusSys.TabIndex = 0;
-            this.btnSaveICForCusSys.Text = "Lưu Toàn Bộ";
-            this.btnSaveICForCusSys.UseVisualStyleBackColor = true;
-            // 
             // btnPrintICForCus
             // 
-            this.btnPrintICForCus.Location = new System.Drawing.Point(578, 12);
+            this.btnPrintICForCus.Location = new System.Drawing.Point(441, 12);
             this.btnPrintICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnPrintICForCus.Name = "btnPrintICForCus";
             this.btnPrintICForCus.Size = new System.Drawing.Size(107, 35);
@@ -268,7 +259,7 @@ namespace ManagingClients
             // 
             // btnHelpICForCus
             // 
-            this.btnHelpICForCus.Location = new System.Drawing.Point(715, 12);
+            this.btnHelpICForCus.Location = new System.Drawing.Point(578, 12);
             this.btnHelpICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnHelpICForCus.Name = "btnHelpICForCus";
             this.btnHelpICForCus.Size = new System.Drawing.Size(107, 35);
@@ -278,7 +269,7 @@ namespace ManagingClients
             // 
             // btnCloseICForCus
             // 
-            this.btnCloseICForCus.Location = new System.Drawing.Point(852, 12);
+            this.btnCloseICForCus.Location = new System.Drawing.Point(715, 12);
             this.btnCloseICForCus.Margin = new System.Windows.Forms.Padding(30, 12, 0, 0);
             this.btnCloseICForCus.Name = "btnCloseICForCus";
             this.btnCloseICForCus.Size = new System.Drawing.Size(107, 35);
@@ -332,6 +323,7 @@ namespace ManagingClients
             this.flowLayoutPanel2.Controls.Add(this.panel6);
             this.flowLayoutPanel2.Controls.Add(this.panel7);
             this.flowLayoutPanel2.Controls.Add(this.panel8);
+            this.flowLayoutPanel2.Controls.Add(this.panel23);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 23);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -401,14 +393,14 @@ namespace ManagingClients
             this.panel6.Location = new System.Drawing.Point(3, 67);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(499, 44);
+            this.panel6.Size = new System.Drawing.Size(480, 44);
             this.panel6.TabIndex = 2;
             // 
             // txtEmailCustomer
             // 
             this.txtEmailCustomer.Location = new System.Drawing.Point(134, 9);
             this.txtEmailCustomer.Name = "txtEmailCustomer";
-            this.txtEmailCustomer.Size = new System.Drawing.Size(360, 26);
+            this.txtEmailCustomer.Size = new System.Drawing.Size(341, 26);
             this.txtEmailCustomer.TabIndex = 1;
             this.txtEmailCustomer.Text = "tv4@pecc4.vn";
             // 
@@ -426,17 +418,17 @@ namespace ManagingClients
             // 
             this.panel7.Controls.Add(this.txtPhoneCustomer);
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(508, 67);
+            this.panel7.Location = new System.Drawing.Point(489, 67);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(412, 44);
+            this.panel7.Size = new System.Drawing.Size(327, 44);
             this.panel7.TabIndex = 2;
             // 
             // txtPhoneCustomer
             // 
             this.txtPhoneCustomer.Location = new System.Drawing.Point(126, 9);
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
-            this.txtPhoneCustomer.Size = new System.Drawing.Size(280, 26);
+            this.txtPhoneCustomer.Size = new System.Drawing.Size(192, 26);
             this.txtPhoneCustomer.TabIndex = 1;
             this.txtPhoneCustomer.Text = "(+84) 258 - 3563999";
             // 
@@ -454,7 +446,7 @@ namespace ManagingClients
             // 
             this.panel8.Controls.Add(this.txtTaxCustomer);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Location = new System.Drawing.Point(926, 67);
+            this.panel8.Location = new System.Drawing.Point(822, 67);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(274, 44);
@@ -1376,6 +1368,25 @@ namespace ManagingClients
             this.Level_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Level_Access_Order.Width = 200;
             // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.btnSaveDataCustomer);
+            this.panel23.Location = new System.Drawing.Point(1102, 67);
+            this.panel23.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(95, 44);
+            this.panel23.TabIndex = 2;
+            // 
+            // btnSaveDataCustomer
+            // 
+            this.btnSaveDataCustomer.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnSaveDataCustomer.Location = new System.Drawing.Point(7, 5);
+            this.btnSaveDataCustomer.Name = "btnSaveDataCustomer";
+            this.btnSaveDataCustomer.Size = new System.Drawing.Size(80, 35);
+            this.btnSaveDataCustomer.TabIndex = 2;
+            this.btnSaveDataCustomer.Text = "Lưu";
+            this.btnSaveDataCustomer.UseVisualStyleBackColor = false;
+            // 
             // FrmDetailCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1456,6 +1467,7 @@ namespace ManagingClients
             this.pnlBelowCusIC.ResumeLayout(false);
             this.tabCtrlInqueryContract.ResumeLayout(false);
             this.tabPageInqueryCus.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1518,7 +1530,6 @@ namespace ManagingClients
         public System.Windows.Forms.Panel pnlCustomerInfo;
         public System.Windows.Forms.GroupBox grbCustomerInfo;
         public System.Windows.Forms.Button btnEditICForCus;
-        public System.Windows.Forms.Button btnSaveICForCusSys;
         public System.Windows.Forms.Button btnRemoveICForCus;
         public System.Windows.Forms.Button btnPrintICForCus;
         public System.Windows.Forms.Button btnAddICForCus;
@@ -1578,5 +1589,7 @@ namespace ManagingClients
         public System.Windows.Forms.FlowLayoutPanel flpDetailContract;
         private System.Windows.Forms.ColumnHeader ID_Customer_Order;
         public System.Windows.Forms.Button btnSaveSettingCusOrder;
+        private System.Windows.Forms.Panel panel23;
+        public System.Windows.Forms.Button btnSaveDataCustomer;
     }
 }

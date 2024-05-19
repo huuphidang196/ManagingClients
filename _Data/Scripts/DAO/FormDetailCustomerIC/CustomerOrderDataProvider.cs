@@ -1,4 +1,5 @@
 ﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer;
+using ManagingClients._Data.Scripts.DAO.Scene_Manage_Customer.pnlMainControl.pnlDisplayOverall.pnlPurchasingOrder;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,15 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         }
 
         #region Query
+
+        protected virtual CustomerGSES GetCustomerGSESByIDCustomer(int id_Customer)
+        {
+            CustomerGSES customerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
+
+            if (customerGSES == null) return new CustomerGSES();
+
+            return customerGSES;
+        }
 
         //InqueryQuotation
 
@@ -107,7 +117,12 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             return this.QueryScalarByQueryAndParameter(query, null);
         }
+        public virtual int GetCountCustomerGSES()
+        {
+            string query = "Select count(*) from CustomerGSES";
 
+            return this.QueryScalarByQueryAndParameter(query, null);
+        }
         //Contract Quotation
         public virtual ContractCustomer GetContractQuotationrOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
         {
@@ -272,6 +287,23 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             return this.InsertTableByNameTable(nameof(ContractCustomer), contractCustomer);
 
         }
+
+        public virtual bool InsertCustomerGSES(CustomerGSES customerGSES)
+        {
+            //Check to clarify that is existed customerOrder
+            //Find by ID_Customer_Order beacause ID_Inquery_Quotation havenot been set
+            CustomerGSES new_CustomerGSES = this.GetCustomerGSESByIDCustomer(customerGSES.ID_Customer);
+
+            bool value_Existed = new_CustomerGSES.ID_Customer > 0;
+            //if existed true => Update. false => insert 
+
+            if (value_Existed) return this.UpdateCustomerGSES(customerGSES);
+
+            customerGSES.ID_Customer = this.GetCountCustomerGSES() + 1;
+
+            return this.InsertTableByNameTable(nameof(CustomerGSES), customerGSES);
+
+        }
         #endregion Insert
 
         #region Update
@@ -290,6 +322,11 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         {
             string nameKeyColumn = "ID_Contract_Customer";
             return this.UpdateDataByNameTable(nameKeyColumn, nameof(ContractCustomer), customerContract);
+        }
+        public virtual bool UpdateCustomerGSES(CustomerGSES customerGSES)
+        {
+            string nameKeyColumn = "ID_Customer";
+            return this.UpdateDataByNameTable(nameKeyColumn, nameof(CustomerGSES), customerGSES);
         }
         #endregion
     }

@@ -46,8 +46,13 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             }
 
             FrmDetailCustomer.Instance.SetCustomerGSES(this._CustomerGSES);
-            FrmDetailCustomer.Instance.Show();
+            DialogResult ret = FrmDetailCustomer.Instance.ShowDialog();
 
+            if (ret == DialogResult.Cancel)
+            {
+                MessageBox.Show("Update Data");
+                this.ShowAllListCustomer();
+            }
         }
 
 
