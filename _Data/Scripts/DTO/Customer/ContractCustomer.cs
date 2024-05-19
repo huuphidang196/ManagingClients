@@ -16,7 +16,7 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public DateTime Expired_Time { get; set; }
 
-        public float Total_Contract_Value { get; set; }
+        public decimal Total_Contract_Value { get; set; }
 
         public byte[] File_Data_Contract { get; set; }
 

@@ -65,11 +65,15 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._flowDetailInquery = FrmDetailCustomer.Instance.flpDetailInquery;
 
             this._txtNumberInquery = FrmDetailCustomer.Instance.txtInqueryNumber;
+
             this._txtCostDeliveryVN = FrmDetailCustomer.Instance.txtCostDeliveryVN;
+            this._txtCostDeliveryKH.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+
             this._txtCostDeliveryKH = FrmDetailCustomer.Instance.txtCostDeliveryKH;
             this._txtMinTimeDurationShip = FrmDetailCustomer.Instance.txtMinTimeDurationShip;
             this._txtMaxTimeDurationShip = FrmDetailCustomer.Instance.txtMaxTimeDurationShip;
             this._txtSelected_Exchange_Rate = FrmDetailCustomer.Instance.txtSelectedExchangeRate;
+
             this._txtPurposePurchasing = FrmDetailCustomer.Instance.txtPurposePurchasing;
             this._txtEndUser = FrmDetailCustomer.Instance.txtEndUser;
 
@@ -84,6 +88,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
 
             this._btnSaveInquery = FrmDetailCustomer.Instance.btnSaveInquery;
+            this._btnSaveInquery.Click += new EventHandler(this.AddEventSaveInqueryButton);
             this._btnDeleteInqueryQuotation = FrmDetailCustomer.Instance.btnRemoveInquery;
 
             this.ClearContentOfControl();
@@ -139,9 +144,45 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.ClearFileInquery();
         }
+
+        protected virtual void AddEventSaveInqueryButton(object sender, EventArgs e)
+        {
+            this.ProcessEventSaveInquery();
+        }
+
+        protected virtual void AddEventCheckTextBoxNumberValidAfterPress(object sender, EventArgs e)
+        {
+            TextBox textBoxChecked = sender as TextBox;
+
+            //bool haveChar =flo textBoxChecked.Text;
+        }
         #endregion
 
         #region Internal_Function
+        protected virtual void ProcessEventSaveInquery()
+        {
+            //Get CustomerOrder was generated
+            CustomerOrder customerOrder_Of_Inquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CustomerOrder_Creating;
+
+            if (customerOrder_Of_Inquery.ID_Customer_Order == 0)
+            {
+                MessageBox.Show("Vui lòng Thiết lập Đơn Hàng trước ở Panel phía trên trước");
+                return;
+            }
+
+            this._InqueryQuotation = this.GetInqueryFromDataOnControl();
+            this._InqueryQuotation.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
+
+            bool saveSuccess = CustomerOrderDataProvider.Instance.InsertInqueryQuotation(this._InqueryQuotation);
+            string str_Result = saveSuccess ? "Lưu Báo giá thành công! " : "Lưu thất bại";
+            MessageBox.Show(str_Result);
+
+            if (saveSuccess) this.ActiveOrUnActiveAllControl(false);
+
+            //setting co
+            //Save together
+            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ActiveOrUnActiveAllControl(false);
+        }
         protected virtual void ClearContentOfControl()
         {
             this._InqueryQuotation = new InqueryQuotation();
@@ -201,23 +242,48 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnSaveInquery.Visible = active;
             this._btnDeleteInqueryQuotation.Visible = active;
         }
+
+        protected virtual InqueryQuotation GetInqueryFromDataOnControl()
+        {
+            InqueryQuotation inqueryQuotation = new InqueryQuotation();
+
+            inqueryQuotation.ID_Inquery_Quotation = this._InqueryQuotation.ID_Inquery_Quotation;
+            inqueryQuotation.Name_Inquiry_Quotation = this._txtNameInquery.Text;
+            inqueryQuotation.Number_Inquiry_Quotation = this._txtNumberInquery.Text;
+            inqueryQuotation.Date_Sending = this.DtpDateSendInquery.Value;
+            inqueryQuotation.DeliveryCost_To_VietNam = decimal.Parse(this._txtCostDeliveryVN.Text);
+            inqueryQuotation.DeliveryCost_To_Customer = decimal.Parse(this._txtCostDeliveryKH.Text);
+            inqueryQuotation.Min_Time_Delivery = int.Parse(this._txtMinTimeDurationShip.Text);
+            inqueryQuotation.Max_Time_Delivery = int.Parse(this._txtMaxTimeDurationShip.Text);
+            inqueryQuotation.Expired_Time_Inquiry = this._dtpDateExpiredInquery.Value;
+            inqueryQuotation.Selected_Exchange_Rate = decimal.Parse(this._txtSelected_Exchange_Rate.Text);
+
+            inqueryQuotation.File_Data_Inquiry_Quotation = this._InqueryQuotation.File_Data_Inquiry_Quotation;
+            inqueryQuotation.Purpose_Purchasing = this._txtPurposePurchasing.Text;
+            inqueryQuotation.Name_Of_EndUser = this._txtEndUser.Text;
+
+            //inqueryQuotation.ID_Customer_Order = 
+
+            return inqueryQuotation;
+        }
         #endregion
 
         #region Outside_Reference
         public virtual void CreatNewInqueryOfCustomer()
         {
-            this.AllowEditCustomerOrder();
+            this.AllowEditInqueryQuotation();
             this.ClearContentOfControl();
         }
         public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
         {
+            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
+
             this._InqueryQuotation = CustomerOrderDataProvider.Instance.GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
             this.SetContentControlByInquery(this._InqueryQuotation);
 
-            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
         }
 
-        public virtual void AllowEditCustomerOrder()
+        public virtual void AllowEditInqueryQuotation()
         {
             this.ActiveOrUnActiveAllControl(true);
         }

@@ -32,18 +32,29 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         #region Query
 
         //InqueryQuotation
+
+        public virtual InqueryQuotation GetInqueryQuotationrOrderOfCustomerByIDInqueryQuotation(int id_Inquery_Quotation)
+        {
+            string query = "Select * from InqueryQuotation where ID_Inquery_Quotation=" + id_Inquery_Quotation;
+
+            List<InqueryQuotation> listInqueryCustomer_Order = this.GetListInqueryCustomerOrderOfCustomerByQuery(query);
+
+            if (listInqueryCustomer_Order.Count == 0) return new InqueryQuotation();
+
+            return listInqueryCustomer_Order[0];
+        }
         public virtual InqueryQuotation GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
         {
             string query = "Select * from InqueryQuotation where ID_Customer_Order=" + id_Customer_Order;
 
-            List<InqueryQuotation> listInqueryCustomer_Order = this.GetListInqueryCustomerOrderOfCustomerByIDCustomer(query);
+            List<InqueryQuotation> listInqueryCustomer_Order = this.GetListInqueryCustomerOrderOfCustomerByQuery(query);
 
             if (listInqueryCustomer_Order.Count == 0) return new InqueryQuotation();
 
             return listInqueryCustomer_Order[0];
         }
 
-        public virtual List<InqueryQuotation> GetListInqueryCustomerOrderOfCustomerByIDCustomer(string query)
+        public virtual List<InqueryQuotation> GetListInqueryCustomerOrderOfCustomerByQuery(string query)
         {
             List<InqueryQuotation> listInqueryCustomer_Order = new List<InqueryQuotation>();
 
@@ -61,9 +72,9 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 Inquery_CustomerOrder.Date_Sending = reader.GetDateTime(3);
 
-                Inquery_CustomerOrder.DeliveryCost_To_VietNam = (float)reader.GetDecimal(4);
+                Inquery_CustomerOrder.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
 
-                Inquery_CustomerOrder.DeliveryCost_To_Customer = (float)reader.GetDecimal(5);
+                Inquery_CustomerOrder.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
 
                 Inquery_CustomerOrder.Min_Time_Delivery = reader.GetInt32(6);
 
@@ -71,7 +82,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 Inquery_CustomerOrder.Expired_Time_Inquiry = reader.GetDateTime(8);
 
-                Inquery_CustomerOrder.Selected_Exchange_Rate = (float)reader.GetDecimal(9);
+                Inquery_CustomerOrder.Selected_Exchange_Rate = (decimal)reader.GetDecimal(9);
 
                 if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) Inquery_CustomerOrder.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
 
@@ -89,6 +100,12 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             this._Connection.Close();
 
             return listInqueryCustomer_Order;
+        }
+        public virtual int GetCountInqueryQuotation()
+        {
+            string query = "Select count(*) from InqueryQuotation";
+
+            return this.QueryScalarByQueryAndParameter(query, null);
         }
 
         //Contract Quotation
@@ -121,7 +138,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 contract_CustomerOrder.Expired_Time = reader.GetDateTime(3);
 
-                contract_CustomerOrder.Total_Contract_Value = (float)reader.GetDecimal(4);
+                contract_CustomerOrder.Total_Contract_Value = (decimal)reader.GetDecimal(4);
 
                 if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Contract"))) contract_CustomerOrder.File_Data_Contract = (byte[])reader["File_Data_Contract"];
 
@@ -136,7 +153,12 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             return listContractCustomer_Order;
         }
+        public virtual int GetCountContractCustomer()
+        {
+            string query = "Select count(*) from ContractCustomer";
 
+            return this.QueryScalarByQueryAndParameter(query, null);
+        }
         //CustomerOrder
         public virtual CustomerOrder GetCustomerOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
         {
@@ -192,7 +214,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             return listCustomer_Order;
         }
 
-        public virtual int GetCountCustomerOrderByQuery()
+        public virtual int GetCountCustomerOrder()
         {
             string query = "Select count(*) from CustomerOrder";
 
@@ -211,12 +233,45 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             if (value_Existed) return this.UpdateCustomerOrder(customerOrder);
 
-            customerOrder.ID_Customer_Order = this.GetCountCustomerOrderByQuery() + 1;
+            customerOrder.ID_Customer_Order = this.GetCountCustomerOrder() + 1;
 
             return this.InsertTableByNameTable(nameof(CustomerOrder), customerOrder);
 
         }
 
+        public virtual bool InsertInqueryQuotation(InqueryQuotation inqueryQuatation)
+        {
+            //Check to clarify that is existed customerOrder
+            //Find by ID_Customer_Order beacause ID_Inquery_Quotation havenot been set
+            InqueryQuotation new_inqueryQuatation = this.GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(inqueryQuatation.ID_Customer_Order);
+
+            bool value_Existed = new_inqueryQuatation.ID_Customer_Order > 0;
+            //if existed true => Update. false => insert 
+
+            if (value_Existed) return this.UpdateInqueryQuotation(inqueryQuatation);
+
+            inqueryQuatation.ID_Inquery_Quotation = this.GetCountInqueryQuotation() + 1;
+
+            return this.InsertTableByNameTable(nameof(InqueryQuotation), inqueryQuatation);
+
+        }
+
+        public virtual bool InsertCustomerContract(ContractCustomer contractCustomer)
+        {
+            //Check to clarify that is existed customerOrder
+            //Find by ID_Customer_Order beacause ID_Inquery_Quotation havenot been set
+            ContractCustomer new_contractCustomer = this.GetContractQuotationrOrderOfCustomerByIDCustomerOrder(contractCustomer.ID_Customer_Order);
+
+            bool value_Existed = new_contractCustomer.ID_Customer_Order > 0;
+            //if existed true => Update. false => insert 
+
+            if (value_Existed) return this.UpdateContractCustomer(contractCustomer);
+
+            contractCustomer.ID_Contract_Customer = this.GetCountContractCustomer() + 1;
+
+            return this.InsertTableByNameTable(nameof(ContractCustomer), contractCustomer);
+
+        }
         #endregion Insert
 
         #region Update
@@ -226,7 +281,16 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             return this.UpdateDataByNameTable(nameKeyColumn, nameof(CustomerOrder), customerOrder);
         }
 
-
+        public virtual bool UpdateInqueryQuotation(InqueryQuotation inqueryQuatation)
+        {
+            string nameKeyColumn = "ID_Inquery_Quotation";
+            return this.UpdateDataByNameTable(nameKeyColumn, nameof(InqueryQuotation), inqueryQuatation);
+        }
+        public virtual bool UpdateContractCustomer(ContractCustomer customerContract)
+        {
+            string nameKeyColumn = "ID_Contract_Customer";
+            return this.UpdateDataByNameTable(nameKeyColumn, nameof(ContractCustomer), customerContract);
+        }
         #endregion
     }
 }

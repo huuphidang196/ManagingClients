@@ -23,9 +23,9 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public DateTime Date_Sending { get; set; }
     
-        public float DeliveryCost_To_VietNam { get; set; }
+        public decimal DeliveryCost_To_VietNam { get; set; }
 
-        public float DeliveryCost_To_Customer { get; set; }        //public DeliveryCost DeliveryCost { get; set; }
+        public decimal DeliveryCost_To_Customer { get; set; }        //public DeliveryCost DeliveryCost { get; set; }
 
         public int Min_Time_Delivery { get; set; }        //public RangeValue Time_Delivery { get; set; }
 
@@ -34,7 +34,7 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         
         public DateTime Expired_Time_Inquiry { get; set; }
 
-        public float Selected_Exchange_Rate { get; set; }// Tỉ giá báo 
+        public decimal Selected_Exchange_Rate { get; set; }// Tỉ giá báo 
 
         public byte[] File_Data_Inquiry_Quotation { get; set; }
 

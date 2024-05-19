@@ -45,7 +45,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnDeleteFileContract.Click += new EventHandler(this.AddEventClickForButtonDeletedFileContract);
 
             this._btnSaveContract = FrmDetailCustomer.Instance.btnSaveContract;
-            this._btnSaveContract.Click += new EventHandler(this.AddEventClickForButtonSaveContract);
+            this._btnSaveContract.Click += new EventHandler(this.AddEventContractButton);
 
             this._btnRemoveContract = FrmDetailCustomer.Instance.btnRemoveContract;
             this.ClearContentOfControl();
@@ -101,9 +101,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.AddEventDeleteFileContract();
         }
-        protected virtual void AddEventClickForButtonSaveContract(object sender, EventArgs e)
+
+        protected virtual void AddEventContractButton(object sender, EventArgs e)
         {
-            this.AddEventSaveContract();
+            this.ProcessEventSaveContract();
         }
         #endregion
 
@@ -112,15 +113,30 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.ClearFileContractAndlabelContract();
         }
-
-        protected virtual void AddEventSaveContract()
+        protected virtual void ProcessEventSaveContract()
         {
-            this._ContractCustomer.Number_Contract = this._txtNumberContract.Text;
-            this._ContractCustomer.Signed_Time = this._dtpDateSigned.Value;
-            this._ContractCustomer.Expired_Time = this._dtpDateExpired.Value;
-            this._ContractCustomer.Total_Contract_Value = int.Parse(this._txtTotalValueContract.Text);
-            // this._ContractCustomer.
+            //Get CustomerOrder was generated
+            CustomerOrder customerOrder_Of_Inquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CustomerOrder_Creating;
+
+            if (customerOrder_Of_Inquery.ID_Customer_Order == 0)
+            {
+                MessageBox.Show("Vui lòng Thiết lập Đơn Hàng trước ở Panel phía trên trước");
+                return;
+            }
+
+            this._ContractCustomer = this.GetContractCustomerAssembleDataOnControl();
+            this._ContractCustomer.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
+
+            bool saveSuccess = CustomerOrderDataProvider.Instance.InsertCustomerContract(this._ContractCustomer);
+            string str_Result = saveSuccess ? "Lưu Hợp Đồng thành công! " : "Lưu thất bại";
+            MessageBox.Show(str_Result);
+
+            if (saveSuccess) this.ActiveOrUnActiveAllControl(false);
+
+            //Save together
+            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ActiveOrUnActiveAllControl(false);
         }
+
         protected virtual void ClearContentOfControl()
         {
             this._ContractCustomer = new ContractCustomer();
@@ -161,6 +177,21 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnSaveContract.Visible = active;
             this._btnRemoveContract.Visible = active;
         }
+        protected virtual ContractCustomer GetContractCustomerAssembleDataOnControl()
+        {
+            ContractCustomer contractCus = new ContractCustomer();
+
+            contractCus.ID_Contract_Customer = this._ContractCustomer.ID_Contract_Customer;
+            contractCus.Number_Contract = this._txtNumberContract.Text;
+            contractCus.Signed_Time = this._dtpDateSigned.Value;
+            contractCus.Expired_Time = this._dtpDateExpired.Value;
+            contractCus.Total_Contract_Value = decimal.Parse(this._txtTotalValueContract.Text);
+            contractCus.File_Data_Contract = this._ContractCustomer.File_Data_Contract;
+
+            // contractCus.ID_Customer_Order 
+
+            return contractCus;
+        }
         #endregion
 
         #region Outside_Reference
@@ -171,10 +202,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         }
         public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
         {
+            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
+
             this._ContractCustomer = CustomerOrderDataProvider.Instance.GetContractQuotationrOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
             this.SetContentControlByInquery(this._ContractCustomer);
-
-            this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
 
         }
         public virtual void AllowEditCustomerOrder()

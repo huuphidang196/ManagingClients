@@ -71,7 +71,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.AllowEditCustomerOrder();
 
             //Inquery
-            this._PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.AllowEditCustomerOrder();
+            this._PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.AllowEditInqueryQuotation();
 
             //Contract
             this._PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.AllowEditCustomerOrder();

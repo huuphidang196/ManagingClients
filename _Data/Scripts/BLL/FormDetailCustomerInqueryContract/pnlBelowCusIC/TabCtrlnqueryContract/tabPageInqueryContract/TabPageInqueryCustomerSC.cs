@@ -27,14 +27,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._lsvOrdersCustomer.FullRowSelect = true;
             this._lsvOrdersCustomer.SelectedIndexChanged += new EventHandler(ListViewCustomerOrder);
 
-           // FrmDetailCustomer.Instance.Load += new EventHandler(this.ShowDataListViewAfterFormDetailCustomerLoad);
+
         }
 
         #region Add_Events
-        //protected virtual void ShowDataListViewAfterFormDetailCustomerLoad(object sender, EventArgs e)
-        //{
-        //   this.ShowDataListViewAfterFormDetailCustomerLoad();
-        //}
+
         #endregion
         public virtual void ShowDataListViewAfterFormDetailCustomerLoad()
         {
@@ -75,6 +72,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public virtual CustomerOrder GetCustomerOrderFromItemSelected()
         {
             CustomerOrder customerOrder = new CustomerOrder();
+            customerOrder.Name_Log_In = FrmMain_Control.Instance.ProfileAccount.Name_Log_In;
+            customerOrder.ID_Customer = FrmDetailCustomer.Instance.CustomerGSES.ID_Customer;
 
             if (this._lsvOrdersCustomer.SelectedItems.Count == 0) return customerOrder;
 
@@ -85,8 +84,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             customerOrder.Status_Order = TransferEnumString.TransferStringToStatusOrder(item.SubItems[2].Text);
             customerOrder.Level_Pos_Access_Order = TransferEnumString.TransferStringToPosition(item.SubItems[3].Text);
             customerOrder.Level_Access_Order = TransferEnumString.TransferStringToLevelAccess(item.SubItems[4].Text);
-            customerOrder.Name_Log_In = FrmMain_Control.Instance.ProfileAccount.Name_Log_In;
-            customerOrder.ID_Customer = FrmDetailCustomer.Instance.CustomerGSES.ID_Customer;
+
 
             return customerOrder;
         }

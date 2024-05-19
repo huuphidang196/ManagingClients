@@ -14,6 +14,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
     public class GrbSettingOrderPurchasingSC
     {
         protected CustomerOrder _CustomerOrder;
+        public CustomerOrder CustomerOrder_Creating => _CustomerOrder;
 
         protected GroupBox _grbSettingOrderPurchasing;
 
@@ -57,9 +58,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Add_Events
         protected virtual void AddEventClickForSaveButtonOfCustomerOrder(object sender, EventArgs e)
         {
-            this._CustomerOrder = this.GetCustomerOrderAssembleDataOnControl();
-            CustomerOrderDataProvider.Instance.InsertCustomerOrder(this._CustomerOrder);
-            PanelBelowCusICSC.Instance.ShowAllInformationAfterOpen();
+            this.ProcessEventSaveCustomerOrder();
         }
         #endregion
 
@@ -128,7 +127,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             }
         }
 
-        protected virtual void ActiveOrUnActiveAllControl(bool active)
+        public virtual void ActiveOrUnActiveAllControl(bool active)
         {
             this._txtNameOrder.ReadOnly = !active;
             this._cboStatusOrder.Enabled = active;
@@ -160,6 +159,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._cboLevelCompanyAccessOrder.SelectedIndex = 0;
         }
 
+      
         protected virtual CustomerOrder GetCustomerOrderAssembleDataOnControl()
         {
             CustomerOrder customerOrder = new CustomerOrder();
@@ -186,14 +186,23 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
         {
-            this.SetContentControlByInquery(customerOrder);
-
             this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
+
+            this.SetContentControlByInquery(customerOrder);
         }
 
         public virtual void AllowEditCustomerOrder()
         {
             this.ActiveOrUnActiveAllControl(true);
+        }
+        public virtual void ProcessEventSaveCustomerOrder()
+        {
+            this._CustomerOrder = this.GetCustomerOrderAssembleDataOnControl();
+            CustomerOrderDataProvider.Instance.InsertCustomerOrder(this._CustomerOrder);
+            PanelBelowCusICSC.Instance.ShowAllInformationAfterOpen();
+
+            //Don't allow user interact
+            this.ActiveOrUnActiveAllControl(false);
         }
         #endregion
     }
