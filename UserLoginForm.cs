@@ -60,7 +60,7 @@ namespace ManagingClients
       
         protected virtual ProfileAccount GetProfileAccount()
         {
-            ProfileAccount profileAccount = DetailProfileProvider.Instance.GetProfileAccount(this.txtNameLoginAccount.Text);
+            ProfileAccount profileAccount = DetailProfileProvider.Instance.GetProfileAccountByNameLogIn(this.txtNameLoginAccount.Text);
 
 
             return profileAccount;

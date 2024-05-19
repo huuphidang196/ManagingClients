@@ -67,7 +67,9 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
             ProfileAccount profileAccount = FrmMain_Control.Instance.ProfileAccount;
 
             this._lblNameLogIn.Text = profileAccount.Name_Log_In;
-            this._lblPersonDepartment.Text = profileAccount.Department.Name_Department;
+
+            this._lblPersonDepartment.Text = DetailProfileProvider.Instance.GetNameDepartment(profileAccount.ID_Department);
+
             this._lblPersonPosition.Text = profileAccount.GetNamePosition();
             this._lblLevelAcess.Text = profileAccount.Level_Access.ToString();
 
@@ -119,7 +121,9 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
 
             profileAccount.Password = FrmMain_Control.Instance.ProfileAccount.Password;
             profileAccount.Name_Log_In = this._lblNameLogIn.Text;
-            profileAccount.Department = FrmMain_Control.Instance.ProfileAccount.Department;
+
+            profileAccount.ID_Department = FrmMain_Control.Instance.ProfileAccount.ID_Department;
+
             profileAccount.Person_Position = FrmMain_Control.Instance.ProfileAccount.Person_Position;
             profileAccount.Level_Access = (LevelAccess)Enum.Parse(typeof(LevelAccess), this._lblLevelAcess.Text);
 

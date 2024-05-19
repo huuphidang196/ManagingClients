@@ -155,6 +155,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected virtual void SetContentControlByInquery(InqueryQuotation inqueryQuotation)
         {
+            this._InqueryQuotation = inqueryQuotation;
+
             this._txtNameInquery.Text = inqueryQuotation.Name_Inquiry_Quotation;
             this._txtNumberInquery.Text = inqueryQuotation.Number_Inquiry_Quotation;
             this._txtCostDeliveryVN.Text = inqueryQuotation.DeliveryCost_To_VietNam.ToString();

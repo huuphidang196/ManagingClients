@@ -207,39 +207,26 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             CustomerOrder new_customer_Order = this.GetCustomerOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
 
             bool value_Existed = new_customer_Order.ID_Customer_Order > 0;
+            //if existed true => Update. false => insert 
 
-            //Only recify id
-            customerOrder.ID_Customer_Order = (value_Existed) ? customerOrder.ID_Customer_Order : this.GetCountCustomerOrderByQuery() + 1;
+            if (value_Existed) return this.UpdateCustomerOrder(customerOrder);
 
-            string query = "Insert into CustomerOrder(";
-            int count_Value = typeof(CustomerOrder).GetProperties().Length;
+            customerOrder.ID_Customer_Order = this.GetCountCustomerOrderByQuery() + 1;
 
-            string queryColumn = "";
-            string queryValuesColumn = "";
-            object[] parameters = new object[count_Value];
-
-            // Lặp qua các thuộc tính của class ProfileAccount
-            for (int i = 0; i < count_Value; i++)
-            {
-                PropertyInfo property = typeof(CustomerOrder).GetProperties()[i];
-
-                // Tách tên thuộc tính và chỉ lấy phần cuối cùng
-                string[] parts = property.Name.Split('.');
-                string propertyName = parts[parts.Length - 1];
-
-                queryColumn += (propertyName + ",");
-                queryValuesColumn += (i == count_Value - 1) ? "@" + propertyName : "@" + propertyName + ",";
-                parameters[i] = property.GetValue(customerOrder);
-
-            }
-
-            query += (queryColumn.Trim(',') + ") Values (" + queryValuesColumn + ")");
-
-            int result = this.GetCountDataResultInsertByQueryAndParameter(query, parameters);
-
-            return result > 0;
+            return this.InsertTableByNameTable(nameof(CustomerOrder), customerOrder);
 
         }
+
         #endregion Insert
+
+        #region Update
+        public virtual bool UpdateCustomerOrder(CustomerOrder customerOrder)
+        {
+            string nameKeyColumn = "ID_Customer_Order";
+            return this.UpdateDataByNameTable(nameKeyColumn, nameof(CustomerOrder), customerOrder);
+        }
+
+
+        #endregion
     }
 }

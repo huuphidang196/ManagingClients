@@ -28,7 +28,7 @@ namespace ManagingClients._Data.Scripts.DAO.Scene_Manage_Customer.pnlMainControl
         }
 
         #region Query
-        public virtual ProfileAccount GetProfileAccount(string nameLogin)
+        public virtual ProfileAccount GetProfileAccountByNameLogIn(string nameLogin)
         {
             ProfileAccount profileAccount = null;
 
@@ -63,8 +63,7 @@ namespace ManagingClients._Data.Scripts.DAO.Scene_Manage_Customer.pnlMainControl
 
                 if (!reader.IsDBNull(reader.GetOrdinal("Picture_Avatar"))) profileAccount.Picture_Avatar = (byte[])reader["Picture_Avatar"];
 
-                int ID_Department = reader.GetInt32(10);
-                profileAccount.Department = new Department(ID_Department, this.GetNameDepartment(ID_Department));
+                profileAccount.ID_Department = reader.GetInt32(10);
             }
 
             reader.Close();
@@ -78,41 +77,16 @@ namespace ManagingClients._Data.Scripts.DAO.Scene_Manage_Customer.pnlMainControl
         #region Insert
         public virtual bool InsertDataProfileAccount(ProfileAccount profileAccount)
         {
-            string query = "Insert into ProfileAccount(";
-            string queryColumn = "";
-            string queryValuesColumn = "";
-            int count_Value = typeof(ProfileAccount).GetProperties().Length;
-            object[] parameters = new object[count_Value];
+            //Check to clarify that is existed customerOrder
+            ProfileAccount new_Profile_Account = this.GetProfileAccountByNameLogIn(profileAccount.Name_Log_In);
 
-            // Lặp qua các thuộc tính của class ProfileAccount
-            for (int i = 0; i < count_Value; i++)
-            {
-                PropertyInfo property = typeof(ProfileAccount).GetProperties()[i];
+            bool value_Existed = new_Profile_Account != null;
 
-                // Tách tên thuộc tính và chỉ lấy phần cuối cùng
-                string[] parts = property.Name.Split('.');
-                string propertyName = parts[parts.Length - 1];
+            //if existed true => Update. false => insert 
 
-                if (propertyName == "Department")
-                {
-                    queryColumn += "ID_Department,";
-                    queryValuesColumn += "@ID_Department";
+            if (value_Existed) return this.UpdateDataProfileAccount(profileAccount);
 
-                    parameters[i] = profileAccount.Department.ID_Department;
-                    continue;
-                }
-
-                queryColumn += (propertyName + ",");
-                queryValuesColumn += "@" + propertyName + ",";
-                parameters[i] = property.GetValue(profileAccount);
-
-            }
-
-            query += (queryColumn.Trim(',') + ") Values (" + queryValuesColumn + ")");
-
-            int result = this.GetCountDataResultInsertByQueryAndParameter(query, parameters);
-
-            return result > 0;
+            return this.InsertTableByNameTable(nameof(ProfileAccount), profileAccount);
         }
 
         public virtual byte[] ImageToByteArray(Image image)
@@ -126,42 +100,11 @@ namespace ManagingClients._Data.Scripts.DAO.Scene_Manage_Customer.pnlMainControl
 
 
         #region Update
+
         public virtual bool UpdateDataProfileAccount(ProfileAccount profileAccount)
         {
-            string query = "UPDATE ProfileAccount SET ";
-            string queryColumn = "";
-
-            int count_Value = typeof(ProfileAccount).GetProperties().Length;//Diff insert
-            object[] parameters = new object[count_Value];
-
-            // Lặp qua các thuộc tính của class ProfileAccount
-            for (int i = 0; i < count_Value; i++)
-            {
-                PropertyInfo property = typeof(ProfileAccount).GetProperties()[i];
-
-                // Tách tên thuộc tính và chỉ lấy phần cuối cùng
-                string[] parts = property.Name.Split('.');
-                string propertyName = parts[parts.Length - 1];
-
-                if (propertyName == "Name_Log_In") continue;
-
-                if (propertyName == "Department")
-                {
-                    queryColumn += " ID_Department= @ID_Department,";
-                    parameters[i] = profileAccount.Department.ID_Department;
-                    continue;
-                }
-                //"UPDATE TableName SET Column1 = @NewValue1, Column2 = @NewValue2 WHERE ConditionColumn = @ConditionValue";
-                queryColumn += (propertyName + "= @" + propertyName + " , ");
-                parameters[i] = property.GetValue(profileAccount);
-
-            }
-
-            query += (queryColumn.Trim(',') + " WHERE Name_Log_In=N'" + profileAccount.Name_Log_In + "'");
-
-            int result = this.GetCountDataResultUpdateByQueryAndParameter(query, parameters);
-
-            return result > 0;
+            string nameKeyColumn = "Name_Log_In";
+            return this.UpdateDataByNameTable(nameKeyColumn, nameof(ProfileAccount), profileAccount);
         }
 
         #endregion

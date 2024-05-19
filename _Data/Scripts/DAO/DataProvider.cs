@@ -7,6 +7,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
 using System.Reflection;
+using ManagingClients._Data.Scripts.DTO.Customer;
 
 namespace ManagingClients._Data.Scripts.DAO
 {
@@ -115,13 +116,22 @@ namespace ManagingClients._Data.Scripts.DAO
 
         #region Insert
         //Insert
-        protected virtual bool InsertTableByNameTable(string nameTable)
+        protected virtual bool InsertTableByNameTable(string nameTable, object valuePara)
         {
             //Check to clarify that is existed customerOrder
 
             string query = "Insert into " + nameTable + "(";
+            Type type = null;
+            // Tìm trong tất cả các assembly đã load
+            foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                type = assembly.GetTypes().FirstOrDefault(t => t.Name == nameTable);
+                if (type != null)
+                {
+                    break;
+                }
+            }
 
-            Type type = Type.GetType(nameTable);
             int count_Value = type.GetProperties().Length;
 
             string queryColumn = "";
@@ -138,53 +148,24 @@ namespace ManagingClients._Data.Scripts.DAO
                 string propertyName = parts[parts.Length - 1];
 
                 queryColumn += (propertyName + ",");
-                queryValuesColumn += (i == count_Value - 1) ? "@" + propertyName : "@" + propertyName + ",";
-                parameters[i] = this.GetAllParameterValueOfTable();
+                queryValuesColumn += (i == count_Value - 1) ? " @" + propertyName : " @" + propertyName + " ,";
+                parameters[i] = property.GetValue(valuePara);
 
             }
 
-            query += (queryColumn.Trim(',') + ") Values (" + queryValuesColumn + ")");
+            query += (queryColumn.Trim(',') + ") Values ( " + queryValuesColumn + " )");
 
-            int result = this.GetCountDataResultInsertByQueryAndParameter(query, parameters);
+            int result = this.InsertExcuteNonQueryGetCountDataResultByQueryAndParameter(query, parameters);
 
             return result > 0;
 
         }
 
-        protected virtual object GetAllParameterValueOfTable()
+        protected virtual int InsertExcuteNonQueryGetCountDataResultByQueryAndParameter(string query, object[] parameter = null)
         {
-            return null;
-        }
+            int posStart = 0;
 
-        protected virtual int GetCountDataResultInsertByQueryAndParameter(string query, object[] parameter = null)
-        {
-            this._Connection = new SqlConnection(this._ConnectionSTR);
-
-            if (this._Connection.State == System.Data.ConnectionState.Closed) _Connection.Open();
-
-            SqlCommand sqlCommand = new SqlCommand(query, this._Connection);
-
-            if (parameter != null)
-            {
-                string[] querySplit = query.Split(' ');
-                string listPara = querySplit[querySplit.Length - 1];
-                string[] listValue = listPara.Trim('(').Trim(')').Split(',');
-                int i = 0;
-                foreach (string item in listValue)
-                {
-                    if (item.Contains('@'))
-                    {
-                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
-                        i++;
-                    }
-                }
-            }
-
-            int ret = sqlCommand.ExecuteNonQuery();
-
-            this._Connection.Close();
-
-            return ret;
+            return this.ExcuteNonQueryByQueryAndParameter(posStart, query, parameter);
 
         }
 
@@ -192,7 +173,65 @@ namespace ManagingClients._Data.Scripts.DAO
 
         #region Update
         //Update
-        protected virtual int GetCountDataResultUpdateByQueryAndParameter(string query, object[] parameter = null)
+        protected virtual bool UpdateDataByNameTable(string nameKeyColumn, string nameTable, object valuePara)
+        {
+            string query = "UPDATE " + nameTable + " SET ";
+
+            Type type = null;
+            // Tìm trong tất cả các assembly đã load
+            foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                type = assembly.GetTypes().FirstOrDefault(t => t.Name == nameTable);
+                if (type != null)
+                {
+                    break;
+                }
+            }
+
+            int count_Value = type.GetProperties().Length;
+
+            string queryColumnValue = "";
+            object[] parameters = new object[count_Value + 1];
+
+            // Lặp qua các thuộc tính của class ProfileAccount
+            for (int i = 0; i < count_Value; i++)
+            {
+                PropertyInfo property = type.GetProperties()[i];
+
+                // Tách tên thuộc tính và chỉ lấy phần cuối cùng
+                string[] parts = property.Name.Split('.');
+                string propertyName = parts[parts.Length - 1];
+
+                if (propertyName == nameKeyColumn) continue;
+
+                queryColumnValue += (propertyName + " = " + " @" + propertyName);
+                if (i != count_Value - 1) queryColumnValue += " , ";
+                parameters[i] = property.GetValue(valuePara);
+
+            }
+            object valueCoulumn = type.GetProperty(nameKeyColumn).GetValue(valuePara);
+
+
+            query += (queryColumnValue + " WHERE " + nameKeyColumn + " = " + " @" + nameKeyColumn);
+            parameters[count_Value] = valueCoulumn;
+
+            int result = this.UpdateExecuteNonQueryGetCountDataResultByQueryAndParameter(query, parameters);
+
+            return result > 0;
+        }
+        protected virtual int UpdateExecuteNonQueryGetCountDataResultByQueryAndParameter(string query, object[] parameter = null)
+        {
+            int posStart = 1;
+
+            return this.ExcuteNonQueryByQueryAndParameter(posStart, query, parameter);
+
+        }
+
+        #endregion
+
+        #region Excute_NonQuery
+
+        protected virtual int ExcuteNonQueryByQueryAndParameter(int posStart, string query, object[] parameter = null)
         {
             this._Connection = new SqlConnection(this._ConnectionSTR);
 
@@ -203,7 +242,7 @@ namespace ManagingClients._Data.Scripts.DAO
             if (parameter != null)
             {
                 string[] listPara = query.Split(' ');
-                int i = 1;
+                int i = posStart;
                 foreach (string item in listPara)
                 {
                     if (item.Contains('@'))
@@ -219,9 +258,7 @@ namespace ManagingClients._Data.Scripts.DAO
             this._Connection.Close();
 
             return ret;
-
         }
-
         #endregion
     }
 

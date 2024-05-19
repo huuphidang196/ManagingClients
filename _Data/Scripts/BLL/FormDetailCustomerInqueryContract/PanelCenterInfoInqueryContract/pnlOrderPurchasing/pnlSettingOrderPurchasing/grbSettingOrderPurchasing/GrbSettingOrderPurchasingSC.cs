@@ -138,6 +138,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         }
         protected virtual void SetContentControlByInquery(CustomerOrder customerOrder)
         {
+            this._CustomerOrder = customerOrder;
 
             this._txtNameOrder.Text = customerOrder.Name_Order;
             this._cboStatusOrder.SelectedIndex = (int)customerOrder.Status_Order;
@@ -171,6 +172,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             customerOrder.Level_Access_Order = (LevelAccess)this._cboLevelCompanyAccessOrder.SelectedIndex;
 
             customerOrder.ID_Customer = this._CustomerOrder.ID_Customer;
+            customerOrder.Name_Log_In = this._CustomerOrder.Name_Log_In;
             return customerOrder;
         }
         #endregion

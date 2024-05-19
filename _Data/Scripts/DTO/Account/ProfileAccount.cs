@@ -30,7 +30,7 @@ namespace ManagingClients._Data.Scripts.DTO.Account
 
         public byte[] Picture_Avatar { get; set; } // Thuộc tính để lưu trữ dữ liệu hình ảnh dưới dạng mảng byte
 
-        public Department Department { get; set; }//Variable
+        public int ID_Department { get; set; }//Variable
 
         public virtual string  GetNamePosition()
         {
