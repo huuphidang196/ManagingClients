@@ -67,8 +67,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._txtNumberInquery = FrmDetailCustomer.Instance.txtInqueryNumber;
 
             this._txtCostDeliveryVN = FrmDetailCustomer.Instance.txtCostDeliveryVN;
-            this._txtCostDeliveryKH.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-
             this._txtCostDeliveryKH = FrmDetailCustomer.Instance.txtCostDeliveryKH;
             this._txtMinTimeDurationShip = FrmDetailCustomer.Instance.txtMinTimeDurationShip;
             this._txtMaxTimeDurationShip = FrmDetailCustomer.Instance.txtMaxTimeDurationShip;
@@ -84,15 +82,24 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._lblShowFileInquery.Click += new EventHandler(ShowFileOrAddFilePDF);
 
             this._btnDeleteFileInquery = FrmDetailCustomer.Instance.btnDeleteFileInquery;
-            this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearInqueryButton);
+            this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearFileInqueryButton);
 
 
             this._btnSaveInquery = FrmDetailCustomer.Instance.btnSaveInquery;
             this._btnSaveInquery.Click += new EventHandler(this.AddEventSaveInqueryButton);
+
             this._btnDeleteInqueryQuotation = FrmDetailCustomer.Instance.btnRemoveInquery;
+            this._btnDeleteInqueryQuotation.Click += new EventHandler(AddEventClearAllDataInqueryButton);
 
             this.ClearContentOfControl();
             this.ActiveOrUnActiveAllControl(false);
+
+            this._txtCostDeliveryVN.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+            this._txtCostDeliveryKH.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+            this._txtMinTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+            this._txtMaxTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+            this._txtSelected_Exchange_Rate.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
@@ -140,9 +147,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             frmPDFFileReader.SetFileNameByte(this._InqueryQuotation.File_Data_Inquiry_Quotation);
             frmPDFFileReader.Show();
         }
-        protected virtual void AddEventClearInqueryButton(object sender, EventArgs e)
+        protected virtual void AddEventClearFileInqueryButton(object sender, EventArgs e)
         {
             this.ClearFileInquery();
+        }
+        protected virtual void AddEventClearAllDataInqueryButton(object sender, EventArgs e)
+        {
+            this.ClearContentOfControl();
         }
 
         protected virtual void AddEventSaveInqueryButton(object sender, EventArgs e)
@@ -154,7 +165,16 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             TextBox textBoxChecked = sender as TextBox;
 
-            //bool haveChar =flo textBoxChecked.Text;
+            bool isNumber = textBoxChecked.Text.All(c => (char.IsDigit(c) || c == '.'));
+
+            if (!isNumber)
+            {
+                MessageBox.Show("Vui lòng nhập hợp lệ");
+                textBoxChecked.BackColor = System.Drawing.Color.Yellow;
+                return;
+            }
+            textBoxChecked.BackColor = System.Drawing.Color.White;
+
         }
         #endregion
 

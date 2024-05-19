@@ -33,6 +33,14 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Add_Events
 
         #endregion
+        public virtual void ShowAndSetSelectedItem()
+        {
+            this.ShowDataListViewAfterFormDetailCustomerLoad();
+
+            this._lsvOrdersCustomer.Items[0].Selected = true;
+            this._lsvOrdersCustomer.Items[0].Focused = true;
+           
+        }
         public virtual void ShowDataListViewAfterFormDetailCustomerLoad()
         {
             this._lsvOrdersCustomer.Items.Clear();
@@ -41,6 +49,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             List<CustomerOrder> customerOrders = CustomerOrderDataProvider.Instance.GetListCustomerOrderOfCustomerByIDCustomer(customerGSES.ID_Customer);
 
+            if (customerOrders.Count == 0) return;
+
+            //Sort form max -> min
+            customerOrders.Sort((x, y) => y.ID_Customer_Order.CompareTo(x.ID_Customer_Order));
             if (customerOrders.Count == 0) return;
 
             foreach (CustomerOrder order in customerOrders)

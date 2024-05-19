@@ -199,7 +199,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._CustomerOrder = this.GetCustomerOrderAssembleDataOnControl();
             CustomerOrderDataProvider.Instance.InsertCustomerOrder(this._CustomerOrder);
-            PanelBelowCusICSC.Instance.ShowAllInformationAfterOpen();
+            PanelBelowCusICSC.Instance.TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.ShowAndSetSelectedItem(); 
 
             //Don't allow user interact
             this.ActiveOrUnActiveAllControl(false);

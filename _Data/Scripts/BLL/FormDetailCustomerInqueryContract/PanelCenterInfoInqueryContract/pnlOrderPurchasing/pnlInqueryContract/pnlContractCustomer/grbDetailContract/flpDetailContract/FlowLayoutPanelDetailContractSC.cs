@@ -48,12 +48,22 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnSaveContract.Click += new EventHandler(this.AddEventContractButton);
 
             this._btnRemoveContract = FrmDetailCustomer.Instance.btnRemoveContract;
+            this._btnRemoveContract.Click += new EventHandler(AddEventClearAllDataContractButton);
+
             this.ClearContentOfControl();
             this.ActiveOrUnActiveAllControl(false);
+
+            this._txtTotalValueContract.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+
         }
 
 
         #region Add_Events
+        protected virtual void AddEventClearAllDataContractButton(object sender, EventArgs e)
+        {
+
+            this.ClearContentOfControl();
+        }
         protected virtual void AddEventDoubleClickForLabelFileContract(object sender, EventArgs e)
         {
             if (this._lblFileContract.Enabled == false) return;
@@ -105,6 +115,21 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected virtual void AddEventContractButton(object sender, EventArgs e)
         {
             this.ProcessEventSaveContract();
+        }
+        protected virtual void AddEventCheckTextBoxNumberValidAfterPress(object sender, EventArgs e)
+        {
+            TextBox textBoxChecked = sender as TextBox;
+
+            bool isNumber = textBoxChecked.Text.All(c => (char.IsDigit(c) || c == '.'));
+
+            if (!isNumber)
+            {
+                MessageBox.Show("Vui lòng nhập hợp lệ");
+                textBoxChecked.BackColor = System.Drawing.Color.Yellow;
+                return;
+            }
+            textBoxChecked.BackColor = System.Drawing.Color.White;
+
         }
         #endregion
 
