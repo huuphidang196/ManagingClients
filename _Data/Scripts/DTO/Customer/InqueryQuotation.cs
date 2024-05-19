@@ -42,15 +42,15 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         public string Name_Of_EndUser { get; set; }
         public int ID_Customer_Order { get; set; }   //  public Customer_Order Customer_Order { get; set; }
 
-        public List<Merchandise> List_Merchandise_IntoInquery { get; private set; }
+        //public List<Merchandise> List_Merchandise_IntoInquery { get; private set; }
 
-        public virtual void AddMerchandise(Merchandise merchandise)
-        {
-            this.List_Merchandise_IntoInquery.Add(merchandise);
-        }
-        public virtual void RemoveMerchandise(Merchandise merchandise)
-        {
-            this.List_Merchandise_IntoInquery.Remove(merchandise);
-        }
+        //public virtual void AddMerchandise(Merchandise merchandise)
+        //{
+        //    this.List_Merchandise_IntoInquery.Add(merchandise);
+        //}
+        //public virtual void RemoveMerchandise(Merchandise merchandise)
+        //{
+        //    this.List_Merchandise_IntoInquery.Remove(merchandise);
+        //}
     }
 }

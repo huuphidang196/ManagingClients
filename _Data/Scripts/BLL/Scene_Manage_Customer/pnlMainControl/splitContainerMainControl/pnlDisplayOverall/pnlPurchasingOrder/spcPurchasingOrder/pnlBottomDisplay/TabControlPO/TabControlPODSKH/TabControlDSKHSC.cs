@@ -23,6 +23,8 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             this._dgvDisplayAllCusPO = FrmMain_Control.Instance.dgvDisplayAllCusPO;
             this._dgvDisplayAllCusPO.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this._dgvDisplayAllCusPO.CellDoubleClick += DataGridView_CellDoubleClick;
+            this._dgvDisplayAllCusPO.MultiSelect = false;
+
             // Giả sử dataGridView1 đã được thêm vào form
             _dgvDisplayAllCusPO.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(dataGridView1_DataBindingComplete);
 

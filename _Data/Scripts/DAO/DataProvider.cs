@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
+using System.Reflection;
 
 namespace ManagingClients._Data.Scripts.DAO
 {
@@ -14,7 +15,7 @@ namespace ManagingClients._Data.Scripts.DAO
         protected string _ConnectionSTR = "Server=DANGHUUPHI\\SQLEXPRESS;Database=CSDL_GSESMC;User Id=huuphidang196;pwd=19062001Phi@";
         protected SqlConnection _Connection;
 
-        protected virtual int InqueryScalarByQueryAndParameter(string query, object[] parameter = null)
+        protected virtual int QueryScalarByQueryAndParameter(string query, object[] parameter = null)
         {
             this._Connection = new SqlConnection(this._ConnectionSTR);
 
@@ -114,6 +115,47 @@ namespace ManagingClients._Data.Scripts.DAO
 
         #region Insert
         //Insert
+        protected virtual bool InsertTableByNameTable(string nameTable)
+        {
+            //Check to clarify that is existed customerOrder
+
+            string query = "Insert into " + nameTable + "(";
+
+            Type type = Type.GetType(nameTable);
+            int count_Value = type.GetProperties().Length;
+
+            string queryColumn = "";
+            string queryValuesColumn = "";
+            object[] parameters = new object[count_Value];
+
+            // Lặp qua các thuộc tính của class ProfileAccount
+            for (int i = 0; i < count_Value; i++)
+            {
+                PropertyInfo property = type.GetProperties()[i];
+
+                // Tách tên thuộc tính và chỉ lấy phần cuối cùng
+                string[] parts = property.Name.Split('.');
+                string propertyName = parts[parts.Length - 1];
+
+                queryColumn += (propertyName + ",");
+                queryValuesColumn += (i == count_Value - 1) ? "@" + propertyName : "@" + propertyName + ",";
+                parameters[i] = this.GetAllParameterValueOfTable();
+
+            }
+
+            query += (queryColumn.Trim(',') + ") Values (" + queryValuesColumn + ")");
+
+            int result = this.GetCountDataResultInsertByQueryAndParameter(query, parameters);
+
+            return result > 0;
+
+        }
+
+        protected virtual object GetAllParameterValueOfTable()
+        {
+            return null;
+        }
+
         protected virtual int GetCountDataResultInsertByQueryAndParameter(string query, object[] parameter = null)
         {
             this._Connection = new SqlConnection(this._ConnectionSTR);
@@ -124,7 +166,8 @@ namespace ManagingClients._Data.Scripts.DAO
 
             if (parameter != null)
             {
-                string listPara = query.Split(' ')[2];
+                string[] querySplit = query.Split(' ');
+                string listPara = querySplit[querySplit.Length - 1];
                 string[] listValue = listPara.Trim('(').Trim(')').Split(',');
                 int i = 0;
                 foreach (string item in listValue)

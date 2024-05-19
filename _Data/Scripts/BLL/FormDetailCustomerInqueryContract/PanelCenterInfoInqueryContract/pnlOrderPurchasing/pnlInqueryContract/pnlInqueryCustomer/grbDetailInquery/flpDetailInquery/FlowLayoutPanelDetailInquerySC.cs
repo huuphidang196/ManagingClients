@@ -145,6 +145,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected virtual void ClearContentOfControl()
         {
             this._InqueryQuotation = new InqueryQuotation();
+
             this.SetContentControlByInquery(this._InqueryQuotation);
             this.ClearFileInquery();
 
@@ -203,6 +204,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Outside_Reference
         public virtual void CreatNewInqueryOfCustomer()
         {
+            this.AllowEditCustomerOrder();
             this.ClearContentOfControl();
         }
         public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)

@@ -134,11 +134,6 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.splitContainer
             DateTime dayOfBirth = DateTime.Parse(dateOfBirthString);
 
             profileAccount.Date_Of_Birth = dayOfBirth;
-            //// Sử dụng phương thức ParseExact để chuyển đổi chuỗi thành kiểu DateTime
-            //if (DateTime.TryParseExact(dateOfBirthString, "yyyy/MM/dd", null, System.Globalization.DateTimeStyles.None, out dayOfBirth))
-            //{
-            //    profileAccount.Date_Of_Birth = dayOfBirth;
-            //}
 
             Image imgAVT = this._ptbAvatar.Image;
             profileAccount.Picture_Avatar = DetailProfileProvider.Instance.ImageToByteArray(imgAVT);

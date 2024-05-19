@@ -166,6 +166,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Outside_Reference
         public virtual void CreatNewContractOfCustomer()
         {
+            this.AllowEditCustomerOrder();
             this.ClearContentOfControl();
         }
         public virtual void ListViewCustomerOrderChangeSelected(CustomerOrder customerOrder)
@@ -176,7 +177,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
 
         }
-
         public virtual void AllowEditCustomerOrder()
         {
             this.ActiveOrUnActiveAllControl(true);

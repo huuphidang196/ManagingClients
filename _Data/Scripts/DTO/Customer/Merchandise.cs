@@ -27,16 +27,16 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public int ID_Merchandise { get; set; } //  public Merchandise Merchandise { get; set; }
 
-        public List<ElementUnitsInquery> List_Elements_UnitsInquery { get; private set; }
+        //public List<ElementUnitsInquery> List_Elements_UnitsInquery { get; private set; }
 
-        public virtual void AddElementsUnitsDeviceInquery(ElementUnitsInquery elementUnitsInquery)
-        {
-            this.List_Elements_UnitsInquery.Add(elementUnitsInquery);
-        }
-        public virtual void RemoveElementsUnitsDeviceInquery(ElementUnitsInquery elementUnitsInquery)
-        {
-            this.List_Elements_UnitsInquery.Remove(elementUnitsInquery);
-        }
+        //public virtual void AddElementsUnitsDeviceInquery(ElementUnitsInquery elementUnitsInquery)
+        //{
+        //    this.List_Elements_UnitsInquery.Add(elementUnitsInquery);
+        //}
+        //public virtual void RemoveElementsUnitsDeviceInquery(ElementUnitsInquery elementUnitsInquery)
+        //{
+        //    this.List_Elements_UnitsInquery.Remove(elementUnitsInquery);
+        //}
     }
 
     [Serializable]
@@ -49,15 +49,15 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         // public InquiryQuotation InquiryQuotation { get; set; }
         public int ID_Inquery_Quotation { get; set; }
 
-        public List<UnitsDeviceInquery> List_Units_Devices_Inquery { get; private set; }
+        //public List<UnitsDeviceInquery> List_Units_Devices_Inquery { get; private set; }
 
-        public virtual void AddUnitsDeviceInquery(UnitsDeviceInquery unitsDeviceInquery)
-        {
-            this.List_Units_Devices_Inquery.Add(unitsDeviceInquery);
-        }
-        public virtual void RemoveUnitsDeviceInquery(UnitsDeviceInquery unitsDeviceInquery)
-        {
-            this.List_Units_Devices_Inquery.Remove(unitsDeviceInquery);
-        }
+        //public virtual void AddUnitsDeviceInquery(UnitsDeviceInquery unitsDeviceInquery)
+        //{
+        //    this.List_Units_Devices_Inquery.Add(unitsDeviceInquery);
+        //}
+        //public virtual void RemoveUnitsDeviceInquery(UnitsDeviceInquery unitsDeviceInquery)
+        //{
+        //    this.List_Units_Devices_Inquery.Remove(unitsDeviceInquery);
+        //}
     }
 }

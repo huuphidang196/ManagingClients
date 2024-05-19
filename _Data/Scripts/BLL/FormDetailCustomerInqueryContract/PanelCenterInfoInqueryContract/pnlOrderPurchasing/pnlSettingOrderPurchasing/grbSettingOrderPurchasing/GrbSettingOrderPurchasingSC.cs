@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer;
+﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlBelowCusIC;
+using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer;
 using ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
@@ -46,6 +47,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._cboLevelCompanyAccessOrder.DropDownStyle = ComboBoxStyle.DropDownList;
 
             this._btnSaveSettingCusOrder = FrmDetailCustomer.Instance.btnSaveSettingCusOrder;
+            this._btnSaveSettingCusOrder.Click += new EventHandler(this.AddEventClickForSaveButtonOfCustomerOrder);
 
             this.InitilizingAllValue();
             this.ActiveOrUnActiveAllControl(false);
@@ -53,7 +55,12 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         }
 
         #region Add_Events
-
+        protected virtual void AddEventClickForSaveButtonOfCustomerOrder(object sender, EventArgs e)
+        {
+            this._CustomerOrder = this.GetCustomerOrderAssembleDataOnControl();
+            CustomerOrderDataProvider.Instance.InsertCustomerOrder(this._CustomerOrder);
+            PanelBelowCusICSC.Instance.ShowAllInformationAfterOpen();
+        }
         #endregion
 
         #region Internal_Function
@@ -144,16 +151,34 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._txtNameOrder.Text = "";
 
             this._CustomerOrder = new CustomerOrder();
+            this._CustomerOrder.ID_Customer = FrmDetailCustomer.Instance.CustomerGSES.ID_Customer;
+            this._CustomerOrder.Name_Log_In = FrmMain_Control.Instance.ProfileAccount.Name_Log_In;
 
             this._cboStatusOrder.SelectedIndex = 0;
             this._cboLevelPosAccessOrder.SelectedIndex = 0;
             this._cboLevelCompanyAccessOrder.SelectedIndex = 0;
+        }
+
+        protected virtual CustomerOrder GetCustomerOrderAssembleDataOnControl()
+        {
+            CustomerOrder customerOrder = new CustomerOrder();
+
+            customerOrder.ID_Customer_Order = this._CustomerOrder.ID_Customer_Order;
+            customerOrder.Name_Order = this._txtNameOrder.Text;
+            customerOrder.Name_Log_In = this._CustomerOrder.Name_Log_In;
+            customerOrder.Status_Order = (StatusOrder)this._cboStatusOrder.SelectedIndex;
+            customerOrder.Level_Pos_Access_Order = (Position)this._cboLevelPosAccessOrder.SelectedIndex;
+            customerOrder.Level_Access_Order = (LevelAccess)this._cboLevelCompanyAccessOrder.SelectedIndex;
+
+            customerOrder.ID_Customer = this._CustomerOrder.ID_Customer;
+            return customerOrder;
         }
         #endregion
 
         #region Reference_outside
         public virtual void CreatNewInqueryAndContractOfCustomerAndSetSetting()
         {
+            this.AllowEditCustomerOrder();
             this.ClearContentOfControl();
         }
 

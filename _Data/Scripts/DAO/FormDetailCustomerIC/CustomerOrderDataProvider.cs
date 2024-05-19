@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -137,6 +138,18 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         }
 
         //CustomerOrder
+        public virtual CustomerOrder GetCustomerOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
+        {
+            string query = "Select * from CustomerOrder where ID_Customer_Order=" + id_Customer_Order;
+
+            List<CustomerOrder> listCustomer_Order = this.GetListCustomerOrderOfCustomerByQuery(query);
+
+
+            if (listCustomer_Order.Count == 0) return new CustomerOrder();
+
+            return listCustomer_Order[0];
+        }
+
         public virtual List<CustomerOrder> GetListCustomerOrderOfCustomerByIDCustomer(int id_Customer)
         {
             string query = "Select * from CustomerOrder where ID_Customer=" + id_Customer;
@@ -183,15 +196,48 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         {
             string query = "Select count(*) from CustomerOrder";
 
-            return this.InqueryScalarByQueryAndParameter(query, null);
-        }    
+            return this.QueryScalarByQueryAndParameter(query, null);
+        }
         #endregion Query
 
         #region Insert
-        public virtual void InsertCustomerOrder(CustomerOrder customerOrder)
+        public virtual bool InsertCustomerOrder(CustomerOrder customerOrder)
         {
-            int current_Count_CO = this.GetCountCustomerOrderByQuery();
+            //Check to clarify that is existed customerOrder
+            CustomerOrder new_customer_Order = this.GetCustomerOrderOfCustomerByIDCustomerOrder(customerOrder.ID_Customer_Order);
 
+            bool value_Existed = new_customer_Order.ID_Customer_Order > 0;
+
+            //Only recify id
+            customerOrder.ID_Customer_Order = (value_Existed) ? customerOrder.ID_Customer_Order : this.GetCountCustomerOrderByQuery() + 1;
+
+            string query = "Insert into CustomerOrder(";
+            int count_Value = typeof(CustomerOrder).GetProperties().Length;
+
+            string queryColumn = "";
+            string queryValuesColumn = "";
+            object[] parameters = new object[count_Value];
+
+            // Lặp qua các thuộc tính của class ProfileAccount
+            for (int i = 0; i < count_Value; i++)
+            {
+                PropertyInfo property = typeof(CustomerOrder).GetProperties()[i];
+
+                // Tách tên thuộc tính và chỉ lấy phần cuối cùng
+                string[] parts = property.Name.Split('.');
+                string propertyName = parts[parts.Length - 1];
+
+                queryColumn += (propertyName + ",");
+                queryValuesColumn += (i == count_Value - 1) ? "@" + propertyName : "@" + propertyName + ",";
+                parameters[i] = property.GetValue(customerOrder);
+
+            }
+
+            query += (queryColumn.Trim(',') + ") Values (" + queryValuesColumn + ")");
+
+            int result = this.GetCountDataResultInsertByQueryAndParameter(query, parameters);
+
+            return result > 0;
 
         }
         #endregion Insert

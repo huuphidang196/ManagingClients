@@ -25,29 +25,29 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         public int ID_Customer { get; set; }            //public Customer Customer { get; set; }
 
 
-        //List Inquery
-        public List<InqueryQuotation> List_Inquery_Quatations { get; private set; }
+        ////List Inquery
+        //public List<InqueryQuotation> List_Inquery_Quatations { get; private set; }
 
-        public virtual void AddUnitsDeviceInquery(InqueryQuotation inqueryQuotation)
-        {
-            this.List_Inquery_Quatations.Add(inqueryQuotation);
-        }
-        public virtual void RemoveUnitsDeviceInquery(InqueryQuotation inqueryQuotation)
-        {
-            this.List_Inquery_Quatations.Remove(inqueryQuotation);
-        }
+        //public virtual void AddUnitsDeviceInquery(InqueryQuotation inqueryQuotation)
+        //{
+        //    this.List_Inquery_Quatations.Add(inqueryQuotation);
+        //}
+        //public virtual void RemoveUnitsDeviceInquery(InqueryQuotation inqueryQuotation)
+        //{
+        //    this.List_Inquery_Quatations.Remove(inqueryQuotation);
+        //}
 
-        //List contract
-        public List<ContractCustomer> List_Contracts_Customer { get; private set; }
+        ////List contract
+        //public List<ContractCustomer> List_Contracts_Customer { get; private set; }
 
-        public virtual void AddContractCustomer(ContractCustomer contractCustomer)
-        {
-            this.List_Contracts_Customer.Add(contractCustomer);
-        }
-        public virtual void RemoveContractCustomer(ContractCustomer contractCustomer)
-        {
-            this.List_Contracts_Customer.Remove(contractCustomer);
-        }
+        //public virtual void AddContractCustomer(ContractCustomer contractCustomer)
+        //{
+        //    this.List_Contracts_Customer.Add(contractCustomer);
+        //}
+        //public virtual void RemoveContractCustomer(ContractCustomer contractCustomer)
+        //{
+        //    this.List_Contracts_Customer.Remove(contractCustomer);
+        //}
 
 
 
@@ -69,15 +69,15 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         //public Customer_Order Customer_Order { get; set; }
 
-        public List<CustomerOrder> List_Customer_Order { get; private set; }
+        //public List<CustomerOrder> List_Customer_Order { get; private set; }
 
-        public virtual void AddCustomerOrder(CustomerOrder customer_Order)
-        {
-            this.List_Customer_Order.Add(customer_Order);
-        }
-        public virtual void RemoveCustomerOrder(CustomerOrder customer_Order)
-        {
-            this.List_Customer_Order.Remove(customer_Order);
-        }
+        //public virtual void AddCustomerOrder(CustomerOrder customer_Order)
+        //{
+        //    this.List_Customer_Order.Add(customer_Order);
+        //}
+        //public virtual void RemoveCustomerOrder(CustomerOrder customer_Order)
+        //{
+        //    this.List_Customer_Order.Remove(customer_Order);
+        //}
     }
 }
