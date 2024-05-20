@@ -56,6 +56,8 @@ namespace ManagingClients
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtTaxCustomer = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.btnSaveDataCustomer = new System.Windows.Forms.Button();
             this.pnlOrderPurchasingParent = new System.Windows.Forms.Panel();
             this.grbOrderPurchasingParent = new System.Windows.Forms.GroupBox();
             this.pnlInqueryContract = new System.Windows.Forms.Panel();
@@ -144,8 +146,14 @@ namespace ManagingClients
             this.Status_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Pos_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.btnSaveDataCustomer = new System.Windows.Forms.Button();
+            this.flpCenterBottom = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.btnLoadListCustomerOrder = new System.Windows.Forms.Button();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.cboMethodSort = new System.Windows.Forms.ComboBox();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -157,6 +165,7 @@ namespace ManagingClients
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.pnlOrderPurchasingParent.SuspendLayout();
             this.grbOrderPurchasingParent.SuspendLayout();
             this.pnlInqueryContract.SuspendLayout();
@@ -185,10 +194,14 @@ namespace ManagingClients
             this.grbSettingOrderPurchasing.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
+            this.pnlCenterBottom.SuspendLayout();
             this.pnlBelowCusIC.SuspendLayout();
             this.tabCtrlInqueryContract.SuspendLayout();
             this.tabPageInqueryCus.SuspendLayout();
-            this.panel23.SuspendLayout();
+            this.flpCenterBottom.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopCusIC
@@ -470,6 +483,25 @@ namespace ManagingClients
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã số thuế  :";
             // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.btnSaveDataCustomer);
+            this.panel23.Location = new System.Drawing.Point(1102, 67);
+            this.panel23.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(95, 44);
+            this.panel23.TabIndex = 2;
+            // 
+            // btnSaveDataCustomer
+            // 
+            this.btnSaveDataCustomer.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnSaveDataCustomer.Location = new System.Drawing.Point(7, 5);
+            this.btnSaveDataCustomer.Name = "btnSaveDataCustomer";
+            this.btnSaveDataCustomer.Size = new System.Drawing.Size(80, 35);
+            this.btnSaveDataCustomer.TabIndex = 2;
+            this.btnSaveDataCustomer.Text = "Lưu";
+            this.btnSaveDataCustomer.UseVisualStyleBackColor = false;
+            // 
             // pnlOrderPurchasingParent
             // 
             this.pnlOrderPurchasingParent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -534,6 +566,7 @@ namespace ManagingClients
             this.flpDetailInquery.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpDetailInquery.Controls.Add(this.panel1);
             this.flpDetailInquery.Controls.Add(this.panel2);
+            this.flpDetailInquery.Controls.Add(this.panel26);
             this.flpDetailInquery.Controls.Add(this.panel3);
             this.flpDetailInquery.Controls.Add(this.panel9);
             this.flpDetailInquery.Controls.Add(this.panel10);
@@ -574,7 +607,7 @@ namespace ManagingClients
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 19);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Tên Báo Giá                :";
+            this.label6.Text = "Tên Báo Giá (V/v)       :";
             // 
             // panel2
             // 
@@ -612,7 +645,7 @@ namespace ManagingClients
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.dtpDateSendInquery);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(3, 103);
+            this.panel3.Location = new System.Drawing.Point(3, 153);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(618, 44);
             this.panel3.TabIndex = 2;
@@ -664,7 +697,7 @@ namespace ManagingClients
             this.panel9.Controls.Add(this.txtCostDeliveryVN);
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Location = new System.Drawing.Point(3, 153);
+            this.panel9.Location = new System.Drawing.Point(3, 203);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(618, 44);
             this.panel9.TabIndex = 3;
@@ -714,7 +747,7 @@ namespace ManagingClients
             this.panel10.Controls.Add(this.txtMinTimeDurationShip);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.label12);
-            this.panel10.Location = new System.Drawing.Point(3, 203);
+            this.panel10.Location = new System.Drawing.Point(3, 253);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(618, 44);
             this.panel10.TabIndex = 4;
@@ -763,7 +796,7 @@ namespace ManagingClients
             this.panel11.Controls.Add(this.lblShowFileInquery);
             this.panel11.Controls.Add(this.label16);
             this.panel11.Controls.Add(this.label15);
-            this.panel11.Location = new System.Drawing.Point(3, 253);
+            this.panel11.Location = new System.Drawing.Point(3, 303);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(618, 44);
             this.panel11.TabIndex = 5;
@@ -823,7 +856,7 @@ namespace ManagingClients
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.txtPurposePurchasing);
             this.panel18.Controls.Add(this.label24);
-            this.panel18.Location = new System.Drawing.Point(3, 303);
+            this.panel18.Location = new System.Drawing.Point(3, 353);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(618, 44);
             this.panel18.TabIndex = 7;
@@ -851,7 +884,7 @@ namespace ManagingClients
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.txtEndUser);
             this.panel19.Controls.Add(this.label19);
-            this.panel19.Location = new System.Drawing.Point(3, 353);
+            this.panel19.Location = new System.Drawing.Point(3, 403);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(618, 44);
             this.panel19.TabIndex = 7;
@@ -878,7 +911,7 @@ namespace ManagingClients
             // 
             this.panel16.Controls.Add(this.btnRemoveInquery);
             this.panel16.Controls.Add(this.btnSaveInquery);
-            this.panel16.Location = new System.Drawing.Point(3, 403);
+            this.panel16.Location = new System.Drawing.Point(3, 453);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(618, 58);
             this.panel16.TabIndex = 6;
@@ -1282,19 +1315,20 @@ namespace ManagingClients
             // 
             // pnlCenterBottom
             // 
+            this.pnlCenterBottom.Controls.Add(this.flpCenterBottom);
             this.pnlCenterBottom.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCenterBottom.Location = new System.Drawing.Point(0, 650);
             this.pnlCenterBottom.Name = "pnlCenterBottom";
-            this.pnlCenterBottom.Size = new System.Drawing.Size(1219, 38);
+            this.pnlCenterBottom.Size = new System.Drawing.Size(1219, 43);
             this.pnlCenterBottom.TabIndex = 2;
             // 
             // pnlBelowCusIC
             // 
             this.pnlBelowCusIC.Controls.Add(this.tabCtrlInqueryContract);
             this.pnlBelowCusIC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 688);
+            this.pnlBelowCusIC.Location = new System.Drawing.Point(0, 693);
             this.pnlBelowCusIC.Name = "pnlBelowCusIC";
-            this.pnlBelowCusIC.Size = new System.Drawing.Size(1219, 273);
+            this.pnlBelowCusIC.Size = new System.Drawing.Size(1219, 268);
             this.pnlBelowCusIC.TabIndex = 3;
             // 
             // tabCtrlInqueryContract
@@ -1304,7 +1338,7 @@ namespace ManagingClients
             this.tabCtrlInqueryContract.Location = new System.Drawing.Point(0, 0);
             this.tabCtrlInqueryContract.Name = "tabCtrlInqueryContract";
             this.tabCtrlInqueryContract.SelectedIndex = 0;
-            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1219, 273);
+            this.tabCtrlInqueryContract.Size = new System.Drawing.Size(1219, 268);
             this.tabCtrlInqueryContract.TabIndex = 0;
             // 
             // tabPageInqueryCus
@@ -1313,7 +1347,7 @@ namespace ManagingClients
             this.tabPageInqueryCus.Location = new System.Drawing.Point(4, 28);
             this.tabPageInqueryCus.Name = "tabPageInqueryCus";
             this.tabPageInqueryCus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInqueryCus.Size = new System.Drawing.Size(1211, 241);
+            this.tabPageInqueryCus.Size = new System.Drawing.Size(1211, 236);
             this.tabPageInqueryCus.TabIndex = 0;
             this.tabPageInqueryCus.Text = "Đơn Hàng Khách Hàng";
             this.tabPageInqueryCus.UseVisualStyleBackColor = true;
@@ -1334,7 +1368,7 @@ namespace ManagingClients
             this.lsvOrdersCustomer.HideSelection = false;
             this.lsvOrdersCustomer.Location = new System.Drawing.Point(3, 3);
             this.lsvOrdersCustomer.Name = "lsvOrdersCustomer";
-            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1205, 235);
+            this.lsvOrdersCustomer.Size = new System.Drawing.Size(1205, 230);
             this.lsvOrdersCustomer.TabIndex = 0;
             this.lsvOrdersCustomer.UseCompatibleStateImageBehavior = false;
             this.lsvOrdersCustomer.View = System.Windows.Forms.View.Details;
@@ -1368,24 +1402,85 @@ namespace ManagingClients
             this.Level_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Level_Access_Order.Width = 200;
             // 
-            // panel23
+            // flpCenterBottom
             // 
-            this.panel23.Controls.Add(this.btnSaveDataCustomer);
-            this.panel23.Location = new System.Drawing.Point(1102, 67);
-            this.panel23.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(95, 44);
-            this.panel23.TabIndex = 2;
+            this.flpCenterBottom.Controls.Add(this.panel24);
+            this.flpCenterBottom.Controls.Add(this.panel25);
+            this.flpCenterBottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpCenterBottom.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flpCenterBottom.Location = new System.Drawing.Point(0, 0);
+            this.flpCenterBottom.Name = "flpCenterBottom";
+            this.flpCenterBottom.Size = new System.Drawing.Size(1219, 43);
+            this.flpCenterBottom.TabIndex = 0;
             // 
-            // btnSaveDataCustomer
+            // panel24
             // 
-            this.btnSaveDataCustomer.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnSaveDataCustomer.Location = new System.Drawing.Point(7, 5);
-            this.btnSaveDataCustomer.Name = "btnSaveDataCustomer";
-            this.btnSaveDataCustomer.Size = new System.Drawing.Size(80, 35);
-            this.btnSaveDataCustomer.TabIndex = 2;
-            this.btnSaveDataCustomer.Text = "Lưu";
-            this.btnSaveDataCustomer.UseVisualStyleBackColor = false;
+            this.panel24.Controls.Add(this.btnLoadListCustomerOrder);
+            this.panel24.Location = new System.Drawing.Point(1077, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(139, 37);
+            this.panel24.TabIndex = 0;
+            // 
+            // btnLoadListCustomerOrder
+            // 
+            this.btnLoadListCustomerOrder.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLoadListCustomerOrder.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadListCustomerOrder.Location = new System.Drawing.Point(34, 6);
+            this.btnLoadListCustomerOrder.Name = "btnLoadListCustomerOrder";
+            this.btnLoadListCustomerOrder.Size = new System.Drawing.Size(75, 25);
+            this.btnLoadListCustomerOrder.TabIndex = 0;
+            this.btnLoadListCustomerOrder.Text = "Load ";
+            this.btnLoadListCustomerOrder.UseVisualStyleBackColor = false;
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.cboMethodSort);
+            this.panel25.Location = new System.Drawing.Point(932, 3);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(139, 37);
+            this.panel25.TabIndex = 0;
+            // 
+            // cboMethodSort
+            // 
+            this.cboMethodSort.FormattingEnabled = true;
+            this.cboMethodSort.Items.AddRange(new object[] {
+            "Mã ID",
+            "Tính Trạng ĐH"});
+            this.cboMethodSort.Location = new System.Drawing.Point(9, 4);
+            this.cboMethodSort.Name = "cboMethodSort";
+            this.cboMethodSort.Size = new System.Drawing.Size(121, 27);
+            this.cboMethodSort.TabIndex = 0;
+            this.cboMethodSort.Text = "Lọc Đơn Hàng";
+            // 
+            // panel26
+            // 
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Controls.Add(this.button1);
+            this.panel26.Controls.Add(this.label28);
+            this.panel26.Location = new System.Drawing.Point(3, 103);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(618, 44);
+            this.panel26.TabIndex = 1;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(9, 12);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(152, 19);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Thành phần Đơn hàng  :";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SandyBrown;
+            this.button1.Location = new System.Drawing.Point(166, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(231, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Thành phần Đơn Hàng";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmDetailCustomer
             // 
@@ -1422,6 +1517,7 @@ namespace ManagingClients
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel23.ResumeLayout(false);
             this.pnlOrderPurchasingParent.ResumeLayout(false);
             this.grbOrderPurchasingParent.ResumeLayout(false);
             this.pnlInqueryContract.ResumeLayout(false);
@@ -1464,10 +1560,15 @@ namespace ManagingClients
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
+            this.pnlCenterBottom.ResumeLayout(false);
             this.pnlBelowCusIC.ResumeLayout(false);
             this.tabCtrlInqueryContract.ResumeLayout(false);
             this.tabPageInqueryCus.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
+            this.flpCenterBottom.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1591,5 +1692,13 @@ namespace ManagingClients
         public System.Windows.Forms.Button btnSaveSettingCusOrder;
         private System.Windows.Forms.Panel panel23;
         public System.Windows.Forms.Button btnSaveDataCustomer;
+        public System.Windows.Forms.FlowLayoutPanel flpCenterBottom;
+        private System.Windows.Forms.Panel panel24;
+        public System.Windows.Forms.Button btnLoadListCustomerOrder;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.ComboBox cboMethodSort;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button1;
     }
 }

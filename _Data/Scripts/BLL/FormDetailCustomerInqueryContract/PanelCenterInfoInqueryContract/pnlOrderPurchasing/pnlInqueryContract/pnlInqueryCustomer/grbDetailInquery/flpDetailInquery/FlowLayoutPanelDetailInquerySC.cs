@@ -158,6 +158,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected virtual void AddEventSaveInqueryButton(object sender, EventArgs e)
         {
+            if (this._InqueryQuotation.File_Data_Inquiry_Quotation == null)
+            {
+                MessageBox.Show("Vui lòng đính kèm tệp PDF File Báo Giá");
+                return;
+            }
             this.ProcessEventSaveInquery();
         }
 
@@ -179,7 +184,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #endregion
 
         #region Internal_Function
-        protected virtual void ProcessEventSaveInquery()
+        protected virtual bool ProcessEventSaveInquery()
         {
             //Get CustomerOrder was generated
             CustomerOrder customerOrder_Of_Inquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CustomerOrder_Creating;
@@ -187,11 +192,24 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             if (customerOrder_Of_Inquery.ID_Customer_Order == 0)
             {
                 MessageBox.Show("Vui lòng Thiết lập Đơn Hàng trước ở Panel phía trên trước");
-                return;
+                return false;
             }
-
             this._InqueryQuotation = this.GetInqueryFromDataOnControl();
             this._InqueryQuotation.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
+
+            if (this._InqueryQuotation.Number_Inquiry_Quotation == "")
+            {
+                MessageBox.Show("Vui lòng nhập Số Báo giá");
+                this._txtNumberInquery.BackColor = System.Drawing.Color.Yellow;
+                return false;
+            }
+            this._txtNumberInquery.BackColor = System.Drawing.Color.White;
+
+            if (this._InqueryQuotation.File_Data_Inquiry_Quotation == null)
+            {
+                MessageBox.Show("Vui lòng đính kèm tệp PDF File Báo Giá");
+                return false;
+            }
 
             bool saveSuccess = CustomerOrderDataProvider.Instance.InsertInqueryQuotation(this._InqueryQuotation);
             string str_Result = saveSuccess ? "Lưu Báo giá thành công! " : "Lưu thất bại";
@@ -202,6 +220,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             //setting co
             //Save together
             PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ActiveOrUnActiveAllControl(false);
+            return true;
         }
         protected virtual void ClearContentOfControl()
         {
@@ -306,6 +325,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public virtual void AllowEditInqueryQuotation()
         {
             this.ActiveOrUnActiveAllControl(true);
+        }
+
+        public virtual bool SaveInqueryCustomerOrderTogether()
+        {
+            return this.ProcessEventSaveInquery();
         }
         #endregion
 

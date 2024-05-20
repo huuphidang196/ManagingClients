@@ -58,6 +58,15 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         #region Add_Events
         protected virtual void AddEventClickForSaveButtonOfCustomerOrder(object sender, EventArgs e)
         {
+            //Check Customer have info
+            CustomerGSES customerGSES_Checked = FrmDetailCustomer.Instance.CustomerGSES;
+
+            if (customerGSES_Checked.ID_Customer == 0)
+            {
+                MessageBox.Show("Vui lòng nhập thông tin Khách Hàng trước");
+                return;
+            }
+
             this.ProcessEventSaveCustomerOrder();
         }
         #endregion
@@ -129,13 +138,34 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         public virtual void ActiveOrUnActiveAllControl(bool active)
         {
+            if (this._txtNameOrder == null)
+            {
+                this._txtNameOrder = FrmDetailCustomer.Instance.txtNameOrder;
+            }
+            if (this._cboStatusOrder == null)
+            {
+                this._cboStatusOrder = FrmDetailCustomer.Instance.cboStatusOrder;
+            }
+            if (this._cboLevelPosAccessOrder == null)
+            {
+                this._cboLevelPosAccessOrder = FrmDetailCustomer.Instance.cboLevelPosAccessOrder;
+            }
+            if (this._cboLevelCompanyAccessOrder == null)
+            {
+                this._cboLevelCompanyAccessOrder = FrmDetailCustomer.Instance.cboLevelCompanyAccessOrder;
+            }
+            if (this._btnSaveSettingCusOrder == null)
+            {
+                this._btnSaveSettingCusOrder = FrmDetailCustomer.Instance.btnSaveSettingCusOrder;
+            }
+
             this._txtNameOrder.ReadOnly = !active;
             this._cboStatusOrder.Enabled = active;
             this._cboLevelPosAccessOrder.Enabled = active;
             this._cboLevelCompanyAccessOrder.Enabled = active;
             this._btnSaveSettingCusOrder.Visible = active;
         }
-        protected virtual void SetContentControlByInquery(CustomerOrder customerOrder)
+        protected virtual void SetContentControlByCustomerOrder(CustomerOrder customerOrder)
         {
             this._CustomerOrder = customerOrder;
 
@@ -159,7 +189,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._cboLevelCompanyAccessOrder.SelectedIndex = 0;
         }
 
-      
+
         protected virtual CustomerOrder GetCustomerOrderAssembleDataOnControl()
         {
             CustomerOrder customerOrder = new CustomerOrder();
@@ -172,7 +202,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             customerOrder.Level_Access_Order = (LevelAccess)this._cboLevelCompanyAccessOrder.SelectedIndex;
 
             customerOrder.ID_Customer = this._CustomerOrder.ID_Customer;
-            customerOrder.Name_Log_In = this._CustomerOrder.Name_Log_In;
+            customerOrder.Name_Log_In = FrmMain_Control.Instance.ProfileAccount.Name_Log_In;
             return customerOrder;
         }
         #endregion
@@ -188,7 +218,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.ActiveOrUnActiveAllControl(customerOrder.ID_Customer_Order == 0);
 
-            this.SetContentControlByInquery(customerOrder);
+            this.SetContentControlByCustomerOrder(customerOrder);
         }
 
         public virtual void AllowEditCustomerOrder()
@@ -199,10 +229,25 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._CustomerOrder = this.GetCustomerOrderAssembleDataOnControl();
             CustomerOrderDataProvider.Instance.InsertCustomerOrder(this._CustomerOrder);
-            PanelBelowCusICSC.Instance.TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.ShowAndSetSelectedItem(); 
 
             //Don't allow user interact
             this.ActiveOrUnActiveAllControl(false);
+
+            this._CustomerOrder.ID_Customer_Order = CustomerOrderDataProvider.Instance.GetMaxIDCustomerOrder();
+            this._CustomerOrder = CustomerOrderDataProvider.Instance.GetCustomerOrderOfCustomerByIDCustomerOrder(this._CustomerOrder.ID_Customer_Order);
+
+            //Save Inquery and Contract Together
+            bool saveInquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.SaveInqueryCustomerOrderTogether();
+
+            bool saveContract = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.SaveContractCustomerOrderTogether();
+
+            if (!saveInquery || !saveContract) return;
+
+            PanelBelowCusICSC.Instance.TabCtrlInqueryContractSC.TabPageInqueryCustomerSC.ShowAndSetSelectedItem();
+        }
+        public virtual void ProcessGroupCustomerOrderSettingAfterGenerateNewCustomer()
+        {
+            this.ClearContentOfControl();
         }
         #endregion
     }

@@ -87,6 +87,8 @@
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlBelowCusIC\TabCtrlnqueryContract\tabPageInqueryContract\TabPageInqueryCustomerSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlCustomerInfo\grbCustomerInfo\GroupBoxCustomerInfoSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\PanelCenterInfoInqueryContract\pnlCustomerInfo\PanelCustomerInfo.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlCenterBottom\flpCenterBottom\FlowLayoutPanelCenterBottomSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlCenterBottom\PanelCenterBottomSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\flpUINegative\FlowLayOutPanelUINegativeSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\PanelTopCusICSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\PanelMainControl.cs" />

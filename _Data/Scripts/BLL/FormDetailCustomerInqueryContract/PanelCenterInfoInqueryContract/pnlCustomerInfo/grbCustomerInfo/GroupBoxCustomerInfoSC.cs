@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC;
+﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract;
+using ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,13 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.PanelCenterInf
 
             //Off buttonSave
             this.SetActiveAllControlOfCustomerInformation(false);
+
+            //Set Customer
+            customerGSES.ID_Customer = CustomerOrderDataProvider.Instance.GetMaxIDCustomerGSES();
+            FrmDetailCustomer.Instance.SetCustomerGSES(customerGSES);
+
+            //Set CustomerOrder
+            PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ProcessGroupCustomerOrderSettingAfterGenerateNewCustomer();
         }
         #endregion Add_Events
         protected virtual void SetValueBegin()
@@ -59,7 +67,9 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.PanelCenterInf
             this._txtPhoneCustomer.Text = customerGSES.Phone_Number;
             this._txtTaxCustomer.Text = customerGSES.Tax_Number;
 
-            this.SetActiveAllControlOfCustomerInformation(false);
+            bool isActive = customerGSES.ID_Customer == 0;
+            //Only Active when have not been created yet
+            this.SetActiveAllControlOfCustomerInformation(isActive);
         }
 
         protected virtual CustomerGSES GetCustomerGSES()

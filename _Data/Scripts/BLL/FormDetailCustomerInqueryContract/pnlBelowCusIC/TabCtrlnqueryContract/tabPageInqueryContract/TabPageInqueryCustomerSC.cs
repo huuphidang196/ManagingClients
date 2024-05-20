@@ -37,6 +37,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.ShowDataListViewAfterFormDetailCustomerLoad();
 
+            if (this._lsvOrdersCustomer.Items.Count == 0) return;
+
             this._lsvOrdersCustomer.Items[0].Selected = true;
             this._lsvOrdersCustomer.Items[0].Focused = true;
            

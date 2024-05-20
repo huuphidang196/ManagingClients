@@ -13,7 +13,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
     public class TabControlDSKHSC
     {
         public DataGridView _dgvDisplayAllCusPO;
-        public DataGridView dgvDisplayAllCusPO => _dgvDisplayAllCusPO;
+        public DataGridView DgvDisplayAllCusPO => _dgvDisplayAllCusPO;
 
         protected CustomerGSES _CustomerGSES;
         public CustomerGSES CustomerGSES => _CustomerGSES;
@@ -35,7 +35,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
             // Xử lý sự kiện double-click tại đây
             if (e.RowIndex < 0) return;
 
-            DataGridViewRow row_Selected = this.dgvDisplayAllCusPO.Rows[e.RowIndex];
+            DataGridViewRow row_Selected = this._dgvDisplayAllCusPO.Rows[e.RowIndex];
             int id_Customer = int.Parse(row_Selected.Cells[0].Value.ToString());
             this._CustomerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
 
@@ -50,7 +50,7 @@ namespace ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl
 
             if (ret == DialogResult.Cancel)
             {
-                MessageBox.Show("Update Data");
+                //MessageBox.Show("Update Data");
                 this.ShowAllListCustomer();
             }
         }

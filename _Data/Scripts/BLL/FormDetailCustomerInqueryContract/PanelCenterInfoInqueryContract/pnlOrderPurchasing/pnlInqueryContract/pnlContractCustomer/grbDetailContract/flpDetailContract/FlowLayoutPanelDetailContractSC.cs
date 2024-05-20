@@ -114,6 +114,12 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected virtual void AddEventContractButton(object sender, EventArgs e)
         {
+            if (this._ContractCustomer.File_Data_Contract == null)
+            {
+                MessageBox.Show("Vui lòng đính kèm tệp PDF File Hợp Đồng");
+                return;
+            }    
+
             this.ProcessEventSaveContract();
         }
         protected virtual void AddEventCheckTextBoxNumberValidAfterPress(object sender, EventArgs e)
@@ -138,7 +144,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this.ClearFileContractAndlabelContract();
         }
-        protected virtual void ProcessEventSaveContract()
+        protected virtual bool ProcessEventSaveContract()
         {
             //Get CustomerOrder was generated
             CustomerOrder customerOrder_Of_Inquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CustomerOrder_Creating;
@@ -146,11 +152,26 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             if (customerOrder_Of_Inquery.ID_Customer_Order == 0)
             {
                 MessageBox.Show("Vui lòng Thiết lập Đơn Hàng trước ở Panel phía trên trước");
-                return;
+                return false;
             }
 
             this._ContractCustomer = this.GetContractCustomerAssembleDataOnControl();
             this._ContractCustomer.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
+
+            if (this._ContractCustomer.Number_Contract == "")
+            {
+                MessageBox.Show("Vui lòng nhập Số Hợp Đồng");
+                this._txtNumberContract.BackColor = System.Drawing.Color.Yellow;
+                return false;
+            }
+
+            this._txtNumberContract.BackColor = System.Drawing.Color.White;
+
+            if (this._ContractCustomer.File_Data_Contract == null)
+            {
+                MessageBox.Show("Vui lòng đính kèm tệp PDF File Hợp Đồng");
+                return false    ;
+            }
 
             bool saveSuccess = CustomerOrderDataProvider.Instance.InsertCustomerContract(this._ContractCustomer);
             string str_Result = saveSuccess ? "Lưu Hợp Đồng thành công! " : "Lưu thất bại";
@@ -160,6 +181,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
             //Save together
             PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ActiveOrUnActiveAllControl(false);
+            return true;
         }
 
         protected virtual void ClearContentOfControl()
@@ -236,6 +258,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public virtual void AllowEditCustomerOrder()
         {
             this.ActiveOrUnActiveAllControl(true);
+        }
+        public virtual bool SaveContractCustomerOrderTogether()
+        {
+           return this.ProcessEventSaveContract();
         }
         #endregion
     }

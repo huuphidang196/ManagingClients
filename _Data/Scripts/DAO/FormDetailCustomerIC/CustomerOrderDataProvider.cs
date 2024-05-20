@@ -111,17 +111,67 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             return listInqueryCustomer_Order;
         }
-        public virtual int GetCountInqueryQuotation()
+        public virtual int GetMaxIDInqueryQuotation()
         {
-            string query = "Select count(*) from InqueryQuotation";
+            InqueryQuotation inqueryQutation = new InqueryQuotation();
+            string query = "SELECT TOP 1 * FROM InqueryQuotation ORDER BY ID_Inquery_Quotation DESC";
+            SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
 
-            return this.QueryScalarByQueryAndParameter(query, null);
+            if (reader.Read())
+            {
+                inqueryQutation.ID_Inquery_Quotation = reader.GetInt32(0);
+
+                inqueryQutation.Name_Inquiry_Quotation = reader.GetString(1);
+
+                inqueryQutation.Number_Inquiry_Quotation = reader.GetString(2);
+
+                inqueryQutation.Date_Sending = reader.GetDateTime(3);
+
+                inqueryQutation.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
+
+                inqueryQutation.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
+
+                inqueryQutation.Min_Time_Delivery = reader.GetInt32(6);
+
+                inqueryQutation.Max_Time_Delivery = reader.GetInt32(7);
+
+                inqueryQutation.Expired_Time_Inquiry = reader.GetDateTime(8);
+
+                inqueryQutation.Selected_Exchange_Rate = (decimal)reader.GetDecimal(9);
+
+                if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) inqueryQutation.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
+
+                inqueryQutation.Purpose_Purchasing = reader.GetString(11);
+
+                inqueryQutation.Name_Of_EndUser = reader.GetString(12);
+
+                inqueryQutation.ID_Customer_Order = reader.GetInt32(13);
+            }
+
+            return inqueryQutation.ID_Inquery_Quotation;
         }
-        public virtual int GetCountCustomerGSES()
+        public virtual int GetMaxIDCustomerGSES()
         {
-            string query = "Select count(*) from CustomerGSES";
+            CustomerGSES customerGSES = new CustomerGSES();
+            string query = "SELECT TOP 1 * FROM CustomerGSES ORDER BY ID_Customer DESC";
+            SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
 
-            return this.QueryScalarByQueryAndParameter(query, null);
+            if (reader.Read())
+            {
+                customerGSES.ID_Customer = reader.GetInt32(0);
+
+                customerGSES.Name_Customer = reader.GetString(1);
+
+                customerGSES.Address_Company = reader.GetString(2);
+
+                customerGSES.Address_Email = reader.GetString(3);
+
+                customerGSES.Phone_Number = reader.GetString(4);
+
+                customerGSES.Tax_Number = reader.GetString(5);
+            }
+
+            return customerGSES.ID_Customer;
         }
         //Contract Quotation
         public virtual ContractCustomer GetContractQuotationrOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
@@ -168,11 +218,30 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             return listContractCustomer_Order;
         }
-        public virtual int GetCountContractCustomer()
+        public virtual int GetMaxIDContractCustomer()
         {
-            string query = "Select count(*) from ContractCustomer";
+            ContractCustomer contractCustomer = new ContractCustomer();
+            string query = "SELECT TOP 1 * FROM ContractCustomer ORDER BY ID_Contract_Customer DESC";
+            SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
 
-            return this.QueryScalarByQueryAndParameter(query, null);
+            if (reader.Read())
+            {
+                contractCustomer.ID_Contract_Customer = reader.GetInt32(0);
+
+                contractCustomer.Number_Contract = reader.GetString(1);
+
+                contractCustomer.Signed_Time = reader.GetDateTime(2);
+
+                contractCustomer.Expired_Time = reader.GetDateTime(3);
+
+                contractCustomer.Total_Contract_Value = (decimal)reader.GetDecimal(4);
+
+                if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Contract"))) contractCustomer.File_Data_Contract = (byte[])reader["File_Data_Contract"];
+
+                contractCustomer.ID_Customer_Order = reader.GetInt32(6);
+            }
+
+            return contractCustomer.ID_Contract_Customer;
         }
         //CustomerOrder
         public virtual CustomerOrder GetCustomerOrderOfCustomerByIDCustomerOrder(int id_Customer_Order)
@@ -229,11 +298,30 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             return listCustomer_Order;
         }
 
-        public virtual int GetCountCustomerOrder()
+        public virtual int GetMaxIDCustomerOrder()
         {
-            string query = "Select count(*) from CustomerOrder";
+            CustomerOrder customerOrder = new CustomerOrder();
+            string query = "SELECT TOP 1 * FROM CustomerOrder ORDER BY ID_Customer_Order DESC";
+            SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
 
-            return this.QueryScalarByQueryAndParameter(query, null);
+            if (reader.Read())
+            {          
+                customerOrder.ID_Customer_Order = reader.GetInt32(0);
+
+                customerOrder.Name_Order = reader.GetString(1);
+
+                customerOrder.Status_Order = (StatusOrder)Enum.Parse(typeof(StatusOrder), reader.GetString(2), true);
+
+                customerOrder.Name_Log_In = reader.GetString(3);
+
+                customerOrder.Level_Pos_Access_Order = (Position)Enum.Parse(typeof(Position), reader.GetString(4), true);
+
+                customerOrder.Level_Access_Order = (LevelAccess)Enum.Parse(typeof(LevelAccess), reader.GetString(5), true);
+
+                customerOrder.ID_Customer = reader.GetInt32(6);
+            }
+
+            return customerOrder.ID_Customer_Order;
         }
         #endregion Query
 
@@ -248,7 +336,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             if (value_Existed) return this.UpdateCustomerOrder(customerOrder);
 
-            customerOrder.ID_Customer_Order = this.GetCountCustomerOrder() + 1;
+            customerOrder.ID_Customer_Order = this.GetMaxIDCustomerOrder() + 1;
 
             return this.InsertTableByNameTable(nameof(CustomerOrder), customerOrder);
 
@@ -260,12 +348,12 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             //Find by ID_Customer_Order beacause ID_Inquery_Quotation havenot been set
             InqueryQuotation new_inqueryQuatation = this.GetInqueryQuotationrOrderOfCustomerByIDCustomerOrder(inqueryQuatation.ID_Customer_Order);
 
-            bool value_Existed = new_inqueryQuatation.ID_Customer_Order > 0;
+            bool value_Existed = new_inqueryQuatation.ID_Inquery_Quotation > 0;
             //if existed true => Update. false => insert 
 
             if (value_Existed) return this.UpdateInqueryQuotation(inqueryQuatation);
 
-            inqueryQuatation.ID_Inquery_Quotation = this.GetCountInqueryQuotation() + 1;
+            inqueryQuatation.ID_Inquery_Quotation = this.GetMaxIDInqueryQuotation() + 1;
 
             return this.InsertTableByNameTable(nameof(InqueryQuotation), inqueryQuatation);
 
@@ -277,12 +365,12 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             //Find by ID_Customer_Order beacause ID_Inquery_Quotation havenot been set
             ContractCustomer new_contractCustomer = this.GetContractQuotationrOrderOfCustomerByIDCustomerOrder(contractCustomer.ID_Customer_Order);
 
-            bool value_Existed = new_contractCustomer.ID_Customer_Order > 0;
+            bool value_Existed = new_contractCustomer.ID_Contract_Customer > 0;
             //if existed true => Update. false => insert 
 
             if (value_Existed) return this.UpdateContractCustomer(contractCustomer);
 
-            contractCustomer.ID_Contract_Customer = this.GetCountContractCustomer() + 1;
+            contractCustomer.ID_Contract_Customer = this.GetMaxIDContractCustomer() + 1;
 
             return this.InsertTableByNameTable(nameof(ContractCustomer), contractCustomer);
 
@@ -299,7 +387,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
             if (value_Existed) return this.UpdateCustomerGSES(customerGSES);
 
-            customerGSES.ID_Customer = this.GetCountCustomerGSES() + 1;
+            customerGSES.ID_Customer = this.GetMaxIDCustomerGSES() + 1;
 
             return this.InsertTableByNameTable(nameof(CustomerGSES), customerGSES);
 
@@ -327,6 +415,35 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
         {
             string nameKeyColumn = "ID_Customer";
             return this.UpdateDataByNameTable(nameKeyColumn, nameof(CustomerGSES), customerGSES);
+        }
+        #endregion
+
+        #region Delete
+        //CustomerOrder
+        public virtual bool DeleteCustomerOrderByID(int id_Customer_Order)
+        {
+            string query = "DELETE FROM CustomerOrder WHERE ID_Customer_Order =" + id_Customer_Order;
+
+            return this.DeleteExcuteNonQueryGetCountDataResultByQueryAndParameter(query, null) > 0;
+
+        }
+        
+        //Inquery
+        public virtual bool DeleteInqueryByIDCustomerOrder(int id_CustomerOrder)
+        {
+            string query = "DELETE FROM InqueryQuotation WHERE ID_Customer_Order =" + id_CustomerOrder;
+
+            return this.DeleteExcuteNonQueryGetCountDataResultByQueryAndParameter(query, null) > 0;
+
+        }
+
+        //Contract
+        public virtual bool DeleteContractByIDCustomerOrder(int id_CustomerOrder)
+        {
+            string query = "DELETE FROM ContractCustomer WHERE ID_Customer_Order =" + id_CustomerOrder;
+
+            return this.DeleteExcuteNonQueryGetCountDataResultByQueryAndParameter(query, null) > 0;
+
         }
         #endregion
     }

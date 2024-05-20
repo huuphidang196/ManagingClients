@@ -1,6 +1,7 @@
 ﻿using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.PanelCenterInfoInqueryContract;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlBelowCusIC;
+using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlCenterBottom;
 using ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.pnlTopCusIC;
 using ManagingClients._Data.Scripts.BLL.Scene_Manage_Customer.pnlMainControl;
 using ManagingClients._Data.Scripts.DTO.Customer;
@@ -51,6 +52,7 @@ namespace ManagingClients
 
             PanelTopCusICSC.Instance.ShowAllDataWhenBegin();
             PanelCenterCusICSC.Instance.ShowAllInformationAfterOpen();
+            PanelCenterBottomSC.Instance.ShowAllDataAfterOpenForm();
             PanelBelowCusICSC.Instance.ShowAllInformationAfterOpen();
         }
 
@@ -60,6 +62,7 @@ namespace ManagingClients
             PanelTopCusICSC.Instance = null;
             PanelCenterCusICSC.Instance = null;
             PanelBelowCusICSC.Instance = null;
+            PanelCenterBottomSC.Instance = null;
         }
     }
 }

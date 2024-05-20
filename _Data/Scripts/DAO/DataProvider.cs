@@ -229,6 +229,15 @@ namespace ManagingClients._Data.Scripts.DAO
 
         #endregion
 
+        #region Delete
+        protected virtual int DeleteExcuteNonQueryGetCountDataResultByQueryAndParameter(string query, object[] parameter = null)
+        {
+            int posStart = 0;
+
+            return this.ExcuteNonQueryByQueryAndParameter(posStart, query, parameter);
+
+        }
+        #endregion
         #region Excute_NonQuery
 
         protected virtual int ExcuteNonQueryByQueryAndParameter(int posStart, string query, object[] parameter = null)
