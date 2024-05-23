@@ -309,8 +309,8 @@ namespace ManagingClients
             // pnlDisplayOverall
             // 
             this.pnlDisplayOverall.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlDisplayOverall.Controls.Add(this.pnlPurchasingOrder);
             this.pnlDisplayOverall.Controls.Add(this.pnlDetailProfile);
+            this.pnlDisplayOverall.Controls.Add(this.pnlPurchasingOrder);
             this.pnlDisplayOverall.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplayOverall.Location = new System.Drawing.Point(0, 0);
             this.pnlDisplayOverall.Name = "pnlDisplayOverall";

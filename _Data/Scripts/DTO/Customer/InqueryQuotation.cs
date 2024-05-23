@@ -29,17 +29,19 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public int Min_Time_Delivery { get; set; }        //public RangeValue Time_Delivery { get; set; }
 
-
         public int Max_Time_Delivery { get; set; }
         
         public DateTime Expired_Time_Inquiry { get; set; }
 
         public decimal Selected_Exchange_Rate { get; set; }// Tỉ giá báo 
 
+        public decimal Real_Exchange_Rate { get; set; }// Tỉ giá thật
+
         public byte[] File_Data_Inquiry_Quotation { get; set; }
 
         public string Purpose_Purchasing { get; set; }
         public string Name_Of_EndUser { get; set; }
+        public byte[] File_Data_MR_Inquiry_Quotation { get; set; }
         public int ID_Customer_Order { get; set; }   //  public Customer_Order Customer_Order { get; set; }
 
         //public List<Merchandise> List_Merchandise_IntoInquery { get; private set; }

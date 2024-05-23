@@ -23,7 +23,12 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
     {
         public int ID_Units_Device_Inquery { get; set; }
 
-        public int ID_Type_Units_Device { get; set; }//ID loại tb. ID_Type_units Device
+        public string Name_Units_Device_Inquery { get; set; }//ID loại tb. ID_Type_units Device
+        public int Count_Units_Device_Inquery { get; set; }
+
+        public decimal VAT_Units_Device_Inquery { get; set; }
+
+        public decimal Cost_Units_Device_Inquery { get; set; }
 
         public int ID_Merchandise { get; set; } //  public Merchandise Merchandise { get; set; }
 

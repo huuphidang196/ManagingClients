@@ -17,32 +17,26 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         protected FlowLayoutPanel _flowDetailInquery;
         public FlowLayoutPanel FlowDetailInquery => _flowDetailInquery;
 
-        protected TextBox _txtNameInquery;
-        public TextBox TxtNameInquery => _txtNameInquery;
+        protected Label _lblNameInquery;
+        public Label LblNameInquery => _lblNameInquery;
 
-        protected TextBox _txtNumberInquery;
-        public TextBox TxtNumberInquery => _txtNumberInquery;
+        protected Label _lblNumberInquery;
+        public Label LblNumberInquery => _lblNumberInquery;
 
-        protected TextBox _txtCostDeliveryVN;
-        public TextBox TxtCostDeliveryVN => _txtCostDeliveryVN;
+        protected Label _lblMinTimeDurationShip;
+        public Label LblMinTimeDurationShip => _lblMinTimeDurationShip;
 
-        protected TextBox _txtCostDeliveryKH;
-        public TextBox TxtCostDeliveryKH => _txtCostDeliveryKH;
+        protected Label _lblMaxTimeDurationShip;
+        public Label TxtMaxTimeDurationShip => _lblMaxTimeDurationShip;
 
-        protected TextBox _txtMinTimeDurationShip;
-        public TextBox TxtMinTimeDurationShip => _txtMinTimeDurationShip;
+        protected Label _lblSelected_Exchange_Rate;
+        public Label LblSelectedExchangeRate => _lblSelected_Exchange_Rate;
 
-        protected TextBox _txtMaxTimeDurationShip;
-        public TextBox TxtMaxTimeDurationShip => _txtMaxTimeDurationShip;
+        protected Label _lblPurposePurchasing;
+        public Label LblPurposePurchasing => _lblPurposePurchasing;
 
-        protected TextBox _txtSelected_Exchange_Rate;
-        public TextBox TxtSelectedExchangeRate => _txtSelected_Exchange_Rate;
-
-        protected TextBox _txtPurposePurchasing;
-        public TextBox TxtPurposePurchasing => _txtPurposePurchasing;
-
-        protected TextBox _txtEndUser;
-        public TextBox TxtEndUser => _txtEndUser;
+        protected Label _lblEndUser;
+        public Label LblEndUser => _lblEndUser;
 
 
         protected DateTimePicker _dtpDateSendInquery;
@@ -60,23 +54,23 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         public FlowLayoutPanelDetailInquerySC()
         {
             // this._InqueryQuotation = new InqueryQuotation();
-
-            this._txtNameInquery = FrmDetailCustomer.Instance.txtNameInquery;
             this._flowDetailInquery = FrmDetailCustomer.Instance.flpDetailInquery;
+            this._lblNameInquery = FrmDetailCustomer.Instance.lblNameInquery;
 
-            this._txtNumberInquery = FrmDetailCustomer.Instance.txtInqueryNumber;
+            this._lblNumberInquery = FrmDetailCustomer.Instance.lblInqueryNumber;
 
-            this._txtCostDeliveryVN = FrmDetailCustomer.Instance.txtCostDeliveryVN;
-            this._txtCostDeliveryKH = FrmDetailCustomer.Instance.txtCostDeliveryKH;
-            this._txtMinTimeDurationShip = FrmDetailCustomer.Instance.txtMinTimeDurationShip;
-            this._txtMaxTimeDurationShip = FrmDetailCustomer.Instance.txtMaxTimeDurationShip;
-            this._txtSelected_Exchange_Rate = FrmDetailCustomer.Instance.txtSelectedExchangeRate;
+            this._lblMinTimeDurationShip = FrmDetailCustomer.Instance.lblMinTimeDurationShip;
+            this._lblMaxTimeDurationShip = FrmDetailCustomer.Instance.lblMaxTimeDurationShip;
+            this._lblSelected_Exchange_Rate = FrmDetailCustomer.Instance.lblSelectedExchangeRate;
 
-            this._txtPurposePurchasing = FrmDetailCustomer.Instance.txtPurposePurchasing;
-            this._txtEndUser = FrmDetailCustomer.Instance.txtEndUser;
+            this._lblPurposePurchasing = FrmDetailCustomer.Instance.lblPurposePurchasing;
+            this._lblEndUser = FrmDetailCustomer.Instance.lblEndUser;
 
             this._dtpDateSendInquery = FrmDetailCustomer.Instance.dtpDateSendInquery;
+            this._dtpDateSendInquery.Enabled = false;
+
             this._dtpDateExpiredInquery = FrmDetailCustomer.Instance.dtpDateExpiredInquery;
+            this._dtpDateExpiredInquery.Enabled = false;
 
             this._lblShowFileInquery = FrmDetailCustomer.Instance.lblShowFileInquery;
             this._lblShowFileInquery.Click += new EventHandler(ShowFileOrAddFilePDF);
@@ -94,12 +88,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.ClearContentOfControl();
             this.ActiveOrUnActiveAllControl(false);
 
-            this._txtCostDeliveryVN.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-            this._txtCostDeliveryKH.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-            this._txtMinTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-            this._txtMaxTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-            this._txtSelected_Exchange_Rate.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-
+            this._lblMinTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+            this._lblMaxTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+            this._lblSelected_Exchange_Rate.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
+           
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
@@ -200,10 +192,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             if (this._InqueryQuotation.Number_Inquiry_Quotation == "")
             {
                 MessageBox.Show("Vui lòng nhập Số Báo giá");
-                this._txtNumberInquery.BackColor = System.Drawing.Color.Yellow;
+                this._lblNumberInquery.BackColor = System.Drawing.Color.Yellow;
                 return false;
             }
-            this._txtNumberInquery.BackColor = System.Drawing.Color.White;
+            this._lblNumberInquery.BackColor = System.Drawing.Color.White;
 
             if (this._InqueryQuotation.File_Data_Inquiry_Quotation == null)
             {
@@ -237,15 +229,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
         {
             this._InqueryQuotation = inqueryQuotation;
 
-            this._txtNameInquery.Text = inqueryQuotation.Name_Inquiry_Quotation;
-            this._txtNumberInquery.Text = inqueryQuotation.Number_Inquiry_Quotation;
-            this._txtCostDeliveryVN.Text = inqueryQuotation.DeliveryCost_To_VietNam.ToString();
-            this._txtCostDeliveryKH.Text = inqueryQuotation.DeliveryCost_To_Customer.ToString();
-            this._txtMinTimeDurationShip.Text = inqueryQuotation.Min_Time_Delivery.ToString();
-            this._txtMaxTimeDurationShip.Text = inqueryQuotation.Max_Time_Delivery.ToString();
-            this._txtSelected_Exchange_Rate.Text = inqueryQuotation.Selected_Exchange_Rate.ToString();
-            this._txtPurposePurchasing.Text = inqueryQuotation.Purpose_Purchasing;
-            this._txtEndUser.Text = inqueryQuotation.Name_Of_EndUser;
+            this._lblNameInquery.Text = inqueryQuotation.Name_Inquiry_Quotation;
+            this._lblNumberInquery.Text = inqueryQuotation.Number_Inquiry_Quotation;
+            this._lblMinTimeDurationShip.Text = inqueryQuotation.Min_Time_Delivery.ToString();
+            this._lblMaxTimeDurationShip.Text = inqueryQuotation.Max_Time_Delivery.ToString();
+            this._lblSelected_Exchange_Rate.Text = inqueryQuotation.Selected_Exchange_Rate.ToString();
+            this._lblPurposePurchasing.Text = inqueryQuotation.Purpose_Purchasing;
+            this._lblEndUser.Text = inqueryQuotation.Name_Of_EndUser;
 
             this._dtpDateSendInquery.Value = (inqueryQuotation.Date_Sending <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Date_Sending;
             this._dtpDateExpiredInquery.Value = (inqueryQuotation.Expired_Time_Inquiry <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Expired_Time_Inquiry;
@@ -263,18 +253,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected virtual void ActiveOrUnActiveAllControl(bool active)
         {
-            this._txtNameInquery.ReadOnly = !active;
-            this._txtNumberInquery.ReadOnly = !active;
-            this._txtCostDeliveryVN.ReadOnly = !active;
-            this._txtCostDeliveryKH.ReadOnly = !active;
-            this._txtMinTimeDurationShip.ReadOnly = !active;
-            this._txtMaxTimeDurationShip.ReadOnly = !active;
-            this._txtSelected_Exchange_Rate.ReadOnly = !active;
-            this._txtPurposePurchasing.ReadOnly = !active;
-            this._txtEndUser.ReadOnly = !active;
-
-            this._dtpDateSendInquery.Enabled = active;
-            this._dtpDateExpiredInquery.Enabled = active;
             this._lblShowFileInquery.Enabled = active;
 
             this._btnDeleteFileInquery.Visible = active;
@@ -287,19 +265,17 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             InqueryQuotation inqueryQuotation = new InqueryQuotation();
 
             inqueryQuotation.ID_Inquery_Quotation = this._InqueryQuotation.ID_Inquery_Quotation;
-            inqueryQuotation.Name_Inquiry_Quotation = this._txtNameInquery.Text;
-            inqueryQuotation.Number_Inquiry_Quotation = this._txtNumberInquery.Text;
+            inqueryQuotation.Name_Inquiry_Quotation = this._lblNameInquery.Text;
+            inqueryQuotation.Number_Inquiry_Quotation = this._lblNumberInquery.Text;
             inqueryQuotation.Date_Sending = this.DtpDateSendInquery.Value;
-            inqueryQuotation.DeliveryCost_To_VietNam = decimal.Parse(this._txtCostDeliveryVN.Text);
-            inqueryQuotation.DeliveryCost_To_Customer = decimal.Parse(this._txtCostDeliveryKH.Text);
-            inqueryQuotation.Min_Time_Delivery = int.Parse(this._txtMinTimeDurationShip.Text);
-            inqueryQuotation.Max_Time_Delivery = int.Parse(this._txtMaxTimeDurationShip.Text);
+            inqueryQuotation.Min_Time_Delivery = int.Parse(this._lblMinTimeDurationShip.Text);
+            inqueryQuotation.Max_Time_Delivery = int.Parse(this._lblMaxTimeDurationShip.Text);
             inqueryQuotation.Expired_Time_Inquiry = this._dtpDateExpiredInquery.Value;
-            inqueryQuotation.Selected_Exchange_Rate = decimal.Parse(this._txtSelected_Exchange_Rate.Text);
+            inqueryQuotation.Selected_Exchange_Rate = decimal.Parse(this._lblSelected_Exchange_Rate.Text);
 
             inqueryQuotation.File_Data_Inquiry_Quotation = this._InqueryQuotation.File_Data_Inquiry_Quotation;
-            inqueryQuotation.Purpose_Purchasing = this._txtPurposePurchasing.Text;
-            inqueryQuotation.Name_Of_EndUser = this._txtEndUser.Text;
+            inqueryQuotation.Purpose_Purchasing = this._lblPurposePurchasing.Text;
+            inqueryQuotation.Name_Of_EndUser = this._lblEndUser.Text;
 
             //inqueryQuotation.ID_Customer_Order = 
 
