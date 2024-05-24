@@ -47,6 +47,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
 
         protected Label _lblShowFileInquery;
 
+        protected Button _btnOpenDetailInforInquery;
         protected Button _btnDeleteFileInquery;
         protected Button _btnDeleteInqueryQuotation;
         protected Button _btnSaveInquery;
@@ -238,7 +239,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._lblEndUser.Text = inqueryQuotation.Name_Of_EndUser;
 
             this._dtpDateSendInquery.Value = (inqueryQuotation.Date_Sending <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Date_Sending;
-            this._dtpDateExpiredInquery.Value = (inqueryQuotation.Expired_Time_Inquiry <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Expired_Time_Inquiry;
+            this._dtpDateExpiredInquery.Value = (inqueryQuotation.Date_Expired_Time_Inquiry <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Date_Expired_Time_Inquiry;
 
             this._lblShowFileInquery.Text = (inqueryQuotation.File_Data_Inquiry_Quotation == null) ? "Tải file PDF" : "File Báo giá";
 
@@ -270,7 +271,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             inqueryQuotation.Date_Sending = this.DtpDateSendInquery.Value;
             inqueryQuotation.Min_Time_Delivery = int.Parse(this._lblMinTimeDurationShip.Text);
             inqueryQuotation.Max_Time_Delivery = int.Parse(this._lblMaxTimeDurationShip.Text);
-            inqueryQuotation.Expired_Time_Inquiry = this._dtpDateExpiredInquery.Value;
+            inqueryQuotation.Date_Expired_Time_Inquiry = this._dtpDateExpiredInquery.Value;
             inqueryQuotation.Selected_Exchange_Rate = decimal.Parse(this._lblSelected_Exchange_Rate.Text);
 
             inqueryQuotation.File_Data_Inquiry_Quotation = this._InqueryQuotation.File_Data_Inquiry_Quotation;

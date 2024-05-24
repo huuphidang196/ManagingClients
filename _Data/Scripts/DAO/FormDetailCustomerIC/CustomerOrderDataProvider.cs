@@ -82,25 +82,25 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 Inquery_CustomerOrder.Date_Sending = reader.GetDateTime(3);
 
-                Inquery_CustomerOrder.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
+               // Inquery_CustomerOrder.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
 
-                Inquery_CustomerOrder.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
+                //Inquery_CustomerOrder.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
 
-                Inquery_CustomerOrder.Min_Time_Delivery = reader.GetInt32(6);
+                Inquery_CustomerOrder.Min_Time_Delivery = reader.GetInt32(4);
 
-                Inquery_CustomerOrder.Max_Time_Delivery = reader.GetInt32(7);
+                Inquery_CustomerOrder.Max_Time_Delivery = reader.GetInt32(5);
 
-                Inquery_CustomerOrder.Expired_Time_Inquiry = reader.GetDateTime(8);
+                Inquery_CustomerOrder.Date_Expired_Time_Inquiry = reader.GetDateTime(6);
 
-                Inquery_CustomerOrder.Selected_Exchange_Rate = (decimal)reader.GetDecimal(9);
+                Inquery_CustomerOrder.Selected_Exchange_Rate = (decimal)reader.GetDecimal(7);
 
                 if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) Inquery_CustomerOrder.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
 
-                Inquery_CustomerOrder.Purpose_Purchasing = reader.GetString(11);
+                Inquery_CustomerOrder.Purpose_Purchasing = reader.GetString(9);
 
-                Inquery_CustomerOrder.Name_Of_EndUser = reader.GetString(12);
+                Inquery_CustomerOrder.Name_Of_EndUser = reader.GetString(10);
 
-                Inquery_CustomerOrder.ID_Customer_Order = reader.GetInt32(13);
+                Inquery_CustomerOrder.ID_Customer_Order = reader.GetInt32(11);
 
                 listInqueryCustomer_Order.Add(Inquery_CustomerOrder);
             }
@@ -127,25 +127,25 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 inqueryQutation.Date_Sending = reader.GetDateTime(3);
 
-                inqueryQutation.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
+              //  inqueryQutation.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
 
-                inqueryQutation.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
+                //inqueryQutation.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
 
-                inqueryQutation.Min_Time_Delivery = reader.GetInt32(6);
+                inqueryQutation.Min_Time_Delivery = reader.GetInt32(4);
 
-                inqueryQutation.Max_Time_Delivery = reader.GetInt32(7);
+                inqueryQutation.Max_Time_Delivery = reader.GetInt32(5);
 
-                inqueryQutation.Expired_Time_Inquiry = reader.GetDateTime(8);
+                inqueryQutation.Date_Expired_Time_Inquiry = reader.GetDateTime(6);
 
-                inqueryQutation.Selected_Exchange_Rate = (decimal)reader.GetDecimal(9);
+                inqueryQutation.Selected_Exchange_Rate = (decimal)reader.GetDecimal(7);
 
                 if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) inqueryQutation.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
 
-                inqueryQutation.Purpose_Purchasing = reader.GetString(11);
+                inqueryQutation.Purpose_Purchasing = reader.GetString(9);
 
-                inqueryQutation.Name_Of_EndUser = reader.GetString(12);
+                inqueryQutation.Name_Of_EndUser = reader.GetString(10);
 
-                inqueryQutation.ID_Customer_Order = reader.GetInt32(13);
+                inqueryQutation.ID_Customer_Order = reader.GetInt32(11);
             }
 
             return inqueryQutation.ID_Inquery_Quotation;

@@ -64,29 +64,36 @@ namespace ManagingClients
             this.pnlInqueryCustomer = new System.Windows.Forms.Panel();
             this.grbDetailInquery = new System.Windows.Forms.GroupBox();
             this.flpDetailInquery = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.btnDetailInqueryInfor = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNameInquery = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblInqueryNumber = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtpDateExpiredInquery = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.dtpDateSendInquery = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblMaxTimeDurationShip = new System.Windows.Forms.Label();
+            this.lblMinTimeDurationShip = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnDeleteFileInquery = new System.Windows.Forms.Button();
+            this.lblSelectedExchangeRate = new System.Windows.Forms.Label();
             this.lblShowFileInquery = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.lblPurposePurchasing = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.lblEndUser = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.btnRemoveInquery = new System.Windows.Forms.Button();
@@ -142,13 +149,6 @@ namespace ManagingClients
             this.Status_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Pos_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Level_Access_Order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblNameInquery = new System.Windows.Forms.Label();
-            this.lblInqueryNumber = new System.Windows.Forms.Label();
-            this.lblMinTimeDurationShip = new System.Windows.Forms.Label();
-            this.lblMaxTimeDurationShip = new System.Windows.Forms.Label();
-            this.lblSelectedExchangeRate = new System.Windows.Forms.Label();
-            this.lblPurposePurchasing = new System.Windows.Forms.Label();
-            this.lblEndUser = new System.Windows.Forms.Label();
             this.pnlTopCusIC.SuspendLayout();
             this.flpUINegative.SuspendLayout();
             this.pnlCenterCusIC.SuspendLayout();
@@ -167,9 +167,9 @@ namespace ManagingClients
             this.pnlInqueryCustomer.SuspendLayout();
             this.grbDetailInquery.SuspendLayout();
             this.flpDetailInquery.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel26.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -573,6 +573,36 @@ namespace ManagingClients
             this.flpDetailInquery.Size = new System.Drawing.Size(645, 234);
             this.flpDetailInquery.TabIndex = 0;
             // 
+            // panel26
+            // 
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Controls.Add(this.btnDetailInqueryInfor);
+            this.panel26.Controls.Add(this.label28);
+            this.panel26.Location = new System.Drawing.Point(3, 3);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(618, 44);
+            this.panel26.TabIndex = 1;
+            // 
+            // btnDetailInqueryInfor
+            // 
+            this.btnDetailInqueryInfor.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnDetailInqueryInfor.Location = new System.Drawing.Point(166, 5);
+            this.btnDetailInqueryInfor.Name = "btnDetailInqueryInfor";
+            this.btnDetailInqueryInfor.Size = new System.Drawing.Size(231, 32);
+            this.btnDetailInqueryInfor.TabIndex = 1;
+            this.btnDetailInqueryInfor.Text = "Thành phần Đơn Hàng";
+            this.btnDetailInqueryInfor.UseVisualStyleBackColor = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(9, 12);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(152, 19);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Thành phần Đơn hàng  :";
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -582,6 +612,17 @@ namespace ManagingClients
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 44);
             this.panel1.TabIndex = 0;
+            // 
+            // lblNameInquery
+            // 
+            this.lblNameInquery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblNameInquery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNameInquery.Location = new System.Drawing.Point(167, 9);
+            this.lblNameInquery.Name = "lblNameInquery";
+            this.lblNameInquery.Size = new System.Drawing.Size(441, 26);
+            this.lblNameInquery.TabIndex = 2;
+            this.lblNameInquery.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
+            this.lblNameInquery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
@@ -603,6 +644,17 @@ namespace ManagingClients
             this.panel2.Size = new System.Drawing.Size(618, 44);
             this.panel2.TabIndex = 1;
             // 
+            // lblInqueryNumber
+            // 
+            this.lblInqueryNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblInqueryNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblInqueryNumber.Location = new System.Drawing.Point(167, 9);
+            this.lblInqueryNumber.Name = "lblInqueryNumber";
+            this.lblInqueryNumber.Size = new System.Drawing.Size(441, 26);
+            this.lblInqueryNumber.TabIndex = 2;
+            this.lblInqueryNumber.Text = "GSES";
+            this.lblInqueryNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -612,36 +664,6 @@ namespace ManagingClients
             this.label7.Size = new System.Drawing.Size(155, 19);
             this.label7.TabIndex = 0;
             this.label7.Text = "Báo Giá Số                  :";
-            // 
-            // panel26
-            // 
-            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel26.Controls.Add(this.button1);
-            this.panel26.Controls.Add(this.label28);
-            this.panel26.Location = new System.Drawing.Point(3, 3);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(618, 44);
-            this.panel26.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SandyBrown;
-            this.button1.Location = new System.Drawing.Point(166, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thành phần Đơn Hàng";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(9, 12);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(152, 19);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Thành phần Đơn hàng  :";
             // 
             // panel3
             // 
@@ -707,6 +729,28 @@ namespace ManagingClients
             this.panel10.Size = new System.Drawing.Size(618, 44);
             this.panel10.TabIndex = 4;
             // 
+            // lblMaxTimeDurationShip
+            // 
+            this.lblMaxTimeDurationShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblMaxTimeDurationShip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMaxTimeDurationShip.Location = new System.Drawing.Point(476, 9);
+            this.lblMaxTimeDurationShip.Name = "lblMaxTimeDurationShip";
+            this.lblMaxTimeDurationShip.Size = new System.Drawing.Size(132, 26);
+            this.lblMaxTimeDurationShip.TabIndex = 2;
+            this.lblMaxTimeDurationShip.Text = "9";
+            this.lblMaxTimeDurationShip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMinTimeDurationShip
+            // 
+            this.lblMinTimeDurationShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblMinTimeDurationShip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMinTimeDurationShip.Location = new System.Drawing.Point(167, 6);
+            this.lblMinTimeDurationShip.Name = "lblMinTimeDurationShip";
+            this.lblMinTimeDurationShip.Size = new System.Drawing.Size(132, 26);
+            this.lblMinTimeDurationShip.TabIndex = 2;
+            this.lblMinTimeDurationShip.Text = "8";
+            this.lblMinTimeDurationShip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -750,6 +794,17 @@ namespace ManagingClients
             this.btnDeleteFileInquery.Text = "X";
             this.btnDeleteFileInquery.UseVisualStyleBackColor = false;
             // 
+            // lblSelectedExchangeRate
+            // 
+            this.lblSelectedExchangeRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblSelectedExchangeRate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSelectedExchangeRate.Location = new System.Drawing.Point(167, 9);
+            this.lblSelectedExchangeRate.Name = "lblSelectedExchangeRate";
+            this.lblSelectedExchangeRate.Size = new System.Drawing.Size(132, 26);
+            this.lblSelectedExchangeRate.TabIndex = 2;
+            this.lblSelectedExchangeRate.Text = "29,000";
+            this.lblSelectedExchangeRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblShowFileInquery
             // 
             this.lblShowFileInquery.BackColor = System.Drawing.Color.LightBlue;
@@ -791,6 +846,17 @@ namespace ManagingClients
             this.panel18.Size = new System.Drawing.Size(618, 44);
             this.panel18.TabIndex = 7;
             // 
+            // lblPurposePurchasing
+            // 
+            this.lblPurposePurchasing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblPurposePurchasing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPurposePurchasing.Location = new System.Drawing.Point(167, 9);
+            this.lblPurposePurchasing.Name = "lblPurposePurchasing";
+            this.lblPurposePurchasing.Size = new System.Drawing.Size(441, 26);
+            this.lblPurposePurchasing.TabIndex = 2;
+            this.lblPurposePurchasing.Text = "29,000";
+            this.lblPurposePurchasing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -810,6 +876,17 @@ namespace ManagingClients
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(618, 44);
             this.panel19.TabIndex = 7;
+            // 
+            // lblEndUser
+            // 
+            this.lblEndUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblEndUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEndUser.Location = new System.Drawing.Point(167, 9);
+            this.lblEndUser.Name = "lblEndUser";
+            this.lblEndUser.Size = new System.Drawing.Size(441, 26);
+            this.lblEndUser.TabIndex = 2;
+            this.lblEndUser.Text = "29,000";
+            this.lblEndUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label19
             // 
@@ -1366,83 +1443,6 @@ namespace ManagingClients
             this.Level_Access_Order.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Level_Access_Order.Width = 200;
             // 
-            // lblNameInquery
-            // 
-            this.lblNameInquery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblNameInquery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNameInquery.Location = new System.Drawing.Point(167, 9);
-            this.lblNameInquery.Name = "lblNameInquery";
-            this.lblNameInquery.Size = new System.Drawing.Size(441, 26);
-            this.lblNameInquery.TabIndex = 2;
-            this.lblNameInquery.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
-            this.lblNameInquery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblInqueryNumber
-            // 
-            this.lblInqueryNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblInqueryNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblInqueryNumber.Location = new System.Drawing.Point(167, 9);
-            this.lblInqueryNumber.Name = "lblInqueryNumber";
-            this.lblInqueryNumber.Size = new System.Drawing.Size(441, 26);
-            this.lblInqueryNumber.TabIndex = 2;
-            this.lblInqueryNumber.Text = "GSES";
-            this.lblInqueryNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblMinTimeDurationShip
-            // 
-            this.lblMinTimeDurationShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblMinTimeDurationShip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMinTimeDurationShip.Location = new System.Drawing.Point(167, 6);
-            this.lblMinTimeDurationShip.Name = "lblMinTimeDurationShip";
-            this.lblMinTimeDurationShip.Size = new System.Drawing.Size(132, 26);
-            this.lblMinTimeDurationShip.TabIndex = 2;
-            this.lblMinTimeDurationShip.Text = "8";
-            this.lblMinTimeDurationShip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMaxTimeDurationShip
-            // 
-            this.lblMaxTimeDurationShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblMaxTimeDurationShip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMaxTimeDurationShip.Location = new System.Drawing.Point(476, 9);
-            this.lblMaxTimeDurationShip.Name = "lblMaxTimeDurationShip";
-            this.lblMaxTimeDurationShip.Size = new System.Drawing.Size(132, 26);
-            this.lblMaxTimeDurationShip.TabIndex = 2;
-            this.lblMaxTimeDurationShip.Text = "9";
-            this.lblMaxTimeDurationShip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSelectedExchangeRate
-            // 
-            this.lblSelectedExchangeRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblSelectedExchangeRate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSelectedExchangeRate.Location = new System.Drawing.Point(167, 9);
-            this.lblSelectedExchangeRate.Name = "lblSelectedExchangeRate";
-            this.lblSelectedExchangeRate.Size = new System.Drawing.Size(132, 26);
-            this.lblSelectedExchangeRate.TabIndex = 2;
-            this.lblSelectedExchangeRate.Text = "29,000";
-            this.lblSelectedExchangeRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPurposePurchasing
-            // 
-            this.lblPurposePurchasing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblPurposePurchasing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPurposePurchasing.Location = new System.Drawing.Point(167, 9);
-            this.lblPurposePurchasing.Name = "lblPurposePurchasing";
-            this.lblPurposePurchasing.Size = new System.Drawing.Size(441, 26);
-            this.lblPurposePurchasing.TabIndex = 2;
-            this.lblPurposePurchasing.Text = "29,000";
-            this.lblPurposePurchasing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblEndUser
-            // 
-            this.lblEndUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblEndUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblEndUser.Location = new System.Drawing.Point(167, 9);
-            this.lblEndUser.Name = "lblEndUser";
-            this.lblEndUser.Size = new System.Drawing.Size(441, 26);
-            this.lblEndUser.TabIndex = 2;
-            this.lblEndUser.Text = "29,000";
-            this.lblEndUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // FrmDetailCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1485,12 +1485,12 @@ namespace ManagingClients
             this.pnlInqueryCustomer.ResumeLayout(false);
             this.grbDetailInquery.ResumeLayout(false);
             this.flpDetailInquery.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -1646,7 +1646,7 @@ namespace ManagingClients
         private System.Windows.Forms.ComboBox cboMethodSort;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDetailInqueryInfor;
         public System.Windows.Forms.Label lblNameInquery;
         public System.Windows.Forms.Label lblInqueryNumber;
         public System.Windows.Forms.Label lblMaxTimeDurationShip;

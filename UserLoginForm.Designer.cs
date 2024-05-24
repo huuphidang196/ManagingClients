@@ -36,16 +36,16 @@ namespace ManagingClients
             this.txtPasswordAccount = new System.Windows.Forms.TextBox();
             this.btnLoginAccount = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCreatNewAccount = new System.Windows.Forms.Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCreatNewAccount = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,16 +107,6 @@ namespace ManagingClients
             this.panel1.Size = new System.Drawing.Size(1039, 669);
             this.panel1.TabIndex = 3;
             // 
-            // btnCreatNewAccount
-            // 
-            this.btnCreatNewAccount.BackColor = System.Drawing.Color.Orange;
-            this.btnCreatNewAccount.Location = new System.Drawing.Point(218, 251);
-            this.btnCreatNewAccount.Name = "btnCreatNewAccount";
-            this.btnCreatNewAccount.Size = new System.Drawing.Size(109, 31);
-            this.btnCreatNewAccount.TabIndex = 3;
-            this.btnCreatNewAccount.Text = "Tạo tài khoản";
-            this.btnCreatNewAccount.UseVisualStyleBackColor = false;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
@@ -132,21 +122,20 @@ namespace ManagingClients
             this.guna2Panel1.Controls.Add(this.btnLoginAccount);
             this.guna2Panel1.Controls.Add(this.txtNameLoginAccount);
             this.guna2Panel1.Controls.Add(this.btnCreatNewAccount);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 178);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 178);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(387, 304);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // pictureBox1
+            // pictureBox3
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1039, 669);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(20, 196);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -158,15 +147,26 @@ namespace ManagingClients
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // btnCreatNewAccount
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 196);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.btnCreatNewAccount.BackColor = System.Drawing.Color.Orange;
+            this.btnCreatNewAccount.Location = new System.Drawing.Point(218, 251);
+            this.btnCreatNewAccount.Name = "btnCreatNewAccount";
+            this.btnCreatNewAccount.Size = new System.Drawing.Size(109, 31);
+            this.btnCreatNewAccount.TabIndex = 3;
+            this.btnCreatNewAccount.Text = "Tạo tài khoản";
+            this.btnCreatNewAccount.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1039, 669);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // frmUserLoginForm
             // 
@@ -187,9 +187,9 @@ namespace ManagingClients
             this.panel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

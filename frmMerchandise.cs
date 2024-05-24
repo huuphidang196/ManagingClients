@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManagingClients._Data.Scripts.DTO.Account;
+using ManagingClients._Data.Scripts.DTO.Customer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,26 @@ namespace ManagingClients
 {
     public partial class frmMerchandise : Form
     {
+        private static frmMerchandise _instance;
+        public static frmMerchandise Instance
+        {
+            get
+            {
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new frmMerchandise();
+                }
+                return _instance;
+            }
+
+            private set { frmMerchandise._instance = value; }
+        }
+
+        protected InqueryQuotation _InqueryQuotation;
+        public InqueryQuotation InqueryQuotation => _InqueryQuotation;
+
+        public virtual void SetInqueryQuotation(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
+
         public frmMerchandise()
         {
             InitializeComponent();
@@ -22,9 +44,5 @@ namespace ManagingClients
 
         }
 
-        private void guna2TileButton1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

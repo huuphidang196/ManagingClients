@@ -140,6 +140,8 @@
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlCenterBottom\PanelCenterBottomSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\flpUINegative\FlowLayOutPanelUINegativeSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\PanelTopCusICSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforEquip\flpDetailEquip\FlowLayoutPanelDetailEquip.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforSysInquery\flpSysDetailInquery\FlowLayoutPanelSysDetailInquerySC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\PanelMainControl.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\PanelDetailProfileSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\tabCtrlPADetail\TabControlProfileDetailSC.cs" />
@@ -157,12 +159,14 @@
     <Compile Include="_Data\Scripts\BLL\TransferEnumString.cs" />
     <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\FormDetailCustomerIC\CustomerOrderDataProvider.cs" />
+    <Compile Include="_Data\Scripts\DAO\FormMerchandise\DetailElementUnitsInqueryDataProvider.cs" />
+    <Compile Include="_Data\Scripts\DAO\FormMerchandise\DetailUnitsDevicInqueryDataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlPurchasingOrder\PurchasingOrderProvider.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\ProfileAccount.cs" />
     <Compile Include="_Data\Scripts\DTO\Customer\ContractCustomer.cs" />
-    <Compile Include="_Data\Scripts\DTO\Customer\CustomerGSES.cs" />
+    <Compile Include="_Data\Scripts\DTO\Customer\CustomerOrder.cs" />
     <Compile Include="_Data\Scripts\DTO\Customer\InqueryQuotation.cs" />
     <Compile Include="_Data\Scripts\DTO\Customer\Merchandise.cs" />
     <Compile Include="_Data\Scripts\DTO\Customer\ProductTypeUnitsDevice.cs" />

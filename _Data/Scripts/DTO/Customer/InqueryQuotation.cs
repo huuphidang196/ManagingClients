@@ -22,17 +22,16 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         public string Number_Inquiry_Quotation { get; set; }//Số báo giá , mục V/v
 
         public DateTime Date_Sending { get; set; }
-    
-        public decimal DeliveryCost_To_VietNam { get; set; }
+        public DateTime Date_Expired_Time_Inquiry { get; set; }
 
-        public decimal DeliveryCost_To_Customer { get; set; }        //public DeliveryCost DeliveryCost { get; set; }
+      //  public decimal DeliveryCost_To_VietNam { get; set; }
+
+      //  public decimal DeliveryCost_To_Customer { get; set; }        //public DeliveryCost DeliveryCost { get; set; }
 
         public int Min_Time_Delivery { get; set; }        //public RangeValue Time_Delivery { get; set; }
 
         public int Max_Time_Delivery { get; set; }
         
-        public DateTime Expired_Time_Inquiry { get; set; }
-
         public decimal Selected_Exchange_Rate { get; set; }// Tỉ giá báo 
 
         public decimal Real_Exchange_Rate { get; set; }// Tỉ giá thật
@@ -41,9 +40,17 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
 
         public string Purpose_Purchasing { get; set; }
         public string Name_Of_EndUser { get; set; }
+
         public byte[] File_Data_MR_Inquiry_Quotation { get; set; }
+
         public int ID_Customer_Order { get; set; }   //  public Customer_Order Customer_Order { get; set; }
 
+      
+        
+        
+        
+        
+        
         //public List<Merchandise> List_Merchandise_IntoInquery { get; private set; }
 
         //public virtual void AddMerchandise(Merchandise merchandise)

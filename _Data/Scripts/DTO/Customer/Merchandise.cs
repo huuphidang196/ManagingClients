@@ -10,10 +10,12 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
     public class ElementUnitsInquery
     {
         //Need a property specification
-        public string Serial_Number_Element_Inquery { get; set; }//must be existed => in quatation it's ID
-        public int ID_Type_Element_Units { get; set; }
-        public float Origin_Price_MR { get; set; }//must be existed
-        public byte[] File_Data_Element_Units_Inquery { get; set; }//Thông số kt phía MR Gủi/ MR send
+        public int ID_Element_Units_Inquery { get; set; }
+        public string Artical_Number_Element_Inquery { get; set; }//must be existed => in quatation it's ID
+        public string Name_Element { get; set; }
+        public int Count_Element { get; set; }
+        public decimal Origin_Price_MR_Per_One { get; set; }//must be existed
+        public string Artical_Design_Element { get; set; }
         public int ID_Units_Device_Inquery { get; set; } // public UnitsDevice UnitsDevice { get; set; }
 
     }
@@ -24,13 +26,21 @@ namespace ManagingClients._Data.Scripts.DTO.Customer
         public int ID_Units_Device_Inquery { get; set; }
 
         public string Name_Units_Device_Inquery { get; set; }//ID loại tb. ID_Type_units Device
-        public int Count_Units_Device_Inquery { get; set; }
+        public int Count_Set_Units_Device_Inquery { get; set; }
+       
+        public decimal Percent_VAT_Units_Device_Inquery { get; set; }
 
-        public decimal VAT_Units_Device_Inquery { get; set; }
+        public decimal Cost_Delivery_To_VN { get; set; }//Euro
+        public decimal Cost_Delivery_To_Customer { get; set; }//Euro
+        public decimal Percent_Benefit_Cost_Delivery_To_Cus { get; set; }//percent
 
-        public decimal Cost_Units_Device_Inquery { get; set; }
+        public decimal Percent_Benefit_Cost_Units_Inquery { get; set; }//percent
 
-        public int ID_Merchandise { get; set; } //  public Merchandise Merchandise { get; set; }
+        public decimal Final_Value_Units_Device_Inquery { get; set; }
+
+        public int ID_Inquery_Quotation { get; set; }
+
+      //  public int ID_Merchandise { get; set; } //  public Merchandise Merchandise { get; set; }
 
         //public List<ElementUnitsInquery> List_Elements_UnitsInquery { get; private set; }
 
