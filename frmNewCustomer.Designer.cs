@@ -1646,7 +1646,6 @@ namespace ManagingClients
         private System.Windows.Forms.ComboBox cboMethodSort;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button btnDetailInqueryInfor;
         public System.Windows.Forms.Label lblNameInquery;
         public System.Windows.Forms.Label lblInqueryNumber;
         public System.Windows.Forms.Label lblMaxTimeDurationShip;
@@ -1654,5 +1653,6 @@ namespace ManagingClients
         public System.Windows.Forms.Label lblSelectedExchangeRate;
         public System.Windows.Forms.Label lblPurposePurchasing;
         public System.Windows.Forms.Label lblEndUser;
+        public System.Windows.Forms.Button btnDetailInqueryInfor;
     }
 }

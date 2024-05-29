@@ -79,6 +79,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnDeleteFileInquery = FrmDetailCustomer.Instance.btnDeleteFileInquery;
             this._btnDeleteFileInquery.Click += new EventHandler(AddEventClearFileInqueryButton);
 
+            this._btnOpenDetailInforInquery = FrmDetailCustomer.Instance.btnDetailInqueryInfor;
+            this._btnOpenDetailInforInquery.Click += new EventHandler(this.AddEventDetailInquery);
 
             this._btnSaveInquery = FrmDetailCustomer.Instance.btnSaveInquery;
             this._btnSaveInquery.Click += new EventHandler(this.AddEventSaveInqueryButton);
@@ -89,10 +91,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.ClearContentOfControl();
             this.ActiveOrUnActiveAllControl(false);
 
-            this._lblMinTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-            this._lblMaxTimeDurationShip.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-            this._lblSelected_Exchange_Rate.Leave += new EventHandler(this.AddEventCheckTextBoxNumberValidAfterPress);
-           
         }
 
         public virtual void ChangeInqueryQuotationSelected(InqueryQuotation inqueryQuotation) => this._InqueryQuotation = inqueryQuotation;
@@ -140,6 +138,20 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             frmPDFFileReader.SetFileNameByte(this._InqueryQuotation.File_Data_Inquiry_Quotation);
             frmPDFFileReader.Show();
         }
+
+        protected virtual void AddEventDetailInquery(object sender, EventArgs e)
+        {
+            CustomerOrder customerOrder_Of_Inquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CustomerOrder_Creating;
+
+            if (!this.CheckOrderCustomerIsExistent(customerOrder_Of_Inquery)) return;
+
+            this._InqueryQuotation.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
+            //if (fr)
+            frmMerchandise.Instance.SetInqueryQuotation(this._InqueryQuotation);
+            DialogResult ret = frmMerchandise.Instance.ShowDialog();
+
+            if (ret == DialogResult.Yes) this._InqueryQuotation = frmMerchandise.Instance.InqueryQuotation;
+        }
         protected virtual void AddEventClearFileInqueryButton(object sender, EventArgs e)
         {
             this.ClearFileInquery();
@@ -159,21 +171,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this.ProcessEventSaveInquery();
         }
 
-        protected virtual void AddEventCheckTextBoxNumberValidAfterPress(object sender, EventArgs e)
-        {
-            TextBox textBoxChecked = sender as TextBox;
-
-            bool isNumber = textBoxChecked.Text.All(c => (char.IsDigit(c) || c == '.'));
-
-            if (!isNumber)
-            {
-                MessageBox.Show("Vui lòng nhập hợp lệ");
-                textBoxChecked.BackColor = System.Drawing.Color.Yellow;
-                return;
-            }
-            textBoxChecked.BackColor = System.Drawing.Color.White;
-
-        }
         #endregion
 
         #region Internal_Function
@@ -182,21 +179,9 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             //Get CustomerOrder was generated
             CustomerOrder customerOrder_Of_Inquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.CustomerOrder_Creating;
 
-            if (customerOrder_Of_Inquery.ID_Customer_Order == 0)
-            {
-                MessageBox.Show("Vui lòng Thiết lập Đơn Hàng trước ở Panel phía trên trước");
-                return false;
-            }
-            this._InqueryQuotation = this.GetInqueryFromDataOnControl();
-            this._InqueryQuotation.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
+            if (!this.CheckOrderCustomerIsExistent(customerOrder_Of_Inquery)) return false;
 
-            if (this._InqueryQuotation.Number_Inquiry_Quotation == "")
-            {
-                MessageBox.Show("Vui lòng nhập Số Báo giá");
-                this._lblNumberInquery.BackColor = System.Drawing.Color.Yellow;
-                return false;
-            }
-            this._lblNumberInquery.BackColor = System.Drawing.Color.White;
+            this._InqueryQuotation.ID_Customer_Order = customerOrder_Of_Inquery.ID_Customer_Order;
 
             if (this._InqueryQuotation.File_Data_Inquiry_Quotation == null)
             {
@@ -213,6 +198,16 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             //setting co
             //Save together
             PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ActiveOrUnActiveAllControl(false);
+            return true;
+        }
+
+        protected virtual bool CheckOrderCustomerIsExistent(CustomerOrder customerOrder_Of_Inquery)
+        {
+            if (customerOrder_Of_Inquery.ID_Customer_Order == 0)
+            {
+                MessageBox.Show("Vui lòng Thiết lập Đơn Hàng trước ở Panel phía trên trước");
+                return false;
+            }
             return true;
         }
         protected virtual void ClearContentOfControl()
@@ -261,27 +256,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._btnDeleteInqueryQuotation.Visible = active;
         }
 
-        protected virtual InqueryQuotation GetInqueryFromDataOnControl()
-        {
-            InqueryQuotation inqueryQuotation = new InqueryQuotation();
-
-            inqueryQuotation.ID_Inquery_Quotation = this._InqueryQuotation.ID_Inquery_Quotation;
-            inqueryQuotation.Name_Inquiry_Quotation = this._lblNameInquery.Text;
-            inqueryQuotation.Number_Inquiry_Quotation = this._lblNumberInquery.Text;
-            inqueryQuotation.Date_Sending = this.DtpDateSendInquery.Value;
-            inqueryQuotation.Min_Time_Delivery = int.Parse(this._lblMinTimeDurationShip.Text);
-            inqueryQuotation.Max_Time_Delivery = int.Parse(this._lblMaxTimeDurationShip.Text);
-            inqueryQuotation.Date_Expired_Time_Inquiry = this._dtpDateExpiredInquery.Value;
-            inqueryQuotation.Selected_Exchange_Rate = decimal.Parse(this._lblSelected_Exchange_Rate.Text);
-
-            inqueryQuotation.File_Data_Inquiry_Quotation = this._InqueryQuotation.File_Data_Inquiry_Quotation;
-            inqueryQuotation.Purpose_Purchasing = this._lblPurposePurchasing.Text;
-            inqueryQuotation.Name_Of_EndUser = this._lblEndUser.Text;
-
-            //inqueryQuotation.ID_Customer_Order = 
-
-            return inqueryQuotation;
-        }
+      
         #endregion
 
         #region Outside_Reference

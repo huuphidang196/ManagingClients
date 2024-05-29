@@ -140,8 +140,11 @@
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlCenterBottom\PanelCenterBottomSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\flpUINegative\FlowLayOutPanelUINegativeSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\PanelTopCusICSC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\PanelTopMerchandiseSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforEquip\flpDetailEquip\FlowLayoutPanelDetailEquip.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforEquip\PanelInforEquipSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforSysInquery\flpSysDetailInquery\FlowLayoutPanelSysDetailInquerySC.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforSysInquery\PanelSystemInforInquerySC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\PanelMainControl.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\PanelDetailProfileSC.cs" />
     <Compile Include="_Data\Scripts\BLL\Scene_Manage_Customer\pnlMainControl\splitContainerMainControl\pnlDisplayOverall\pnlDetailProfile\tabCtrlPADetail\TabControlProfileDetailSC.cs" />
@@ -210,6 +213,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="_Data\Scripts\BLL\FormMerchandise\pnlBottom\" />
+    <Folder Include="_Data\Scripts\BLL\FormMerchandise\pnlCenter\" />
     <Folder Include="_Data\Scripts\SaveManager\Query\PersonalAccount\" />
   </ItemGroup>
   <ItemGroup>

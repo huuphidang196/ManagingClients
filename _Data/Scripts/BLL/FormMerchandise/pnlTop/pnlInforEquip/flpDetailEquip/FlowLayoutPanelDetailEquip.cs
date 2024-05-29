@@ -26,6 +26,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
         protected Label _lblValueVATEquip;
         protected Label _lblValueEquipCaculated;
 
+        protected Button _btnCalculatePrice;
         protected Button _btnAddEquip;
         protected Button _btnEditEquip;
         protected Button _btnDeleteEquip;
@@ -47,12 +48,16 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
 
             this._lblValueVATEquip = frmMerchandise.Instance.lblValueVATEquip;
             this._lblValueEquipCaculated = frmMerchandise.Instance.lblValueCaculatedEquip;
+          
+            this._btnCalculatePrice = frmMerchandise.Instance.btnCalculatePrice;
+            this._btnCalculatePrice.Click += new EventHandler(this.AddEventButtonCalculatePrice);
 
             this._btnAddEquip = frmMerchandise.Instance.btnAddEquip;
             this._btnAddEquip.Click += new EventHandler(this.AddEventAddEquip);
 
             this._btnEditEquip = frmMerchandise.Instance.btnEditEquip;
             this._btnDeleteEquip = frmMerchandise.Instance.btnDeleteEquip;
+
 
             this._dtgAllEquipOfInquery = frmMerchandise.Instance.dtgAllEquipOfInquery;
             this._dtgAllEquipOfInquery.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.RecifyNameColumnOfEquip);
@@ -62,6 +67,10 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
         }
 
         #region Add_Events
+        protected virtual void AddEventButtonCalculatePrice(object sender, EventArgs e)
+        {
+            this.SetContentCalulatePrice();
+        }
         protected virtual void AddEventAddEquip(object sender, EventArgs e)
         {
             //Insert
@@ -94,6 +103,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
         }
+
         protected virtual void AddEventSelectedEquipChange(object sender, EventArgs e)
         {
             if (this._dtgAllEquipOfInquery.SelectedRows[0].Index < 0)
@@ -115,10 +125,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             this._UnitsDeviceInquery.ID_Inquery_Quotation = int.Parse(selectedRow.Cells["ID_Inquery_Quotation"].Value.ToString());
 
         }
+
         #endregion
 
         #region Internal_Function
-        protected virtual void SetContentAllDataInquery()
+        protected virtual void SetContentAllDataOnInquery()
         {
             this._txtNameEquipmentUnit.Text = this._UnitsDeviceInquery.Name_Units_Device_Inquery;
             this._txtCountSetEquipmentUnit.Text = this._UnitsDeviceInquery.Count_Set_Units_Device_Inquery.ToString();
@@ -129,14 +140,18 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             this._txtPercentBenefitEquip.Text = this._UnitsDeviceInquery.Percent_Benefit_Cost_Units_Inquery.ToString();
             this._txtFinalValueEquip.Text = this._UnitsDeviceInquery.Final_Value_Units_Device_Inquery.ToString();
 
-            this._lblValueEquipCaculated.Text = this.GetValueEquipCaculated().ToString();
-            this._lblValueVATEquip.Text = this.GetValueVATEquip().ToString();
-
-            this._txtFinalValueEquip.Text = this.GetValueFinalAllSet().ToString();
+            this.SetContentCalulatePrice();
 
             this._btnAddEquip = frmMerchandise.Instance.btnAddEquip;
             this._btnEditEquip = frmMerchandise.Instance.btnEditEquip;
             this._btnDeleteEquip = frmMerchandise.Instance.btnDeleteEquip;
+        }
+
+        protected virtual void SetContentCalulatePrice()
+        {
+            this._lblValueEquipCaculated.Text = this.GetValueEquipCaculated().ToString();
+            this._lblValueVATEquip.Text = this.GetValueVATEquip().ToString();
+            this._txtFinalValueEquip.Text = this.GetValueFinalAllSet().ToString();
         }
         protected virtual decimal GetValueEquipCaculated()
         {
@@ -161,12 +176,19 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             decimal VAT = this._UnitsDeviceInquery.Percent_VAT_Units_Device_Inquery * cost_Caculated;
             return VAT;
         }
-
         protected virtual decimal GetValueFinalAllSet()
         {
             decimal cost_Caculated = decimal.Parse(this._lblValueEquipCaculated.Text);
             decimal VAT = this._UnitsDeviceInquery.Percent_VAT_Units_Device_Inquery * cost_Caculated;
             return VAT + cost_Caculated;
+        }
+
+        #endregion
+
+        #region Reference_OutSide
+        public virtual void ShowAllDataOnFormMerchandise()
+        {
+            this.SetContentAllDataOnInquery();
         }
         #endregion
     }

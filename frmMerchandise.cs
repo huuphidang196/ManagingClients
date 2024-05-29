@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.DTO.Account;
+﻿using ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop;
+using ManagingClients._Data.Scripts.DTO.Account;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
@@ -41,8 +42,14 @@ namespace ManagingClients
 
         private void frmMerchandise_Load(object sender, EventArgs e)
         {
-
+            //Panel Detail Inquery Sysstem
+            PanelTopMerchandiseSC.Instance.ShowAllValueOnScene();
         }
 
+        private void frmMerchandise_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
+            PanelTopMerchandiseSC.Instance = null;
+        }
     }
 }

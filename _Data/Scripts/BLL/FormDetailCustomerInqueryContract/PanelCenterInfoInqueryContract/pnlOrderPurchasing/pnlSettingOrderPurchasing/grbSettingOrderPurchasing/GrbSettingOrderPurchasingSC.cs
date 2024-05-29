@@ -237,9 +237,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._CustomerOrder = CustomerOrderDataProvider.Instance.GetCustomerOrderOfCustomerByIDCustomerOrder(this._CustomerOrder.ID_Customer_Order);
 
             //Save Inquery and Contract Together
-            bool saveInquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.SaveInqueryCustomerOrderTogether();
+            bool saveInquery = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.
+                PanelInqueryCustomerSC.FlowLayoutPanelDetailInquerySC.SaveInqueryCustomerOrderTogether();
 
-            bool saveContract = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.SaveContractCustomerOrderTogether();
+            bool saveContract = PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelInqueryContractSC.
+                PanelContractCustomerSC.GroupBoxDetailContractSC.FlowLayoutPanelDetailContractSC.SaveContractCustomerOrderTogether();
 
             if (!saveInquery || !saveContract) return;
 

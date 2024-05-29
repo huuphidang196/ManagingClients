@@ -66,9 +66,29 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
         public virtual List<InqueryQuotation> GetListInqueryCustomerOrderOfCustomerByQuery(string query)
         {
-            List<InqueryQuotation> listInqueryCustomer_Order = new List<InqueryQuotation>();
-
             SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
+
+            List<InqueryQuotation> listInqueryCustomer_Order = this.ProcessReaderInqueryQotation(reader);
+
+            this._Connection.Close();
+
+            return listInqueryCustomer_Order;
+        }
+        public virtual int GetMaxIDInqueryQuotation()
+        {
+            string query = "SELECT TOP 1 * FROM InqueryQuotation ORDER BY ID_Inquery_Quotation DESC";
+
+            List<InqueryQuotation> listInqueryCustomer_Order = this.GetListInqueryCustomerOrderOfCustomerByQuery(query);
+
+            if (listInqueryCustomer_Order.Count == 0) return 0;
+
+            InqueryQuotation inqueryQutation = listInqueryCustomer_Order[0];
+
+            return inqueryQutation.ID_Inquery_Quotation;
+        }
+        protected virtual List<InqueryQuotation> ProcessReaderInqueryQotation(SqlDataReader reader)
+        {
+            List<InqueryQuotation> listInqueryCustomer_Order = new List<InqueryQuotation>();
 
             while (reader.Read())
             {
@@ -82,73 +102,36 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 Inquery_CustomerOrder.Date_Sending = reader.GetDateTime(3);
 
-               // Inquery_CustomerOrder.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
+                Inquery_CustomerOrder.Date_Expired_Time_Inquiry = reader.GetDateTime(4);
+
+                // Inquery_CustomerOrder.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
 
                 //Inquery_CustomerOrder.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
 
-                Inquery_CustomerOrder.Min_Time_Delivery = reader.GetInt32(4);
+                Inquery_CustomerOrder.Min_Time_Delivery = reader.GetInt32(5);
 
-                Inquery_CustomerOrder.Max_Time_Delivery = reader.GetInt32(5);
+                Inquery_CustomerOrder.Max_Time_Delivery = reader.GetInt32(6);
 
-                Inquery_CustomerOrder.Date_Expired_Time_Inquiry = reader.GetDateTime(6);
+                Inquery_CustomerOrder.Selected_Exchange_Rate = reader.GetDecimal(7);
 
-                Inquery_CustomerOrder.Selected_Exchange_Rate = (decimal)reader.GetDecimal(7);
+                Inquery_CustomerOrder.Real_Exchange_Rate = reader.GetDecimal(8);
 
                 if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) Inquery_CustomerOrder.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
 
-                Inquery_CustomerOrder.Purpose_Purchasing = reader.GetString(9);
+                Inquery_CustomerOrder.Purpose_Purchasing = reader.GetString(10);
 
-                Inquery_CustomerOrder.Name_Of_EndUser = reader.GetString(10);
+                Inquery_CustomerOrder.Name_Of_EndUser = reader.GetString(11);
 
-                Inquery_CustomerOrder.ID_Customer_Order = reader.GetInt32(11);
+                if (!reader.IsDBNull(reader.GetOrdinal("File_Data_MR_Inquiry_Quotation"))) Inquery_CustomerOrder.File_Data_MR_Inquiry_Quotation = (byte[])reader["File_Data_MR_Inquiry_Quotation"];
+
+                Inquery_CustomerOrder.ID_Customer_Order = reader.GetInt32(12);
 
                 listInqueryCustomer_Order.Add(Inquery_CustomerOrder);
             }
 
             reader.Close();
 
-            this._Connection.Close();
-
             return listInqueryCustomer_Order;
-        }
-        public virtual int GetMaxIDInqueryQuotation()
-        {
-            InqueryQuotation inqueryQutation = new InqueryQuotation();
-            string query = "SELECT TOP 1 * FROM InqueryQuotation ORDER BY ID_Inquery_Quotation DESC";
-            SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
-
-            if (reader.Read())
-            {
-                inqueryQutation.ID_Inquery_Quotation = reader.GetInt32(0);
-
-                inqueryQutation.Name_Inquiry_Quotation = reader.GetString(1);
-
-                inqueryQutation.Number_Inquiry_Quotation = reader.GetString(2);
-
-                inqueryQutation.Date_Sending = reader.GetDateTime(3);
-
-              //  inqueryQutation.DeliveryCost_To_VietNam = (decimal)reader.GetDecimal(4);
-
-                //inqueryQutation.DeliveryCost_To_Customer = (decimal)reader.GetDecimal(5);
-
-                inqueryQutation.Min_Time_Delivery = reader.GetInt32(4);
-
-                inqueryQutation.Max_Time_Delivery = reader.GetInt32(5);
-
-                inqueryQutation.Date_Expired_Time_Inquiry = reader.GetDateTime(6);
-
-                inqueryQutation.Selected_Exchange_Rate = (decimal)reader.GetDecimal(7);
-
-                if (!reader.IsDBNull(reader.GetOrdinal("File_Data_Inquiry_Quotation"))) inqueryQutation.File_Data_Inquiry_Quotation = (byte[])reader["File_Data_Inquiry_Quotation"];
-
-                inqueryQutation.Purpose_Purchasing = reader.GetString(9);
-
-                inqueryQutation.Name_Of_EndUser = reader.GetString(10);
-
-                inqueryQutation.ID_Customer_Order = reader.GetInt32(11);
-            }
-
-            return inqueryQutation.ID_Inquery_Quotation;
         }
         public virtual int GetMaxIDCustomerGSES()
         {
@@ -305,7 +288,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             SqlDataReader reader = this.GetDataReaderByQueryAndParameter(query, null);
 
             if (reader.Read())
-            {          
+            {
                 customerOrder.ID_Customer_Order = reader.GetInt32(0);
 
                 customerOrder.Name_Order = reader.GetString(1);
@@ -427,7 +410,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
             return this.DeleteExcuteNonQueryGetCountDataResultByQueryAndParameter(query, null) > 0;
 
         }
-        
+
         //Inquery
         public virtual bool DeleteInqueryByIDCustomerOrder(int id_CustomerOrder)
         {

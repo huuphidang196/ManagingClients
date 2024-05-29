@@ -254,11 +254,10 @@ namespace ManagingClients._Data.Scripts.DAO
                 int i = posStart;
                 foreach (string item in listPara)
                 {
-                    if (item.Contains('@'))
-                    {
-                        sqlCommand.Parameters.AddWithValue(item, parameter[i]);
-                        i++;
-                    }
+                    if (!item.Contains('@')) continue;
+
+                    sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                    i++;
                 }
             }
 

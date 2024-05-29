@@ -29,12 +29,12 @@ namespace ManagingClients
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMainMerchandise = new System.Windows.Forms.Panel();
             this.pnlBelow = new System.Windows.Forms.Panel();
             this.pnlListElementEquip = new System.Windows.Forms.Panel();
@@ -124,21 +124,22 @@ namespace ManagingClients
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtNameEquipmentUnit = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.txtPercentVATEquip = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCountSetEquipmentUnit = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCostDeliveryCus = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtCostDeliveryVN = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.txtPercentBenefitDelivery = new System.Windows.Forms.TextBox();
+            this.txtPercentVATEquip = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.txtFinalValueEquip = new System.Windows.Forms.TextBox();
+            this.btnCalculatePrice = new System.Windows.Forms.Button();
+            this.txtCountSetEquipmentUnit = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtPercentBenefitEquip = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblValueVATEquip = new System.Windows.Forms.Label();
@@ -192,8 +193,8 @@ namespace ManagingClients
             this.grbDetailEquipment.SuspendLayout();
             this.flpDetailEquip.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -253,31 +254,31 @@ namespace ManagingClients
             // 
             // dgvListElement
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
-            this.dgvListElement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
+            this.dgvListElement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvListElement.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvListElement.ColumnHeadersHeight = 21;
             this.dgvListElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvListElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListElement.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListElement.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvListElement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListElement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
             this.dgvListElement.Location = new System.Drawing.Point(0, 40);
@@ -718,9 +719,9 @@ namespace ManagingClients
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(16, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 19);
+            this.label7.Size = new System.Drawing.Size(149, 19);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Báo Giá Số                 :";
+            this.label7.Text = "Báo Giá Số (*)           :";
             // 
             // panel6
             // 
@@ -969,9 +970,9 @@ namespace ManagingClients
             this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(16, 12);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(148, 19);
+            this.label25.Size = new System.Drawing.Size(154, 19);
             this.label25.TabIndex = 0;
-            this.label25.Text = "Báo giá MR gốc         :";
+            this.label25.Text = "Báo giá MR gốc (*)     :";
             // 
             // panel16
             // 
@@ -1170,9 +1171,9 @@ namespace ManagingClients
             // txtNameEquipmentUnit
             // 
             this.txtNameEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameEquipmentUnit.Location = new System.Drawing.Point(156, 9);
+            this.txtNameEquipmentUnit.Location = new System.Drawing.Point(173, 9);
             this.txtNameEquipmentUnit.Name = "txtNameEquipmentUnit";
-            this.txtNameEquipmentUnit.Size = new System.Drawing.Size(433, 26);
+            this.txtNameEquipmentUnit.Size = new System.Drawing.Size(416, 26);
             this.txtNameEquipmentUnit.TabIndex = 1;
             this.txtNameEquipmentUnit.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
             // 
@@ -1182,61 +1183,9 @@ namespace ManagingClients
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.Size = new System.Drawing.Size(154, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên Thiết bị            :";
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.txtPercentBenefitDelivery);
-            this.panel9.Controls.Add(this.txtPercentVATEquip);
-            this.panel9.Controls.Add(this.label42);
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(3, 103);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(599, 44);
-            this.panel9.TabIndex = 1;
-            // 
-            // txtPercentVATEquip
-            // 
-            this.txtPercentVATEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentVATEquip.Location = new System.Drawing.Point(463, 9);
-            this.txtPercentVATEquip.Name = "txtPercentVATEquip";
-            this.txtPercentVATEquip.Size = new System.Drawing.Size(125, 26);
-            this.txtPercentVATEquip.TabIndex = 1;
-            this.txtPercentVATEquip.Text = "10";
-            this.txtPercentVATEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(310, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Thuế VAT Thiết bị (%) :";
-            // 
-            // txtCountSetEquipmentUnit
-            // 
-            this.txtCountSetEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountSetEquipmentUnit.Location = new System.Drawing.Point(463, 103);
-            this.txtCountSetEquipmentUnit.Name = "txtCountSetEquipmentUnit";
-            this.txtCountSetEquipmentUnit.Size = new System.Drawing.Size(125, 26);
-            this.txtCountSetEquipmentUnit.TabIndex = 1;
-            this.txtCountSetEquipmentUnit.Text = "10";
-            this.txtCountSetEquipmentUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(310, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Số lượng ( Bộ )           :";
+            this.label1.Text = "Tên Thiết bị (*)            :";
             // 
             // panel1
             // 
@@ -1253,11 +1202,11 @@ namespace ManagingClients
             // txtCostDeliveryCus
             // 
             this.txtCostDeliveryCus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostDeliveryCus.Location = new System.Drawing.Point(463, 9);
+            this.txtCostDeliveryCus.Location = new System.Drawing.Point(482, 9);
             this.txtCostDeliveryCus.Name = "txtCostDeliveryCus";
-            this.txtCostDeliveryCus.Size = new System.Drawing.Size(125, 26);
+            this.txtCostDeliveryCus.Size = new System.Drawing.Size(106, 26);
             this.txtCostDeliveryCus.TabIndex = 1;
-            this.txtCostDeliveryCus.Text = "156.32";
+            this.txtCostDeliveryCus.Text = "111111";
             this.txtCostDeliveryCus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label22
@@ -1266,16 +1215,16 @@ namespace ManagingClients
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(310, 12);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(152, 19);
+            this.label22.Size = new System.Drawing.Size(170, 19);
             this.label22.TabIndex = 0;
-            this.label22.Text = "Đến K/Hang (Euro)     :";
+            this.label22.Text = "Đến K/Hang (Euro) (*)    :";
             // 
             // txtCostDeliveryVN
             // 
             this.txtCostDeliveryVN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostDeliveryVN.Location = new System.Drawing.Point(156, 9);
+            this.txtCostDeliveryVN.Location = new System.Drawing.Point(173, 9);
             this.txtCostDeliveryVN.Name = "txtCostDeliveryVN";
-            this.txtCostDeliveryVN.Size = new System.Drawing.Size(138, 26);
+            this.txtCostDeliveryVN.Size = new System.Drawing.Size(123, 26);
             this.txtCostDeliveryVN.TabIndex = 1;
             this.txtCostDeliveryVN.Text = "10";
             this.txtCostDeliveryVN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1286,19 +1235,41 @@ namespace ManagingClients
             this.label23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(16, 12);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(131, 19);
+            this.label23.Size = new System.Drawing.Size(153, 19);
             this.label23.TabIndex = 0;
-            this.label23.Text = "Phí V/c VN (Euro) :";
+            this.label23.Text = "Phí V/c VN (Euro) (*) :";
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.txtPercentBenefitDelivery);
+            this.panel9.Controls.Add(this.txtPercentVATEquip);
+            this.panel9.Controls.Add(this.label42);
+            this.panel9.Controls.Add(this.label4);
+            this.panel9.Location = new System.Drawing.Point(3, 103);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(599, 44);
+            this.panel9.TabIndex = 1;
             // 
             // txtPercentBenefitDelivery
             // 
             this.txtPercentBenefitDelivery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentBenefitDelivery.Location = new System.Drawing.Point(156, 9);
+            this.txtPercentBenefitDelivery.Location = new System.Drawing.Point(173, 9);
             this.txtPercentBenefitDelivery.Name = "txtPercentBenefitDelivery";
-            this.txtPercentBenefitDelivery.Size = new System.Drawing.Size(138, 26);
+            this.txtPercentBenefitDelivery.Size = new System.Drawing.Size(123, 26);
             this.txtPercentBenefitDelivery.TabIndex = 1;
             this.txtPercentBenefitDelivery.Text = "50";
             this.txtPercentBenefitDelivery.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPercentVATEquip
+            // 
+            this.txtPercentVATEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPercentVATEquip.Location = new System.Drawing.Point(482, 9);
+            this.txtPercentVATEquip.Name = "txtPercentVATEquip";
+            this.txtPercentVATEquip.Size = new System.Drawing.Size(106, 26);
+            this.txtPercentVATEquip.TabIndex = 1;
+            this.txtPercentVATEquip.Text = "10";
+            this.txtPercentVATEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label42
             // 
@@ -1306,15 +1277,26 @@ namespace ManagingClients
             this.label42.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(16, 12);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(133, 19);
+            this.label42.Size = new System.Drawing.Size(155, 19);
             this.label42.TabIndex = 0;
-            this.label42.Text = "Lãi VC đến KH(%):";
+            this.label42.Text = "Lãi VC đến KH(%)(*) :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(310, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Thuế VAT Thiết bị (%)(*) :";
             // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label27);
             this.panel14.Controls.Add(this.txtFinalValueEquip);
+            this.panel14.Controls.Add(this.btnCalculatePrice);
             this.panel14.Controls.Add(this.txtCountSetEquipmentUnit);
             this.panel14.Controls.Add(this.label2);
             this.panel14.Controls.Add(this.txtPercentBenefitEquip);
@@ -1349,12 +1331,42 @@ namespace ManagingClients
             this.txtFinalValueEquip.TabIndex = 1;
             this.txtFinalValueEquip.Text = "10,234,567,890";
             // 
+            // btnCalculatePrice
+            // 
+            this.btnCalculatePrice.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnCalculatePrice.Location = new System.Drawing.Point(170, 154);
+            this.btnCalculatePrice.Name = "btnCalculatePrice";
+            this.btnCalculatePrice.Size = new System.Drawing.Size(120, 35);
+            this.btnCalculatePrice.TabIndex = 2;
+            this.btnCalculatePrice.Text = "Tính Toán";
+            this.btnCalculatePrice.UseVisualStyleBackColor = false;
+            // 
+            // txtCountSetEquipmentUnit
+            // 
+            this.txtCountSetEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountSetEquipmentUnit.Location = new System.Drawing.Point(482, 103);
+            this.txtCountSetEquipmentUnit.Name = "txtCountSetEquipmentUnit";
+            this.txtCountSetEquipmentUnit.Size = new System.Drawing.Size(106, 26);
+            this.txtCountSetEquipmentUnit.TabIndex = 1;
+            this.txtCountSetEquipmentUnit.Text = "10";
+            this.txtCountSetEquipmentUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(314, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Số lượng ( Bộ )               :";
+            // 
             // txtPercentBenefitEquip
             // 
             this.txtPercentBenefitEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentBenefitEquip.Location = new System.Drawing.Point(463, 55);
+            this.txtPercentBenefitEquip.Location = new System.Drawing.Point(482, 55);
             this.txtPercentBenefitEquip.Name = "txtPercentBenefitEquip";
-            this.txtPercentBenefitEquip.Size = new System.Drawing.Size(125, 26);
+            this.txtPercentBenefitEquip.Size = new System.Drawing.Size(106, 26);
             this.txtPercentBenefitEquip.TabIndex = 1;
             this.txtPercentBenefitEquip.Text = "50";
             this.txtPercentBenefitEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1385,11 +1397,11 @@ namespace ManagingClients
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(310, 59);
+            this.label36.Location = new System.Drawing.Point(314, 59);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(151, 19);
+            this.label36.Size = new System.Drawing.Size(165, 19);
             this.label36.TabIndex = 0;
-            this.label36.Text = "Lãi Thiết bị ( % )         :";
+            this.label36.Text = "Lãi Thiết bị ( % ) ( * )     :";
             // 
             // lblValueCaculatedEquip
             // 
@@ -1409,9 +1421,9 @@ namespace ManagingClients
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(15, 59);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 19);
+            this.label9.Size = new System.Drawing.Size(147, 19);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Theo TT đã gồm lãi   :";
+            this.label9.Text = "Theo TT đã gồm lãi    :";
             // 
             // label10
             // 
@@ -1473,31 +1485,31 @@ namespace ManagingClients
             // 
             // dtgAllEquipOfInquery
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dtgAllEquipOfInquery.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dtgAllEquipOfInquery.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgAllEquipOfInquery.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAllEquipOfInquery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAllEquipOfInquery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dtgAllEquipOfInquery.ColumnHeadersHeight = 21;
             this.dtgAllEquipOfInquery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgAllEquipOfInquery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgAllEquipOfInquery.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgAllEquipOfInquery.DefaultCellStyle = dataGridViewCellStyle12;
             this.dtgAllEquipOfInquery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgAllEquipOfInquery.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
             this.dtgAllEquipOfInquery.Location = new System.Drawing.Point(0, 0);
@@ -1609,6 +1621,7 @@ namespace ManagingClients
             this.Name = "frmMerchandise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMerchandise";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMerchandise_FormClosed);
             this.Load += new System.EventHandler(this.frmMerchandise_Load);
             this.pnlMainMerchandise.ResumeLayout(false);
             this.pnlBelow.ResumeLayout(false);
@@ -1657,10 +1670,10 @@ namespace ManagingClients
             this.flpDetailEquip.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -1799,5 +1812,6 @@ namespace ManagingClients
         public System.Windows.Forms.Label lblValueVATEquip;
         public System.Windows.Forms.Label lblValueCaculatedEquip;
         public Guna.UI2.WinForms.Guna2DataGridView dtgAllEquipOfInquery;
+        public System.Windows.Forms.Button btnCalculatePrice;
     }
 }
