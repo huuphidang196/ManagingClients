@@ -48,7 +48,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
 
             this._lblValueVATEquip = frmMerchandise.Instance.lblValueVATEquip;
             this._lblValueEquipCaculated = frmMerchandise.Instance.lblValueCaculatedEquip;
-          
+
             this._btnCalculatePrice = frmMerchandise.Instance.btnCalculatePrice;
             this._btnCalculatePrice.Click += new EventHandler(this.AddEventButtonCalculatePrice);
 
@@ -62,6 +62,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             this._dtgAllEquipOfInquery = frmMerchandise.Instance.dtgAllEquipOfInquery;
             this._dtgAllEquipOfInquery.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.RecifyNameColumnOfEquip);
             this._dtgAllEquipOfInquery.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this._dtgAllEquipOfInquery.CellDoubleClick += DataGridView_CellDoubleClick;
             this._dtgAllEquipOfInquery.MultiSelect = false;
             this._dtgAllEquipOfInquery.SelectionChanged += new EventHandler(this.AddEventSelectedEquipChange);
         }
@@ -74,6 +75,23 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
         protected virtual void AddEventAddEquip(object sender, EventArgs e)
         {
             //Insert
+            this._UnitsDeviceInquery = this.GetUnitsDeviceInqueryByAssembleAllControl();
+
+            bool saveSuccess = DetailUnitsDevicInqueryDataProvider.Instance.InsertUnitsDeviceInquery(this._UnitsDeviceInquery);
+            string str_Result = saveSuccess ? "Thêm Thiết Bị thành công! " : "Thêm thất bại";
+            MessageBox.Show(str_Result);
+
+            if (saveSuccess)
+            {
+                this.ClearAllDataEquipOfInquery();
+                return;
+            }
+
+            this._UnitsDeviceInquery.ID_Units_Device_Inquery = DetailUnitsDevicInqueryDataProvider.Instance.GetMaxIDUnitsDeviceInquery();
+            this._UnitsDeviceInquery.ID_Inquery_Quotation = frmMerchandise.Instance.InqueryQuotation.ID_Inquery_Quotation;
+
+            //Update Data GridView
+
         }
         protected virtual void RecifyNameColumnOfEquip(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -126,9 +144,47 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
 
         }
 
+        protected virtual void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Xử lý sự kiện double-click tại đây
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row_Selected = this._dtgAllEquipOfInquery.Rows[e.RowIndex];
+            //int id_UnitDeviceInquery = int.Parse(row_Selected.Cells[0].Value.ToString());
+            //this._CustomerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
+
+            //if (this._CustomerGSES == null)
+            //{
+            //    MessageBox.Show("Vui lòng chọn lại Khách Hàng cần kiểm tra");
+            //    return;
+            //}
+
+            //FrmDetailCustomer.Instance.SetCustomerGSES(this._CustomerGSES);
+            //DialogResult ret = FrmDetailCustomer.Instance.ShowDialog();
+
+            //if (ret == DialogResult.Cancel)
+            //{
+            //    //MessageBox.Show("Update Data");
+            //    this.ShowAllListCustomer();
+            //}
+        }
         #endregion
 
         #region Internal_Function
+        protected virtual void ClearAllDataEquipOfInquery()
+        {
+            this._txtNameEquipmentUnit.Text = "";
+            this._txtCountSetEquipmentUnit.Text = "0";
+            this._txtPercentVATEquip.Text = "10";
+            this._txtCostDeliveryVN.Text = "";
+            this._txtCostDeliveryCus.Text = "";
+            this._txtPercentBenefitDelivery.Text = "50";
+            this._txtPercentBenefitEquip.Text = "50";
+            this._txtFinalValueEquip.Text = "";
+
+            this._lblValueVATEquip.Text = "0";
+            this._lblValueEquipCaculated.Text = "0";
+        }
         protected virtual void SetContentAllDataOnInquery()
         {
             this._txtNameEquipmentUnit.Text = this._UnitsDeviceInquery.Name_Units_Device_Inquery;
@@ -183,6 +239,25 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             return VAT + cost_Caculated;
         }
 
+        protected virtual UnitsDeviceInquery GetUnitsDeviceInqueryByAssembleAllControl()
+
+        {
+            UnitsDeviceInquery unitsDeviceInquery = new UnitsDeviceInquery();
+
+            unitsDeviceInquery.ID_Units_Device_Inquery = this._UnitsDeviceInquery.ID_Units_Device_Inquery;
+
+            unitsDeviceInquery.ID_Inquery_Quotation = this._UnitsDeviceInquery.ID_Inquery_Quotation;
+            unitsDeviceInquery.Name_Units_Device_Inquery = this._txtNameEquipmentUnit.Text;
+            unitsDeviceInquery.Count_Set_Units_Device_Inquery = int.Parse(this._txtCountSetEquipmentUnit.Text);
+            unitsDeviceInquery.Percent_VAT_Units_Device_Inquery = decimal.Parse(this._txtPercentVATEquip.Text);
+            unitsDeviceInquery.Cost_Delivery_To_VN = decimal.Parse(this._txtCostDeliveryVN.Text);
+            unitsDeviceInquery.Cost_Delivery_To_Customer = decimal.Parse(this._txtCostDeliveryCus.Text);
+            unitsDeviceInquery.Percent_Benefit_Cost_Delivery_To_Cus = decimal.Parse(this._txtPercentBenefitDelivery.Text);
+            unitsDeviceInquery.Percent_Benefit_Cost_Units_Inquery = decimal.Parse(this._txtPercentBenefitEquip.Text);
+            unitsDeviceInquery.Final_Value_Units_Device_Inquery = decimal.Parse(this._txtFinalValueEquip.Text);
+
+            return unitsDeviceInquery;
+        }
         #endregion
 
         #region Reference_OutSide
