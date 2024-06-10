@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforSysInquery;
+﻿using ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip;
+using ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforSysInquery;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +25,15 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop
         protected PanelSystemInforInquerySC _PanelSystemInforInquerySC;
         public PanelSystemInforInquerySC PanelSystemInforInquerySC => _PanelSystemInforInquerySC;
 
+        protected PanelInforEquipSC _PanelInforEquipSC;
+        public PanelInforEquipSC PanelInforEquipSC => _PanelInforEquipSC;
+
         public static Action EventShowAllDataOnLoad;
 
         private PanelTopMerchandiseSC()
         {
             this._PanelSystemInforInquerySC = new PanelSystemInforInquerySC();
+            this._PanelInforEquipSC = new PanelInforEquipSC();
         }
         public virtual void ShowAllValueOnScene()
         {

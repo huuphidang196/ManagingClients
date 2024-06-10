@@ -142,6 +142,7 @@
     <Compile Include="_Data\Scripts\BLL\FormDetailCustomerInqueryContract\pnlTopCusIC\PanelTopCusICSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\PanelTopMerchandiseSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforEquip\flpDetailEquip\FlowLayoutPanelDetailEquip.cs" />
+    <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforEquip\flpDetailEquip\flpElementOfEquip\FlowLayoutPanelElementsOfEquipSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforEquip\PanelInforEquipSC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforSysInquery\flpSysDetailInquery\FlowLayoutPanelSysDetailInquerySC.cs" />
     <Compile Include="_Data\Scripts\BLL\FormMerchandise\pnlTop\pnlInforSysInquery\PanelSystemInforInquerySC.cs" />

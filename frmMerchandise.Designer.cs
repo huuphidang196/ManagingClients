@@ -29,36 +29,35 @@ namespace ManagingClients
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlMainMerchandise = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlMainLeft = new System.Windows.Forms.Panel();
             this.pnlBelow = new System.Windows.Forms.Panel();
             this.pnlListElementEquip = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.dgvListElement = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dtgAllEquipOfInquery = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlInfoElement = new System.Windows.Forms.Panel();
             this.grbInforElement = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpElementsOfEquip = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtArticalNo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtNameElement = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPricePerOneElement = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtCountElements = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtArticalDesign = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -66,8 +65,8 @@ namespace ManagingClients
             this.btnDeleteElement = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.pnlCenter = new System.Windows.Forms.Panel();
-            this.pnlTop = new System.Windows.Forms.Panel();
+            this.pnlMainTop = new System.Windows.Forms.Panel();
+            this.pnlTopLeft = new System.Windows.Forms.Panel();
             this.pnlInforSysInquery = new System.Windows.Forms.Panel();
             this.grbSystemDetailInquery = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flpSysDetailInquery = new System.Windows.Forms.FlowLayoutPanel();
@@ -152,29 +151,27 @@ namespace ManagingClients
             this.btnEditEquip = new System.Windows.Forms.Button();
             this.btnAddEquip = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgAllEquipOfInquery = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgvListElement = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.pnlMainMerchandise.SuspendLayout();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.pnlInfoElement = new System.Windows.Forms.Panel();
+            this.pnlMainRight = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnlMainLeft.SuspendLayout();
             this.pnlBelow.SuspendLayout();
             this.pnlListElementEquip.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListElement)).BeginInit();
-            this.pnlInfoElement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAllEquipOfInquery)).BeginInit();
             this.grbInforElement.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.flpElementsOfEquip.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.pnlTop.SuspendLayout();
+            this.pnlTopLeft.SuspendLayout();
             this.pnlInforSysInquery.SuspendLayout();
             this.grbSystemDetailInquery.SuspendLayout();
             this.flpSysDetailInquery.SuspendLayout();
@@ -198,42 +195,42 @@ namespace ManagingClients
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAllEquipOfInquery)).BeginInit();
-            this.panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListElement)).BeginInit();
+            this.panel23.SuspendLayout();
+            this.pnlInfoElement.SuspendLayout();
+            this.pnlMainRight.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlMainMerchandise
+            // pnlMainLeft
             // 
-            this.pnlMainMerchandise.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlMainMerchandise.Controls.Add(this.pnlBelow);
-            this.pnlMainMerchandise.Controls.Add(this.pnlCenter);
-            this.pnlMainMerchandise.Controls.Add(this.pnlTop);
-            this.pnlMainMerchandise.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainMerchandise.Location = new System.Drawing.Point(0, 0);
-            this.pnlMainMerchandise.Name = "pnlMainMerchandise";
-            this.pnlMainMerchandise.Size = new System.Drawing.Size(1304, 841);
-            this.pnlMainMerchandise.TabIndex = 0;
+            this.pnlMainLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlMainLeft.Controls.Add(this.pnlBelow);
+            this.pnlMainLeft.Controls.Add(this.pnlTopLeft);
+            this.pnlMainLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMainLeft.Location = new System.Drawing.Point(0, 48);
+            this.pnlMainLeft.Name = "pnlMainLeft";
+            this.pnlMainLeft.Size = new System.Drawing.Size(680, 833);
+            this.pnlMainLeft.TabIndex = 0;
             // 
             // pnlBelow
             // 
             this.pnlBelow.BackColor = System.Drawing.Color.LightSlateGray;
             this.pnlBelow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlBelow.Controls.Add(this.pnlListElementEquip);
-            this.pnlBelow.Controls.Add(this.pnlInfoElement);
             this.pnlBelow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBelow.Location = new System.Drawing.Point(0, 535);
+            this.pnlBelow.Location = new System.Drawing.Point(0, 540);
             this.pnlBelow.Name = "pnlBelow";
-            this.pnlBelow.Size = new System.Drawing.Size(1304, 306);
+            this.pnlBelow.Size = new System.Drawing.Size(680, 293);
             this.pnlBelow.TabIndex = 3;
             // 
             // pnlListElementEquip
             // 
             this.pnlListElementEquip.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pnlListElementEquip.Controls.Add(this.guna2GroupBox1);
-            this.pnlListElementEquip.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlListElementEquip.Location = new System.Drawing.Point(678, 0);
+            this.pnlListElementEquip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListElementEquip.Location = new System.Drawing.Point(0, 0);
             this.pnlListElementEquip.Name = "pnlListElementEquip";
-            this.pnlListElementEquip.Size = new System.Drawing.Size(624, 304);
+            this.pnlListElementEquip.Size = new System.Drawing.Size(678, 291);
             this.pnlListElementEquip.TabIndex = 1;
             // 
             // guna2GroupBox1
@@ -241,73 +238,73 @@ namespace ManagingClients
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GroupBox1.BorderRadius = 10;
             this.guna2GroupBox1.BorderThickness = 5;
-            this.guna2GroupBox1.Controls.Add(this.dgvListElement);
+            this.guna2GroupBox1.Controls.Add(this.dtgAllEquipOfInquery);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(624, 304);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(678, 291);
             this.guna2GroupBox1.TabIndex = 1;
-            this.guna2GroupBox1.Text = "Danh sách thành phần trong thiết bị";
+            this.guna2GroupBox1.Text = "Danh sách Thiết bị trong Đơn hàng";
             // 
-            // dgvListElement
+            // dtgAllEquipOfInquery
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
-            this.dgvListElement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvListElement.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvListElement.ColumnHeadersHeight = 21;
-            this.dgvListElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
+            this.dtgAllEquipOfInquery.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgAllEquipOfInquery.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAllEquipOfInquery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgAllEquipOfInquery.ColumnHeadersHeight = 21;
+            this.dtgAllEquipOfInquery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgAllEquipOfInquery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListElement.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvListElement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListElement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
-            this.dgvListElement.Location = new System.Drawing.Point(0, 40);
-            this.dgvListElement.Name = "dgvListElement";
-            this.dgvListElement.RowHeadersVisible = false;
-            this.dgvListElement.Size = new System.Drawing.Size(624, 264);
-            this.dgvListElement.TabIndex = 0;
-            this.dgvListElement.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Turquoise;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListElement.ThemeStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dgvListElement.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
-            this.dgvListElement.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
-            this.dgvListElement.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListElement.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dgvListElement.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListElement.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListElement.ThemeStyle.HeaderStyle.Height = 21;
-            this.dgvListElement.ThemeStyle.ReadOnly = false;
-            this.dgvListElement.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
-            this.dgvListElement.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListElement.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dgvListElement.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvListElement.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvListElement.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
-            this.dgvListElement.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgAllEquipOfInquery.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgAllEquipOfInquery.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgAllEquipOfInquery.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
+            this.dtgAllEquipOfInquery.Location = new System.Drawing.Point(0, 40);
+            this.dtgAllEquipOfInquery.Name = "dtgAllEquipOfInquery";
+            this.dtgAllEquipOfInquery.RowHeadersVisible = false;
+            this.dtgAllEquipOfInquery.Size = new System.Drawing.Size(678, 251);
+            this.dtgAllEquipOfInquery.TabIndex = 0;
+            this.dtgAllEquipOfInquery.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Turquoise;
+            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
+            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgAllEquipOfInquery.ThemeStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.dtgAllEquipOfInquery.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(179)))), ((int)(((byte)(241)))));
+            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(0)))), ((int)(((byte)(211)))));
+            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.Height = 21;
+            this.dtgAllEquipOfInquery.ThemeStyle.ReadOnly = false;
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
+            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // Column1
             // 
@@ -324,46 +321,36 @@ namespace ManagingClients
             this.Column3.HeaderText = "Column3";
             this.Column3.Name = "Column3";
             // 
-            // pnlInfoElement
-            // 
-            this.pnlInfoElement.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnlInfoElement.Controls.Add(this.grbInforElement);
-            this.pnlInfoElement.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlInfoElement.Location = new System.Drawing.Point(0, 0);
-            this.pnlInfoElement.Name = "pnlInfoElement";
-            this.pnlInfoElement.Size = new System.Drawing.Size(649, 304);
-            this.pnlInfoElement.TabIndex = 1;
-            // 
             // grbInforElement
             // 
             this.grbInforElement.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.grbInforElement.BorderRadius = 10;
             this.grbInforElement.BorderThickness = 5;
-            this.grbInforElement.Controls.Add(this.flowLayoutPanel2);
-            this.grbInforElement.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grbInforElement.Controls.Add(this.flpElementsOfEquip);
+            this.grbInforElement.CustomBorderColor = System.Drawing.Color.Yellow;
             this.grbInforElement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbInforElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.grbInforElement.ForeColor = System.Drawing.Color.Black;
             this.grbInforElement.Location = new System.Drawing.Point(0, 0);
             this.grbInforElement.Name = "grbInforElement";
-            this.grbInforElement.Size = new System.Drawing.Size(649, 304);
+            this.grbInforElement.Size = new System.Drawing.Size(609, 311);
             this.grbInforElement.TabIndex = 1;
             this.grbInforElement.Text = "Thiết lập Thành phần trong Thiết bị";
             // 
-            // flowLayoutPanel2
+            // flpElementsOfEquip
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.Controls.Add(this.panel3);
-            this.flowLayoutPanel2.Controls.Add(this.panel12);
-            this.flowLayoutPanel2.Controls.Add(this.panel13);
-            this.flowLayoutPanel2.Controls.Add(this.panel17);
-            this.flowLayoutPanel2.Controls.Add(this.panel20);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 40);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(649, 264);
-            this.flowLayoutPanel2.TabIndex = 0;
+            this.flpElementsOfEquip.AutoScroll = true;
+            this.flpElementsOfEquip.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpElementsOfEquip.Controls.Add(this.panel3);
+            this.flpElementsOfEquip.Controls.Add(this.panel12);
+            this.flpElementsOfEquip.Controls.Add(this.panel13);
+            this.flpElementsOfEquip.Controls.Add(this.panel17);
+            this.flpElementsOfEquip.Controls.Add(this.panel20);
+            this.flpElementsOfEquip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpElementsOfEquip.Location = new System.Drawing.Point(0, 40);
+            this.flpElementsOfEquip.Name = "flpElementsOfEquip";
+            this.flpElementsOfEquip.Size = new System.Drawing.Size(609, 271);
+            this.flpElementsOfEquip.TabIndex = 0;
             // 
             // panel3
             // 
@@ -372,7 +359,7 @@ namespace ManagingClients
             this.panel3.Controls.Add(this.label16);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(627, 44);
+            this.panel3.Size = new System.Drawing.Size(603, 44);
             this.panel3.TabIndex = 1;
             // 
             // txtArticalNo
@@ -380,7 +367,7 @@ namespace ManagingClients
             this.txtArticalNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArticalNo.Location = new System.Drawing.Point(173, 9);
             this.txtArticalNo.Name = "txtArticalNo";
-            this.txtArticalNo.Size = new System.Drawing.Size(441, 26);
+            this.txtArticalNo.Size = new System.Drawing.Size(428, 26);
             this.txtArticalNo.TabIndex = 1;
             this.txtArticalNo.Text = "635-AT1BC1ZP06S4SB1100AA";
             // 
@@ -397,21 +384,21 @@ namespace ManagingClients
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.textBox7);
+            this.panel12.Controls.Add(this.txtNameElement);
             this.panel12.Controls.Add(this.label17);
             this.panel12.Location = new System.Drawing.Point(3, 53);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(627, 44);
+            this.panel12.Size = new System.Drawing.Size(603, 44);
             this.panel12.TabIndex = 0;
             // 
-            // textBox7
+            // txtNameElement
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(173, 9);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(441, 26);
-            this.textBox7.TabIndex = 1;
-            this.textBox7.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
+            this.txtNameElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameElement.Location = new System.Drawing.Point(173, 9);
+            this.txtNameElement.Name = "txtNameElement";
+            this.txtNameElement.Size = new System.Drawing.Size(428, 26);
+            this.txtNameElement.TabIndex = 1;
+            this.txtNameElement.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
             // 
             // label17
             // 
@@ -426,42 +413,43 @@ namespace ManagingClients
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.textBox5);
+            this.panel13.Controls.Add(this.txtPricePerOneElement);
             this.panel13.Controls.Add(this.label24);
-            this.panel13.Controls.Add(this.textBox8);
+            this.panel13.Controls.Add(this.txtCountElements);
             this.panel13.Controls.Add(this.label18);
             this.panel13.Location = new System.Drawing.Point(3, 103);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(627, 44);
+            this.panel13.Size = new System.Drawing.Size(603, 44);
             this.panel13.TabIndex = 1;
             // 
-            // textBox5
+            // txtPricePerOneElement
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(482, 9);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 26);
-            this.textBox5.TabIndex = 1;
-            this.textBox5.Text = "532.25";
+            this.txtPricePerOneElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPricePerOneElement.Location = new System.Drawing.Point(497, 9);
+            this.txtPricePerOneElement.Name = "txtPricePerOneElement";
+            this.txtPricePerOneElement.Size = new System.Drawing.Size(103, 26);
+            this.txtPricePerOneElement.TabIndex = 1;
+            this.txtPricePerOneElement.Text = "532.25";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(320, 12);
+            this.label24.Location = new System.Drawing.Point(330, 12);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(131, 19);
+            this.label24.Size = new System.Drawing.Size(163, 19);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Giá mội cái (Euro)  :";
+            this.label24.Text = "Giá mội cái (Euro)          :";
             // 
-            // textBox8
+            // txtCountElements
             // 
-            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(173, 9);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(132, 26);
-            this.textBox8.TabIndex = 1;
-            this.textBox8.Text = "01";
+            this.txtCountElements.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountElements.Location = new System.Drawing.Point(173, 9);
+            this.txtCountElements.Name = "txtCountElements";
+            this.txtCountElements.Size = new System.Drawing.Size(132, 26);
+            this.txtCountElements.TabIndex = 1;
+            this.txtCountElements.Text = "01";
+            this.txtCountElements.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label18
             // 
@@ -476,32 +464,32 @@ namespace ManagingClients
             // panel17
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.textBox12);
+            this.panel17.Controls.Add(this.txtArticalDesign);
             this.panel17.Controls.Add(this.label21);
             this.panel17.Controls.Add(this.label19);
             this.panel17.Controls.Add(this.label20);
             this.panel17.Location = new System.Drawing.Point(3, 153);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(627, 44);
+            this.panel17.Size = new System.Drawing.Size(603, 44);
             this.panel17.TabIndex = 2;
             // 
-            // textBox12
+            // txtArticalDesign
             // 
-            this.textBox12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(173, 10);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(132, 26);
-            this.textBox12.TabIndex = 1;
-            this.textBox12.Text = "MT-ST160F/4/6m";
+            this.txtArticalDesign.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArticalDesign.Location = new System.Drawing.Point(173, 10);
+            this.txtArticalDesign.Name = "txtArticalDesign";
+            this.txtArticalDesign.Size = new System.Drawing.Size(132, 26);
+            this.txtArticalDesign.TabIndex = 1;
+            this.txtArticalDesign.Text = "MT-ST160F/4/6m";
             // 
             // label21
             // 
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(482, 10);
+            this.label21.Location = new System.Drawing.Point(497, 10);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(132, 26);
+            this.label21.Size = new System.Drawing.Size(104, 26);
             this.label21.TabIndex = 0;
             this.label21.Text = "325.5";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -510,7 +498,7 @@ namespace ManagingClients
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(320, 12);
+            this.label19.Location = new System.Drawing.Point(330, 12);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(161, 19);
             this.label19.TabIndex = 0;
@@ -533,7 +521,7 @@ namespace ManagingClients
             this.panel20.Controls.Add(this.button6);
             this.panel20.Location = new System.Drawing.Point(3, 203);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(627, 58);
+            this.panel20.Size = new System.Drawing.Size(603, 58);
             this.panel20.TabIndex = 6;
             // 
             // btnDeleteElement
@@ -566,35 +554,34 @@ namespace ManagingClients
             this.button6.Text = "Thêm";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // pnlCenter
+            // pnlMainTop
             // 
-            this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCenter.Location = new System.Drawing.Point(0, 485);
-            this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(1304, 50);
-            this.pnlCenter.TabIndex = 2;
+            this.pnlMainTop.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnlMainTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMainTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainTop.Name = "pnlMainTop";
+            this.pnlMainTop.Size = new System.Drawing.Size(1334, 48);
+            this.pnlMainTop.TabIndex = 2;
             // 
-            // pnlTop
+            // pnlTopLeft
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.LightSlateGray;
-            this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTop.Controls.Add(this.pnlInforSysInquery);
-            this.pnlTop.Controls.Add(this.pnlInforEquip);
-            this.pnlTop.Controls.Add(this.panel22);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1304, 485);
-            this.pnlTop.TabIndex = 1;
+            this.pnlTopLeft.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pnlTopLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTopLeft.Controls.Add(this.pnlInforSysInquery);
+            this.pnlTopLeft.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopLeft.Name = "pnlTopLeft";
+            this.pnlTopLeft.Size = new System.Drawing.Size(680, 540);
+            this.pnlTopLeft.TabIndex = 1;
             // 
             // pnlInforSysInquery
             // 
             this.pnlInforSysInquery.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pnlInforSysInquery.Controls.Add(this.grbSystemDetailInquery);
-            this.pnlInforSysInquery.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlInforSysInquery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInforSysInquery.Location = new System.Drawing.Point(0, 0);
             this.pnlInforSysInquery.Name = "pnlInforSysInquery";
-            this.pnlInforSysInquery.Size = new System.Drawing.Size(649, 483);
+            this.pnlInforSysInquery.Size = new System.Drawing.Size(678, 538);
             this.pnlInforSysInquery.TabIndex = 0;
             // 
             // grbSystemDetailInquery
@@ -609,7 +596,7 @@ namespace ManagingClients
             this.grbSystemDetailInquery.ForeColor = System.Drawing.Color.Black;
             this.grbSystemDetailInquery.Location = new System.Drawing.Point(0, 0);
             this.grbSystemDetailInquery.Name = "grbSystemDetailInquery";
-            this.grbSystemDetailInquery.Size = new System.Drawing.Size(649, 483);
+            this.grbSystemDetailInquery.Size = new System.Drawing.Size(678, 538);
             this.grbSystemDetailInquery.TabIndex = 1;
             this.grbSystemDetailInquery.Text = "Thiết lập Thông tin hệ thống Báo Giá ";
             // 
@@ -631,7 +618,7 @@ namespace ManagingClients
             this.flpSysDetailInquery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpSysDetailInquery.Location = new System.Drawing.Point(0, 40);
             this.flpSysDetailInquery.Name = "flpSysDetailInquery";
-            this.flpSysDetailInquery.Size = new System.Drawing.Size(649, 443);
+            this.flpSysDetailInquery.Size = new System.Drawing.Size(678, 498);
             this.flpSysDetailInquery.TabIndex = 0;
             // 
             // panel7
@@ -641,7 +628,7 @@ namespace ManagingClients
             this.panel7.Controls.Add(this.label13);
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(627, 44);
+            this.panel7.Size = new System.Drawing.Size(646, 44);
             this.panel7.TabIndex = 1;
             // 
             // lblNameCustomer
@@ -650,7 +637,7 @@ namespace ManagingClients
             this.lblNameCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameCustomer.Location = new System.Drawing.Point(174, 9);
             this.lblNameCustomer.Name = "lblNameCustomer";
-            this.lblNameCustomer.Size = new System.Drawing.Size(441, 26);
+            this.lblNameCustomer.Size = new System.Drawing.Size(467, 26);
             this.lblNameCustomer.TabIndex = 0;
             this.lblNameCustomer.Text = "CÔNG TY TNHH CÔNG NGHIỆP VŨ PHAN VPIC";
             this.lblNameCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -672,7 +659,7 @@ namespace ManagingClients
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(3, 53);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(627, 44);
+            this.panel4.Size = new System.Drawing.Size(646, 44);
             this.panel4.TabIndex = 0;
             // 
             // txtNameInquery
@@ -680,7 +667,7 @@ namespace ManagingClients
             this.txtNameInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameInquery.Location = new System.Drawing.Point(174, 9);
             this.txtNameInquery.Name = "txtNameInquery";
-            this.txtNameInquery.Size = new System.Drawing.Size(441, 26);
+            this.txtNameInquery.Size = new System.Drawing.Size(467, 26);
             this.txtNameInquery.TabIndex = 1;
             this.txtNameInquery.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
             // 
@@ -701,7 +688,7 @@ namespace ManagingClients
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(3, 103);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(627, 44);
+            this.panel5.Size = new System.Drawing.Size(646, 44);
             this.panel5.TabIndex = 1;
             // 
             // txtInqueryNumber
@@ -709,7 +696,7 @@ namespace ManagingClients
             this.txtInqueryNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInqueryNumber.Location = new System.Drawing.Point(174, 9);
             this.txtInqueryNumber.Name = "txtInqueryNumber";
-            this.txtInqueryNumber.Size = new System.Drawing.Size(441, 26);
+            this.txtInqueryNumber.Size = new System.Drawing.Size(467, 26);
             this.txtInqueryNumber.TabIndex = 1;
             this.txtInqueryNumber.Text = "GSES/123456";
             // 
@@ -732,7 +719,7 @@ namespace ManagingClients
             this.panel6.Controls.Add(this.label8);
             this.panel6.Location = new System.Drawing.Point(3, 153);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(627, 44);
+            this.panel6.Size = new System.Drawing.Size(646, 44);
             this.panel6.TabIndex = 2;
             // 
             // dtpDateExpiredInquery
@@ -740,7 +727,7 @@ namespace ManagingClients
             this.dtpDateExpiredInquery.CustomFormat = "dd/MM/yyyy";
             this.dtpDateExpiredInquery.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateExpiredInquery.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateExpiredInquery.Location = new System.Drawing.Point(483, 7);
+            this.dtpDateExpiredInquery.Location = new System.Drawing.Point(508, 7);
             this.dtpDateExpiredInquery.Name = "dtpDateExpiredInquery";
             this.dtpDateExpiredInquery.Size = new System.Drawing.Size(132, 26);
             this.dtpDateExpiredInquery.TabIndex = 1;
@@ -749,7 +736,7 @@ namespace ManagingClients
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(318, 11);
+            this.label14.Location = new System.Drawing.Point(343, 11);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(162, 19);
             this.label14.TabIndex = 0;
@@ -784,13 +771,13 @@ namespace ManagingClients
             this.panel10.Controls.Add(this.label12);
             this.panel10.Location = new System.Drawing.Point(3, 203);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(627, 44);
+            this.panel10.Size = new System.Drawing.Size(646, 44);
             this.panel10.TabIndex = 4;
             // 
             // txtMaxTimeDurationShip
             // 
             this.txtMaxTimeDurationShip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaxTimeDurationShip.Location = new System.Drawing.Point(483, 9);
+            this.txtMaxTimeDurationShip.Location = new System.Drawing.Point(508, 9);
             this.txtMaxTimeDurationShip.Name = "txtMaxTimeDurationShip";
             this.txtMaxTimeDurationShip.Size = new System.Drawing.Size(132, 26);
             this.txtMaxTimeDurationShip.TabIndex = 1;
@@ -817,7 +804,7 @@ namespace ManagingClients
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(319, 12);
+            this.label12.Location = new System.Drawing.Point(344, 12);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(160, 19);
             this.label12.TabIndex = 0;
@@ -832,13 +819,13 @@ namespace ManagingClients
             this.panel11.Controls.Add(this.label15);
             this.panel11.Location = new System.Drawing.Point(3, 253);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(627, 44);
+            this.panel11.Size = new System.Drawing.Size(646, 44);
             this.panel11.TabIndex = 5;
             // 
             // txtRealisticExchange
             // 
             this.txtRealisticExchange.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRealisticExchange.Location = new System.Drawing.Point(483, 9);
+            this.txtRealisticExchange.Location = new System.Drawing.Point(508, 9);
             this.txtRealisticExchange.Name = "txtRealisticExchange";
             this.txtRealisticExchange.Size = new System.Drawing.Size(132, 26);
             this.txtRealisticExchange.TabIndex = 1;
@@ -859,7 +846,7 @@ namespace ManagingClients
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(318, 12);
+            this.label38.Location = new System.Drawing.Point(343, 12);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(164, 19);
             this.label38.TabIndex = 0;
@@ -882,7 +869,7 @@ namespace ManagingClients
             this.panel24.Controls.Add(this.label41);
             this.panel24.Location = new System.Drawing.Point(3, 303);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(627, 44);
+            this.panel24.Size = new System.Drawing.Size(646, 44);
             this.panel24.TabIndex = 5;
             // 
             // txtEndUser
@@ -890,7 +877,7 @@ namespace ManagingClients
             this.txtEndUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndUser.Location = new System.Drawing.Point(174, 9);
             this.txtEndUser.Name = "txtEndUser";
-            this.txtEndUser.Size = new System.Drawing.Size(441, 26);
+            this.txtEndUser.Size = new System.Drawing.Size(467, 26);
             this.txtEndUser.TabIndex = 1;
             // 
             // label41
@@ -910,7 +897,7 @@ namespace ManagingClients
             this.panel21.Controls.Add(this.label37);
             this.panel21.Location = new System.Drawing.Point(3, 353);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(627, 44);
+            this.panel21.Size = new System.Drawing.Size(646, 44);
             this.panel21.TabIndex = 8;
             // 
             // txtPurposePurchasing
@@ -918,7 +905,7 @@ namespace ManagingClients
             this.txtPurposePurchasing.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPurposePurchasing.Location = new System.Drawing.Point(174, 9);
             this.txtPurposePurchasing.Name = "txtPurposePurchasing";
-            this.txtPurposePurchasing.Size = new System.Drawing.Size(441, 26);
+            this.txtPurposePurchasing.Size = new System.Drawing.Size(467, 26);
             this.txtPurposePurchasing.TabIndex = 1;
             // 
             // label37
@@ -939,7 +926,7 @@ namespace ManagingClients
             this.panel18.Controls.Add(this.label25);
             this.panel18.Location = new System.Drawing.Point(3, 403);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(627, 44);
+            this.panel18.Size = new System.Drawing.Size(646, 44);
             this.panel18.TabIndex = 1;
             // 
             // btnDeleteFileInquery
@@ -980,7 +967,7 @@ namespace ManagingClients
             this.panel16.Controls.Add(this.btnSaveSysInquery);
             this.panel16.Location = new System.Drawing.Point(3, 453);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(627, 63);
+            this.panel16.Size = new System.Drawing.Size(646, 63);
             this.panel16.TabIndex = 6;
             // 
             // btnRemoveSysInquery
@@ -1018,7 +1005,7 @@ namespace ManagingClients
             this.panel19.Controls.Add(this.label35);
             this.panel19.Location = new System.Drawing.Point(3, 522);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(627, 247);
+            this.panel19.Size = new System.Drawing.Size(646, 247);
             this.panel19.TabIndex = 5;
             // 
             // txtTotalValueChar
@@ -1069,7 +1056,7 @@ namespace ManagingClients
             this.lblTotalValueNoVAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblTotalValueNoVAT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTotalValueNoVAT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalValueNoVAT.Location = new System.Drawing.Point(338, 45);
+            this.lblTotalValueNoVAT.Location = new System.Drawing.Point(339, 45);
             this.lblTotalValueNoVAT.Name = "lblTotalValueNoVAT";
             this.lblTotalValueNoVAT.Size = new System.Drawing.Size(277, 26);
             this.lblTotalValueNoVAT.TabIndex = 0;
@@ -1120,10 +1107,10 @@ namespace ManagingClients
             // 
             this.pnlInforEquip.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pnlInforEquip.Controls.Add(this.grbDetailEquipment);
-            this.pnlInforEquip.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlInforEquip.Location = new System.Drawing.Point(678, 0);
+            this.pnlInforEquip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInforEquip.Location = new System.Drawing.Point(0, 0);
             this.pnlInforEquip.Name = "pnlInforEquip";
-            this.pnlInforEquip.Size = new System.Drawing.Size(624, 483);
+            this.pnlInforEquip.Size = new System.Drawing.Size(638, 833);
             this.pnlInforEquip.TabIndex = 1;
             // 
             // grbDetailEquipment
@@ -1138,7 +1125,7 @@ namespace ManagingClients
             this.grbDetailEquipment.ForeColor = System.Drawing.Color.Black;
             this.grbDetailEquipment.Location = new System.Drawing.Point(0, 0);
             this.grbDetailEquipment.Name = "grbDetailEquipment";
-            this.grbDetailEquipment.Size = new System.Drawing.Size(624, 483);
+            this.grbDetailEquipment.Size = new System.Drawing.Size(638, 833);
             this.grbDetailEquipment.TabIndex = 2;
             this.grbDetailEquipment.Text = "Thiết lập thông tin thiết bị trong Báo giá";
             // 
@@ -1149,13 +1136,15 @@ namespace ManagingClients
             this.flpDetailEquip.Controls.Add(this.panel8);
             this.flpDetailEquip.Controls.Add(this.panel1);
             this.flpDetailEquip.Controls.Add(this.panel9);
-            this.flpDetailEquip.Controls.Add(this.panel14);
+            this.flpDetailEquip.Controls.Add(this.panel23);
             this.flpDetailEquip.Controls.Add(this.panel15);
+            this.flpDetailEquip.Controls.Add(this.pnlInfoElement);
             this.flpDetailEquip.Controls.Add(this.panel2);
+            this.flpDetailEquip.Controls.Add(this.panel14);
             this.flpDetailEquip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDetailEquip.Location = new System.Drawing.Point(0, 40);
             this.flpDetailEquip.Name = "flpDetailEquip";
-            this.flpDetailEquip.Size = new System.Drawing.Size(624, 443);
+            this.flpDetailEquip.Size = new System.Drawing.Size(638, 793);
             this.flpDetailEquip.TabIndex = 0;
             // 
             // panel8
@@ -1165,7 +1154,7 @@ namespace ManagingClients
             this.panel8.Controls.Add(this.label1);
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(599, 44);
+            this.panel8.Size = new System.Drawing.Size(610, 44);
             this.panel8.TabIndex = 0;
             // 
             // txtNameEquipmentUnit
@@ -1173,9 +1162,9 @@ namespace ManagingClients
             this.txtNameEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameEquipmentUnit.Location = new System.Drawing.Point(173, 9);
             this.txtNameEquipmentUnit.Name = "txtNameEquipmentUnit";
-            this.txtNameEquipmentUnit.Size = new System.Drawing.Size(416, 26);
+            this.txtNameEquipmentUnit.Size = new System.Drawing.Size(432, 26);
             this.txtNameEquipmentUnit.TabIndex = 1;
-            this.txtNameEquipmentUnit.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
+            this.txtNameEquipmentUnit.Text = "ETOS_ED";
             // 
             // label1
             // 
@@ -1196,13 +1185,13 @@ namespace ManagingClients
             this.panel1.Controls.Add(this.label23);
             this.panel1.Location = new System.Drawing.Point(3, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 44);
+            this.panel1.Size = new System.Drawing.Size(610, 44);
             this.panel1.TabIndex = 1;
             // 
             // txtCostDeliveryCus
             // 
             this.txtCostDeliveryCus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostDeliveryCus.Location = new System.Drawing.Point(482, 9);
+            this.txtCostDeliveryCus.Location = new System.Drawing.Point(497, 9);
             this.txtCostDeliveryCus.Name = "txtCostDeliveryCus";
             this.txtCostDeliveryCus.Size = new System.Drawing.Size(106, 26);
             this.txtCostDeliveryCus.TabIndex = 1;
@@ -1213,11 +1202,11 @@ namespace ManagingClients
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(310, 12);
+            this.label22.Location = new System.Drawing.Point(320, 12);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(170, 19);
+            this.label22.Size = new System.Drawing.Size(174, 19);
             this.label22.TabIndex = 0;
-            this.label22.Text = "Đến K/Hang (Euro) (*)    :";
+            this.label22.Text = "Đến K/Hang (Euro) (*)     :";
             // 
             // txtCostDeliveryVN
             // 
@@ -1248,7 +1237,7 @@ namespace ManagingClients
             this.panel9.Controls.Add(this.label4);
             this.panel9.Location = new System.Drawing.Point(3, 103);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(599, 44);
+            this.panel9.Size = new System.Drawing.Size(610, 44);
             this.panel9.TabIndex = 1;
             // 
             // txtPercentBenefitDelivery
@@ -1264,7 +1253,7 @@ namespace ManagingClients
             // txtPercentVATEquip
             // 
             this.txtPercentVATEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentVATEquip.Location = new System.Drawing.Point(482, 9);
+            this.txtPercentVATEquip.Location = new System.Drawing.Point(497, 9);
             this.txtPercentVATEquip.Name = "txtPercentVATEquip";
             this.txtPercentVATEquip.Size = new System.Drawing.Size(106, 26);
             this.txtPercentVATEquip.TabIndex = 1;
@@ -1285,11 +1274,11 @@ namespace ManagingClients
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(310, 12);
+            this.label4.Location = new System.Drawing.Point(320, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 19);
+            this.label4.Size = new System.Drawing.Size(175, 19);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Thuế VAT Thiết bị (%)(*) :";
+            this.label4.Text = "Thuế VAT Thiết bị (%)(*)  :";
             // 
             // panel14
             // 
@@ -1297,46 +1286,42 @@ namespace ManagingClients
             this.panel14.Controls.Add(this.label27);
             this.panel14.Controls.Add(this.txtFinalValueEquip);
             this.panel14.Controls.Add(this.btnCalculatePrice);
-            this.panel14.Controls.Add(this.txtCountSetEquipmentUnit);
-            this.panel14.Controls.Add(this.label2);
-            this.panel14.Controls.Add(this.txtPercentBenefitEquip);
             this.panel14.Controls.Add(this.label3);
             this.panel14.Controls.Add(this.lblValueVATEquip);
-            this.panel14.Controls.Add(this.label36);
             this.panel14.Controls.Add(this.lblValueCaculatedEquip);
             this.panel14.Controls.Add(this.label9);
             this.panel14.Controls.Add(this.label10);
-            this.panel14.Location = new System.Drawing.Point(3, 153);
+            this.panel14.Location = new System.Drawing.Point(3, 688);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(599, 215);
+            this.panel14.Size = new System.Drawing.Size(610, 146);
             this.panel14.TabIndex = 5;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(15, 110);
+            this.label27.Location = new System.Drawing.Point(321, 52);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(145, 19);
+            this.label27.Size = new System.Drawing.Size(133, 19);
             this.label27.TabIndex = 0;
-            this.label27.Text = "Thuế VAT  (VNĐ)     :";
+            this.label27.Text = "Thuế VAT  (VNĐ)  :";
             // 
             // txtFinalValueEquip
             // 
             this.txtFinalValueEquip.BackColor = System.Drawing.Color.SandyBrown;
             this.txtFinalValueEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFinalValueEquip.Location = new System.Drawing.Point(463, 159);
+            this.txtFinalValueEquip.Location = new System.Drawing.Point(177, 103);
             this.txtFinalValueEquip.Name = "txtFinalValueEquip";
-            this.txtFinalValueEquip.Size = new System.Drawing.Size(125, 26);
+            this.txtFinalValueEquip.Size = new System.Drawing.Size(124, 26);
             this.txtFinalValueEquip.TabIndex = 1;
             this.txtFinalValueEquip.Text = "10,234,567,890";
             // 
             // btnCalculatePrice
             // 
             this.btnCalculatePrice.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnCalculatePrice.Location = new System.Drawing.Point(170, 154);
+            this.btnCalculatePrice.Location = new System.Drawing.Point(329, 98);
             this.btnCalculatePrice.Name = "btnCalculatePrice";
-            this.btnCalculatePrice.Size = new System.Drawing.Size(120, 35);
+            this.btnCalculatePrice.Size = new System.Drawing.Size(129, 35);
             this.btnCalculatePrice.TabIndex = 2;
             this.btnCalculatePrice.Text = "Tính Toán";
             this.btnCalculatePrice.UseVisualStyleBackColor = false;
@@ -1344,29 +1329,29 @@ namespace ManagingClients
             // txtCountSetEquipmentUnit
             // 
             this.txtCountSetEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountSetEquipmentUnit.Location = new System.Drawing.Point(482, 103);
+            this.txtCountSetEquipmentUnit.Location = new System.Drawing.Point(497, 10);
             this.txtCountSetEquipmentUnit.Name = "txtCountSetEquipmentUnit";
             this.txtCountSetEquipmentUnit.Size = new System.Drawing.Size(106, 26);
             this.txtCountSetEquipmentUnit.TabIndex = 1;
-            this.txtCountSetEquipmentUnit.Text = "10";
+            this.txtCountSetEquipmentUnit.Text = "1";
             this.txtCountSetEquipmentUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(314, 106);
+            this.label2.Location = new System.Drawing.Point(320, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 19);
+            this.label2.Size = new System.Drawing.Size(175, 19);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Số lượng ( Bộ )               :";
+            this.label2.Text = "Số lượng ( Bộ )                 :";
             // 
             // txtPercentBenefitEquip
             // 
             this.txtPercentBenefitEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentBenefitEquip.Location = new System.Drawing.Point(482, 55);
+            this.txtPercentBenefitEquip.Location = new System.Drawing.Point(173, 11);
             this.txtPercentBenefitEquip.Name = "txtPercentBenefitEquip";
-            this.txtPercentBenefitEquip.Size = new System.Drawing.Size(106, 26);
+            this.txtPercentBenefitEquip.Size = new System.Drawing.Size(123, 26);
             this.txtPercentBenefitEquip.TabIndex = 1;
             this.txtPercentBenefitEquip.Text = "50";
             this.txtPercentBenefitEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1375,20 +1360,20 @@ namespace ManagingClients
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(310, 163);
+            this.label3.Location = new System.Drawing.Point(16, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 19);
+            this.label3.Size = new System.Drawing.Size(155, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Giá cuối của thiết bị  :";
+            this.label3.Text = "Giá cuối của Thiết bị :";
             // 
             // lblValueVATEquip
             // 
             this.lblValueVATEquip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblValueVATEquip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblValueVATEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueVATEquip.Location = new System.Drawing.Point(162, 106);
+            this.lblValueVATEquip.Location = new System.Drawing.Point(471, 47);
             this.lblValueVATEquip.Name = "lblValueVATEquip";
-            this.lblValueVATEquip.Size = new System.Drawing.Size(138, 26);
+            this.lblValueVATEquip.Size = new System.Drawing.Size(130, 26);
             this.lblValueVATEquip.TabIndex = 0;
             this.lblValueVATEquip.Text = "10,234,567,890";
             this.lblValueVATEquip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1397,20 +1382,20 @@ namespace ManagingClients
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(314, 59);
+            this.label36.Location = new System.Drawing.Point(16, 12);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(165, 19);
+            this.label36.Size = new System.Drawing.Size(157, 19);
             this.label36.TabIndex = 0;
-            this.label36.Text = "Lãi Thiết bị ( % ) ( * )     :";
+            this.label36.Text = "Lãi Thiết bị ( % ) ( * )   :";
             // 
             // lblValueCaculatedEquip
             // 
             this.lblValueCaculatedEquip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblValueCaculatedEquip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblValueCaculatedEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValueCaculatedEquip.Location = new System.Drawing.Point(162, 54);
+            this.lblValueCaculatedEquip.Location = new System.Drawing.Point(177, 47);
             this.lblValueCaculatedEquip.Name = "lblValueCaculatedEquip";
-            this.lblValueCaculatedEquip.Size = new System.Drawing.Size(138, 26);
+            this.lblValueCaculatedEquip.Size = new System.Drawing.Size(124, 26);
             this.lblValueCaculatedEquip.TabIndex = 0;
             this.lblValueCaculatedEquip.Text = "10,234,567,890";
             this.lblValueCaculatedEquip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1419,11 +1404,11 @@ namespace ManagingClients
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 59);
+            this.label9.Location = new System.Drawing.Point(15, 52);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 19);
+            this.label9.Size = new System.Drawing.Size(159, 19);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Theo TT đã gồm lãi    :";
+            this.label9.Text = "Theo TT đã gồm lãi       :";
             // 
             // label10
             // 
@@ -1437,20 +1422,21 @@ namespace ManagingClients
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.button1);
             this.panel15.Controls.Add(this.btnDeleteEquip);
             this.panel15.Controls.Add(this.btnEditEquip);
             this.panel15.Controls.Add(this.btnAddEquip);
-            this.panel15.Location = new System.Drawing.Point(3, 374);
+            this.panel15.Location = new System.Drawing.Point(3, 203);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(599, 70);
+            this.panel15.Size = new System.Drawing.Size(610, 63);
             this.panel15.TabIndex = 6;
             // 
             // btnDeleteEquip
             // 
             this.btnDeleteEquip.BackColor = System.Drawing.Color.DeepPink;
-            this.btnDeleteEquip.Location = new System.Drawing.Point(426, 10);
+            this.btnDeleteEquip.Location = new System.Drawing.Point(324, 10);
             this.btnDeleteEquip.Name = "btnDeleteEquip";
-            this.btnDeleteEquip.Size = new System.Drawing.Size(150, 40);
+            this.btnDeleteEquip.Size = new System.Drawing.Size(110, 40);
             this.btnDeleteEquip.TabIndex = 2;
             this.btnDeleteEquip.Text = "Xóa";
             this.btnDeleteEquip.UseVisualStyleBackColor = false;
@@ -1458,9 +1444,9 @@ namespace ManagingClients
             // btnEditEquip
             // 
             this.btnEditEquip.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnEditEquip.Location = new System.Drawing.Point(232, 10);
+            this.btnEditEquip.Location = new System.Drawing.Point(175, 10);
             this.btnEditEquip.Name = "btnEditEquip";
-            this.btnEditEquip.Size = new System.Drawing.Size(150, 40);
+            this.btnEditEquip.Size = new System.Drawing.Size(110, 40);
             this.btnEditEquip.TabIndex = 2;
             this.btnEditEquip.Text = "Sửa";
             this.btnEditEquip.UseVisualStyleBackColor = false;
@@ -1470,75 +1456,75 @@ namespace ManagingClients
             this.btnAddEquip.BackColor = System.Drawing.Color.GreenYellow;
             this.btnAddEquip.Location = new System.Drawing.Point(33, 10);
             this.btnAddEquip.Name = "btnAddEquip";
-            this.btnAddEquip.Size = new System.Drawing.Size(150, 40);
+            this.btnAddEquip.Size = new System.Drawing.Size(110, 40);
             this.btnAddEquip.TabIndex = 2;
             this.btnAddEquip.Text = "Thêm";
             this.btnAddEquip.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dtgAllEquipOfInquery);
-            this.panel2.Location = new System.Drawing.Point(3, 450);
+            this.panel2.Controls.Add(this.dgvListElement);
+            this.panel2.Location = new System.Drawing.Point(3, 591);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(599, 138);
+            this.panel2.Size = new System.Drawing.Size(610, 91);
             this.panel2.TabIndex = 6;
             // 
-            // dtgAllEquipOfInquery
+            // dgvListElement
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dtgAllEquipOfInquery.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dtgAllEquipOfInquery.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgAllEquipOfInquery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dtgAllEquipOfInquery.ColumnHeadersHeight = 21;
-            this.dtgAllEquipOfInquery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgAllEquipOfInquery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvListElement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvListElement.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvListElement.ColumnHeadersHeight = 21;
+            this.dgvListElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvListElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgAllEquipOfInquery.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dtgAllEquipOfInquery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgAllEquipOfInquery.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.dtgAllEquipOfInquery.Location = new System.Drawing.Point(0, 0);
-            this.dtgAllEquipOfInquery.Name = "dtgAllEquipOfInquery";
-            this.dtgAllEquipOfInquery.RowHeadersVisible = false;
-            this.dtgAllEquipOfInquery.Size = new System.Drawing.Size(599, 138);
-            this.dtgAllEquipOfInquery.TabIndex = 1;
-            this.dtgAllEquipOfInquery.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
-            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgAllEquipOfInquery.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgAllEquipOfInquery.ThemeStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dtgAllEquipOfInquery.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgAllEquipOfInquery.ThemeStyle.HeaderStyle.Height = 21;
-            this.dtgAllEquipOfInquery.ThemeStyle.ReadOnly = false;
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListElement.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvListElement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListElement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
+            this.dgvListElement.Location = new System.Drawing.Point(0, 0);
+            this.dgvListElement.Name = "dgvListElement";
+            this.dgvListElement.RowHeadersVisible = false;
+            this.dgvListElement.Size = new System.Drawing.Size(610, 91);
+            this.dgvListElement.TabIndex = 1;
+            this.dgvListElement.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
+            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvListElement.ThemeStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvListElement.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
+            this.dgvListElement.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.dgvListElement.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvListElement.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvListElement.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvListElement.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvListElement.ThemeStyle.HeaderStyle.Height = 21;
+            this.dgvListElement.ThemeStyle.ReadOnly = false;
+            this.dgvListElement.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.dgvListElement.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListElement.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvListElement.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvListElement.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvListElement.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            this.dgvListElement.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1555,65 +1541,56 @@ namespace ManagingClients
             this.dataGridViewTextBoxColumn3.HeaderText = "Column3";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // panel22
+            // panel23
             // 
-            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel22.Controls.Add(this.textBox11);
-            this.panel22.Controls.Add(this.label39);
-            this.panel22.Controls.Add(this.textBox13);
-            this.panel22.Controls.Add(this.label40);
-            this.panel22.Location = new System.Drawing.Point(677, 166);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(599, 44);
-            this.panel22.TabIndex = 1;
+            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Controls.Add(this.label36);
+            this.panel23.Controls.Add(this.txtPercentBenefitEquip);
+            this.panel23.Controls.Add(this.label2);
+            this.panel23.Controls.Add(this.txtCountSetEquipmentUnit);
+            this.panel23.Location = new System.Drawing.Point(3, 153);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(610, 44);
+            this.panel23.TabIndex = 1;
             // 
-            // textBox11
+            // pnlInfoElement
             // 
-            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(463, 9);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(125, 26);
-            this.textBox11.TabIndex = 1;
-            this.textBox11.Text = "156.32";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pnlInfoElement.AutoScroll = true;
+            this.pnlInfoElement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInfoElement.Controls.Add(this.grbInforElement);
+            this.pnlInfoElement.Location = new System.Drawing.Point(3, 272);
+            this.pnlInfoElement.Name = "pnlInfoElement";
+            this.pnlInfoElement.Size = new System.Drawing.Size(611, 313);
+            this.pnlInfoElement.TabIndex = 1;
             // 
-            // label39
+            // pnlMainRight
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(310, 12);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(152, 19);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Đến K/Hang (Euro)     :";
+            this.pnlMainRight.Controls.Add(this.pnlInforEquip);
+            this.pnlMainRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMainRight.Location = new System.Drawing.Point(696, 48);
+            this.pnlMainRight.Name = "pnlMainRight";
+            this.pnlMainRight.Size = new System.Drawing.Size(638, 833);
+            this.pnlMainRight.TabIndex = 0;
             // 
-            // textBox13
+            // button1
             // 
-            this.textBox13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(156, 9);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(138, 26);
-            this.textBox13.TabIndex = 1;
-            this.textBox13.Text = "10";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(16, 12);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(131, 19);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "Phí V/c VN (Euro) :";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(472, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tạo mới";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmMerchandise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1304, 841);
-            this.Controls.Add(this.pnlMainMerchandise);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1334, 881);
+            this.Controls.Add(this.pnlMainLeft);
+            this.Controls.Add(this.pnlMainRight);
+            this.Controls.Add(this.pnlMainTop);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -1623,14 +1600,13 @@ namespace ManagingClients
             this.Text = "frmMerchandise";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMerchandise_FormClosed);
             this.Load += new System.EventHandler(this.frmMerchandise_Load);
-            this.pnlMainMerchandise.ResumeLayout(false);
+            this.pnlMainLeft.ResumeLayout(false);
             this.pnlBelow.ResumeLayout(false);
             this.pnlListElementEquip.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListElement)).EndInit();
-            this.pnlInfoElement.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAllEquipOfInquery)).EndInit();
             this.grbInforElement.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flpElementsOfEquip.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -1640,7 +1616,7 @@ namespace ManagingClients
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel20.ResumeLayout(false);
-            this.pnlTop.ResumeLayout(false);
+            this.pnlTopLeft.ResumeLayout(false);
             this.pnlInforSysInquery.ResumeLayout(false);
             this.grbSystemDetailInquery.ResumeLayout(false);
             this.flpSysDetailInquery.ResumeLayout(false);
@@ -1678,19 +1654,21 @@ namespace ManagingClients
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAllEquipOfInquery)).EndInit();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListElement)).EndInit();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.pnlInfoElement.ResumeLayout(false);
+            this.pnlMainRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMainMerchandise;
-        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Panel pnlMainLeft;
+        private System.Windows.Forms.Panel pnlTopLeft;
         private System.Windows.Forms.Panel pnlBelow;
-        private System.Windows.Forms.Panel pnlCenter;
+        private System.Windows.Forms.Panel pnlMainTop;
         private System.Windows.Forms.Panel pnlInforSysInquery;
         public System.Windows.Forms.FlowLayoutPanel flpSysDetailInquery;
         private System.Windows.Forms.Panel panel4;
@@ -1736,27 +1714,26 @@ namespace ManagingClients
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btnEditEquip;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public System.Windows.Forms.FlowLayoutPanel flpElementsOfEquip;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtArticalNo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel12;
-        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox txtNameElement;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel13;
-        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox txtCountElements;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel20;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListElement;
-        private System.Windows.Forms.Panel pnlInfoElement;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgAllEquipOfInquery;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox txtPricePerOneElement;
         private System.Windows.Forms.Label label24;
-        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.TextBox txtArticalDesign;
         private System.Windows.Forms.Panel pnlListElementEquip;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
@@ -1795,11 +1772,6 @@ namespace ManagingClients
         private Guna.UI2.WinForms.Guna2GroupBox grbSystemDetailInquery;
         private Guna.UI2.WinForms.Guna2GroupBox grbDetailEquipment;
         private Guna.UI2.WinForms.Guna2GroupBox grbInforElement;
-        private System.Windows.Forms.Panel panel22;
-        public System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label39;
-        public System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label40;
         public System.Windows.Forms.TextBox txtPercentBenefitDelivery;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Panel panel24;
@@ -1811,7 +1783,11 @@ namespace ManagingClients
         public System.Windows.Forms.Label lblVATAllEquip;
         public System.Windows.Forms.Label lblValueVATEquip;
         public System.Windows.Forms.Label lblValueCaculatedEquip;
-        public Guna.UI2.WinForms.Guna2DataGridView dtgAllEquipOfInquery;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvListElement;
         public System.Windows.Forms.Button btnCalculatePrice;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel pnlInfoElement;
+        private System.Windows.Forms.Panel pnlMainRight;
+        public System.Windows.Forms.Button button1;
     }
 }

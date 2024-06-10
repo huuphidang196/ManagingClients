@@ -31,6 +31,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
         protected Button _btnEditEquip;
         protected Button _btnDeleteEquip;
 
+
         protected DataGridView _dtgAllEquipOfInquery;
 
         public FlowLayoutPanelDetailEquip()
@@ -59,7 +60,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             this._btnDeleteEquip = frmMerchandise.Instance.btnDeleteEquip;
 
 
-            this._dtgAllEquipOfInquery = frmMerchandise.Instance.dtgAllEquipOfInquery;
+            this._dtgAllEquipOfInquery = frmMerchandise.Instance.dgvListElement;
             this._dtgAllEquipOfInquery.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.RecifyNameColumnOfEquip);
             this._dtgAllEquipOfInquery.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this._dtgAllEquipOfInquery.CellDoubleClick += DataGridView_CellDoubleClick;
@@ -81,9 +82,9 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             string str_Result = saveSuccess ? "Thêm Thiết Bị thành công! " : "Thêm thất bại";
             MessageBox.Show(str_Result);
 
-            if (saveSuccess)
+            if (!saveSuccess)
             {
-                this.ClearAllDataEquipOfInquery();
+                this._UnitsDeviceInquery = new UnitsDeviceInquery();
                 return;
             }
 
