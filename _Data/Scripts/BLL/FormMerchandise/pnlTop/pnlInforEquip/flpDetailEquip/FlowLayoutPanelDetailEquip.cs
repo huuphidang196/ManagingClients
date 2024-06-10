@@ -1,4 +1,5 @@
-﻿using ManagingClients._Data.Scripts.DAO.FormMerchandise;
+﻿using ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip.flpDetailEquip.flpElementOfEquip;
+using ManagingClients._Data.Scripts.DAO.FormMerchandise;
 using ManagingClients._Data.Scripts.DTO.Customer;
 using System;
 using System.Collections.Generic;
@@ -6,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip.flpDetailEquip
 {
     public class FlowLayoutPanelDetailEquip
     {
         protected UnitsDeviceInquery _UnitsDeviceInquery;
+        public UnitsDeviceInquery UnitsDeviceInquery => _UnitsDeviceInquery;
+
+        protected FlowLayoutPanelElementsOfEquipSC _FlowLayoutPanelElementsOfEquipSC;
+        public FlowLayoutPanelElementsOfEquipSC FlowLayoutPanelElementsOfEquipSC => _FlowLayoutPanelElementsOfEquipSC;
 
         protected TextBox _txtNameEquipmentUnit;
         protected TextBox _txtCountSetEquipmentUnit;
@@ -32,11 +38,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
         protected Button _btnDeleteEquip;
 
 
-        protected DataGridView _dtgAllEquipOfInquery;
+        protected Guna2DataGridView _dtgAllEquipOfInquery;
 
         public FlowLayoutPanelDetailEquip()
         {
             this._UnitsDeviceInquery = new UnitsDeviceInquery();
+
+            this._FlowLayoutPanelElementsOfEquipSC = new FlowLayoutPanelElementsOfEquipSC();
 
             this._txtNameEquipmentUnit = frmMerchandise.Instance.txtNameEquipmentUnit;
             this._txtCountSetEquipmentUnit = frmMerchandise.Instance.txtCountSetEquipmentUnit;
@@ -60,12 +68,15 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             this._btnDeleteEquip = frmMerchandise.Instance.btnDeleteEquip;
 
 
-            this._dtgAllEquipOfInquery = frmMerchandise.Instance.dgvListElement;
+            this._dtgAllEquipOfInquery = frmMerchandise.Instance.dtgAllEquipOfInquery;
+            this.ShowAllListEquipments();
             this._dtgAllEquipOfInquery.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(this.RecifyNameColumnOfEquip);
             this._dtgAllEquipOfInquery.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this._dtgAllEquipOfInquery.CellDoubleClick += DataGridView_CellDoubleClick;
             this._dtgAllEquipOfInquery.MultiSelect = false;
             this._dtgAllEquipOfInquery.SelectionChanged += new EventHandler(this.AddEventSelectedEquipChange);
+       
+        
         }
 
         #region Add_Events
@@ -78,7 +89,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             //Insert
             this._UnitsDeviceInquery = this.GetUnitsDeviceInqueryByAssembleAllControl();
 
-            bool saveSuccess = DetailUnitsDevicInqueryDataProvider.Instance.InsertUnitsDeviceInquery(this._UnitsDeviceInquery);
+            bool saveSuccess = DetailUnitsDeviceInqueryDataProvider.Instance.InsertUnitsDeviceInquery(this._UnitsDeviceInquery);
             string str_Result = saveSuccess ? "Thêm Thiết Bị thành công! " : "Thêm thất bại";
             MessageBox.Show(str_Result);
 
@@ -88,11 +99,13 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
                 return;
             }
 
-            this._UnitsDeviceInquery.ID_Units_Device_Inquery = DetailUnitsDevicInqueryDataProvider.Instance.GetMaxIDUnitsDeviceInquery();
+            this._UnitsDeviceInquery.ID_Units_Device_Inquery = DetailUnitsDeviceInqueryDataProvider.Instance.GetMaxIDUnitsDeviceInquery();
             this._UnitsDeviceInquery.ID_Inquery_Quotation = frmMerchandise.Instance.InqueryQuotation.ID_Inquery_Quotation;
 
             //Update Data GridView
-
+            this.ShowAllListEquipments();
+            //Show All Element of Equip
+            this._FlowLayoutPanelElementsOfEquipSC.ShowAllListElementsOfEquip();
         }
         protected virtual void RecifyNameColumnOfEquip(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -151,23 +164,17 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
             if (e.RowIndex < 0) return;
 
             DataGridViewRow row_Selected = this._dtgAllEquipOfInquery.Rows[e.RowIndex];
-            //int id_UnitDeviceInquery = int.Parse(row_Selected.Cells[0].Value.ToString());
-            //this._CustomerGSES = PurchasingOrderProvider.Instance.GetCustomerGSES(id_Customer);
+            int id_Unit_Inquery = int.Parse(row_Selected.Cells[0].Value.ToString());
+            this._UnitsDeviceInquery = DetailUnitsDeviceInqueryDataProvider.Instance.GetUnitsDeviceInqueryByIDUnitsDevice(id_Unit_Inquery);
 
-            //if (this._CustomerGSES == null)
-            //{
-            //    MessageBox.Show("Vui lòng chọn lại Khách Hàng cần kiểm tra");
-            //    return;
-            //}
+            if (this._UnitsDeviceInquery == null)
+            {
+                MessageBox.Show("Vui lòng chọn lại Thiêt bị cần kiểm tra");
+                return;
+            }
 
-            //FrmDetailCustomer.Instance.SetCustomerGSES(this._CustomerGSES);
-            //DialogResult ret = FrmDetailCustomer.Instance.ShowDialog();
-
-            //if (ret == DialogResult.Cancel)
-            //{
-            //    //MessageBox.Show("Update Data");
-            //    this.ShowAllListCustomer();
-            //}
+            //Show All Element of Equip
+            this._FlowLayoutPanelElementsOfEquipSC.ShowAllListElementsOfEquip();
         }
         #endregion
 
@@ -259,12 +266,20 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
 
             return unitsDeviceInquery;
         }
+
         #endregion
 
         #region Reference_OutSide
-        public virtual void ShowAllDataOnFormMerchandise()
+        public virtual void ShowAllListEquipments()
         {
-            this.SetContentAllDataOnInquery();
+            int id_Inquery = frmMerchandise.Instance.InqueryQuotation.ID_Inquery_Quotation;
+
+            if (id_Inquery == 0) return;
+
+            List<UnitsDeviceInquery> listUnitsDeviceInquery = DetailUnitsDeviceInqueryDataProvider.Instance.GetListUnitsDeviceInqueryByIDInqueryQuotation(id_Inquery);
+
+            this._dtgAllEquipOfInquery.DataSource = listUnitsDeviceInquery;
+
         }
         #endregion
     }

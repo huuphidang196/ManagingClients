@@ -62,8 +62,8 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforSysIn
 
             this._txtEndUser = frmMerchandise.Instance.txtEndUser;
             this._txtPurposePurchasing = frmMerchandise.Instance.txtPurposePurchasing;
+
             this._txtTotalValueChar = frmMerchandise.Instance.txtTotalValueChar;
-            this._txtTotalValueChar.Leave += new EventHandler(AddEventCheckTextBoxNumberValidAfterPress);
 
             this._lblNameCustomerGSES = frmMerchandise.Instance.lblNameCustomer;
 

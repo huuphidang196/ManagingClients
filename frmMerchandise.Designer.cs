@@ -40,32 +40,6 @@ namespace ManagingClients
             this.pnlListElementEquip = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgAllEquipOfInquery = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grbInforElement = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.flpElementsOfEquip = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtArticalNo = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.txtNameElement = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.txtPricePerOneElement = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtCountElements = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.txtArticalDesign = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.btnDeleteElement = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pnlMainTop = new System.Windows.Forms.Panel();
             this.pnlTopLeft = new System.Windows.Forms.Panel();
             this.pnlInforSysInquery = new System.Windows.Forms.Panel();
             this.grbSystemDetailInquery = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -117,6 +91,29 @@ namespace ManagingClients
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
+            this.grbInforElement = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.flpElementsOfEquip = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtArticalNo = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.txtNameElement = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.txtPricePerOneElement = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtCountElements = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.txtArticalDesign = new System.Windows.Forms.TextBox();
+            this.lblTotalPriceElements = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.btnDeleteElement = new System.Windows.Forms.Button();
+            this.btnEditElement = new System.Windows.Forms.Button();
+            this.btnAddElement = new System.Windows.Forms.Button();
+            this.pnlMainTop = new System.Windows.Forms.Panel();
             this.pnlInforEquip = new System.Windows.Forms.Panel();
             this.grbDetailEquipment = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flpDetailEquip = new System.Windows.Forms.FlowLayoutPanel();
@@ -133,44 +130,34 @@ namespace ManagingClients
             this.txtPercentVATEquip = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtPercentBenefitEquip = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCountSetEquipmentUnit = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteEquip = new System.Windows.Forms.Button();
+            this.btnEditEquip = new System.Windows.Forms.Button();
+            this.btnAddEquip = new System.Windows.Forms.Button();
+            this.pnlInfoElement = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvListElements = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.txtFinalValueEquip = new System.Windows.Forms.TextBox();
             this.btnCalculatePrice = new System.Windows.Forms.Button();
-            this.txtCountSetEquipmentUnit = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPercentBenefitEquip = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblValueVATEquip = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.lblValueCaculatedEquip = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnDeleteEquip = new System.Windows.Forms.Button();
-            this.btnEditEquip = new System.Windows.Forms.Button();
-            this.btnAddEquip = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvListElement = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.pnlInfoElement = new System.Windows.Forms.Panel();
             this.pnlMainRight = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlMainLeft.SuspendLayout();
             this.pnlBelow.SuspendLayout();
             this.pnlListElementEquip.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAllEquipOfInquery)).BeginInit();
-            this.grbInforElement.SuspendLayout();
-            this.flpElementsOfEquip.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.pnlTopLeft.SuspendLayout();
             this.pnlInforSysInquery.SuspendLayout();
             this.grbSystemDetailInquery.SuspendLayout();
@@ -186,18 +173,25 @@ namespace ManagingClients
             this.panel18.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel19.SuspendLayout();
+            this.grbInforElement.SuspendLayout();
+            this.flpElementsOfEquip.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel20.SuspendLayout();
             this.pnlInforEquip.SuspendLayout();
             this.grbDetailEquipment.SuspendLayout();
             this.flpDetailEquip.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListElement)).BeginInit();
             this.panel23.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.pnlInfoElement.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListElements)).BeginInit();
+            this.panel14.SuspendLayout();
             this.pnlMainRight.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -264,10 +258,6 @@ namespace ManagingClients
             this.dtgAllEquipOfInquery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgAllEquipOfInquery.ColumnHeadersHeight = 21;
             this.dtgAllEquipOfInquery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgAllEquipOfInquery.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(204)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
@@ -305,263 +295,6 @@ namespace ManagingClients
             this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.Height = 22;
             this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(85)))), ((int)(((byte)(225)))));
             this.dtgAllEquipOfInquery.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            // 
-            // grbInforElement
-            // 
-            this.grbInforElement.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.grbInforElement.BorderRadius = 10;
-            this.grbInforElement.BorderThickness = 5;
-            this.grbInforElement.Controls.Add(this.flpElementsOfEquip);
-            this.grbInforElement.CustomBorderColor = System.Drawing.Color.Yellow;
-            this.grbInforElement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbInforElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.grbInforElement.ForeColor = System.Drawing.Color.Black;
-            this.grbInforElement.Location = new System.Drawing.Point(0, 0);
-            this.grbInforElement.Name = "grbInforElement";
-            this.grbInforElement.Size = new System.Drawing.Size(609, 311);
-            this.grbInforElement.TabIndex = 1;
-            this.grbInforElement.Text = "Thiết lập Thành phần trong Thiết bị";
-            // 
-            // flpElementsOfEquip
-            // 
-            this.flpElementsOfEquip.AutoScroll = true;
-            this.flpElementsOfEquip.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flpElementsOfEquip.Controls.Add(this.panel3);
-            this.flpElementsOfEquip.Controls.Add(this.panel12);
-            this.flpElementsOfEquip.Controls.Add(this.panel13);
-            this.flpElementsOfEquip.Controls.Add(this.panel17);
-            this.flpElementsOfEquip.Controls.Add(this.panel20);
-            this.flpElementsOfEquip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpElementsOfEquip.Location = new System.Drawing.Point(0, 40);
-            this.flpElementsOfEquip.Name = "flpElementsOfEquip";
-            this.flpElementsOfEquip.Size = new System.Drawing.Size(609, 271);
-            this.flpElementsOfEquip.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txtArticalNo);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(603, 44);
-            this.panel3.TabIndex = 1;
-            // 
-            // txtArticalNo
-            // 
-            this.txtArticalNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArticalNo.Location = new System.Drawing.Point(173, 9);
-            this.txtArticalNo.Name = "txtArticalNo";
-            this.txtArticalNo.Size = new System.Drawing.Size(428, 26);
-            this.txtArticalNo.TabIndex = 1;
-            this.txtArticalNo.Text = "635-AT1BC1ZP06S4SB1100AA";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(15, 12);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 19);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Số hiệu TP(Artical No):";
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.txtNameElement);
-            this.panel12.Controls.Add(this.label17);
-            this.panel12.Location = new System.Drawing.Point(3, 53);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(603, 44);
-            this.panel12.TabIndex = 0;
-            // 
-            // txtNameElement
-            // 
-            this.txtNameElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameElement.Location = new System.Drawing.Point(173, 9);
-            this.txtNameElement.Name = "txtNameElement";
-            this.txtNameElement.Size = new System.Drawing.Size(428, 26);
-            this.txtNameElement.TabIndex = 1;
-            this.txtNameElement.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(15, 12);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(157, 19);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Tên Thành phần           : ";
-            // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.txtPricePerOneElement);
-            this.panel13.Controls.Add(this.label24);
-            this.panel13.Controls.Add(this.txtCountElements);
-            this.panel13.Controls.Add(this.label18);
-            this.panel13.Location = new System.Drawing.Point(3, 103);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(603, 44);
-            this.panel13.TabIndex = 1;
-            // 
-            // txtPricePerOneElement
-            // 
-            this.txtPricePerOneElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPricePerOneElement.Location = new System.Drawing.Point(497, 9);
-            this.txtPricePerOneElement.Name = "txtPricePerOneElement";
-            this.txtPricePerOneElement.Size = new System.Drawing.Size(103, 26);
-            this.txtPricePerOneElement.TabIndex = 1;
-            this.txtPricePerOneElement.Text = "532.25";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(330, 12);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(163, 19);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Giá mội cái (Euro)          :";
-            // 
-            // txtCountElements
-            // 
-            this.txtCountElements.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountElements.Location = new System.Drawing.Point(173, 9);
-            this.txtCountElements.Name = "txtCountElements";
-            this.txtCountElements.Size = new System.Drawing.Size(132, 26);
-            this.txtCountElements.TabIndex = 1;
-            this.txtCountElements.Text = "01";
-            this.txtCountElements.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(15, 12);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(152, 19);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Số lượng thành phần    :";
-            // 
-            // panel17
-            // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.txtArticalDesign);
-            this.panel17.Controls.Add(this.label21);
-            this.panel17.Controls.Add(this.label19);
-            this.panel17.Controls.Add(this.label20);
-            this.panel17.Location = new System.Drawing.Point(3, 153);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(603, 44);
-            this.panel17.TabIndex = 2;
-            // 
-            // txtArticalDesign
-            // 
-            this.txtArticalDesign.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArticalDesign.Location = new System.Drawing.Point(173, 10);
-            this.txtArticalDesign.Name = "txtArticalDesign";
-            this.txtArticalDesign.Size = new System.Drawing.Size(132, 26);
-            this.txtArticalDesign.TabIndex = 1;
-            this.txtArticalDesign.Text = "MT-ST160F/4/6m";
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(497, 10);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(104, 26);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "325.5";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(330, 12);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(161, 19);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Giá Tổng của TP (Euro) :";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(15, 12);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(157, 19);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Mã TP (Artical Design) :";
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.btnDeleteElement);
-            this.panel20.Controls.Add(this.button5);
-            this.panel20.Controls.Add(this.button6);
-            this.panel20.Location = new System.Drawing.Point(3, 203);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(603, 58);
-            this.panel20.TabIndex = 6;
-            // 
-            // btnDeleteElement
-            // 
-            this.btnDeleteElement.BackColor = System.Drawing.Color.DeepPink;
-            this.btnDeleteElement.Location = new System.Drawing.Point(431, 9);
-            this.btnDeleteElement.Name = "btnDeleteElement";
-            this.btnDeleteElement.Size = new System.Drawing.Size(150, 40);
-            this.btnDeleteElement.TabIndex = 3;
-            this.btnDeleteElement.Text = "Xóa";
-            this.btnDeleteElement.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DarkOrange;
-            this.button5.Location = new System.Drawing.Point(237, 9);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 40);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Sửa";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.GreenYellow;
-            this.button6.Location = new System.Drawing.Point(38, 9);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 40);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // pnlMainTop
-            // 
-            this.pnlMainTop.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnlMainTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMainTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlMainTop.Name = "pnlMainTop";
-            this.pnlMainTop.Size = new System.Drawing.Size(1334, 48);
-            this.pnlMainTop.TabIndex = 2;
             // 
             // pnlTopLeft
             // 
@@ -1103,6 +836,248 @@ namespace ManagingClients
             this.label35.TabIndex = 0;
             this.label35.Text = "Giá tri Toàn bộ Thiết bị sau tính toán (VNĐ)   :";
             // 
+            // grbInforElement
+            // 
+            this.grbInforElement.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.grbInforElement.BorderRadius = 10;
+            this.grbInforElement.BorderThickness = 5;
+            this.grbInforElement.Controls.Add(this.flpElementsOfEquip);
+            this.grbInforElement.CustomBorderColor = System.Drawing.Color.Yellow;
+            this.grbInforElement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbInforElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.grbInforElement.ForeColor = System.Drawing.Color.Black;
+            this.grbInforElement.Location = new System.Drawing.Point(0, 0);
+            this.grbInforElement.Name = "grbInforElement";
+            this.grbInforElement.Size = new System.Drawing.Size(609, 311);
+            this.grbInforElement.TabIndex = 1;
+            this.grbInforElement.Text = "Thiết lập Thành phần trong Thiết bị";
+            // 
+            // flpElementsOfEquip
+            // 
+            this.flpElementsOfEquip.AutoScroll = true;
+            this.flpElementsOfEquip.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpElementsOfEquip.Controls.Add(this.panel3);
+            this.flpElementsOfEquip.Controls.Add(this.panel12);
+            this.flpElementsOfEquip.Controls.Add(this.panel13);
+            this.flpElementsOfEquip.Controls.Add(this.panel17);
+            this.flpElementsOfEquip.Controls.Add(this.panel20);
+            this.flpElementsOfEquip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpElementsOfEquip.Location = new System.Drawing.Point(0, 40);
+            this.flpElementsOfEquip.Name = "flpElementsOfEquip";
+            this.flpElementsOfEquip.Size = new System.Drawing.Size(609, 271);
+            this.flpElementsOfEquip.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtArticalNo);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(603, 44);
+            this.panel3.TabIndex = 1;
+            // 
+            // txtArticalNo
+            // 
+            this.txtArticalNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArticalNo.Location = new System.Drawing.Point(173, 9);
+            this.txtArticalNo.Name = "txtArticalNo";
+            this.txtArticalNo.Size = new System.Drawing.Size(428, 26);
+            this.txtArticalNo.TabIndex = 1;
+            this.txtArticalNo.Text = "635-AT1BC1ZP06S4SB1100AA";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(15, 12);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(153, 19);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Số hiệu TP(Artical No):";
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.txtNameElement);
+            this.panel12.Controls.Add(this.label17);
+            this.panel12.Location = new System.Drawing.Point(3, 53);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(603, 44);
+            this.panel12.TabIndex = 0;
+            // 
+            // txtNameElement
+            // 
+            this.txtNameElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameElement.Location = new System.Drawing.Point(173, 9);
+            this.txtNameElement.Name = "txtNameElement";
+            this.txtNameElement.Size = new System.Drawing.Size(428, 26);
+            this.txtNameElement.TabIndex = 1;
+            this.txtNameElement.Text = "Báo Giá Bộ Giám Sát Nhiệt độ dầu máy biến áp";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(15, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(157, 19);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Tên Thành phần           : ";
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.txtPricePerOneElement);
+            this.panel13.Controls.Add(this.label24);
+            this.panel13.Controls.Add(this.txtCountElements);
+            this.panel13.Controls.Add(this.label18);
+            this.panel13.Location = new System.Drawing.Point(3, 103);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(603, 44);
+            this.panel13.TabIndex = 1;
+            // 
+            // txtPricePerOneElement
+            // 
+            this.txtPricePerOneElement.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPricePerOneElement.Location = new System.Drawing.Point(497, 9);
+            this.txtPricePerOneElement.Name = "txtPricePerOneElement";
+            this.txtPricePerOneElement.Size = new System.Drawing.Size(103, 26);
+            this.txtPricePerOneElement.TabIndex = 1;
+            this.txtPricePerOneElement.Text = "532.25";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(330, 12);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(163, 19);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Giá mội cái (Euro)          :";
+            // 
+            // txtCountElements
+            // 
+            this.txtCountElements.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountElements.Location = new System.Drawing.Point(173, 9);
+            this.txtCountElements.Name = "txtCountElements";
+            this.txtCountElements.Size = new System.Drawing.Size(132, 26);
+            this.txtCountElements.TabIndex = 1;
+            this.txtCountElements.Text = "01";
+            this.txtCountElements.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(15, 12);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(152, 19);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Số lượng thành phần    :";
+            // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Controls.Add(this.txtArticalDesign);
+            this.panel17.Controls.Add(this.lblTotalPriceElements);
+            this.panel17.Controls.Add(this.label19);
+            this.panel17.Controls.Add(this.label20);
+            this.panel17.Location = new System.Drawing.Point(3, 153);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(603, 44);
+            this.panel17.TabIndex = 2;
+            // 
+            // txtArticalDesign
+            // 
+            this.txtArticalDesign.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArticalDesign.Location = new System.Drawing.Point(173, 10);
+            this.txtArticalDesign.Name = "txtArticalDesign";
+            this.txtArticalDesign.Size = new System.Drawing.Size(132, 26);
+            this.txtArticalDesign.TabIndex = 1;
+            this.txtArticalDesign.Text = "MT-ST160F/4/6m";
+            // 
+            // lblTotalPriceElements
+            // 
+            this.lblTotalPriceElements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lblTotalPriceElements.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalPriceElements.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPriceElements.Location = new System.Drawing.Point(497, 10);
+            this.lblTotalPriceElements.Name = "lblTotalPriceElements";
+            this.lblTotalPriceElements.Size = new System.Drawing.Size(104, 26);
+            this.lblTotalPriceElements.TabIndex = 0;
+            this.lblTotalPriceElements.Text = "325.5";
+            this.lblTotalPriceElements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(330, 12);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(161, 19);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Giá Tổng của TP (Euro) :";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(15, 12);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(157, 19);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Mã TP (Artical Design) :";
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.btnDeleteElement);
+            this.panel20.Controls.Add(this.btnEditElement);
+            this.panel20.Controls.Add(this.btnAddElement);
+            this.panel20.Location = new System.Drawing.Point(3, 203);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(603, 58);
+            this.panel20.TabIndex = 6;
+            // 
+            // btnDeleteElement
+            // 
+            this.btnDeleteElement.BackColor = System.Drawing.Color.DeepPink;
+            this.btnDeleteElement.Location = new System.Drawing.Point(431, 9);
+            this.btnDeleteElement.Name = "btnDeleteElement";
+            this.btnDeleteElement.Size = new System.Drawing.Size(150, 40);
+            this.btnDeleteElement.TabIndex = 3;
+            this.btnDeleteElement.Text = "Xóa";
+            this.btnDeleteElement.UseVisualStyleBackColor = false;
+            // 
+            // btnEditElement
+            // 
+            this.btnEditElement.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnEditElement.Location = new System.Drawing.Point(237, 9);
+            this.btnEditElement.Name = "btnEditElement";
+            this.btnEditElement.Size = new System.Drawing.Size(150, 40);
+            this.btnEditElement.TabIndex = 4;
+            this.btnEditElement.Text = "Sửa";
+            this.btnEditElement.UseVisualStyleBackColor = false;
+            // 
+            // btnAddElement
+            // 
+            this.btnAddElement.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnAddElement.Location = new System.Drawing.Point(38, 9);
+            this.btnAddElement.Name = "btnAddElement";
+            this.btnAddElement.Size = new System.Drawing.Size(150, 40);
+            this.btnAddElement.TabIndex = 5;
+            this.btnAddElement.Text = "Thêm";
+            this.btnAddElement.UseVisualStyleBackColor = false;
+            // 
+            // pnlMainTop
+            // 
+            this.pnlMainTop.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnlMainTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMainTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainTop.Name = "pnlMainTop";
+            this.pnlMainTop.Size = new System.Drawing.Size(1334, 48);
+            this.pnlMainTop.TabIndex = 2;
+            // 
             // pnlInforEquip
             // 
             this.pnlInforEquip.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -1280,6 +1255,180 @@ namespace ManagingClients
             this.label4.TabIndex = 0;
             this.label4.Text = "Thuế VAT Thiết bị (%)(*)  :";
             // 
+            // panel23
+            // 
+            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Controls.Add(this.label36);
+            this.panel23.Controls.Add(this.txtPercentBenefitEquip);
+            this.panel23.Controls.Add(this.label2);
+            this.panel23.Controls.Add(this.txtCountSetEquipmentUnit);
+            this.panel23.Location = new System.Drawing.Point(3, 153);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(610, 44);
+            this.panel23.TabIndex = 1;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(16, 12);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(157, 19);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Lãi Thiết bị ( % ) ( * )   :";
+            // 
+            // txtPercentBenefitEquip
+            // 
+            this.txtPercentBenefitEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPercentBenefitEquip.Location = new System.Drawing.Point(173, 11);
+            this.txtPercentBenefitEquip.Name = "txtPercentBenefitEquip";
+            this.txtPercentBenefitEquip.Size = new System.Drawing.Size(123, 26);
+            this.txtPercentBenefitEquip.TabIndex = 1;
+            this.txtPercentBenefitEquip.Text = "50";
+            this.txtPercentBenefitEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(320, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Số lượng ( Bộ )                 :";
+            // 
+            // txtCountSetEquipmentUnit
+            // 
+            this.txtCountSetEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountSetEquipmentUnit.Location = new System.Drawing.Point(497, 10);
+            this.txtCountSetEquipmentUnit.Name = "txtCountSetEquipmentUnit";
+            this.txtCountSetEquipmentUnit.Size = new System.Drawing.Size(106, 26);
+            this.txtCountSetEquipmentUnit.TabIndex = 1;
+            this.txtCountSetEquipmentUnit.Text = "1";
+            this.txtCountSetEquipmentUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.button1);
+            this.panel15.Controls.Add(this.btnDeleteEquip);
+            this.panel15.Controls.Add(this.btnEditEquip);
+            this.panel15.Controls.Add(this.btnAddEquip);
+            this.panel15.Location = new System.Drawing.Point(3, 203);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(610, 63);
+            this.panel15.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(472, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tạo mới";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteEquip
+            // 
+            this.btnDeleteEquip.BackColor = System.Drawing.Color.DeepPink;
+            this.btnDeleteEquip.Location = new System.Drawing.Point(324, 10);
+            this.btnDeleteEquip.Name = "btnDeleteEquip";
+            this.btnDeleteEquip.Size = new System.Drawing.Size(110, 40);
+            this.btnDeleteEquip.TabIndex = 2;
+            this.btnDeleteEquip.Text = "Xóa";
+            this.btnDeleteEquip.UseVisualStyleBackColor = false;
+            // 
+            // btnEditEquip
+            // 
+            this.btnEditEquip.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnEditEquip.Location = new System.Drawing.Point(175, 10);
+            this.btnEditEquip.Name = "btnEditEquip";
+            this.btnEditEquip.Size = new System.Drawing.Size(110, 40);
+            this.btnEditEquip.TabIndex = 2;
+            this.btnEditEquip.Text = "Sửa";
+            this.btnEditEquip.UseVisualStyleBackColor = false;
+            // 
+            // btnAddEquip
+            // 
+            this.btnAddEquip.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnAddEquip.Location = new System.Drawing.Point(33, 10);
+            this.btnAddEquip.Name = "btnAddEquip";
+            this.btnAddEquip.Size = new System.Drawing.Size(110, 40);
+            this.btnAddEquip.TabIndex = 2;
+            this.btnAddEquip.Text = "Thêm";
+            this.btnAddEquip.UseVisualStyleBackColor = false;
+            // 
+            // pnlInfoElement
+            // 
+            this.pnlInfoElement.AutoScroll = true;
+            this.pnlInfoElement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInfoElement.Controls.Add(this.grbInforElement);
+            this.pnlInfoElement.Location = new System.Drawing.Point(3, 272);
+            this.pnlInfoElement.Name = "pnlInfoElement";
+            this.pnlInfoElement.Size = new System.Drawing.Size(611, 313);
+            this.pnlInfoElement.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvListElements);
+            this.panel2.Location = new System.Drawing.Point(3, 591);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(610, 91);
+            this.panel2.TabIndex = 6;
+            // 
+            // dgvListElements
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvListElements.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvListElements.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListElements.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvListElements.ColumnHeadersHeight = 21;
+            this.dgvListElements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListElements.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvListElements.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListElements.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
+            this.dgvListElements.Location = new System.Drawing.Point(0, 0);
+            this.dgvListElements.Name = "dgvListElements";
+            this.dgvListElements.RowHeadersVisible = false;
+            this.dgvListElements.Size = new System.Drawing.Size(610, 91);
+            this.dgvListElements.TabIndex = 1;
+            this.dgvListElements.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
+            this.dgvListElements.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.dgvListElements.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvListElements.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvListElements.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvListElements.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvListElements.ThemeStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvListElements.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
+            this.dgvListElements.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.dgvListElements.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvListElements.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvListElements.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvListElements.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvListElements.ThemeStyle.HeaderStyle.Height = 21;
+            this.dgvListElements.ThemeStyle.ReadOnly = false;
+            this.dgvListElements.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.dgvListElements.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListElements.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvListElements.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvListElements.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvListElements.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
+            this.dgvListElements.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1326,36 +1475,6 @@ namespace ManagingClients
             this.btnCalculatePrice.Text = "Tính Toán";
             this.btnCalculatePrice.UseVisualStyleBackColor = false;
             // 
-            // txtCountSetEquipmentUnit
-            // 
-            this.txtCountSetEquipmentUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountSetEquipmentUnit.Location = new System.Drawing.Point(497, 10);
-            this.txtCountSetEquipmentUnit.Name = "txtCountSetEquipmentUnit";
-            this.txtCountSetEquipmentUnit.Size = new System.Drawing.Size(106, 26);
-            this.txtCountSetEquipmentUnit.TabIndex = 1;
-            this.txtCountSetEquipmentUnit.Text = "1";
-            this.txtCountSetEquipmentUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(320, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Số lượng ( Bộ )                 :";
-            // 
-            // txtPercentBenefitEquip
-            // 
-            this.txtPercentBenefitEquip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentBenefitEquip.Location = new System.Drawing.Point(173, 11);
-            this.txtPercentBenefitEquip.Name = "txtPercentBenefitEquip";
-            this.txtPercentBenefitEquip.Size = new System.Drawing.Size(123, 26);
-            this.txtPercentBenefitEquip.TabIndex = 1;
-            this.txtPercentBenefitEquip.Text = "50";
-            this.txtPercentBenefitEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1377,16 +1496,6 @@ namespace ManagingClients
             this.lblValueVATEquip.TabIndex = 0;
             this.lblValueVATEquip.Text = "10,234,567,890";
             this.lblValueVATEquip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(16, 12);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(157, 19);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Lãi Thiết bị ( % ) ( * )   :";
             // 
             // lblValueCaculatedEquip
             // 
@@ -1420,149 +1529,6 @@ namespace ManagingClients
             this.label10.TabIndex = 0;
             this.label10.Text = "Giá tri Thiết bị sau tính toán (VNĐ):";
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.button1);
-            this.panel15.Controls.Add(this.btnDeleteEquip);
-            this.panel15.Controls.Add(this.btnEditEquip);
-            this.panel15.Controls.Add(this.btnAddEquip);
-            this.panel15.Location = new System.Drawing.Point(3, 203);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(610, 63);
-            this.panel15.TabIndex = 6;
-            // 
-            // btnDeleteEquip
-            // 
-            this.btnDeleteEquip.BackColor = System.Drawing.Color.DeepPink;
-            this.btnDeleteEquip.Location = new System.Drawing.Point(324, 10);
-            this.btnDeleteEquip.Name = "btnDeleteEquip";
-            this.btnDeleteEquip.Size = new System.Drawing.Size(110, 40);
-            this.btnDeleteEquip.TabIndex = 2;
-            this.btnDeleteEquip.Text = "Xóa";
-            this.btnDeleteEquip.UseVisualStyleBackColor = false;
-            // 
-            // btnEditEquip
-            // 
-            this.btnEditEquip.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnEditEquip.Location = new System.Drawing.Point(175, 10);
-            this.btnEditEquip.Name = "btnEditEquip";
-            this.btnEditEquip.Size = new System.Drawing.Size(110, 40);
-            this.btnEditEquip.TabIndex = 2;
-            this.btnEditEquip.Text = "Sửa";
-            this.btnEditEquip.UseVisualStyleBackColor = false;
-            // 
-            // btnAddEquip
-            // 
-            this.btnAddEquip.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnAddEquip.Location = new System.Drawing.Point(33, 10);
-            this.btnAddEquip.Name = "btnAddEquip";
-            this.btnAddEquip.Size = new System.Drawing.Size(110, 40);
-            this.btnAddEquip.TabIndex = 2;
-            this.btnAddEquip.Text = "Thêm";
-            this.btnAddEquip.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvListElement);
-            this.panel2.Location = new System.Drawing.Point(3, 591);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(610, 91);
-            this.panel2.TabIndex = 6;
-            // 
-            // dgvListElement
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dgvListElement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvListElement.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListElement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvListElement.ColumnHeadersHeight = 21;
-            this.dgvListElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListElement.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvListElement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListElement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.dgvListElement.Location = new System.Drawing.Point(0, 0);
-            this.dgvListElement.Name = "dgvListElement";
-            this.dgvListElement.RowHeadersVisible = false;
-            this.dgvListElement.Size = new System.Drawing.Size(610, 91);
-            this.dgvListElement.TabIndex = 1;
-            this.dgvListElement.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WetAsphalt;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListElement.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListElement.ThemeStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dgvListElement.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(199)))), ((int)(((byte)(206)))));
-            this.dgvListElement.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.dgvListElement.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListElement.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dgvListElement.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListElement.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListElement.ThemeStyle.HeaderStyle.Height = 21;
-            this.dgvListElement.ThemeStyle.ReadOnly = false;
-            this.dgvListElement.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.dgvListElement.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListElement.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dgvListElement.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvListElement.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvListElement.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(133)))), ((int)(((byte)(147)))));
-            this.dgvListElement.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Column2";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Column3";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // panel23
-            // 
-            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel23.Controls.Add(this.label36);
-            this.panel23.Controls.Add(this.txtPercentBenefitEquip);
-            this.panel23.Controls.Add(this.label2);
-            this.panel23.Controls.Add(this.txtCountSetEquipmentUnit);
-            this.panel23.Location = new System.Drawing.Point(3, 153);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(610, 44);
-            this.panel23.TabIndex = 1;
-            // 
-            // pnlInfoElement
-            // 
-            this.pnlInfoElement.AutoScroll = true;
-            this.pnlInfoElement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInfoElement.Controls.Add(this.grbInforElement);
-            this.pnlInfoElement.Location = new System.Drawing.Point(3, 272);
-            this.pnlInfoElement.Name = "pnlInfoElement";
-            this.pnlInfoElement.Size = new System.Drawing.Size(611, 313);
-            this.pnlInfoElement.TabIndex = 1;
-            // 
             // pnlMainRight
             // 
             this.pnlMainRight.Controls.Add(this.pnlInforEquip);
@@ -1571,16 +1537,6 @@ namespace ManagingClients
             this.pnlMainRight.Name = "pnlMainRight";
             this.pnlMainRight.Size = new System.Drawing.Size(638, 833);
             this.pnlMainRight.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(472, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tạo mới";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmMerchandise
             // 
@@ -1605,17 +1561,6 @@ namespace ManagingClients
             this.pnlListElementEquip.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAllEquipOfInquery)).EndInit();
-            this.grbInforElement.ResumeLayout(false);
-            this.flpElementsOfEquip.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel20.ResumeLayout(false);
             this.pnlTopLeft.ResumeLayout(false);
             this.pnlInforSysInquery.ResumeLayout(false);
             this.grbSystemDetailInquery.ResumeLayout(false);
@@ -1641,6 +1586,17 @@ namespace ManagingClients
             this.panel16.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            this.grbInforElement.ResumeLayout(false);
+            this.flpElementsOfEquip.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel20.ResumeLayout(false);
             this.pnlInforEquip.ResumeLayout(false);
             this.grbDetailEquipment.ResumeLayout(false);
             this.flpDetailEquip.ResumeLayout(false);
@@ -1650,14 +1606,14 @@ namespace ManagingClients
             this.panel1.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListElement)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            this.panel15.ResumeLayout(false);
             this.pnlInfoElement.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListElements)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.pnlMainRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1727,15 +1683,10 @@ namespace ManagingClients
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel20;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgAllEquipOfInquery;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         public System.Windows.Forms.TextBox txtPricePerOneElement;
         private System.Windows.Forms.Label label24;
         public System.Windows.Forms.TextBox txtArticalDesign;
         private System.Windows.Forms.Panel pnlListElementEquip;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtCostDeliveryCus;
@@ -1743,12 +1694,9 @@ namespace ManagingClients
         public System.Windows.Forms.TextBox txtCostDeliveryVN;
         private System.Windows.Forms.Label label23;
         public System.Windows.Forms.Button btnDeleteElement;
-        public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Button btnEditElement;
+        public System.Windows.Forms.Button btnAddElement;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel19;
@@ -1783,11 +1731,13 @@ namespace ManagingClients
         public System.Windows.Forms.Label lblVATAllEquip;
         public System.Windows.Forms.Label lblValueVATEquip;
         public System.Windows.Forms.Label lblValueCaculatedEquip;
-        public Guna.UI2.WinForms.Guna2DataGridView dgvListElement;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvListElements;
         public System.Windows.Forms.Button btnCalculatePrice;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel pnlInfoElement;
         private System.Windows.Forms.Panel pnlMainRight;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lblTotalPriceElements;
+        public Guna.UI2.WinForms.Guna2DataGridView dtgAllEquipOfInquery;
     }
 }

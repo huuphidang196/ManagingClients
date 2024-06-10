@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace ManagingClients._Data.Scripts.DAO.FormMerchandise
 {
-    public class DetailUnitsDevicInqueryDataProvider : DataProvider
+    public class DetailUnitsDeviceInqueryDataProvider : DataProvider
     {
-        private static DetailUnitsDevicInqueryDataProvider _instance;
-        public static DetailUnitsDevicInqueryDataProvider Instance
+        private static DetailUnitsDeviceInqueryDataProvider _instance;
+        public static DetailUnitsDeviceInqueryDataProvider Instance
         {
             get
             {
-                if (_instance == null) _instance = new DetailUnitsDevicInqueryDataProvider();
-                return DetailUnitsDevicInqueryDataProvider._instance;
+                if (_instance == null) _instance = new DetailUnitsDeviceInqueryDataProvider();
+                return DetailUnitsDeviceInqueryDataProvider._instance;
             }
 
-            private set { DetailUnitsDevicInqueryDataProvider._instance = value; }
+            private set { DetailUnitsDeviceInqueryDataProvider._instance = value; }
         }
 
-        private DetailUnitsDevicInqueryDataProvider()
+        private DetailUnitsDeviceInqueryDataProvider()
         {
 
         }
@@ -56,6 +56,9 @@ namespace ManagingClients._Data.Scripts.DAO.FormMerchandise
                 unitsDeviceInquery.Final_Value_Units_Device_Inquery = reader.GetDecimal(8);
 
                 unitsDeviceInquery.ID_Inquery_Quotation = reader.GetInt32(9);
+                
+                listUnitsDeviceInquery.Add(unitsDeviceInquery);
+
             }
 
             reader.Close();

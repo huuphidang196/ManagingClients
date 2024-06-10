@@ -193,8 +193,11 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             string str_Result = saveSuccess ? "Lưu Báo giá thành công! " : "Lưu thất bại";
             MessageBox.Show(str_Result);
 
-            if (saveSuccess) this.ActiveOrUnActiveAllControl(false);
-
+            if (saveSuccess)
+            {
+                frmMerchandise.Instance.SetInqueryQuotation(this._InqueryQuotation);
+                this.ActiveOrUnActiveAllControl(false);
+            } 
             //setting co
             //Save together
             PanelCenterCusICSC.Instance.PanelOrderPurchasingCustomerSC.PanelSettingOrderPurchasingSC.GrbSettingOrderPurchasingSC.ActiveOrUnActiveAllControl(false);
@@ -237,7 +240,6 @@ namespace ManagingClients._Data.Scripts.BLL.FormDetailCustomerInqueryContract.Pa
             this._dtpDateExpiredInquery.Value = (inqueryQuotation.Date_Expired_Time_Inquiry <= DateTime.MinValue) ? DateTime.Today : inqueryQuotation.Date_Expired_Time_Inquiry;
 
             this._lblShowFileInquery.Text = (inqueryQuotation.File_Data_Inquiry_Quotation == null) ? "Tải file PDF" : "File Báo giá";
-
         }
         protected virtual void ClearFileInquery()
         {

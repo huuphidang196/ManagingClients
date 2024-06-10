@@ -164,7 +164,7 @@
     <Compile Include="_Data\Scripts\DAO\DataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\FormDetailCustomerIC\CustomerOrderDataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\FormMerchandise\DetailElementUnitsInqueryDataProvider.cs" />
-    <Compile Include="_Data\Scripts\DAO\FormMerchandise\DetailUnitsDevicInqueryDataProvider.cs" />
+    <Compile Include="_Data\Scripts\DAO\FormMerchandise\DetailUnitsDeviceInqueryDataProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlDetailProfile\DetailProfileProvider.cs" />
     <Compile Include="_Data\Scripts\DAO\Scene_Manage_Customer\pnlMainControl\pnlDisplayOverall\pnlPurchasingOrder\PurchasingOrderProvider.cs" />
     <Compile Include="_Data\Scripts\DTO\Account\Department.cs" />

@@ -102,7 +102,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormMerchandise
             return elementUnitsInquery;
         }
 
-        public virtual int GetMaxIDUnitsDeviceInquery()
+        public virtual int GetMaxIDElementUnitsInquery()
         {
             string query = "SELECT TOP 1 * FROM ElementUnitsInquery ORDER BY ID_Element_Units_Inquery DESC";
             ElementUnitsInquery unitsDeviceInquery = this.GetElementUnitsInqueryByQuery(query);
@@ -121,9 +121,9 @@ namespace ManagingClients._Data.Scripts.DAO.FormMerchandise
             bool value_Existed = new_ElementUnitsInquery.ID_Element_Units_Inquery > 0;
             //if existed true => Update. false => insert 
 
-            if (value_Existed) return this.UpdateUnitsDeviceInquery(elementUnitsInquery);
+            if (value_Existed) return this.UpdateElementUnitsInquery(elementUnitsInquery);
 
-            elementUnitsInquery.ID_Units_Device_Inquery = this.GetMaxIDUnitsDeviceInquery() + 1;
+            elementUnitsInquery.ID_Units_Device_Inquery = this.GetMaxIDElementUnitsInquery() + 1;
 
             return this.InsertTableByNameTable(nameof(UnitsDeviceInquery), elementUnitsInquery);
 
@@ -131,7 +131,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormMerchandise
         #endregion
 
         #region Update
-        public virtual bool UpdateUnitsDeviceInquery(ElementUnitsInquery elementUnitsInquery)
+        public virtual bool UpdateElementUnitsInquery(ElementUnitsInquery elementUnitsInquery)
         {
             string nameKeyColumn = "ID_Element_Units_Inquery";
             return this.UpdateDataByNameTable(nameKeyColumn, nameof(ElementUnitsInquery), elementUnitsInquery);

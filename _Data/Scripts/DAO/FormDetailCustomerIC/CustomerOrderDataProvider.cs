@@ -124,7 +124,7 @@ namespace ManagingClients._Data.Scripts.DAO.FormDetailCustomerIC
 
                 if (!reader.IsDBNull(reader.GetOrdinal("File_Data_MR_Inquiry_Quotation"))) Inquery_CustomerOrder.File_Data_MR_Inquiry_Quotation = (byte[])reader["File_Data_MR_Inquiry_Quotation"];
 
-                Inquery_CustomerOrder.ID_Customer_Order = reader.GetInt32(12);
+                Inquery_CustomerOrder.ID_Customer_Order = reader.GetInt32(13);
 
                 listInqueryCustomer_Order.Add(Inquery_CustomerOrder);
             }

@@ -10,6 +10,7 @@ namespace ManagingClients._Data.Scripts.BLL.FormMerchandise.pnlTop.pnlInforEquip
     public class PanelInforEquipSC
     {
         protected FlowLayoutPanelDetailEquip _FlowLayoutPanelDetailEquip;
+        public FlowLayoutPanelDetailEquip FlowLayoutPanelDetailEquip => _FlowLayoutPanelDetailEquip;
 
         public PanelInforEquipSC()
         {
